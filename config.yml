@@ -21,7 +21,7 @@ menu:
           url: papers/
 
 params:
-    description: "I am an incoming Ph.D. student in Applied Economics at the Wharton School, University of Pennsylvania."
+    description: "I am an incoming Ph.D. student in *Applied Economics* at the *Wharton School, University of Pennsylvania*."
     author: Hyoungchul Kim
     # googleAnalyticsID: "G-XXXXX"
     DateFormat: "January 2006"
