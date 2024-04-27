@@ -19,7 +19,6 @@ menu:
           weight: 2
         - name: Publications
           url: papers/
-          weight: 3
 
 params:
     description: "I am an incoming Ph.D. student in Applied Economics at the Wharton School, University of Pennsylvania."
