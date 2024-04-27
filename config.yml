@@ -48,7 +48,7 @@ params:
           imageUrl: "picture.jpeg"
           imageWidth: 160
           imageHeight: 160
-          imageTitle: Prof. Name
+          imageTitle: Hyoungchul Kim
           buttons:
             - name: CV
               url: https://www.dropbox.com/scl/fi/k05ar0ig471kqpzw85z5b/cv-kim.pdf?rlkey=f33cey8fcjezo5c2w4g6thf45&dl=0
