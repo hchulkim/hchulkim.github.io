@@ -12,7 +12,7 @@ summary: "Under review."
 
 ##### Download
 
-+ [Paper](https://www.dropbox.com/scl/fi/biigga26hxs7jcfu8bwtp/migration_china_shock.pdf?rlkey=1ycpxjq450jet62a8vdrew19m&dl=0)
++ [Working paper](https://www.dropbox.com/scl/fi/biigga26hxs7jcfu8bwtp/migration_china_shock.pdf?rlkey=1ycpxjq450jet62a8vdrew19m&dl=0)
 
 ---
 
