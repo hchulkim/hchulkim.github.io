@@ -14,9 +14,12 @@ menu:
         - name: CV
           url: https://www.dropbox.com/scl/fi/k05ar0ig471kqpzw85z5b/cv-kim.pdf?rlkey=f33cey8fcjezo5c2w4g6thf45&dl=0
           weight: 1
-        - name: Research
-          url: papers/
+        - name: Working Papers
+          url: working/
           weight: 2
+        - name: Publications
+          url: papers/
+          weight: 3
 
 params:
     description: "I am an incoming Ph.D. student in Applied Economics at the Wharton School, University of Pennsylvania."
