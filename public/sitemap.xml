@@ -2,43 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://hchulkim.github.io/tags/china-trade-shock/</loc>
-    <lastmod>2024-03-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hchulkim.github.io/</loc>
-    <lastmod>2024-03-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hchulkim.github.io/tags/internal-migration/</loc>
-    <lastmod>2024-03-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hchulkim.github.io/tags/labor-adjustment/</loc>
-    <lastmod>2024-03-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hchulkim.github.io/papers/</loc>
-    <lastmod>2024-03-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hchulkim.github.io/tags/</loc>
-    <lastmod>2024-03-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hchulkim.github.io/papers/paper2/</loc>
-    <lastmod>2024-03-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hchulkim.github.io/papers/paper1/</loc>
-    <lastmod>2024-02-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hchulkim.github.io/tags/economic-sanctions/</loc>
-    <lastmod>2024-02-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hchulkim.github.io/tags/immigration/</loc>
-    <lastmod>2024-02-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hchulkim.github.io/tags/political-conflict/</loc>
-    <lastmod>2024-02-07T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://hchulkim.github.io/data/</loc>
     <lastmod>2023-09-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hchulkim.github.io/data/data1/</loc>
+    <lastmod>2023-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hchulkim.github.io/</loc>
     <lastmod>2023-09-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hchulkim.github.io/tags/keyword-10/</loc>
@@ -51,6 +21,9 @@
     <lastmod>2023-09-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hchulkim.github.io/tags/keyword-7/</loc>
+    <lastmod>2023-09-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hchulkim.github.io/tags/</loc>
     <lastmod>2023-09-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hchulkim.github.io/courses/course1/</loc>
@@ -79,5 +52,7 @@
     <loc>https://hchulkim.github.io/location/</loc>
   </url><url>
     <loc>https://hchulkim.github.io/officehours/</loc>
+  </url><url>
+    <loc>https://hchulkim.github.io/papers/</loc>
   </url>
 </urlset>
