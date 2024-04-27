@@ -6,7 +6,7 @@ description: "Working papers and Publications"
 
 ---
 
-<span style="color:cyan">### Working Papers </span>
+#### Working Papers
 
 
 > **[2] The China Shock and Internal Migration: Evidence from Bilateral Migration Flows** 
@@ -21,7 +21,7 @@ description: "Working papers and Publications"
 
 ---
 
-### Work in Progress
+#### Work in Progress
 
 TBA
 
