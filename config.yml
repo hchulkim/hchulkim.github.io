@@ -14,11 +14,18 @@ menu:
         - name: CV
           url: https://www.dropbox.com/scl/fi/k05ar0ig471kqpzw85z5b/cv-kim.pdf?rlkey=f33cey8fcjezo5c2w4g6thf45&dl=0
           weight: 1
+        - name: Education
+          url: education/
+          weight: 2
         - name: Working Papers
           url: working/
-          weight: 2
+          weight: 3
         - name: Publications
           url: papers/
+          weight: 4
+        - name: Contact
+          url: contact/
+          weight: 5
 
 params:
     description: I am an incoming Ph.D. student in Applied Economics at the Wharton School, University of Pennsylvania.
@@ -54,15 +61,21 @@ params:
           buttons:
             - name: CV
               url: https://www.dropbox.com/scl/fi/k05ar0ig471kqpzw85z5b/cv-kim.pdf?rlkey=f33cey8fcjezo5c2w4g6thf45&dl=0
+            - name: Education
+              url: education/
             - name: Working Papers
               url: working/
             - name: Publications
               url: papers/
+            - name: Contact
+              url: contact/
     socialIcons:
         - name: Email
           url: mailto:hchulkim@wharton.upenn.edu
         - name: Location
           url: location/
+        - name: Linkedin
+          url: https://www.linkedin.com/in/hyoungchul-kim-267104306/
         - name: Google Scholar
           url: https://scholar.google.com/citations?user=GaRgVqoAAAAJ&hl=ko
         - name: GitHub
