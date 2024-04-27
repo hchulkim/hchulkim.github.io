@@ -1,17 +1,17 @@
 ---
-title: "Paper Title 1" 
-date: 2012-06-01
-tags: ["keyword 1","keyword 2","keyword 3"]
-author: "Author Name"
-description: "This paper shows things. Published in Journal Name, 2012." 
-summary: "This paper shows things using various techniques and data." 
+title: "Does Political Conflict hurt Immigration? Evidence from the South Korea – China THAAD Dispute" 
+date: 2024-02-07
+tags: ["immigration","political conflict","economic sanctions"]
+author: ["Hyoungchul Kim", "Jongkwan Lee"]
+description: "Revise and resubmit, Southern Economic Journal" 
+summary: "Revise and resubmit, Southern Economic Journal" 
 cover:
     image: "paper1.png"
     alt: "Image caption"
     relative: false
 editPost:
-    URL: "https://doi.org/10.1257/aer.102.4.1721"
-    Text: "Journal Name"
+    URL: ""
+    Text: ""
 
 ---
 
@@ -19,45 +19,11 @@ editPost:
 
 ##### Download
 
-+ [Paper](paper1.pdf)
-+ [Online appendix](appendix1.pdf)
-+ [Code and data](https://github.com/pmichaillat/job-rationing)
++ [Paper](https://www.dropbox.com/scl/fi/113r6xed29hg8rtzm1klg/thaad_paper_Feb_2024.pdf?rlkey=xz01ikf3sfspm1uyr74pky2pf&e=1&dl=0)
 
 ---
 
 ##### Abstract
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
----
-
-##### Figure X: Figure caption
-
-![](paper1.png)
-
----
-
-##### Citation
-
-Author. Year. "Title." *Journal* Volume (Issue): First page–Last page. https://doi.org/paper_doi.
-
-```BibTeX
-@article{AAYY,
-author = {Author},
-doi = {paper_doi},
-journal = {Journal},
-number = {Issue},
-pages = {XXX--YYY},
-title ={Title},
-volume = {Volume},
-year = {Year}}
-```
-
----
-
-##### Related material
-
-+ [Presentation slides](presentation1.pdf)
-+ [Dissertation title](https://escholarship.org/uc/item/7jr3m96r) – PhD dissertation on which this paper is based.
-+ [Column title](https://cep.lse.ac.uk/pubs/download/cp365.pdf) – Nontechnical column describing the paper.
+We estimate the impact of political conflict on immigration using economic sanctions imposed by China on South Korea as a natural experiment. Due to the deployment of the Terminal High-Altitude Area Defense (THAAD) system in South Korea in 2016 (in cooperation with the US), China started a series of retaliatory actions that could potentially hurt immigration by increasing anti-immigrant sentiment among Koreans. We use the synthetic control method and find no evidence suggesting a significant decline in the number of Chinese immigrants in South Korea. To explore the mechanism of this null effect, we also examine the impact of the dispute on attitudes toward China among Koreans and experiences of discrimination among Chinese people in South Korea. While negative perceptions of China greatly increased, experiences of discrimination did not increase. Taken together, this suggests that negative views of a country do not necessarily lead to a decrease in immigration from that country.
 

@@ -1,4 +1,4 @@
 ---
 title: "Papers"
-description: "Preprints and articles on this website."
+description: "Working papers and Publications"
 ---
