@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Immigration on Hyoungchul Kim</title>
-    <link>http://localhost:1313/tags/immigration/</link>
+    <link>https://hchulkim.github.io/tags/immigration/</link>
     <description>Recent content in Immigration on Hyoungchul Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 07 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/immigration/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hchulkim.github.io/tags/immigration/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Does Political Conflict hurt Immigration? Evidence from the South Korea – China THAAD Dispute</title>
-      <link>http://localhost:1313/working/paper1/</link>
+      <link>https://hchulkim.github.io/working/paper1/</link>
       <pubDate>Wed, 07 Feb 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/working/paper1/</guid>
+      <guid>https://hchulkim.github.io/working/paper1/</guid>
       <description>Revise and resubmit, Southern Economic Journal</description>
     </item>
     
