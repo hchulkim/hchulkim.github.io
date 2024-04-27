@@ -20,7 +20,7 @@ menu:
 
 params:
     description: "I am an incoming Ph.D. student in Applied Economics at the Wharton School, University of Pennsylvania."
-    author: Name
+    author: Hyoungchul Kim
     # googleAnalyticsID: "G-XXXXX"
     DateFormat: "January 2006"
     defaultTheme: light
@@ -45,7 +45,7 @@ params:
           enabled: true
           title: Hyoungchul Kim
           subtitle: "I am an incoming Ph.D. student in Applied Economics at the Wharton School, University of Pennsylvania."
-          imageUrl: "picture.jpeg"
+          imageUrl: personal.jpeg
           imageWidth: 160
           imageHeight: 160
           imageTitle: Hyoungchul Kim
