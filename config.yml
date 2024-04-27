@@ -11,22 +11,15 @@ taxonomies:
 
 menu:
     main:
-        - name: Papers
-          url: papers/
+        - name: CV
+          url: https://www.dropbox.com/scl/fi/k05ar0ig471kqpzw85z5b/cv-kim.pdf?rlkey=f33cey8fcjezo5c2w4g6thf45&dl=0
           weight: 1
-        - name: Courses
-          url: courses/
+        - name: Research
+          url: papers/
           weight: 2
-        - name: Data
-          url: data/
-          weight: 3 
-        - name: Newsletter
-          url: https://pmichaillat.substack.com
-          weight: 4
 
 params:
-    description: "I am a Professor of Subject at the University of Place. My research covers various topics.
-consequat."
+    description: "I am an incoming Ph.D. student in Applied Economics at the Wharton School, University of Pennsylvania."
     author: Name
     # googleAnalyticsID: "G-XXXXX"
     DateFormat: "January 2006"
