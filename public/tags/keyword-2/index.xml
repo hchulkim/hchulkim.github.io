@@ -16,14 +16,5 @@
       <description>This graduate course presents things.</description>
     </item>
     
-    <item>
-      <title>Paper Title 2</title>
-      <link>https://hchulkim.github.io/papers/paper2/</link>
-      <pubDate>Tue, 01 Dec 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://hchulkim.github.io/papers/paper2/</guid>
-      <description>This paper shows other things. Published in Journal Name, 2015.</description>
-    </item>
-    
   </channel>
 </rss>
