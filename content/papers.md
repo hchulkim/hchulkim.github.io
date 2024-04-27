@@ -6,8 +6,7 @@ description: "Working papers and Publications"
 
 ---
 
-#### Working Papers
-
+### Working Papers
 
 > **[2] The China Shock and Internal Migration: Evidence from Bilateral Migration Flows** 
 >with [Jaerim Choi](http://www.jaerimchoi.com/), Hyoungchul Kim and [Seung Hoon Lee](https://sites.google.com/view/seunghoon/home)
@@ -21,7 +20,7 @@ description: "Working papers and Publications"
 
 ---
 
-#### Work in Progress
+### Work in Progress
 
 TBA
 
