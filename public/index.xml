@@ -6,7 +6,25 @@
     <description>Recent content on Hyoungchul Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 07 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://hchulkim.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hchulkim.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The China Shock and Internal Migration: Evidence from Bilateral Migration Flows</title>
+      <link>https://hchulkim.github.io/papers/paper2/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hchulkim.github.io/papers/paper2/</guid>
+      <description>Under review</description>
+    </item>
+    
+    <item>
+      <title>Does Political Conflict hurt Immigration? Evidence from the South Korea – China THAAD Dispute</title>
+      <link>https://hchulkim.github.io/papers/paper1/</link>
+      <pubDate>Wed, 07 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://hchulkim.github.io/papers/paper1/</guid>
+      <description>Revise and resubmit, Southern Economic Journal</description>
+    </item>
+    
     <item>
       <title>Dataset Title</title>
       <link>https://hchulkim.github.io/data/data1/</link>
@@ -51,15 +69,6 @@
       
       <guid>https://hchulkim.github.io/officehours/</guid>
       <description>Schedule and location for office hours.</description>
-    </item>
-    
-    <item>
-      <title>Research</title>
-      <link>https://hchulkim.github.io/papers/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hchulkim.github.io/papers/</guid>
-      <description>Working papers and Publications</description>
     </item>
     
   </channel>
