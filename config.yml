@@ -52,7 +52,9 @@ params:
           buttons:
             - name: CV
               url: https://www.dropbox.com/scl/fi/k05ar0ig471kqpzw85z5b/cv-kim.pdf?rlkey=f33cey8fcjezo5c2w4g6thf45&dl=0
-            - name: Research
+            - name: Working Papers
+              url: working/
+            - name: Publications
               url: papers/
     socialIcons:
         - name: Email

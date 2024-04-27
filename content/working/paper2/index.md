@@ -5,13 +5,6 @@ tags: ["China trade shock","internal migration","labor adjustment"]
 author: ["Jaerim Choi", "Hyoungchul Kim", "Seung Hoon Lee"]
 description: "Under review" 
 summary: "Under review." 
-cover:
-    image: "paper2.png"
-    alt: "Image caption"
-    relative: false
-editPost:
-    URL: ""
-    Text: ""
 
 ---
 
