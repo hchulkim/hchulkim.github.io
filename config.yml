@@ -72,8 +72,6 @@ params:
     socialIcons:
         - name: Email
           url: mailto:hchulkim@wharton.upenn.edu
-        - name: Location
-          url: location/
         - name: Linkedin
           url: https://www.linkedin.com/in/hyoungchul-kim-267104306/
         - name: Google Scholar
