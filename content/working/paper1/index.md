@@ -2,7 +2,7 @@
 title: "Does Political Conflict hurt Immigration? Evidence from the South Korea – China THAAD Dispute" 
 date: 2024-02-07
 tags: ["immigration","political conflict","economic sanctions"]
-author: ["Hyoungchul Kim", "Jongkwan Lee"]
+author: ["Hyoungchul Kim", "[Jongkwan Lee](https://sites.google.com/site/kwanlee84/home?authuser=0)"]
 description: "Revise and resubmit, Southern Economic Journal" 
 summary: "Revise and resubmit, Southern Economic Journal" 
 
