@@ -28,7 +28,6 @@ menu:
           weight: 5
         - name: Blog Posts 
           url: posts/
-          weight: 6
 params:
     description: I am an incoming Ph.D. student in Applied Economics at the Wharton School, University of Pennsylvania.
     author: Hyoungchul Kim
