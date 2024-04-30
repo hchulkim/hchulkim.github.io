@@ -1,5 +1,5 @@
 ---
-title: "[Predoctoral Publication] The Well-Being of Cities: Estimating Migration Attractiveness From Internal Migration Across Korean Cities" 
+title: "The Well-Being of Cities: Estimating Migration Attractiveness From Internal Migration Across Korean Cities" 
 date: 2023-12-09
 tags: ["internal migration","welfare estimates","regional imbalance"]
 author: ["Hyoungchul Kim", "Seung Hoon Lee", "Ji Sub Park" ]
