@@ -29,7 +29,7 @@ menu:
         - name: Contact 
           url: contact/
 params:
-    description: I am an incoming Ph.D. student in Applied Economics at the Wharton School, University of Pennsylvania.
+    description: I am a Ph.D. student in Applied Economics at the Wharton School, University of Pennsylvania.
     author: Hyoungchul Kim
     # googleAnalyticsID: "G-XXXXX"
     DateFormat: "January 2006"
@@ -54,7 +54,7 @@ params:
     profileMode:
           enabled: true
           title: Hyoungchul Kim
-          subtitle: "I am an incoming Ph.D. student in Applied Economics at the Wharton School, University of Pennsylvania."
+          subtitle: "I am a Ph.D. student in Applied Economics at the Wharton School, University of Pennsylvania."
           imageUrl: personal.jpeg
           imageWidth: 160
           imageHeight: 160
