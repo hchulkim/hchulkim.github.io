@@ -4,7 +4,7 @@ date: 2024-03-15
 tags: ["China trade shock","internal migration","labor adjustment"]
 author: ["Jaerim Choi", "Hyoungchul Kim", "Seung Hoon Lee"]
 description: "Under review" 
-summary: "Under review." 
+summary: "Under review" 
 
 ---
 
