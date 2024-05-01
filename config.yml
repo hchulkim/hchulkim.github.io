@@ -23,11 +23,11 @@ menu:
         - name: Publications
           url: papers/
           weight: 4
-        - name: Contact
-          url: contact/
+        - name: Teaching
+          url: teaching/
           weight: 5
-        - name: Blog Posts 
-          url: posts/
+        - name: Contact 
+          url: contact/
 params:
     description: I am an incoming Ph.D. student in Applied Economics at the Wharton School, University of Pennsylvania.
     author: Hyoungchul Kim
@@ -68,6 +68,8 @@ params:
               url: working/
             - name: Publications
               url: papers/
+            - name: Teaching
+              url: teaching/
             - name: Contact
               url: contact/
             - name: Blog Posts
