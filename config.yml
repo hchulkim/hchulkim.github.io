@@ -54,7 +54,7 @@ params:
     profileMode:
           enabled: true
           title: Hyoungchul Kim
-          subtitle: I am a Ph.D. student in <span style="color:#011F5B">Applied Economics**</span> at the <span style="color:#011F5B">**Wharton School, University of Pennsylvania**</span>. You can pronounce my name as "H-Young-Cheol Kim."
+          subtitle: I am a Ph.D. student in <span style="color:#011F5B">**Applied Economics**</span> at the <span style="color:#011F5B">**Wharton School, University of Pennsylvania**</span>. You can pronounce my name as "H-Young-Cheol Kim."
           imageUrl: personal.jpeg
           imageWidth: 160
           imageHeight: 160
