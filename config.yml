@@ -1,5 +1,5 @@
 baseURL: "https://hchulkim.github.io" 
-title: Hyoungchul Kim
+title: Hyoungchul Kim 
 paginate: 20
 theme: PaperMod
 
@@ -53,7 +53,7 @@ params:
     math: true
     profileMode:
           enabled: true
-          title: Hyoungchul Kim
+          title: <span style="color:#011F5B">Hyoungchul Kim</span> 
           subtitle: I am a Ph.D. student in <span style="color:#011F5B">**Applied Economics**</span> at the <span style="color:#011F5B">**Wharton School, University of Pennsylvania**</span>. You can pronounce my name as "H-Young-Cheol Kim."
           imageUrl: personal.jpeg
           imageWidth: 160
