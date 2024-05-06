@@ -9,7 +9,7 @@ description: "Education"
 
 #### The Wharton School, University of Pennsylvania
 
-Ph.D. student in Applied Economics, Fall 2024 - Present
+Ph.D. student in Applied Economics, Fall 2024 - Present.
 
 ---
 
