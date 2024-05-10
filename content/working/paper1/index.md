@@ -1,10 +1,10 @@
 ---
-title: "Does Political Conflict hurt Immigration? Evidence from the South Korea – China THAAD Dispute" 
-date: 2024-02-07
-tags: ["immigration","political conflict","economic sanctions"]
-author: ["Hyoungchul Kim", "Jongkwan Lee"]
-description: "Revise and resubmit, Southern Economic Journal" 
-summary: "Revise and resubmit, Southern Economic Journal" 
+title: "The China Shock and Internal Migration: Evidence from Bilateral Migration Flows" 
+date: 2024-03-15
+tags: ["China trade shock","internal migration","labor adjustment"]
+author: ["Jaerim Choi", "Hyoungchul Kim", "Seung Hoon Lee"]
+description: "Under review" 
+summary: "Under review" 
 
 ---
 
@@ -12,17 +12,19 @@ summary: "Revise and resubmit, Southern Economic Journal"
 
 ##### Download
 
-+ [Working paper](https://www.dropbox.com/scl/fi/113r6xed29hg8rtzm1klg/thaad_paper_Feb_2024.pdf?rlkey=xz01ikf3sfspm1uyr74pky2pf&e=1&dl=0)
++ [Working paper](https://www.dropbox.com/scl/fi/biigga26hxs7jcfu8bwtp/migration_china_shock.pdf?rlkey=1ycpxjq450jet62a8vdrew19m&dl=0)
 
 ---
 
-##### Coauthors
+#### Coauthors
 
-+ [Jongkwan Lee](https://sites.google.com/site/kwanlee84/home?authuser=0)
++ [Jaerim Choi](http://www.jaerimchoi.com/)
++ [Seung Hoon Lee](https://sites.google.com/view/seunghoon/home)
 
 ---
 
 ##### Abstract
 
-We estimate the impact of political conflict on immigration using economic sanctions imposed by China on South Korea as a natural experiment. Due to the deployment of the Terminal High-Altitude Area Defense (THAAD) system in South Korea in 2016 (in cooperation with the US), China started a series of retaliatory actions that could potentially hurt immigration by increasing anti-immigrant sentiment among Koreans. We use the synthetic control method and find no evidence suggesting a significant decline in the number of Chinese immigrants in South Korea. To explore the mechanism of this null effect, we also examine the impact of the dispute on attitudes toward China among Koreans and experiences of discrimination among Chinese people in South Korea. While negative perceptions of China greatly increased, experiences of discrimination did not increase. Taken together, this suggests that negative views of a country do not necessarily lead to a decrease in immigration from that country.
+Using Korean administrative datasets spanning almost two decades and covering nearly the entire bilateral internal migration flows between local labor markets, we identify the causal impact of the China trade shock on internal migration. The trade shock affects in-migration, but not out-migration. Separating further the China trade shock into export and import shocks, we find that export expansion increases in-migration, whereas import competition reduces in-migration. By decomposing the impact of trade shock into age groups, we find that effects of trade shocks in destination are robust and statistically significant across age groups; and most pronounced for middle-aged people between the ages of 45 and 64. Finally, households with male heads are more likely to be influenced by the trade shock compared to those with female heads, due to the greater reliance of the manufacturing sector on male labor.
+
 
