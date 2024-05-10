@@ -12,7 +12,7 @@ summary: "Accepted, Southern Economic Journal"
 
 ##### Download
 
-+ [Working paper](https://www.dropbox.com/scl/fi/113r6xed29hg8rtzm1klg/thaad_paper_Feb_2024.pdf?rlkey=xz01ikf3sfspm1uyr74pky2pf&e=1&dl=0)
++ [Working paper (recent)](https://www.dropbox.com/scl/fi/113r6xed29hg8rtzm1klg/thaad_paper_Feb_2024.pdf?rlkey=xz01ikf3sfspm1uyr74pky2pf&e=1&dl=0)
 
 ---
 
