@@ -2,8 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://hchulkim.github.io/papers/paper2/</loc>
+    <lastmod>2024-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hchulkim.github.io/tags/economic-sanctions/</loc>
+    <lastmod>2024-05-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://hchulkim.github.io/</loc>
-    <lastmod>2024-04-28T00:00:00+00:00</lastmod>
+    <lastmod>2024-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hchulkim.github.io/tags/immigration/</loc>
+    <lastmod>2024-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hchulkim.github.io/papers/</loc>
+    <lastmod>2024-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hchulkim.github.io/tags/political-conflict/</loc>
+    <lastmod>2024-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hchulkim.github.io/tags/</loc>
+    <lastmod>2024-05-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hchulkim.github.io/posts/posts1/</loc>
     <lastmod>2024-04-28T00:00:00+00:00</lastmod>
@@ -20,29 +38,11 @@
     <loc>https://hchulkim.github.io/tags/labor-adjustment/</loc>
     <lastmod>2024-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://hchulkim.github.io/tags/</loc>
-    <lastmod>2024-03-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://hchulkim.github.io/working/paper1/</loc>
     <lastmod>2024-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hchulkim.github.io/working/</loc>
     <lastmod>2024-03-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hchulkim.github.io/papers/paper2/</loc>
-    <lastmod>2024-02-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hchulkim.github.io/tags/economic-sanctions/</loc>
-    <lastmod>2024-02-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hchulkim.github.io/tags/immigration/</loc>
-    <lastmod>2024-02-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hchulkim.github.io/papers/</loc>
-    <lastmod>2024-02-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://hchulkim.github.io/tags/political-conflict/</loc>
-    <lastmod>2024-02-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hchulkim.github.io/tags/regional-imbalance/</loc>
     <lastmod>2023-12-09T00:00:00+00:00</lastmod>
