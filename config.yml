@@ -72,8 +72,6 @@ params:
               url: teaching/
             - name: Contact
               url: contact/
-            - name: Blog Posts
-              url: posts/
     socialIcons:
         - name: Email
           url: mailto:hchulkim@wharton.upenn.edu
