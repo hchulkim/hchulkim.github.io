@@ -3,8 +3,8 @@ title: "The China Shock and Internal Migration: Evidence from Bilateral Migratio
 date: 2024-03-15
 tags: ["China trade shock","internal migration","labor adjustment"]
 author: ["Jaerim Choi", "Hyoungchul Kim", "Seung Hoon Lee"]
-description: "" 
-summary: "" 
+description: "." 
+summary: "." 
 
 ---
 
