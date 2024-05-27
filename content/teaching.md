@@ -15,7 +15,7 @@ TBA
 
 #### Yonsei University
 
-**Math Camp Instructor** for incoming graduate students, Summer 2023, Winter 2023
+**[Math Camp Instructor](https://www.youtube.com/watch?v=hjO35TmESkc&list=PL8e0vwT2KNJG5JnQd4odKsoxYrlHDU2bi)** for incoming graduate students, Summer 2023, Winter 2023
 
 **Teaching Assistant to Prof. Seung Hoon Lee**
 - Urban Economics (Spring 2023).
