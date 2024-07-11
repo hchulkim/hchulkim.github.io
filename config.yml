@@ -29,7 +29,7 @@ menu:
         - name: Contact 
           url: contact/
 params:
-    description: I am a Ph.D. student in Applied Economics at the Wharton School, University of Pennsylvania. You can either call me Hyoungchul (H-Young-Cheol Kim.) or Kent (my english name).
+    description: I am a Ph.D. student in Applied Economics at the Wharton School, University of Pennsylvania. You can either call me Hyoungchul (H-Young-Cheol Kim) or Kent (my english name).
     author: Hyoungchul (Kent) Kim
     # googleAnalyticsID: "G-XXXXX"
     DateFormat: "January 2006"
@@ -54,11 +54,11 @@ params:
     profileMode:
           enabled: true
           title: <span style="color:#011F5B">Hyoungchul Kim</span> 
-          subtitle: I am a Ph.D. student in <span style="color:#011F5B">**Applied Economics**</span> at the <span style="color:#011F5B">**Wharton School, University of Pennsylvania**</span>. You can either call me Hyoungchul (H-Young-Cheol Kim.) or Kent (my english name)."
+          subtitle: I am a Ph.D. student in <span style="color:#011F5B">**Applied Economics**</span> at the <span style="color:#011F5B">**Wharton School, University of Pennsylvania**</span>. You can either call me Hyoungchul (H-Young-Cheol Kim) or Kent (my english name)."
           imageUrl: personal.jpeg
           imageWidth: 160
           imageHeight: 160
-          imageTitle: Hyoungchul Kim
+          imageTitle: Hyoungchul (Kent) Kim
           buttons:
             - name: CV
               url: https://www.dropbox.com/scl/fi/6ohqv9tgt5ihvdwau40gz/cv-kim.pdf?rlkey=y7xuyfopqrd398pnuzx9okuhm&dl=0
