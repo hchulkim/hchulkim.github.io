@@ -30,7 +30,7 @@ menu:
           url: contact/
 params:
     description: I am a Ph.D. student in Applied Economics at the Wharton School, University of Pennsylvania. You can either call me Hyoungchul (H-Young-Cheol Kim.) or Kent (my english name).
-    author: Hyoungchul Kim
+    author: Hyoungchul (Kent) Kim
     # googleAnalyticsID: "G-XXXXX"
     DateFormat: "January 2006"
     defaultTheme: light
