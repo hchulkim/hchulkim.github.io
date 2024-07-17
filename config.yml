@@ -91,7 +91,7 @@ params:
         hiddenInList: false
         hiddenInSingle: true
     label:
-      text: "Hyoungchul (Kent) Kim"
+      text: "Hyoungchul Kim"
       icon: favicon.ico
       iconHeight: 18
 
