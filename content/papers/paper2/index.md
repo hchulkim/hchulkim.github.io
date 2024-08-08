@@ -12,7 +12,7 @@ summary: "Accepted, Southern Economic Journal"
 
 ##### Download
 
-+ [Article (forthcoming)](https://onlinelibrary-wiley-com.proxy.library.upenn.edu/doi/10.1002/soej.12723)
++ [Article (forthcoming)](http://doi.org/10.1002/soej.12723)
 
 ---
 
