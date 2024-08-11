@@ -3,8 +3,8 @@ title: "Does Political Conflict hurt Immigration? Evidence from the South Korea 
 date: 2024-05-01
 tags: ["immigration","political conflict","economic sanctions"]
 author: ["Hyoungchul Kim", "Jongkwan Lee"]
-description: "Accepted, Southern Economic Journal" 
-summary: "Accepted, Southern Economic Journal" 
+description: "Forthcoming, Southern Economic Journal" 
+summary: "Forthcoming, Southern Economic Journal" 
 
 ---
 
@@ -12,7 +12,7 @@ summary: "Accepted, Southern Economic Journal"
 
 ##### Download
 
-+ [Article (forthcoming)](http://doi.org/10.1002/soej.12723)
++ [Article](http://doi.org/10.1002/soej.12723)
 
 ---
 
