@@ -11,7 +11,7 @@ description: "Contact Information"
 
 **The Wharton School, University of Pennsylvania**
 
-Vance Hall
+348B, Vance Hall
 
 2733 Spruce Street
 
