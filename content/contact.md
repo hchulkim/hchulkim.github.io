@@ -11,9 +11,9 @@ description: "Contact Information"
 
 **The Wharton School, University of Pennsylvania**
 
-Vance Hall 348B
+Dinan Hall (formerly Vance Hall) 348B
 
-2733 Spruce Street
+3733 Spruce Street
 
 Philadelphia PA, 19104
 
