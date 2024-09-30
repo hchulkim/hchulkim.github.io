@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Labor Adjustment on Hyoungchul Kim</title>
-    <link>https://hchulkim.github.io/tags/labor-adjustment/</link>
+    <link>http://localhost:1313/tags/labor-adjustment/</link>
     <description>Recent content in Labor Adjustment on Hyoungchul Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 15 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hchulkim.github.io/tags/labor-adjustment/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/labor-adjustment/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The China Shock and Internal Migration: Evidence from Bilateral Migration Flows</title>
-      <link>https://hchulkim.github.io/working/paper1/</link>
+      <link>http://localhost:1313/working/paper1/</link>
       <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://hchulkim.github.io/working/paper1/</guid>
+      <guid>http://localhost:1313/working/paper1/</guid>
       <description>Under major revision</description>
     </item>
     
