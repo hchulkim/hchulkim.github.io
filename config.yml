@@ -12,7 +12,7 @@ taxonomies:
 menu:
     main:
         - name: CV
-          url: https://www.dropbox.com/scl/fi/3lq5qrzgcvz9c3975mg1t/cv-kim.pdf?rlkey=zel0j2ghqocupokmgafj7f1lk&dl=0
+          url: cv-kim.pdf
           weight: 1
         - name: Education
           url: education/
@@ -61,7 +61,7 @@ params:
           imageTitle: Hyoungchul Kim
           buttons:
             - name: CV
-              url: https://www.dropbox.com/scl/fi/3lq5qrzgcvz9c3975mg1t/cv-kim.pdf?rlkey=zel0j2ghqocupokmgafj7f1lk&dl=0
+              url: cv-kim.pdf
             - name: Education
               url: education/
             - name: Working Papers
