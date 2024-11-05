@@ -2,108 +2,108 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Hyoungchul Kim</title>
-    <link>http://localhost:1313/</link>
+    <link>https://hchulkim.github.io/</link>
     <description>Recent content on Hyoungchul Kim</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 01 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://hchulkim.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Does Political Conflict hurt Immigration? Evidence from the South Korea – China THAAD Dispute</title>
-      <link>http://localhost:1313/papers/paper2/</link>
+      <link>https://hchulkim.github.io/papers/paper2/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/papers/paper2/</guid>
+      <guid>https://hchulkim.github.io/papers/paper2/</guid>
       <description>Forthcoming, Southern Economic Journal</description>
     </item>
     
     <item>
       <title>My Korean Blog</title>
-      <link>http://localhost:1313/posts/posts1/</link>
+      <link>https://hchulkim.github.io/posts/posts1/</link>
       <pubDate>Sun, 28 Apr 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/posts1/</guid>
+      <guid>https://hchulkim.github.io/posts/posts1/</guid>
       <description>Link to my Korean Blog.</description>
     </item>
     
     <item>
       <title>The China Shock and Internal Migration: Evidence from Bilateral Migration Flows</title>
-      <link>http://localhost:1313/working/paper1/</link>
+      <link>https://hchulkim.github.io/working/paper1/</link>
       <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/working/paper1/</guid>
+      <guid>https://hchulkim.github.io/working/paper1/</guid>
       <description>Under major revision</description>
     </item>
     
     <item>
       <title>The Well-Being of Cities: Estimating Migration Attractiveness From Internal Migration Across Korean Cities</title>
-      <link>http://localhost:1313/papers/paper1/</link>
+      <link>https://hchulkim.github.io/papers/paper1/</link>
       <pubDate>Sat, 09 Dec 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/papers/paper1/</guid>
+      <guid>https://hchulkim.github.io/papers/paper1/</guid>
       <description>Global Economic Review</description>
     </item>
     
     <item>
       <title>Dataset Title</title>
-      <link>http://localhost:1313/data/data1/</link>
+      <link>https://hchulkim.github.io/data/data1/</link>
       <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/data/data1/</guid>
+      <guid>https://hchulkim.github.io/data/data1/</guid>
       <description>This dataset contains things.</description>
     </item>
     
     <item>
       <title>Course Title 1</title>
-      <link>http://localhost:1313/courses/course1/</link>
+      <link>https://hchulkim.github.io/courses/course1/</link>
       <pubDate>Thu, 10 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/courses/course1/</guid>
+      <guid>https://hchulkim.github.io/courses/course1/</guid>
       <description>This graduate course presents things.</description>
     </item>
     
     <item>
       <title>Course Title 2</title>
-      <link>http://localhost:1313/courses/course2/</link>
+      <link>https://hchulkim.github.io/courses/course2/</link>
       <pubDate>Wed, 16 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/courses/course2/</guid>
+      <guid>https://hchulkim.github.io/courses/course2/</guid>
       <description>This undergraduate course presents many new things.</description>
     </item>
     
     
     <item>
       <title>Contact Information</title>
-      <link>http://localhost:1313/contact/</link>
+      <link>https://hchulkim.github.io/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/contact/</guid>
+      <guid>https://hchulkim.github.io/contact/</guid>
       <description>Contact Information</description>
     </item>
     
     <item>
       <title>Education</title>
-      <link>http://localhost:1313/education/</link>
+      <link>https://hchulkim.github.io/education/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/education/</guid>
+      <guid>https://hchulkim.github.io/education/</guid>
       <description>Education</description>
     </item>
     
     <item>
       <title>Office Hours</title>
-      <link>http://localhost:1313/officehours/</link>
+      <link>https://hchulkim.github.io/officehours/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/officehours/</guid>
+      <guid>https://hchulkim.github.io/officehours/</guid>
       <description>Schedule and location for office hours.</description>
     </item>
     
     <item>
       <title>Teaching</title>
-      <link>http://localhost:1313/teaching/</link>
+      <link>https://hchulkim.github.io/teaching/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/teaching/</guid>
+      <guid>https://hchulkim.github.io/teaching/</guid>
       <description>Teaching</description>
     </item>
     
