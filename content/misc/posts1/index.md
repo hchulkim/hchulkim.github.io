@@ -7,9 +7,7 @@ summary: "Link to my Korean Blog."
 
 --- 
 
-In case anyone is interested, I sometimes post things in Korean. The link to the blog is here. I will occasionally post things (in English) on this site as well.
-
-[Korean Blog](https://blog.naver.com/himakun)
+In case anyone is interested, I sometimes post things in Korean. If you want to check it out, email me.
 
 
 
