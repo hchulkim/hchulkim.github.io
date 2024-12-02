@@ -28,6 +28,8 @@ menu:
           weight: 5
         - name: Contact 
           url: contact/
+        - name: Misc.
+          url: misc/
 params:
     description: I am a PhD student in Applied Economics at The Wharton School, University of Pennsylvania. You can either call me Hyoungchul (H-Young-Cheol) or Kent (english name).
     author: Hyoungchul Kim
@@ -72,6 +74,8 @@ params:
               url: teaching/
             - name: Contact
               url: contact/
+            - name: Misc.
+              url: misc/
     socialIcons:
         - name: Email
           url: mailto:hchulkim@wharton.upenn.edu
