@@ -13,16 +13,12 @@ menu:
     main:
         - name: CV
           url: cv-kim.pdf
-          weight: 1
         - name: Working Papers
           url: working/
-          weight: 2
         - name: Publications
           url: papers/
-          weight: 3
         - name: Teaching
           url: teaching/
-          weight: 4
         - name: Contact 
           url: contact/
         - name: Misc.
