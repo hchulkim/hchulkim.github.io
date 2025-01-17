@@ -2,7 +2,8 @@
   {
     "listing": "/posts/index.html",
     "items": [
-      "/posts/hello-quarto/index.html"
+      "/posts/hello-quarto/index.html",
+      "/posts/sql-info/index.html"
     ]
   }
 ]
