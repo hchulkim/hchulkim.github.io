@@ -1,7 +1,7 @@
 ---
 title: "SQL materials"
 description: "Resources for learning SQL"
-date: "2025-01-30"
+date: "2025-01-17"
 toc: false
 categories:
   - Study
@@ -9,7 +9,7 @@ categories:
 
 Here are some of the resources that I used (or plan to use) to understand SQL.
 
-- [SQL masterclass(https://nomadcoders.co/sql-masterclass/lobby)
+- [SQL masterclass](https://nomadcoders.co/sql-masterclass/lobby)
 - [Teach SQL in grad school](https://alemartinello.com/posts/2024-12_TeachSQLinGradSchool.html)
 - [DuckDB and Polars](https://grantmcdermott.com/duckdb-polars/)
 - [True order of SQL](https://blog.jooq.org/a-beginners-guide-to-the-true-order-of-sql-operations/)
