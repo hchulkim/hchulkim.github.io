@@ -1,0 +1,17 @@
+---
+title: "SQL materials"
+description: "Resources for learning SQL"
+date: "2025-01-30"
+toc: false
+categories:
+  - Study
+---
+
+Here are some of the resources that I used (or plan to use) to understand SQL.
+
+- [SQL masterclass(https://nomadcoders.co/sql-masterclass/lobby)
+- [Teach SQL in grad school](https://alemartinello.com/posts/2024-12_TeachSQLinGradSchool.html)
+- [DuckDB and Polars](https://grantmcdermott.com/duckdb-polars/)
+- [True order of SQL](https://blog.jooq.org/a-beginners-guide-to-the-true-order-of-sql-operations/)
+- [SQL order of operations](https://www.eversql.com/sql-order-of-operations-sql-query-order-of-execution/)
+- [Google big query using R](http://jsmayorga.com/post/getting-global-fishing-watch-from-google-bigquery-using-r/)
