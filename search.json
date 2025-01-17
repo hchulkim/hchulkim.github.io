@@ -25,7 +25,7 @@
     "href": "posts/index.html",
     "title": "Blog",
     "section": "",
-    "text": "Hello, Quarto\n\n\n\n\n\n\nmedia\n\n\n\nMigrating from hugo github page\n\n\n\n\n\nJan 30, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nSQL materials\n\n\n\n\n\n\nStudy\n\n\n\nResources for learning SQL\n\n\n\n\n\nJan 30, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\nNo matching items"
+    "text": "Hello, Quarto\n\n\n\n\n\n\nmedia\n\n\n\nMigrating from hugo github page\n\n\n\n\n\nJan 30, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nSQL materials\n\n\n\n\n\n\nStudy\n\n\n\nResources for learning SQL\n\n\n\n\n\nJan 17, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "teaching/index.html",
@@ -39,7 +39,7 @@
     "href": "posts/sql-info/index.html",
     "title": "SQL materials",
     "section": "",
-    "text": "Here are some of the resources that I used (or plan to use) to understand SQL.\n\n[SQL masterclass(https://nomadcoders.co/sql-masterclass/lobby)\nTeach SQL in grad school\nDuckDB and Polars\nTrue order of SQL\nSQL order of operations\nGoogle big query using R"
+    "text": "Here are some of the resources that I used (or plan to use) to understand SQL.\n\nSQL masterclass\nTeach SQL in grad school\nDuckDB and Polars\nTrue order of SQL\nSQL order of operations\nGoogle big query using R"
   },
   {
     "objectID": "index.html",
