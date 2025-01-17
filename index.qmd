@@ -1,0 +1,29 @@
+---
+title: "Hyoungchul Kim"
+image: bio-picture.png
+about:
+  template: solana #jolla trestles
+  links:
+    - icon: file-text-fill 
+      text: CV
+      href: vita/cv-kim.pdf
+    - icon: github
+      text: Github
+      href: https://github.com/hchulkim
+    - icon: linkedin
+      text: LinkedIn
+      href: https://kr.linkedin.com/in/hyoungchul-kim-267104306 
+    - text: "{{< iconify academicons google-scholar >}} Scholar"
+      href: https://scholar.google.com/citations?user=GaRgVqoAAAAJ&hl=ko 
+#    - text: "{{< iconify academicons orcid>}} ORCID"
+#      href: https://orcid.org/0000-0001-7883-8573
+    - icon: envelope
+      text: Email
+      aria-label: email
+      href: "mailto:hchulkim@wharton.upenn.edu"
+
+---
+
+I am a Ph.D. student in Applied Economics at The Wharton School, University of Pennsylvania. 
+
+You can either call em Hyoungchul (H-Young-Cheol) or Kent (my english name).

@@ -1,0 +1,33 @@
+project:
+  type: website
+
+website:
+  site-url: "https://hchulkim.github.io"
+  title: "Hyoungchul Kim"
+  page-footer: "Copyright Hyoungchul Kim, 2024"
+  navbar:
+    left:
+      - text: Home
+        href: index.qmd
+      - text: CV
+        href: vita/cv-kim.pdf 
+      - research/index.qmd
+      - teaching/index.qmd
+      - text: Blog
+        href: posts/index.qmd
+    right:
+      - icon: github
+        href: https://github.com/hchulkim
+      - icon: twitter
+        href: https://x.com/hckim_econ
+      - text: "{{< iconify fa6-brands:bluesky >}}"
+        href: https://bsky.app/profile/himakun.bsky.social
+  favicon: favicon.ico
+  open-graph: true
+format:
+  html:
+    theme:
+      - cosmo
+    css: styles.css
+execute:
+  freeze: auto
