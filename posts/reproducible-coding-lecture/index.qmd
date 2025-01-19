@@ -7,4 +7,4 @@ categories:
   - lecture
 ---
 
-I recently did a crash course on "reproducible coding" at my [alma mater](https://economics.yonsei.ac.kr/economics/index.co). Here is my [material](https://github.com/hchulkim/reproducible-coding-slide) for the course. It mostly deals with **Bash, Project environment (Renv, Poetry), Automation (Make), Docker**.
+I recently did a crash course on "reproducible coding" at my [alma mater](https://economics.yonsei.ac.kr/). Here is my [material](https://github.com/hchulkim/reproducible-coding-slide) for the course. It mostly deals with **Bash, Project environment (Renv, Poetry), Automation (Make), Docker**.
