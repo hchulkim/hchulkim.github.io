@@ -61,5 +61,12 @@
     "title": "Hello, Quarto",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nIn case you want to check out my past hugo website, click here↩︎"
+  },
+  {
+    "objectID": "posts/reproducible-coding-lecture/index.html",
+    "href": "posts/reproducible-coding-lecture/index.html",
+    "title": "Reproducible coding crash course",
+    "section": "",
+    "text": "I recently did a crash course on “reproducible coding” at my alma mater"
   }
 ]

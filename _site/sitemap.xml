@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://hchulkim.github.io/posts/hello-quarto/index.html</loc>
-    <lastmod>2025-01-19T16:06:00.576Z</lastmod>
+    <lastmod>2025-01-19T16:06:24.776Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/research/index.html</loc>
@@ -23,5 +23,9 @@
   <url>
     <loc>https://hchulkim.github.io/posts/sql-info/index.html</loc>
     <lastmod>2025-01-18T05:32:25.963Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hchulkim.github.io/posts/reproducible-coding-lecture/index.html</loc>
+    <lastmod>2025-01-19T16:12:27.887Z</lastmod>
   </url>
 </urlset>
