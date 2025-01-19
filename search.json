@@ -25,14 +25,21 @@
     "href": "posts/index.html",
     "title": "Blog",
     "section": "",
-    "text": "Hello, Quarto\n\n\n\n\n\n\nmedia\n\n\n\nMigrating from hugo github page\n\n\n\n\n\nJan 18, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nSQL materials\n\n\n\n\n\n\nstudy\n\n\n\nResources for learning SQL\n\n\n\n\n\nJan 17, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\nNo matching items"
+    "text": "Hello, Quarto\n\n\n\n\n\n\nmedia\n\n\n\nMigrating from hugo github page\n\n\n\n\n\nJan 19, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nSQL materials\n\n\n\n\n\n\nstudy\n\n\n\nResources for learning SQL\n\n\n\n\n\nJan 17, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/hello-quarto/index.html",
     "href": "posts/hello-quarto/index.html",
     "title": "Hello, Quarto",
     "section": "",
-    "text": "Recently, I successfully migrated my website over to Quarto. My past website using Hugo was not that bad but it was bit too glitchy for me. Luckily, I was able to learn that it was possible to make a website using Quarto. After some trial and error, I was able to set it up.\nFor me, migrating was not that painful as I did not have much information on my website. In fact, this was partially due to the fragility of my past website. For some reason, my website would sometimes go full 404 when I commit new info on my website. In order to solve this, I had to make some meaningless changes to re-commit my git repository. This problem does not seem to occur in Quarto. Finally, I will be able to actively use my Blog section.\nFYI, I will write down some words about the problems I faced when migrating. I was bit stuck when I had to type quarto publish gh-pages. According to Quarto documentation, this code “will confirm that you want to publish, render your content, copy the output to a special gh-pages branch, push that branch to GitHub, and then open a browser to view your site once it is deployed.” The problem was that my command will not go through in the deployment process. The deployment will go on forever. I googled it and one of the solutions seems to be that I need to delete my gh-pages branch and old deployment point to re-initiate it. But I solved it by typing quarto publish gh-pages --no-browser. This is bit weird because Quarto documentation says you should use this option when you are publishing to a private website. While I don’t think my website is a private one, this somehow made my command go through.\nAlso, I had to specify gh-pages branch manually in the repo settings in the github repository."
+    "text": "Recently, I successfully migrated my website over to Quarto. My past website using Hugo1 was not that bad but it was bit too glitchy for me. Luckily, I was able to learn that it was possible to make a website using Quarto. After some trial and error, I was able to set it up.\nFor me, migrating was not that painful as I did not have much information on my website. In fact, this was partially due to the fragility of my past website. For some reason, my website would sometimes go full 404 when I commit new info on my website. In order to solve this, I had to make some meaningless changes to re-commit my git repository. This problem does not seem to occur in Quarto. Finally, I will be able to actively use my Blog section.\nFYI, I will write down some words about the problems I faced when migrating. I was bit stuck when I had to type quarto publish gh-pages. According to Quarto documentation, this code “will confirm that you want to publish, render your content, copy the output to a special gh-pages branch, push that branch to GitHub, and then open a browser to view your site once it is deployed.” The problem was that my command will not go through in the deployment process. The deployment will go on forever. I googled it and one of the solutions seems to be that I need to delete my gh-pages branch and old deployment point to re-initiate it. But I solved it by typing quarto publish gh-pages --no-browser. This is bit weird because Quarto documentation says you should use this option when you are publishing to a private website. While I don’t think my website is a private one, this somehow made my command go through.\nAlso, I had to specify gh-pages branch manually in the repo settings in the github repository."
+  },
+  {
+    "objectID": "posts/hello-quarto/index.html#footnotes",
+    "href": "posts/hello-quarto/index.html#footnotes",
+    "title": "Hello, Quarto",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nIn case you want to check out my past hugo website, click here↩︎"
   },
   {
     "objectID": "teaching/index.html",
