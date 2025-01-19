@@ -25,7 +25,7 @@
     "href": "posts/index.html",
     "title": "Blog",
     "section": "",
-    "text": "Hello, Quarto\n\n\n\n\n\n\nmedia\n\n\n\nMigrating from hugo github page\n\n\n\n\n\nJan 19, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nSQL materials\n\n\n\n\n\n\nstudy\n\n\n\nResources for learning SQL\n\n\n\n\n\nJan 17, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\nNo matching items"
+    "text": "Reproducible coding crash course\n\n\n\n\n\n\nlecture\n\n\n\nMy slide and resources on reproducible coding\n\n\n\n\n\nJan 20, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nHello, Quarto\n\n\n\n\n\n\nmedia\n\n\n\nMigrating from hugo github page\n\n\n\n\n\nJan 19, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nSQL materials\n\n\n\n\n\n\nstudy\n\n\n\nResources for learning SQL\n\n\n\n\n\nJan 17, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/hello-quarto/index.html",
@@ -47,6 +47,13 @@
     "title": "Teaching",
     "section": "",
     "text": "TBD"
+  },
+  {
+    "objectID": "posts/reproducible-coding-lecture/index.html",
+    "href": "posts/reproducible-coding-lecture/index.html",
+    "title": "Reproducible coding crash course",
+    "section": "",
+    "text": "I recently did a crash course on “reproducible coding” at my alma mater. Here is my material for the course. It mostly deals with Bash, Project environment (Renv, Poetry), Automation (Make), Docker."
   },
   {
     "objectID": "posts/sql-info/index.html",
