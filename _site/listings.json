@@ -2,7 +2,9 @@
   {
     "listing": "/posts/index.html",
     "items": [
-      "/posts/hello-quarto/index.html"
+      "/posts/reproducible-coding-lecture/index.html",
+      "/posts/hello-quarto/index.html",
+      "/posts/sql-info/index.html"
     ]
   }
 ]
