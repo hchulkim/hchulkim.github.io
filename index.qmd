@@ -26,4 +26,4 @@ about:
 
 I am a Ph.D. student in <span style="color:#011F5B;">**Applied Economics**</span> at <span style="color:#011F5B;">**The Wharton School**</span>, <span style="color:#011F5B;">**University of Pennsylvania**</span>. 
 
-You can either call me Hyoungchul (H-Young-Cheol) or Kent (my english name).
+You can either call me **Hyoungchul (H-Young-Cheol)** or **Kent (my english name)**.
