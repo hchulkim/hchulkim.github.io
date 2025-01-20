@@ -68,5 +68,12 @@
     "title": "Reproducible coding crash course",
     "section": "",
     "text": "I recently did a crash course on “reproducible coding” at my alma mater. Here is my material for the course. It mostly deals with Bash, Project environment (Renv, Poetry), Automation (Make), Docker."
+  },
+  {
+    "objectID": "posts/admission-econ/index.html",
+    "href": "posts/admission-econ/index.html",
+    "title": "Admission tips for Econ. Ph.D. (by Ph.D. student)",
+    "section": "",
+    "text": "I had a chance to talk about some admission tips for master students in my university after my application process. I decided to share this slide on my website. You can find it here.\n\nDisclaimer\nThis slides only consist of my personal experience. That being said, lot of it can have some misinformation. Also, some of the contents are tailored to the students in my alma mater."
   }
 ]

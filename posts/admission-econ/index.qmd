@@ -1,0 +1,14 @@
+---
+title: "Admission tips for Econ. Ph.D. (by Ph.D. student)"
+description: "Admission tips slide I wrote for master students at Alma Mater"
+date: "2025-01-20"
+toc: false
+categories:
+  - lecture
+---
+
+I had a chance to talk about some admission tips for master students in my university after my application process (It happened later year). I decided to share this slide on my website. You can find it [here](resource/slide.pdf).
+
+### Disclaimer
+
+This slides only consist of my personal experience. That being said, lot of it can have some misinformation. Also, some of the contents are tailored to the students in my alma mater. 
