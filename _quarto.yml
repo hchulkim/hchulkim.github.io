@@ -15,6 +15,7 @@ website:
       - teaching/index.qmd
       - text: Blog
         href: posts/index.qmd
+      - misc/index.qmd
     right:
       - icon: github
         href: https://github.com/hchulkim
