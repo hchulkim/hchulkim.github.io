@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Hyoungchul Kim",
+    "section": "",
+    "text": "I am a Ph.D. student in Applied Economics at The Wharton School, University of Pennsylvania.\nYou can either call me Hyoungchul (H-Young-Cheol) or Kent (my english name)."
+  },
+  {
     "objectID": "research/index.html",
     "href": "research/index.html",
     "title": "Research",
@@ -21,18 +28,25 @@
     "text": "Publications\n[2] “Does political conflict hurt immigration? Evidence from the South Korea – China THAAD Dispute” with Jongkwan Lee. Aug. 2024. Published in Southern Economic Journal [Paper].\n[1] “The well-being of cities: Estimating migration attractiveness from internal migration across Korean cities” with Seung Hoon Lee and Ji Sub Park. Feb. 2024. Published in Global Economic Review [Paper]."
   },
   {
-    "objectID": "posts/empirical-econ/index.html",
-    "href": "posts/empirical-econ/index.html",
-    "title": "Summary of my understanding of terms in empirical economics",
+    "objectID": "posts/reproducible-coding-lecture/index.html",
+    "href": "posts/reproducible-coding-lecture/index.html",
+    "title": "Reproducible coding crash course",
     "section": "",
-    "text": "I had some time last year to study about some terms and jargons used in empirical economics. I decided to share this slide on my website. You can find it here.\n\nDisclaimer\nThis is just a summary of the things I have read and studied. That being said, none of it should be credited as my work."
+    "text": "I recently did a crash course on “reproducible coding” at my alma mater. Here is my material for the course. It mostly deals with Bash, Project environment (Renv, Poetry), Automation (Make), Docker."
   },
   {
     "objectID": "posts/index.html",
     "href": "posts/index.html",
     "title": "Blog",
     "section": "",
-    "text": "Reproducible coding crash course\n\n\n\n\n\n\nlecture\n\n\n\nMy slide and resources on reproducible coding\n\n\n\n\n\nJan 20, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nAdmission tips for Econ. Ph.D. (by Ph.D. student)\n\n\n\n\n\n\nlecture\n\n\n\nAdmission tips slide I wrote for master students at Alma Mater\n\n\n\n\n\nJan 20, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nSummary of my understanding of terms in empirical economics\n\n\n\n\n\n\nstudy\n\n\n\nSummary of some terms and jargons in the field of empirical economics\n\n\n\n\n\nJan 20, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nHello, Quarto\n\n\n\n\n\n\nmedia\n\n\n\nMigrating from hugo github page\n\n\n\n\n\nJan 19, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nSQL materials\n\n\n\n\n\n\nstudy\n\n\n\nResources for learning SQL\n\n\n\n\n\nJan 17, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\nNo matching items"
+    "text": "Summary of my understanding of terms in empirical economics\n\n\n\n\n\n\nstudy\n\n\n\nSummary of some terms and jargons in the field of empirical economics\n\n\n\n\n\nJan 20, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nAdmission tips for Econ. Ph.D. (by Ph.D. student)\n\n\n\n\n\n\nlecture\n\n\n\nAdmission tips slide I wrote for master students at Alma Mater\n\n\n\n\n\nJan 20, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nReproducible coding crash course\n\n\n\n\n\n\nlecture\n\n\n\nMy slide and resources on reproducible coding\n\n\n\n\n\nJan 20, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nHello, Quarto\n\n\n\n\n\n\nmedia\n\n\n\nMigrating from hugo github page\n\n\n\n\n\nJan 19, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nSQL materials\n\n\n\n\n\n\nstudy\n\n\n\nResources for learning SQL\n\n\n\n\n\nJan 17, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/empirical-econ/index.html",
+    "href": "posts/empirical-econ/index.html",
+    "title": "Summary of my understanding of terms in empirical economics",
+    "section": "",
+    "text": "I had some time last year to study about some terms and jargons used in empirical economics. I decided to share this slide on my website. You can find it here.\n\nDisclaimer\nThis is just a summary of the things I have read and studied. That being said, none of it should be credited as my work."
   },
   {
     "objectID": "posts/hello-quarto/index.html",
@@ -49,18 +63,11 @@
     "text": "Footnotes\n\n\nIn case you want to check out my past hugo website, click here↩︎"
   },
   {
-    "objectID": "teaching/index.html",
-    "href": "teaching/index.html",
-    "title": "Teaching",
+    "objectID": "posts/admission-econ/index.html",
+    "href": "posts/admission-econ/index.html",
+    "title": "Admission tips for Econ. Ph.D. (by Ph.D. student)",
     "section": "",
-    "text": "TBD"
-  },
-  {
-    "objectID": "posts/reproducible-coding-lecture/index.html",
-    "href": "posts/reproducible-coding-lecture/index.html",
-    "title": "Reproducible coding crash course",
-    "section": "",
-    "text": "I recently did a crash course on “reproducible coding” at my alma mater. Here is my material for the course. It mostly deals with Bash, Project environment (Renv, Poetry), Automation (Make), Docker."
+    "text": "I had a chance to talk about some admission tips for master students in my university after my application process (It happened later year). I decided to share this slide on my website. You can find it here.\n\nDisclaimer\nThis slides only consist of my personal experience. That being said, lot of it can have some misinformation. Also, some of the contents are tailored to the students in my alma mater."
   },
   {
     "objectID": "posts/sql-info/index.html",
@@ -70,17 +77,24 @@
     "text": "Here are some of the resources that I used (or plan to use) to understand SQL.\n\nSQL masterclass\nTeach SQL in grad school\nDuckDB and Polars\nTrue order of SQL\nSQL order of operations\nGoogle big query using R"
   },
   {
-    "objectID": "posts/admission-econ/index.html",
-    "href": "posts/admission-econ/index.html",
-    "title": "Admission tips for Econ. Ph.D. (by Ph.D. student)",
+    "objectID": "teaching/index.html",
+    "href": "teaching/index.html",
+    "title": "Teaching",
     "section": "",
-    "text": "I had a chance to talk about some admission tips for master students in my university after my application process (It happened later year). I decided to share this slide on my website. You can find it here.\n\nDisclaimer\nThis slides only consist of my personal experience. That being said, lot of it can have some misinformation. Also, some of the contents are tailored to the students in my alma mater."
+    "text": "TBD"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Hyoungchul Kim",
+    "objectID": "misc/index.html",
+    "href": "misc/index.html",
+    "title": "Misc.",
     "section": "",
-    "text": "I am a Ph.D. student in Applied Economics at The Wharton School, University of Pennsylvania.\nYou can either call me Hyoungchul (H-Young-Cheol) or Kent (my english name)."
+    "text": "These are some info on the courses that I took.\n\nPhD Applied Econometrics (HCMG 9010, UPenn), Spring 2025: [Personal summary] [PS-solutions]\nPhD Advanced Real Estate and Urban Economics (REAL 9470, UPenn, Spring 2025): [Personal summary]\nPhD Public Economics (BEPP 9330, UPenn, Spring 2025): [Personal summary] PS1-solutions"
+  },
+  {
+    "objectID": "misc/index.html#courses",
+    "href": "misc/index.html#courses",
+    "title": "Misc.",
+    "section": "",
+    "text": "These are some info on the courses that I took.\n\nPhD Applied Econometrics (HCMG 9010, UPenn), Spring 2025: [Personal summary] [PS-solutions]\nPhD Advanced Real Estate and Urban Economics (REAL 9470, UPenn, Spring 2025): [Personal summary]\nPhD Public Economics (BEPP 9330, UPenn, Spring 2025): [Personal summary] PS1-solutions"
   }
 ]
