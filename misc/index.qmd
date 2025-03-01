@@ -7,7 +7,7 @@ toc: true
 
 These are some info on the courses that I took.
 
-- PhD Applied Econometrics (HCMG 9010, UPenn, Spring 2025): [Personal summary] [PS-solutions] 
+- PhD Applied Econometrics (HCMG 9010, UPenn, Spring 2025): [Personal summary] 
 
 - PhD Advanced Real Estate and Urban Economics (REAL 9470, UPenn, Spring 2025): [Personal summary] 
 
