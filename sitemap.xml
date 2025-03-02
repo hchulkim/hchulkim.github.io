@@ -2,42 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://hchulkim.github.io/research/index.html</loc>
-    <lastmod>2025-03-01T18:41:08.802Z</lastmod>
+    <lastmod>2025-03-02T05:18:24.377Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/posts/empirical-econ/index.html</loc>
-    <lastmod>2025-03-01T18:41:08.801Z</lastmod>
+    <lastmod>2025-03-02T05:18:24.374Z</lastmod>
   </url>
   <url>
-    <loc>https://hchulkim.github.io/posts/sql-info/index.html</loc>
-    <lastmod>2025-03-01T18:41:08.802Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hchulkim.github.io/posts/reproducible-coding-lecture/index.html</loc>
-    <lastmod>2025-03-01T18:41:08.802Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hchulkim.github.io/teaching/index.html</loc>
-    <lastmod>2025-03-01T18:41:08.810Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hchulkim.github.io/index.html</loc>
-    <lastmod>2025-03-01T18:41:08.799Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hchulkim.github.io/misc/index.html</loc>
-    <lastmod>2025-03-01T18:41:08.799Z</lastmod>
+    <loc>https://hchulkim.github.io/posts/first-cite/index.html</loc>
+    <lastmod>2025-03-02T05:18:24.377Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/posts/index.html</loc>
-    <lastmod>2025-03-01T18:41:08.802Z</lastmod>
+    <lastmod>2025-03-02T05:18:24.377Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hchulkim.github.io/misc/index.html</loc>
+    <lastmod>2025-03-02T05:18:24.373Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hchulkim.github.io/index.html</loc>
+    <lastmod>2025-03-02T05:18:24.373Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hchulkim.github.io/teaching/index.html</loc>
+    <lastmod>2025-03-02T05:18:24.384Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hchulkim.github.io/posts/reproducible-coding-lecture/index.html</loc>
+    <lastmod>2025-03-02T05:18:24.377Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hchulkim.github.io/posts/sql-info/index.html</loc>
+    <lastmod>2025-03-02T05:18:24.377Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/posts/admission-econ/index.html</loc>
-    <lastmod>2025-03-01T18:41:08.800Z</lastmod>
+    <lastmod>2025-03-02T05:18:24.374Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/posts/hello-quarto/index.html</loc>
-    <lastmod>2025-03-01T18:41:08.802Z</lastmod>
+    <lastmod>2025-03-02T05:18:24.377Z</lastmod>
   </url>
 </urlset>

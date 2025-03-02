@@ -2,6 +2,7 @@
   {
     "listing": "/posts/index.html",
     "items": [
+      "/posts/first-cite/index.html",
       "/posts/reproducible-coding-lecture/index.html",
       "/posts/admission-econ/index.html",
       "/posts/empirical-econ/index.html",
