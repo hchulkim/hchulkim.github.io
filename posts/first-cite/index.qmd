@@ -1,0 +1,16 @@
+---
+title: "First academic citation"
+description: "I am celebrating my first citation."
+date: "2025-03-01"
+toc: false
+categories:
+  - research
+---
+
+I just realized that I got my first-ever citation for one of my published papers. 
+
+![My first citation](cite.PNG)
+
+If getting a paper published is a *first-order* effect of academic achievement, I think having someone cite your paper is a *second-order* effect. In essence, I believe one of the main reasons we do academic research is to share it with other scholars and expand the current literature. In that sense, citation is important because it is an indicator that verifies that your research is (at least marginally) helping other scholars.
+
+Thus, it is an *epsilon* leap for the academia, but a *giant* leap for myself.
