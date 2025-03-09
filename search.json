@@ -46,21 +46,28 @@
     "href": "misc/index.html",
     "title": "Misc.",
     "section": "",
-    "text": "These are some info on the courses that I took.\n\nPhD Applied Econometrics (HCMG 9010, UPenn, Spring 2025): [Personal summary]\nPhD Advanced Real Estate and Urban Economics (REAL 9470, UPenn, Spring 2025): [Personal summary]\nPhD Public Economics (BEPP 9330, UPenn, Spring 2025): [Personal summary] [PS1-solutions]"
+    "text": "Quarto working paper template for Economics: github link"
+  },
+  {
+    "objectID": "misc/index.html#software-templates",
+    "href": "misc/index.html#software-templates",
+    "title": "Misc.",
+    "section": "",
+    "text": "Quarto working paper template for Economics: github link"
   },
   {
     "objectID": "misc/index.html#courses",
     "href": "misc/index.html#courses",
     "title": "Misc.",
-    "section": "",
-    "text": "These are some info on the courses that I took.\n\nPhD Applied Econometrics (HCMG 9010, UPenn, Spring 2025): [Personal summary]\nPhD Advanced Real Estate and Urban Economics (REAL 9470, UPenn, Spring 2025): [Personal summary]\nPhD Public Economics (BEPP 9330, UPenn, Spring 2025): [Personal summary] [PS1-solutions]"
+    "section": "Courses",
+    "text": "Courses\nThese are some info on the courses that I took.\n\nPhD Applied Econometrics (HCMG 9010, UPenn, Spring 2025): [Personal summary]\nPhD Advanced Real Estate and Urban Economics (REAL 9470, UPenn, Spring 2025): [Personal summary]\nPhD Public Economics (BEPP 9330, UPenn, Spring 2025): [Personal summary] [PS1-solutions]"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Hyoungchul Kim",
     "section": "",
-    "text": "I am a first-year Ph.D. student in Applied Economics at The Wharton School, University of Pennsylvania.\nYou can either call me Hyoungchul (H-Young-Cheol) or Kent (my english name)."
+    "text": "I am a first-year Ph.D. student in Applied Economics at The Wharton School, University of Pennsylvania.\nYou can either call me Hyoungchul (H-Young-Cheol) or Kent (my english name).\nFor inquiries about software, email me or use the issue tracker at github."
   },
   {
     "objectID": "teaching/index.html",
