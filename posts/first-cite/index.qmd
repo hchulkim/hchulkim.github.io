@@ -1,6 +1,6 @@
 ---
 title: "First academic citation"
-description: "I am celebrating my first citation."
+description: "I am celebrating my first citation"
 date: "2025-03-01"
 toc: false
 categories:
