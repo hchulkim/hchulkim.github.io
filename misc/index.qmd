@@ -3,6 +3,10 @@ title: Misc.
 toc: true
 ---
 
+## Software (+ Templates)
+
+- Quarto working paper template for Economics: [github link](https://github.com/hchulkim/econ-paper-template/tree/main)
+
 ## Courses
 
 These are some info on the courses that I took.
