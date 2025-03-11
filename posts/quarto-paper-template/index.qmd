@@ -27,6 +27,10 @@ For Econ folks, this template can be thought of as an easier version of LyX. Not
 
 Unfortunately, the current version is a bit preliminary. This means there can be some glitches that are not yet spotted by the contributors. If there is any problem with the current version, do not hesitate to contact me or my other contributors. You can also use issue tracker or pull-requests to contact us.
 
+**You can use the quarto template by following the instructions at my [github repo](https://github.com/hchulkim/econ-paper-template)!**
+
+<details>
+<summary>Outdated</summary>
 Also, I have not yet made the current version incorporated into the Quarto official journal extension. I requested to add my version but it will take some time since the Quarto team has to approve it. If this is approved, you will be able to download the template by using simple command in the terminal.
 
 Until then, easy way to use this template is as follows:
@@ -40,3 +44,5 @@ Until then, easy way to use this template is as follows:
 4. If you need to change the title format or preambles like in LaTeX, use `before-body.tex` or `_include-in-header.tex` files in `_extensions/aea/partials/` folder.
 
 5. After writing your paper, type `quarto render template.qmd` in the terminal to obtain your output in PDF, TeX, and html. Note that you need to run this command in the directory that contains the qmd file.
+
+</details>
