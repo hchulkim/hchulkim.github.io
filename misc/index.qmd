@@ -3,9 +3,11 @@ title: Misc.
 toc: true
 ---
 
-## Software (+ Templates)
+## Software
 
-- Quarto working paper template for Economics: [github link](https://github.com/hchulkim/econ-paper-template/tree/main)
+### Quarto
+
+- Quarto working paper template for Economics: [\[github link\]](https://github.com/hchulkim/econ-paper-template/tree/main) [\[Blog post\]](https://hchulkim.github.io/posts/quarto-paper-template/)
 
 ## Courses
 
