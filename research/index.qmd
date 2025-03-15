@@ -5,7 +5,9 @@ toc: true
 
 ## Working papers
 
-"The China shock and internal migration: Evidence from bilateral migration flows" with [Jaerim Choi](https://sites.google.com/view/jaerimchoi) and [Seung Hoon Lee](https://sites.google.com/view/seunghoon/home). Mar. 2024. [\[Working Paper\]](working-paper/migration_china_shock.pdf).
+"The effect of remote working on household waste: Evidence from South Korea" with [Hee-Seung Yang](https://sites.google.com/site/heeseungyang/home). Mar. 2025. [\[Working paper\]](working-paper/wfh-waste.pdf).
+
+"The China shock and internal migration: Evidence from bilateral migration flows" with [Jaerim Choi](https://sites.google.com/view/jaerimchoi) and [Seung Hoon Lee](https://sites.google.com/view/seunghoon/home). Mar. 2024. [\[Working paper\]](working-paper/migration_china_shock.pdf).
 
 <details>
   <summary>Abstract</summary>
