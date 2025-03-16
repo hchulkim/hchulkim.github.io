@@ -23,6 +23,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -194,102 +228,102 @@ ul.task-list li input[type="checkbox"] {
 <p>During spring break, I had some time to finalize the Dockerfile template for my research workflow. If you don’t know what a Docker is, check it out <a href="https://raw.githack.com/uo-ec607/lectures/master/13-docker/13-docker.html#1">here</a>. TL;DR, it is a light virtual machine that contains all the necessary resources for your empirical analysis. It is as if you are shipping your computer to other people that wants to try out your analysis.</p>
 <p>If you want the exact replication project folder, click <a href="https://github.com/hchulkim/replication-template">here</a>.</p>
 <p>This is the final <code>Dockerfile</code> (for now):</p>
-<pre class="{bash}"><code># Use Rocker image as the base for R
-FROM rocker/r-ver:4.4.0
-
-LABEL maintainer="Hyoungchul Kim &lt;hchul.kim96@gmail.com&gt;"
-
-## Update and install system dependencies
-RUN apt-get update &amp;&amp; apt-get install -y \
-    libcurl4-openssl-dev \
-    libssl-dev \
-    libfontconfig1-dev \
-    libharfbuzz-dev \
-    libfribidi-dev \
-    libfreetype6-dev \
-    libpng-dev \
-    libtiff5-dev \
-    libjpeg-dev \
-    libglpk-dev \
-    libxml2-dev \
-    libcairo2-dev \
-    libgit2-dev \
-    libpq-dev \
-    libsasl2-dev \
-    libsqlite3-dev \
-    libssh2-1-dev \
-    libxt-dev \
-    libgdal-dev \
-    wget \
-    curl \
-    vim \
-    git 
-
-## Install Pandoc (Required for RMarkdown, Quarto, etc.)
-RUN /rocker_scripts/install_pandoc.sh
-
-## Install Python &amp; Poetry
-RUN /rocker_scripts/install_python.sh &amp;&amp; \
-    pip3 install --upgrade pip &amp;&amp; \
-    pip3 install poetry
-
-# Ensure Poetry installs dependencies in the system environment
-RUN poetry config virtualenvs.create false
-
-# Copy Poetry files and install dependencies
-COPY pyproject.toml poetry.lock .
-RUN poetry install --no-interaction --no-root
-
-# Verify installed packages
-RUN python3 -c "import sys; print(sys.path)"
-RUN python3 -c "import pandas; print('Poetry packages installed successfully!')"
-
-## Install Julia 1.11.3 (to match Manifest.toml)
-ENV JULIA_VERSION=1.11.3
-RUN wget -q https://julialang-s3.julialang.org/bin/linux/x64/${JULIA_VERSION%.*}/julia-${JULIA_VERSION}-linux-x86_64.tar.gz &amp;&amp; \
-    tar -xzf julia-${JULIA_VERSION}-linux-x86_64.tar.gz -C /usr/local --strip-components=1 &amp;&amp; \
-    rm julia-${JULIA_VERSION}-linux-x86_64.tar.gz
-
-## Verify Julia installation
-RUN julia --version
-
-## Set Julia environment variables
-ENV JULIA_DEPOT_PATH="/root/.julia"
-ENV JULIA_PROJECT="/project"
-
-## Set working directory
-WORKDIR /project
-
-## Copy renv.lock file into the folder
-COPY renv.lock .
-
-# Set environment variables for renv
-ENV RENV_VERSION=1.0.7
-ENV RENV_PATHS_CACHE=/renv/cache
-ENV RENV_CONFIG_REPOS_OVERRIDE=https://cloud.r-project.org
-ENV RENV_CONFIG_AUTOLOADER_ENABLED=FALSE
-ENV RENV_WATCHDOG_ENABLED=FALSE
-RUN echo "options(renv.consent = TRUE)" &gt;&gt; .Rprofile
-RUN echo "options(RETICULATE_MINICONDA_ENABLED = FALSE)" &gt;&gt; .Rprofile
-
-# Install renv from CRAN (avoiding bootstrapping by specifying version)
-RUN R -e "install.packages('renv', repos = c(CRAN = 'https://cloud.r-project.org'))"
-RUN R -e "renv::consent(provided = TRUE)"
-
-# Run renv restore to restore the environment
-RUN R -e "renv::restore(confirm = FALSE)"
-
-# Install Julia packages and manage dependencies
-COPY Manifest.toml Project.toml .
-RUN julia -e "import Pkg; Pkg.update(); Pkg.resolve(); Pkg.instantiate(); Pkg.precompile()"
-
-# Copy over the rest of the project files
-COPY . .
-
-# Default command
-CMD ["bash"]
-
-</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use Rocker image as the base for R</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">FROM</span> rocker/r-ver:4.4.0</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">LABEL</span> maintainer=<span class="st">"Hyoungchul Kim &lt;hchul.kim96@gmail.com&gt;"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">## Update and install system dependencies</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ex">RUN</span> apt-get update <span class="kw">&amp;&amp;</span> <span class="ex">apt-get</span> install <span class="at">-y</span> <span class="dt">\</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    libcurl4-openssl-dev <span class="dt">\</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    libssl-dev <span class="dt">\</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    libfontconfig1-dev <span class="dt">\</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    libharfbuzz-dev <span class="dt">\</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    libfribidi-dev <span class="dt">\</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    libfreetype6-dev <span class="dt">\</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    libpng-dev <span class="dt">\</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    libtiff5-dev <span class="dt">\</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    libjpeg-dev <span class="dt">\</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    libglpk-dev <span class="dt">\</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    libxml2-dev <span class="dt">\</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    libcairo2-dev <span class="dt">\</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    libgit2-dev <span class="dt">\</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    libpq-dev <span class="dt">\</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    libsasl2-dev <span class="dt">\</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    libsqlite3-dev <span class="dt">\</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    libssh2-1-dev <span class="dt">\</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    libxt-dev <span class="dt">\</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    libgdal-dev <span class="dt">\</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    wget <span class="dt">\</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    curl <span class="dt">\</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    vim <span class="dt">\</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    git </span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co">## Install Pandoc (Required for RMarkdown, Quarto, etc.)</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ex">RUN</span> /rocker_scripts/install_pandoc.sh</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co">## Install Python &amp; Poetry</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="ex">RUN</span> /rocker_scripts/install_python.sh <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    <span class="ex">pip3</span> install <span class="at">--upgrade</span> pip <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    <span class="ex">pip3</span> install poetry</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Ensure Poetry installs dependencies in the system environment</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="ex">RUN</span> poetry config virtualenvs.create false</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy Poetry files and install dependencies</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="ex">COPY</span> pyproject.toml poetry.lock .</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="ex">RUN</span> poetry install <span class="at">--no-interaction</span> <span class="at">--no-root</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify installed packages</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="ex">RUN</span> python3 <span class="at">-c</span> <span class="st">"import sys; print(sys.path)"</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="ex">RUN</span> python3 <span class="at">-c</span> <span class="st">"import pandas; print('Poetry packages installed successfully!')"</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="co">## Install Julia 1.11.3 (to match Manifest.toml)</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ex">ENV</span> JULIA_VERSION=1.11.3</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="ex">RUN</span> wget <span class="at">-q</span> https://julialang-s3.julialang.org/bin/linux/x64/<span class="va">${JULIA_VERSION</span><span class="op">%</span>.<span class="pp">*</span><span class="va">}</span>/julia-<span class="va">${JULIA_VERSION}</span>-linux-x86_64.tar.gz <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tar</span> <span class="at">-xzf</span> julia-<span class="va">${JULIA_VERSION}</span>-linux-x86_64.tar.gz <span class="at">-C</span> /usr/local <span class="at">--strip-components</span><span class="op">=</span>1 <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rm</span> julia-<span class="va">${JULIA_VERSION}</span>-linux-x86_64.tar.gz</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="co">## Verify Julia installation</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ex">RUN</span> julia <span class="at">--version</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="co">## Set Julia environment variables</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="ex">ENV</span> JULIA_DEPOT_PATH=<span class="st">"/root/.julia"</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="ex">ENV</span> JULIA_PROJECT=<span class="st">"/project"</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="co">## Set working directory</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="ex">WORKDIR</span> /project</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="co">## Copy renv.lock file into the folder</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="ex">COPY</span> renv.lock .</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="co"># Set environment variables for renv</span></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="ex">ENV</span> RENV_VERSION=1.0.7</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="ex">ENV</span> RENV_PATHS_CACHE=/renv/cache</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="ex">ENV</span> RENV_CONFIG_REPOS_OVERRIDE=https://cloud.r-project.org</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="ex">ENV</span> RENV_CONFIG_AUTOLOADER_ENABLED=FALSE</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="ex">ENV</span> RENV_WATCHDOG_ENABLED=FALSE</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="ex">RUN</span> echo <span class="st">"options(renv.consent = TRUE)"</span> <span class="op">&gt;&gt;</span> .Rprofile</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="ex">RUN</span> echo <span class="st">"options(RETICULATE_MINICONDA_ENABLED = FALSE)"</span> <span class="op">&gt;&gt;</span> .Rprofile</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="co"># Install renv from CRAN (avoiding bootstrapping by specifying version)</span></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="ex">RUN</span> R <span class="at">-e</span> <span class="st">"install.packages('renv', repos = c(CRAN = 'https://cloud.r-project.org'))"</span></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="ex">RUN</span> R <span class="at">-e</span> <span class="st">"renv::consent(provided = TRUE)"</span></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a><span class="co"># Run renv restore to restore the environment</span></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="ex">RUN</span> R <span class="at">-e</span> <span class="st">"renv::restore(confirm = FALSE)"</span></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="co"># Install Julia packages and manage dependencies</span></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="ex">COPY</span> Manifest.toml Project.toml .</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a><span class="ex">RUN</span> julia <span class="at">-e</span> <span class="st">"import Pkg; Pkg.update(); Pkg.resolve(); Pkg.instantiate(); Pkg.precompile()"</span></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy over the rest of the project files</span></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="ex">COPY</span> . .</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="co"># Default command</span></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="ex">CMD</span> <span class="pp">[</span><span class="st">"bash"</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Although most of the commands are self-explanatory from the comments, here is some additional info on what my Dockerfile does:</p>
 <ol type="1">
 <li><p>In my personal Dockerfile, I have added three major programming languages that I use: <code>R</code>, <code>Python</code>, and <code>Julia</code>.</p></li>
@@ -312,28 +346,34 @@ CMD ["bash"]
 <li><p>Create Dockerfile.</p></li>
 <li><p>Build Docker image using Dockerfile.</p></li>
 </ol>
-<pre class="{bash}"><code># IMPORTANT: You might not need to use sudo command. First try this code without it and only use sudo if it does not work.
-sudo docker build --network=host --tag &lt;PROJECT_NAME&gt;:VERSION . </code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># IMPORTANT: You might not need to use sudo command. First try this code without it and only use sudo if it does not work.</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker build <span class="at">--network</span><span class="op">=</span>host <span class="at">--tag</span> <span class="op">&lt;</span>PROJECT_NAME<span class="op">&gt;</span>:VERSION . </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <ol start="3" type="1">
 <li>Run Docker image.</li>
 </ol>
-<pre class="{bash}"><code># IMPORTANT: You might not need to use sudo command. First try this code without it and only use sudo if it does not work.
-sudo docker run -it --rm &lt;PROJECT_NAME&gt;:VERSION</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># IMPORTANT: You might not need to use sudo command. First try this code without it and only use sudo if it does not work.</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker run <span class="at">-it</span> <span class="at">--rm</span> <span class="op">&lt;</span>PROJECT_NAME<span class="op">&gt;</span>:VERSION</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="some-useful-docker-related-commands" class="level3">
 <h3 class="anchored" data-anchor-id="some-useful-docker-related-commands">Some useful Docker-related commands</h3>
-<pre class="{bash}"><code># IMPORTANT: You might not need to use sudo command. First try this code without it and only use sudo if it does not work.
-# check cached docker images
-sudo docker images
-
-# check docker containers that are running
-sudo docker ps
-
-# remove the docker image
-sudo docker rmi &lt;IMAGE_NAME&gt;
-
-# remove all dangling images and caches (do it periodically to save space)
-sudo docker system prune</code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># IMPORTANT: You might not need to use sudo command. First try this code without it and only use sudo if it does not work.</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># check cached docker images</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker images</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># check docker containers that are running</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker ps</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># remove the docker image</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker rmi <span class="op">&lt;</span>IMAGE_NAME<span class="op">&gt;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># remove all dangling images and caches (do it periodically to save space)</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> docker system prune</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 </section>
