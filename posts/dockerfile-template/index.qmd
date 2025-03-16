@@ -11,7 +11,7 @@ During the spring break, I had some time to finalize the Dockerfile template for
 
 If you want the exact replication project folder, click [here](https://github.com/hchulkim/replication-template).
 
-This is final `Dockerfile` (for now):
+This is the final `Dockerfile` (for now):
 
 ```{bash}
 # Use Rocker image as the base for R
@@ -112,7 +112,7 @@ CMD ["bash"]
 
 ```
 
-Although most of commands are self-explanatory from the comments, here is some additional info on what my Dockerfile does:
+Although most of the commands are self-explanatory from the comments, here is some additional info on what my Dockerfile does:
 
 1. In my personal Dockerfile, I have added three major programming languages that I use: `R`, `Python`, and `Julia`.
 
