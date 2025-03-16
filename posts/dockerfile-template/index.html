@@ -191,9 +191,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>During the spring break, I had some time to finalize the Dockerfile template for my research workflow. If you don’t know what a Docker is, check it out <a href="https://raw.githack.com/uo-ec607/lectures/master/13-docker/13-docker.html#1">here</a>. TL;DR, it is a light virtual machine that contains all the necessary resources for your empirical analysis. It is as if you are shipping your computer to other people that wants to try out your analysis.</p>
+<p>During spring break, I had some time to finalize the Dockerfile template for my research workflow. If you don’t know what a Docker is, check it out <a href="https://raw.githack.com/uo-ec607/lectures/master/13-docker/13-docker.html#1">here</a>. TL;DR, it is a light virtual machine that contains all the necessary resources for your empirical analysis. It is as if you are shipping your computer to other people that wants to try out your analysis.</p>
 <p>If you want the exact replication project folder, click <a href="https://github.com/hchulkim/replication-template">here</a>.</p>
-<p>This is final <code>Dockerfile</code> (for now):</p>
+<p>This is the final <code>Dockerfile</code> (for now):</p>
 <pre class="{bash}"><code># Use Rocker image as the base for R
 FROM rocker/r-ver:4.4.0
 
@@ -290,7 +290,7 @@ COPY . .
 CMD ["bash"]
 
 </code></pre>
-<p>Although most of commands are self-explanatory from the comments, here is some additional info on what my Dockerfile does:</p>
+<p>Although most of the commands are self-explanatory from the comments, here is some additional info on what my Dockerfile does:</p>
 <ol type="1">
 <li><p>In my personal Dockerfile, I have added three major programming languages that I use: <code>R</code>, <code>Python</code>, and <code>Julia</code>.</p></li>
 <li><p>I have also added some necessary dependencies and useful programs (e.g.&nbsp;<code>git</code>, <code>vim</code>) for my analysis.</p></li>
