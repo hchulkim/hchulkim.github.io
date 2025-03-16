@@ -1,8 +1,12 @@
 ---
 title: "Personal Dockerfile for data science"
 description: "Personal Dockerfile template for my research workflow"
-date: "2025-01-20"
+date: "2025-03-15"
 toc: false
+execute:
+  echo: true
+  eval: false
+  freeze: auto
 categories:
   - lecture
 ---
