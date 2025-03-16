@@ -1,0 +1,48 @@
+---
+title: "Quarto format Econ. working paper template"
+description: "I just dropped a new quarto format working paper template in github"
+date: "2025-03-09"
+toc: false
+categories:
+  - software
+---
+
+I just dropped a new Quarto format working paper template that is often used in the field of Economics. You can check the rendered pdf demo [here](template.pdf). I also have a [github repository](https://github.com/hchulkim/econ-paper-template) for this.
+
+### Why use Quarto?[^1]
+
+1. You can easily create scientific reproducible, production quality articles n various formats including LaTeX, PDF, Word, html, and more.
+
+2. You can write using Pandoc markdown, including equations, citations, crossrefs, figure panels, callouts, advanced layout, and more.
+
+3. You can also use the typical LaTeX syntax directly in the document.
+
+4. You can create dynamic content with Python, R, Julia, and Observable. It is language-agnostic.
+
+[^1]: Cited from Quarto official website.
+
+For Econ folks, this template can be thought of as an easier version of LyX. Not only does the quarto template provide an easier way to typeset your paper (markdown way), it also allows you to have the output in tex, pdf, and html at the same time.
+
+### Basic usage
+
+Unfortunately, the current version is a bit preliminary. This means there can be some glitches that are not yet spotted by the contributors. If there is any problem with the current version, do not hesitate to contact me or my other contributors. You can also use issue tracker or pull-requests to contact us.
+
+**You can use the quarto template by following the instructions at my [github repo](https://github.com/hchulkim/econ-paper-template)!**
+
+<details>
+<summary>Outdated</summary>
+Also, I have not yet made the current version incorporated into the Quarto official journal extension. I requested to add my version but it will take some time since the Quarto team has to approve it. If this is approved, you will be able to download the template by using simple command in the terminal.
+
+Until then, easy way to use this template is as follows:
+
+1. Download (or use git clone) the template from the repository.
+
+2. Make sure you have Quarto and TeX compilers installed in your local computer (this can take you some time. But I promise it is worth it). 
+
+3. Start writing your paper in the `template.qmd` file.
+
+4. If you need to change the title format or preambles like in LaTeX, use `before-body.tex` or `_include-in-header.tex` files in `_extensions/aea/partials/` folder.
+
+5. After writing your paper, type `quarto render template.qmd` in the terminal to obtain your output in PDF, TeX, and html. Note that you need to run this command in the directory that contains the qmd file.
+
+</details>

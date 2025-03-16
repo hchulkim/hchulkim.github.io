@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Hyoungchul Kim">
-<meta name="dcterms.date" content="2025-03-01">
-<meta name="description" content="I am celebrating my first citation">
+<meta name="dcterms.date" content="2025-03-09">
+<meta name="description" content="I just dropped a new quarto format working paper template in github">
 
-<title>First academic citation – Hyoungchul Kim</title>
+<title>Quarto format Econ. working paper template – Hyoungchul Kim</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -74,9 +74,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="First academic citation – Hyoungchul Kim">
-<meta property="og:description" content="I am celebrating my first citation">
-<meta property="og:image" content="https://hchulkim.github.io/posts/first-cite/cite.PNG">
+<meta property="og:title" content="Quarto format Econ. working paper template – Hyoungchul Kim">
+<meta property="og:description" content="I just dropped a new quarto format working paper template in github">
 <meta property="og:site_name" content="Hyoungchul Kim">
 </head>
 
@@ -148,14 +147,14 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">First academic citation</h1>
+      <h1 class="title">Quarto format Econ. working paper template</h1>
                   <div>
         <div class="description">
-          I am celebrating my first citation
+          I just dropped a new quarto format working paper template in github
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">research</div>
+                <div class="quarto-category">software</div>
               </div>
                   </div>
   </div>
@@ -173,7 +172,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">March 1, 2025</p>
+        <p class="date">March 9, 2025</p>
       </div>
     </div>
     
@@ -192,19 +191,46 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>I just realized that I got my first-ever citation for one of my published papers.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="cite.PNG" class="img-fluid figure-img"></p>
-<figcaption>My first citation</figcaption>
-</figure>
-</div>
-<p>If getting a paper published is a <em>first-order</em> effect of academic achievement, I think having someone cite your paper is a <em>second-order</em> effect. In essence, I believe one of the main reasons we do academic research is to share it with other scholars and expand the current literature. In that sense, citation is important because it is an indicator that verifies that your research is (at least marginally) helping other scholars.</p>
-<p>Thus, it is an <em>epsilon</em> leap for the academia, but a <em>giant</em> leap for myself.</p>
+<p>I just dropped a new Quarto format working paper template that is often used in the field of Economics. You can check the rendered pdf demo <a href="template.pdf">here</a>. I also have a <a href="https://github.com/hchulkim/econ-paper-template">github repository</a> for this.</p>
+<section id="why-use-quarto1" class="level3">
+<h3 class="anchored" data-anchor-id="why-use-quarto1">Why use Quarto?<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h3>
+<ol type="1">
+<li><p>You can easily create scientific reproducible, production quality articles n various formats including LaTeX, PDF, Word, html, and more.</p></li>
+<li><p>You can write using Pandoc markdown, including equations, citations, crossrefs, figure panels, callouts, advanced layout, and more.</p></li>
+<li><p>You can also use the typical LaTeX syntax directly in the document.</p></li>
+<li><p>You can create dynamic content with Python, R, Julia, and Observable. It is language-agnostic.</p></li>
+</ol>
+<p>For Econ folks, this template can be thought of as an easier version of LyX. Not only does the quarto template provide an easier way to typeset your paper (markdown way), it also allows you to have the output in tex, pdf, and html at the same time.</p>
+</section>
+<section id="basic-usage" class="level3">
+<h3 class="anchored" data-anchor-id="basic-usage">Basic usage</h3>
+<p>Unfortunately, the current version is a bit preliminary. This means there can be some glitches that are not yet spotted by the contributors. If there is any problem with the current version, do not hesitate to contact me or my other contributors. You can also use issue tracker or pull-requests to contact us.</p>
+<p><strong>You can use the quarto template by following the instructions at my <a href="https://github.com/hchulkim/econ-paper-template">github repo</a>!</strong></p>
+<details>
+<summary>
+Outdated
+</summary>
+<p>Also, I have not yet made the current version incorporated into the Quarto official journal extension. I requested to add my version but it will take some time since the Quarto team has to approve it. If this is approved, you will be able to download the template by using simple command in the terminal.</p>
+<p>Until then, easy way to use this template is as follows:</p>
+<ol type="1">
+<li><p>Download (or use git clone) the template from the repository.</p></li>
+<li><p>Make sure you have Quarto and TeX compilers installed in your local computer (this can take you some time. But I promise it is worth it).</p></li>
+<li><p>Start writing your paper in the <code>template.qmd</code> file.</p></li>
+<li><p>If you need to change the title format or preambles like in LaTeX, use <code>before-body.tex</code> or <code>_include-in-header.tex</code> files in <code>_extensions/aea/partials/</code> folder.</p></li>
+<li><p>After writing your paper, type <code>quarto render template.qmd</code> in the terminal to obtain your output in PDF, TeX, and html. Note that you need to run this command in the directory that contains the qmd file.</p></li>
+</ol>
+</details>
 
 
+</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Cited from Quarto official website.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

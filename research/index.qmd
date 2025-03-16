@@ -5,7 +5,14 @@ toc: true
 
 ## Working papers
 
-"The China shock and internal migration: Evidence from bilateral migration flows" with [Jaerim Choi](https://sites.google.com/view/jaerimchoi) and [Seung Hoon Lee](https://sites.google.com/view/seunghoon/home). Mar. 2024. [\[Working Paper\]](working-paper/migration_china_shock.pdf).
+"The effect of remote working on household waste: Evidence from South Korea" with [Hee-Seung Yang](https://sites.google.com/site/heeseungyang/home). Mar. 2025. [\[Working paper\]](working-paper/wfh-waste.pdf).
+
+<details>
+  <summary>Abstract</summary>
+  Remote working, or Work-From-Home (WFH), is now one of the prevalent work arrangement around the world. However, its impact on the social welfare---such as waste generation---is largely unexplored. This paper examines the causal impact of remote working on household waste generation in South Korea using COVID-19 as a natural experiment. The findings reveal mixed results. While overall household waste in district remain unaffected, districts with higher WFH levels experience increased plastic and textile waste but decreased food waste. These results suggest that remote working may influence current consumption patterns and lifestyle. Understanding these environmental implications is crucial for promoting sustainable work models and responsible waste management in a digital and remote world.
+</details>
+
+"The China shock and internal migration: Evidence from bilateral migration flows" with [Jaerim Choi](https://sites.google.com/view/jaerimchoi) and [Seung Hoon Lee](https://sites.google.com/view/seunghoon/home). Mar. 2024. [\[Working paper\]](working-paper/migration_china_shock.pdf).
 
 <details>
   <summary>Abstract</summary>
