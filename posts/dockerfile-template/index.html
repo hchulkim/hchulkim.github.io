@@ -194,9 +194,7 @@ ul.task-list li input[type="checkbox"] {
 <p>During the spring break, I had some time to finalize the Dockerfile template for my research workflow. If you don’t know what a Docker is, check it out <a href="https://raw.githack.com/uo-ec607/lectures/master/13-docker/13-docker.html#1">here</a>. TL;DR, it is a light virtual machine that contains all the necessary resources for your empirical analysis. It is as if you are shipping your computer to other people that wants to try out your analysis.</p>
 <p>If you want the exact replication project folder, click <a href="https://github.com/hchulkim/replication-template">here</a>.</p>
 <p>This is final <code>Dockerfile</code> (for now):</p>
-<pre class="{bash}"><code>#| echo: true
-#| eval: false 
-
+<pre class="{bash}"><code>
 # Use Rocker image as the base for R
 FROM rocker/r-ver:4.4.0
 
@@ -315,17 +313,13 @@ CMD ["bash"]
 <li><p>Create Dockerfile.</p></li>
 <li><p>Build Docker image using Dockerfile.</p></li>
 </ol>
-<pre class="{bash}"><code>#| echo: true
-#| eval: false 
-
+<pre class="{bash}"><code>
 # IMPORTANT: You might not need to use sudo command. First try this code without it and only use sudo if it does not work.
 sudo docker build --network=host --tag &lt;PROJECT_NAME&gt;:VERSION . </code></pre>
 <ol start="3" type="1">
 <li>Run Docker image.</li>
 </ol>
-<pre class="{bash}"><code>#| echo: true
-#| eval: false 
-
+<pre class="{bash}"><code>
 # IMPORTANT: You might not need to use sudo command. First try this code without it and only use sudo if it does not work.
 sudo docker run -it --rm &lt;PROJECT_NAME&gt;:VERSION</code></pre>
 </section>
