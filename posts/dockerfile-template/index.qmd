@@ -3,10 +3,6 @@ title: "Personal Dockerfile for data science"
 description: "Personal Dockerfile template for my research workflow"
 date: "2025-03-15"
 toc: false
-execute:
-  echo: true
-  eval: false
-  freeze: auto
 categories:
   - lecture
 ---
@@ -18,8 +14,6 @@ If you want the exact replication project folder, click [here](https://github.co
 This is final `Dockerfile` (for now):
 
 ```{bash}
-#| echo: true
-#| eval: false 
 
 # Use Rocker image as the base for R
 FROM rocker/r-ver:4.4.0
@@ -146,8 +140,6 @@ Although most of commands are self-explanatory from the comments, here is some a
 2. Build Docker image using Dockerfile.
 
 ```{bash}
-#| echo: true
-#| eval: false 
 
 # IMPORTANT: You might not need to use sudo command. First try this code without it and only use sudo if it does not work.
 sudo docker build --network=host --tag <PROJECT_NAME>:VERSION . 
@@ -156,8 +148,6 @@ sudo docker build --network=host --tag <PROJECT_NAME>:VERSION .
 3. Run Docker image.
 
 ```{bash}
-#| echo: true
-#| eval: false 
 
 # IMPORTANT: You might not need to use sudo command. First try this code without it and only use sudo if it does not work.
 sudo docker run -it --rm <PROJECT_NAME>:VERSION

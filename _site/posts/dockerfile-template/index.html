@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Hyoungchul Kim">
+<meta name="dcterms.date" content="2025-03-15">
+<meta name="description" content="Personal Dockerfile template for my research workflow">
 
-<title>Teaching – Hyoungchul Kim</title>
+<title>Personal Dockerfile for data science – Hyoungchul Kim</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +26,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../favicon.ico" rel="icon">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-76a985aa22ccd12130a26cea3e021208.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-76a985aa22ccd12130a26cea3e021208.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,20 +73,20 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Teaching – Hyoungchul Kim">
-<meta property="og:description" content="">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Personal Dockerfile for data science – Hyoungchul Kim">
+<meta property="og:description" content="Personal Dockerfile template for my research workflow">
 <meta property="og:site_name" content="Hyoungchul Kim">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Hyoungchul Kim</span>
     </a>
   </div>
@@ -94,27 +97,27 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../vita/cv-kim.pdf"> 
+    <a class="nav-link" href="../../vita/cv-kim.pdf"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../research/index.html"> 
+    <a class="nav-link" href="../../research/index.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../teaching/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../teaching/index.html"> 
 <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../posts/index.html"> 
+    <a class="nav-link" href="../../posts/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../misc/index.html"> 
+    <a class="nav-link" href="../../misc/index.html"> 
 <span class="menu-text">Misc.</span></a>
   </li>  
 </ul>
@@ -141,43 +144,202 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Personal Dockerfile for data science</h1>
+                  <div>
+        <div class="description">
+          Personal Dockerfile template for my research workflow
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">lecture</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Hyoungchul Kim </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 15, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#the-wharton-school-upenn-t.a." id="toc-the-wharton-school-upenn-t.a." class="nav-link active" data-scroll-target="#the-wharton-school-upenn-t.a.">The Wharton School, UPenn (T.A.)</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Teaching</h1>
-</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
 
 
-</header>
+<p>During the spring break, I had some time to finalize the Dockerfile template for my research workflow. If you don’t know what a Docker is, check it out <a href="https://raw.githack.com/uo-ec607/lectures/master/13-docker/13-docker.html#1">here</a>. TL;DR, it is a light virtual machine that contains all the necessary resources for your empirical analysis. It is as if you are shipping your computer to other people that wants to try out your analysis.</p>
+<p>If you want the exact replication project folder, click <a href="https://github.com/hchulkim/replication-template">here</a>.</p>
+<p>This is final <code>Dockerfile</code> (for now):</p>
+<pre class="{bash}"><code>
+# Use Rocker image as the base for R
+FROM rocker/r-ver:4.4.0
 
+LABEL maintainer="Hyoungchul Kim &lt;hchul.kim96@gmail.com&gt;"
 
-<p>For more detailed resources, check out <a href="https://hchulkim.github.io/tools-site"><strong>this site</strong></a>.</p>
-<section id="the-wharton-school-upenn-t.a." class="level2">
-<h2 class="anchored" data-anchor-id="the-wharton-school-upenn-t.a.">The Wharton School, UPenn (T.A.)</h2>
+## Update and install system dependencies
+RUN apt-get update &amp;&amp; apt-get install -y \
+    libcurl4-openssl-dev \
+    libssl-dev \
+    libfontconfig1-dev \
+    libharfbuzz-dev \
+    libfribidi-dev \
+    libfreetype6-dev \
+    libpng-dev \
+    libtiff5-dev \
+    libjpeg-dev \
+    libglpk-dev \
+    libxml2-dev \
+    libcairo2-dev \
+    libgit2-dev \
+    libpq-dev \
+    libsasl2-dev \
+    libsqlite3-dev \
+    libssh2-1-dev \
+    libxt-dev \
+    libgdal-dev \
+    wget \
+    curl \
+    vim \
+    git 
+
+## Install Pandoc (Required for RMarkdown, Quarto, etc.)
+RUN /rocker_scripts/install_pandoc.sh
+
+## Install Python &amp; Poetry
+RUN /rocker_scripts/install_python.sh &amp;&amp; \
+    pip3 install --upgrade pip &amp;&amp; \
+    pip3 install poetry
+
+# Ensure Poetry installs dependencies in the system environment
+RUN poetry config virtualenvs.create false
+
+# Copy Poetry files and install dependencies
+COPY pyproject.toml poetry.lock .
+RUN poetry install --no-interaction --no-root
+
+# Verify installed packages
+RUN python3 -c "import sys; print(sys.path)"
+RUN python3 -c "import pandas; print('Poetry packages installed successfully!')"
+
+## Install Julia 1.11.3 (to match Manifest.toml)
+ENV JULIA_VERSION=1.11.3
+RUN wget -q https://julialang-s3.julialang.org/bin/linux/x64/${JULIA_VERSION%.*}/julia-${JULIA_VERSION}-linux-x86_64.tar.gz &amp;&amp; \
+    tar -xzf julia-${JULIA_VERSION}-linux-x86_64.tar.gz -C /usr/local --strip-components=1 &amp;&amp; \
+    rm julia-${JULIA_VERSION}-linux-x86_64.tar.gz
+
+## Verify Julia installation
+RUN julia --version
+
+## Set Julia environment variables
+ENV JULIA_DEPOT_PATH="/root/.julia"
+ENV JULIA_PROJECT="/project"
+
+## Set working directory
+WORKDIR /project
+
+## Copy renv.lock file into the folder
+COPY renv.lock .
+
+# Set environment variables for renv
+ENV RENV_VERSION 1.0.7
+ENV RENV_PATHS_CACHE /renv/cache
+ENV RENV_CONFIG_REPOS_OVERRIDE https://cloud.r-project.org
+ENV RENV_CONFIG_AUTOLOADER_ENABLED FALSE
+ENV RENV_WATCHDOG_ENABLED FALSE
+RUN echo "options(renv.consent = TRUE)" &gt;&gt; .Rprofile
+RUN echo "options(RETICULATE_MINICONDA_ENABLED = FALSE)" &gt;&gt; .Rprofile
+
+# Install renv from CRAN (avoiding bootstrapping by specifying version)
+RUN R -e "install.packages('renv', repos = c(CRAN = 'https://cloud.r-project.org'))"
+RUN R -e "renv::consent(provided = TRUE)"
+
+# Run renv restore to restore the environment
+RUN R -e "renv::restore(confirm = FALSE)"
+
+# Install Julia packages and manage dependencies
+COPY Manifest.toml Project.toml .
+RUN julia -e "import Pkg; Pkg.update(); Pkg.resolve(); Pkg.instantiate(); Pkg.precompile()"
+
+# Copy over the rest of the project files
+COPY . .
+
+# Default command
+CMD ["bash"]
+
+</code></pre>
+<p>Although most of commands are self-explanatory from the comments, here is some additional info on what my Dockerfile does:</p>
+<ol type="1">
+<li><p>In my personal Dockerfile, I have added three major programming languages that I use: <code>R</code>, <code>Python</code>, and <code>Julia</code>.</p></li>
+<li><p>I have also added some necessary dependencies and useful programs (e.g.&nbsp;<code>git</code>, <code>vim</code>) for my analysis.</p></li>
+<li><p>I have also added dependency management software for all of the languages. <code>renv</code> for <code>R</code>, <code>poetry</code> for <code>Python</code>, and <code>Pkg</code> environment for <code>Julia</code>. This allows you to use the exact versions of the packages that you installed in your analysis.</p></li>
+<li><p>For this code to fully work, you would need to setup some files (e.g.&nbsp;<code>Project.toml</code>, <code>Manifest.toml</code>, etc).</p></li>
+<li><p>Save the above code as <code>Dockerfile</code> (no extensions) right inside your project directory.</p></li>
+</ol>
+<section id="quick-terminology" class="level3">
+<h3 class="anchored" data-anchor-id="quick-terminology">Quick terminology</h3>
+<ul>
+<li><p>Dockerfile: “The sheet music.” The list of layers and instructions for building a Docker image.</p></li>
+<li><p>Image: “The MP3 file.” This is the tarball.</p></li>
+<li><p>Container: “Song playing on my phone.” A container is a running instance of an image.</p></li>
+</ul>
+</section>
+<section id="docker-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="docker-workflow">Docker workflow</h3>
+<ol type="1">
+<li><p>Create Dockerfile.</p></li>
+<li><p>Build Docker image using Dockerfile.</p></li>
+</ol>
+<pre class="{bash}"><code>
+# IMPORTANT: You might not need to use sudo command. First try this code without it and only use sudo if it does not work.
+sudo docker build --network=host --tag &lt;PROJECT_NAME&gt;:VERSION . </code></pre>
+<ol start="3" type="1">
+<li>Run Docker image.</li>
+</ol>
+<pre class="{bash}"><code>
+# IMPORTANT: You might not need to use sudo command. First try this code without it and only use sudo if it does not work.
+sudo docker run -it --rm &lt;PROJECT_NAME&gt;:VERSION</code></pre>
+</section>
+<section id="some-useful-docker-related-commands" class="level3">
+<h3 class="anchored" data-anchor-id="some-useful-docker-related-commands">Some useful Docker-related commands</h3>
+<pre class="{bash}"><code>#| echo: true
+#| eval: false 
+
+# IMPORTANT: You might not need to use sudo command. First try this code without it and only use sudo if it does not work.
+# check cached docker images
+sudo docker images
+
+# check docker containers that are running
+sudo docker ps
+
+# remove the docker image
+sudo docker rmi &lt;IMAGE_NAME&gt;
+
+# remove all dangling images and caches (do it periodically to save space)
+sudo docker system prune</code></pre>
 
 
 </section>
