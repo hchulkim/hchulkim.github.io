@@ -146,8 +146,11 @@ Although most of the commands are self-explanatory from the comments, here is so
 #| echo: true
 #| eval: false
 
-# IMPORTANT: You might not need to use sudo command. First try this code without it and only use sudo if it does not work.
-sudo docker build --network=host --tag <PROJECT_NAME>:VERSION . 
+# IMPORTANT: If this does not go through, maybe try sudo command
+docker build --network=host --tag <PROJECT_NAME>:VERSION . 
+
+# Above command might not work well in computers such as Macbook with Apple Silicon (Ofc...). This is mainly because it has a different cpu architecture (arm64 instead of amd64) so the base image is different. I am not sure if this is the best solution but try this code below.
+# docker build --platform=linux/amd64 --tag <PROJECT_NAME>:VERSION .
 ```
 
 3. Run Docker image.
@@ -156,8 +159,7 @@ sudo docker build --network=host --tag <PROJECT_NAME>:VERSION .
 #| echo: true
 #| eval: false
 
-# IMPORTANT: You might not need to use sudo command. First try this code without it and only use sudo if it does not work.
-sudo docker run -it --rm <PROJECT_NAME>:VERSION
+docker run -it --rm <PROJECT_NAME>:VERSION
 ```
 
 ### Some useful Docker-related commands
@@ -166,16 +168,15 @@ sudo docker run -it --rm <PROJECT_NAME>:VERSION
 #| echo: true
 #| eval: false
 
-# IMPORTANT: You might not need to use sudo command. First try this code without it and only use sudo if it does not work.
 # check cached docker images
-sudo docker images
+docker images
 
 # check docker containers that are running
-sudo docker ps
+docker ps
 
 # remove the docker image
-sudo docker rmi <IMAGE_NAME>
+docker rmi <IMAGE_NAME>
 
 # remove all dangling images and caches (do it periodically to save space)
-sudo docker system prune
+docker system prune
 ```
