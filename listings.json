@@ -2,10 +2,10 @@
   {
     "listing": "/posts/index.html",
     "items": [
+      "/posts/dockerfile-template/index.html",
       "/posts/quarto-paper-template/index.html",
       "/posts/first-cite/index.html",
       "/posts/reproducible-coding-lecture/index.html",
-      "/posts/dockerfile-template/index.html",
       "/posts/admission-econ/index.html",
       "/posts/empirical-econ/index.html",
       "/posts/hello-quarto/index.html",
