@@ -15,10 +15,26 @@ toc: true
 
 ## Courses
 
-These are some info on the courses that I took.
+These are some info on the courses that I took or self-studied.
+
+<details>
+<summary><strong>Courses</strong></summary>
+- PhD Microeconomic Theory I (ECON 7100, UPenn, Fall 2024): [Personal summary]
+
+- PhD Macroeconomic Theory I (ECON 7200, UPenn, Fall 2024): [Personal summary]
+
+- PhD Econometrics I (ECON 7300, UPenn, Fall 2024): [Personal summary]
+
+- PhD Game Theory and Applications (ECON 6110, UPenn, Spring 2025): [Personal summary]
 
 - PhD Applied Econometrics (HCMG 9010, UPenn, Spring 2025): [Personal summary] 
 
 - PhD Advanced Real Estate and Urban Economics (REAL 9470, UPenn, Spring 2025): [Personal summary] 
 
+- PhD Cities in Developing Countries (REAL 9490, UPenn, Spring 2025): [Personal summary]
+
 - PhD Public Economics (BEPP 9330, UPenn, Spring 2025): [Personal summary] [\[PS1-solutions\]](ps/bepp-9330-1.pdf) 
+
+- PhD opics in Empirical Microeconomics: Spatial Economic Analysis (ECON 8400, UPenn, Spring 2025): [Personal summary]
+
+</details>
