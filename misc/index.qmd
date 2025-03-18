@@ -18,7 +18,7 @@ toc: true
 These are some info on the courses that I took or self-studied.
 
 <details>
-<summary><strong>Courses</strong></summary>
+<summary><strong>List of courses</strong></summary>
 - PhD Microeconomic Theory I (ECON 7100, UPenn, Fall 2024): [Personal summary]
 
 - PhD Macroeconomic Theory I (ECON 7200, UPenn, Fall 2024): [Personal summary]
