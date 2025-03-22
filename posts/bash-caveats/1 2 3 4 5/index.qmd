@@ -67,9 +67,9 @@ car=7; echo $?
 
 ```{bash}
 # Wrong!
-[10 -et 10]; echo $?
+[10 -eq 10]; echo $?
 
 # Correct!
-[ 10 -et 10 ]; echo $?
+[ 10 -eq 10 ]; echo $?
 
 ```
