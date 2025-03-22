@@ -12,7 +12,7 @@ In this post, I list some important precautions and best practices when working 
 
 ### 1. Word splitting
 
-When you enter commands in Bash shell, the shell performs several operations on your commands before finally executing them. Thus, understanding how your original command will be tranformed by the shell is important to avoid any fatal errors. This is especially true for Bash as one of the problem with Bash shell is that it does not easily let you find there is something wrong with your command. So it is very likely that you might be having some fatal error without ever knowing it until the ver end.
+When you enter commands in Bash shell, the shell performs several operations on your commands before finally executing them. Thus, understanding how your original command will be tranformed by the shell is important to avoid any fatal errors. This is especially true for Bash as one of the problems with Bash shell is that it does not easily let you know that there is something wrong with your command. So it is very likely that you have some fatal errors without ever knowing them until the very end.
 
 One of these operations is called "word splitting." This is a process where shell splits the results of the expansions (brace expansion, arithmetic expansion, etc) into separate words based on the characters of the IFS variable.[^1]
 
@@ -26,16 +26,15 @@ Still wondering what would happen? Try this and you will see.
 
 ```{bash}
 #| echo: true
-
     name="1 2 3 4 5"
     mkdir $name
     ls
     rmdir 1 2 3 4 5
 ```
 
-This created 5 files named "1", "2", "3", "4", "5".
+This creates 5 files named "1", "2", "3", "4", "5".
 
-#### Case 1 (quoting expansion)
+#### Case 2 (quoting expansion)
 
 ```{bash}
     name="1 2 3 4 5"
@@ -44,17 +43,17 @@ This created 5 files named "1", "2", "3", "4", "5".
     rmdir "1 2 3 4 5"
 ```
 
-This created one file named "1 2 3 4 5".
+This creates one file named "1 2 3 4 5".
 
-Hence it is best practice always to quote the expansion.
+Hence, it is always a best practice to quote the expansion.
 
 ### 2. Bash is sensitive to space (white character)
 
 In Bash, space (white character) matters a lot. Use it only when it is necessary.
 
 #### Example 1: Space gives you error[^2]
-```{bash}
 
+```{bash}
 # Wrong!
 car = 7; echo $?
 
@@ -67,7 +66,6 @@ car=7; echo $?
 #### Example 2: Sometimes though, you need space
 
 ```{bash}
-
 # Wrong!
 [10 -et 10]; echo $?
 
