@@ -290,15 +290,14 @@ index.rmarkdown</code></pre>
 <h4 class="anchored" data-anchor-id="example-2-sometimes-though-you-need-space">Example 2: Sometimes though, you need space</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Wrong!</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">[10</span> <span class="at">-et</span> 10]<span class="kw">;</span> <span class="bu">echo</span> <span class="va">$?</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">[10</span> <span class="at">-eq</span> 10]<span class="kw">;</span> <span class="bu">echo</span> <span class="va">$?</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Correct!</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> 10 -et 10 <span class="bu">]</span><span class="kw">;</span> <span class="bu">echo</span> <span class="va">$?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> 10 <span class="ot">-eq</span> 10 <span class="bu">]</span><span class="kw">;</span> <span class="bu">echo</span> <span class="va">$?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>bash: line 2: [10: command not found
 127
-bash: line 5: [: -et: binary operator expected
-2</code></pre>
+0</code></pre>
 </div>
 </div>
 
