@@ -1,0 +1,49 @@
+---
+title: "Beware of Bash"
+description: "Some warnings when using Bash"
+date: "2025-03-21"
+toc: false
+engine: knitr
+categories:
+  - software
+---
+
+In this post, I list some ㅑmportant precautions and best practices when working with the Bash shell. Note that this will be updated as I find more of it.
+
+### 1. Word splitting
+
+When you enter commands in Bash shell, the shell performs several operations on your commands before finally executing them. Thus, understanding how your original command will be tranformed by the shell is important to avoid any fatal errors. This is especially true for Bash as one of the problem with Bash shell is that it does not easily let you find there is something wrong with your command. So it is very likely that you might be having some fatal error without ever knowing it until the ver end.
+
+One of these operations is called "word splitting." This is a process where shell splits the results of the expansions (brace expansion, arithmetic expansion, etc) into separate words based on the characters of the IFS variable.[^1]
+
+[^1]: The IFS variable is a string of special characters that works as delimiters between words. The default value of IFS is space, tab, newline.
+
+Why can this be problematic? Word splitting works almost on every unquoted expansions. So the results of your commands can be problematic if you do not consider this.
+
+Still wondering what would happen? Try this and you will see.
+
+#### Case 1 (not quoting expansion)
+
+```{bash}
+#| echo: true
+
+    name="1 2 3 4 5"
+    mkdir $name
+    ls
+    rmdir 1 2 3 4 5
+```
+
+This created 5 files named "1", "2", "3", "4", "5".
+
+#### Case 1 (quoting expansion)
+
+```{bash}
+    name="1 2 3 4 5"
+    mkdir "$name"
+    ls
+    rmdir "1 2 3 4 5"
+```
+
+This created one file named "1 2 3 4 5".
+
+Hence it is best practice always to quote the expansion.

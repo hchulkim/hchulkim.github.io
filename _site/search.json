@@ -39,7 +39,7 @@
     "href": "posts/index.html",
     "title": "Blog",
     "section": "",
-    "text": "Reproducible coding crash course\n\n\n\n\n\n\nlecture\n\n\n\nMy slide and resources on reproducible coding\n\n\n\n\n\nJan 20, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nHello, Quarto\n\n\n\n\n\n\nmedia\n\n\n\nMigrating from hugo github page\n\n\n\n\n\nJan 19, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nSQL materials\n\n\n\n\n\n\nstudy\n\n\n\nResources for learning SQL\n\n\n\n\n\nJan 17, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\nNo matching items"
+    "text": "Beware of Bash\n\n\n\n\n\n\nsoftware\n\n\n\nSome warnings when using Bash\n\n\n\n\n\nMar 21, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nPersonal Dockerfile for data science\n\n\n\n\n\n\nlecture\n\n\n\nPersonal Dockerfile template for my research workflow\n\n\n\n\n\nMar 15, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto format Econ. working paper template\n\n\n\n\n\n\nsoftware\n\n\n\nI just dropped a new quarto format working paper template in github\n\n\n\n\n\nMar 9, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nFirst academic citation\n\n\n\n\n\n\nresearch\n\n\n\nI am celebrating my first citation\n\n\n\n\n\nMar 1, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nAdmission tips for Econ. Ph.D. (by Ph.D. student)\n\n\n\n\n\n\nlecture\n\n\n\nAdmission tips slide I wrote for master students at Alma Mater\n\n\n\n\n\nJan 20, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nReproducible coding crash course\n\n\n\n\n\n\nlecture\n\n\n\nMy slide and resources on reproducible coding\n\n\n\n\n\nJan 20, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nSummary of my understanding of terms in empirical economics\n\n\n\n\n\n\nstudy\n\n\n\nSummary of some terms and jargons in the field of empirical economics\n\n\n\n\n\nJan 20, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nHello, Quarto\n\n\n\n\n\n\nmedia\n\n\n\nMigrating from hugo github page\n\n\n\n\n\nJan 19, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nSQL materials\n\n\n\n\n\n\nstudy\n\n\n\nResources for learning SQL\n\n\n\n\n\nJan 17, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/hello-quarto/index.html",
@@ -102,7 +102,7 @@
     "href": "misc/index.html#courses",
     "title": "Misc.",
     "section": "Courses",
-    "text": "Courses\nThese are some info on the courses that I took.\n\nPhD Applied Econometrics (HCMG 9010, UPenn, Spring 2025): [Personal summary]\nPhD Advanced Real Estate and Urban Economics (REAL 9470, UPenn, Spring 2025): [Personal summary]\nPhD Public Economics (BEPP 9330, UPenn, Spring 2025): [Personal summary] [PS1-solutions]"
+    "text": "Courses\nThese are some info on the courses that I took or self-studied.\n\n\nList of courses\n\n\nPhD Microeconomic Theory I (ECON 7100, UPenn, Fall 2024): [Personal summary]\nPhD Macroeconomic Theory I (ECON 7200, UPenn, Fall 2024): [Personal summary]\nPhD Econometrics I (ECON 7300, UPenn, Fall 2024): [Personal summary]\nPhD Game Theory and Applications (ECON 6110, UPenn, Spring 2025): [Personal summary]\nPhD Applied Econometrics (HCMG 9010, UPenn, Spring 2025): [Personal summary]\nPhD Advanced Real Estate and Urban Economics (REAL 9470, UPenn, Spring 2025): [Personal summary]\nPhD Cities in Developing Countries (REAL 9490, UPenn, Spring 2025): [Personal summary]\nPhD Public Economics (BEPP 9330, UPenn, Spring 2025): [Personal summary] [PS1-solutions]\nPhD opics in Empirical Microeconomics: Spatial Economic Analysis (ECON 8400, UPenn, Spring 2025): [Personal summary]"
   },
   {
     "objectID": "misc/index.html#software",
@@ -138,5 +138,33 @@
     "title": "Teaching",
     "section": "The Wharton School, UPenn (T.A.)",
     "text": "The Wharton School, UPenn (T.A.)"
+  },
+  {
+    "objectID": "posts/bash-caveats/index.html",
+    "href": "posts/bash-caveats/index.html",
+    "title": "Beware of Bash",
+    "section": "",
+    "text": "In this post, I list some ㅑmportant precautions and best practices when working with the Bash shell. Note that this will be updated as I find more of it."
+  },
+  {
+    "objectID": "posts/bash-caveats/index.html#footnotes",
+    "href": "posts/bash-caveats/index.html#footnotes",
+    "title": "Beware of Bash",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThe IFS variable is a string of special characters that works as delimiters between words. The default value of IFS is space, tab, newline.↩︎"
+  },
+  {
+    "objectID": "posts/bash-caveats/1 2 3 4 5/index.html",
+    "href": "posts/bash-caveats/1 2 3 4 5/index.html",
+    "title": "Beware of Bash",
+    "section": "",
+    "text": "In this post, I list some ㅑmportant precautions and best practices when working with the Bash shell. Note that this will be updated as I find more of it."
+  },
+  {
+    "objectID": "posts/bash-caveats/1 2 3 4 5/index.html#footnotes",
+    "href": "posts/bash-caveats/1 2 3 4 5/index.html#footnotes",
+    "title": "Beware of Bash",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThe IFS variable is a string of special characters that works as delimiters between words. The default value of IFS is space, tab, newline.↩︎"
   }
 ]
