@@ -165,6 +165,6 @@
     "href": "posts/bash-caveats/1 2 3 4 5/index.html#footnotes",
     "title": "Beware of Bash",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nThe IFS variable is a string of special characters that works as delimiters between words. The default value of IFS is space, tab, newline.↩︎\nYou might wonder what 127 and 0 mean in the output. In Bash, every command gives off return code. If it is 0, it means execute code was run without problem. If it is some other value, it means there is something wrong with the command.↩︎"
+    "text": "Footnotes\n\n\nThe IFS variable is a string of special characters that works as delimiters between words. The default value of IFS is space, tab, newline.↩︎\nYou might wonder what 127 and 0 mean in the output. In Bash, every command gives off return code. If it is 0, it means execute code was run without problem. If it has some other values, it means there is something wrong with the command.↩︎"
   }
 ]

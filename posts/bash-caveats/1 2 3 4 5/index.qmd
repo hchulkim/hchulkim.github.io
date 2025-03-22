@@ -50,7 +50,7 @@ Hence it is best practice always to quote the expansion.
 
 ### 2. Bash is sensitive to space (white character)
 
-In Bash, space (which character) matters a lot. Use it only when it is necessary.
+In Bash, space (white character) matters a lot. Use it only when it is necessary.
 
 #### Example 1: Space gives you error[^2]
 ```{bash}
