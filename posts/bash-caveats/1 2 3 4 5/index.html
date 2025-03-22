@@ -270,7 +270,7 @@ index.rmarkdown</code></pre>
 </section>
 <section id="bash-is-sensitive-to-space-white-character" class="level3">
 <h3 class="anchored" data-anchor-id="bash-is-sensitive-to-space-white-character">2. Bash is sensitive to space (white character)</h3>
-<p>In Bash, space (which character) matters a lot. Use it only when it is necessary.</p>
+<p>In Bash, space (white character) matters a lot. Use it only when it is necessary.</p>
 <section id="example-1-space-gives-you-error2" class="level4">
 <h4 class="anchored" data-anchor-id="example-1-space-gives-you-error2">Example 1: Space gives you error<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></h4>
 <div class="cell">
@@ -290,15 +290,16 @@ index.rmarkdown</code></pre>
 <section id="example-2-sometimes-though-you-need-space" class="level4">
 <h4 class="anchored" data-anchor-id="example-2-sometimes-though-you-need-space">Example 2: Sometimes though, you need space</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Wrong!</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">[10</span> <span class="at">-et</span> 10]<span class="kw">;</span> <span class="bu">echo</span> <span class="va">$?</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Correct!</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> 10 -et 10 <span class="bu">]</span><span class="kw">;</span> <span class="bu">echo</span> <span class="va">$?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Wrong!</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">[10</span> <span class="at">-et</span> 10]<span class="kw">;</span> <span class="bu">echo</span> <span class="va">$?</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Correct!</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> 10 -et 10 <span class="bu">]</span><span class="kw">;</span> <span class="bu">echo</span> <span class="va">$?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>bash: line 1: [10: command not found
+<pre><code>bash: line 2: [10: command not found
 127
-bash: line 4: [: -et: binary operator expected
+bash: line 5: [: -et: binary operator expected
 2</code></pre>
 </div>
 </div>
@@ -312,7 +313,7 @@ bash: line 4: [: -et: binary operator expected
 
 <ol>
 <li id="fn1"><p>The IFS variable is a string of special characters that works as delimiters between words. The default value of IFS is space, tab, newline.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>You might wonder what 127 and 0 mean in the output. In Bash, every command gives off return code. If it is 0, it means execute code was run without problem. If it is some other value, it means there is something wrong with the command.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>You might wonder what 127 and 0 mean in the output. In Bash, every command gives off return code. If it is 0, it means execute code was run without problem. If it has some other values, it means there is something wrong with the command.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
