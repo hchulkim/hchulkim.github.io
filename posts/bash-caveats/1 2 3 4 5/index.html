@@ -225,7 +225,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>In this post, I list some ㅑmportant precautions and best practices when working with the Bash shell. Note that this will be updated as I find more of it.</p>
+<p>In this post, I list some important precautions and best practices when working with the Bash shell. Note that this will be updated as I find more of it.</p>
 <section id="word-splitting" class="level3">
 <h3 class="anchored" data-anchor-id="word-splitting">1. Word splitting</h3>
 <p>When you enter commands in Bash shell, the shell performs several operations on your commands before finally executing them. Thus, understanding how your original command will be tranformed by the shell is important to avoid any fatal errors. This is especially true for Bash as one of the problem with Bash shell is that it does not easily let you find there is something wrong with your command. So it is very likely that you might be having some fatal error without ever knowing it until the ver end.</p>
@@ -246,8 +246,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 4
 5
 index.qmd
-index.rmarkdown
-index_files</code></pre>
+index.rmarkdown</code></pre>
 </div>
 </div>
 <p>This created 5 files named “1”, “2”, “3”, “4”, “5”.</p>
@@ -262,12 +261,47 @@ index_files</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>1 2 3 4 5
 index.qmd
-index.rmarkdown
-index_files</code></pre>
+index.rmarkdown</code></pre>
 </div>
 </div>
 <p>This created one file named “1 2 3 4 5”.</p>
 <p>Hence it is best practice always to quote the expansion.</p>
+</section>
+</section>
+<section id="bash-is-sensitive-to-space-white-character" class="level3">
+<h3 class="anchored" data-anchor-id="bash-is-sensitive-to-space-white-character">2. Bash is sensitive to space (white character)</h3>
+<p>In Bash, space (which character) matters a lot. Use it only when it is necessary.</p>
+<section id="example-1-space-gives-you-error2" class="level4">
+<h4 class="anchored" data-anchor-id="example-1-space-gives-you-error2">Example 1: Space gives you error<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Wrong!</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">car</span> = 7<span class="kw">;</span> <span class="bu">echo</span> <span class="va">$?</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Correct!</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="va">car</span><span class="op">=</span>7<span class="kw">;</span> <span class="bu">echo</span> <span class="va">$?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>bash: line 2: car: command not found
+127
+0</code></pre>
+</div>
+</div>
+</section>
+<section id="example-2-sometimes-though-you-need-space" class="level4">
+<h4 class="anchored" data-anchor-id="example-2-sometimes-though-you-need-space">Example 2: Sometimes though, you need space</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Wrong!</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">[10</span> <span class="at">-et</span> 10]<span class="kw">;</span> <span class="bu">echo</span> <span class="va">$?</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Correct!</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> 10 -et 10 <span class="bu">]</span><span class="kw">;</span> <span class="bu">echo</span> <span class="va">$?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>bash: line 1: [10: command not found
+127
+bash: line 4: [: -et: binary operator expected
+2</code></pre>
+</div>
+</div>
 
 
 </section>
@@ -278,6 +312,7 @@ index_files</code></pre>
 
 <ol>
 <li id="fn1"><p>The IFS variable is a string of special characters that works as delimiters between words. The default value of IFS is space, tab, newline.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>You might wonder what 127 and 0 mean in the output. In Bash, every command gives off return code. If it is 0, it means execute code was run without problem. If it is some other value, it means there is something wrong with the command.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

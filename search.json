@@ -39,14 +39,14 @@
     "href": "posts/bash-caveats/1 2 3 4 5/index.html",
     "title": "Beware of Bash",
     "section": "",
-    "text": "In this post, I list some ㅑmportant precautions and best practices when working with the Bash shell. Note that this will be updated as I find more of it."
+    "text": "In this post, I list some important precautions and best practices when working with the Bash shell. Note that this will be updated as I find more of it."
   },
   {
     "objectID": "posts/bash-caveats/1 2 3 4 5/index.html#footnotes",
     "href": "posts/bash-caveats/1 2 3 4 5/index.html#footnotes",
     "title": "Beware of Bash",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nThe IFS variable is a string of special characters that works as delimiters between words. The default value of IFS is space, tab, newline.↩︎"
+    "text": "Footnotes\n\n\nThe IFS variable is a string of special characters that works as delimiters between words. The default value of IFS is space, tab, newline.↩︎\nYou might wonder what 127 and 0 mean in the output. In Bash, every command gives off return code. If it is 0, it means execute code was run without problem. If it is some other value, it means there is something wrong with the command.↩︎"
   },
   {
     "objectID": "posts/first-cite/index.html",
