@@ -8,7 +8,7 @@ categories:
   - software
 ---
 
-In this post, I list some ㅑmportant precautions and best practices when working with the Bash shell. Note that this will be updated as I find more of it.
+In this post, I list some important precautions and best practices when working with the Bash shell. Note that this will be updated as I find more of it.
 
 ### 1. Word splitting
 
@@ -47,3 +47,31 @@ This created 5 files named "1", "2", "3", "4", "5".
 This created one file named "1 2 3 4 5".
 
 Hence it is best practice always to quote the expansion.
+
+### 2. Bash is sensitive to space (white character)
+
+In Bash, space (which character) matters a lot. Use it only when it is necessary.
+
+#### Example 1: Space gives you error[^2]
+```{bash}
+
+# Wrong!
+car = 7; echo $?
+
+# Correct!
+car=7; echo $?
+```
+
+[^2]: You might wonder what 127 and 0 mean in the output. In Bash, every command gives off return code. If it is 0, it means execute code was run without problem. If it has some other values, it means there is something wrong with the command.
+
+#### Example 2: Sometimes though, you need space
+
+```{bash}
+
+# Wrong!
+[10 -et 10]; echo $?
+
+# Correct!
+[ 10 -et 10 ]; echo $?
+
+```
