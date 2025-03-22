@@ -2,6 +2,7 @@
   {
     "listing": "/posts/index.html",
     "items": [
+      "/posts/bash-caveats/1 2 3 4 5/index.html",
       "/posts/dockerfile-template/index.html",
       "/posts/quarto-paper-template/index.html",
       "/posts/first-cite/index.html",
