@@ -228,7 +228,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>In this post, I list some important precautions and best practices when working with the Bash shell. Note that this will be updated as I find more of it.</p>
 <section id="word-splitting" class="level3">
 <h3 class="anchored" data-anchor-id="word-splitting">1. Word splitting</h3>
-<p>When you enter commands in Bash shell, the shell performs several operations on your commands before finally executing them. Thus, understanding how your original command will be tranformed by the shell is important to avoid any fatal errors. This is especially true for Bash as one of the problem with Bash shell is that it does not easily let you find there is something wrong with your command. So it is very likely that you might be having some fatal error without ever knowing it until the ver end.</p>
+<p>When you enter commands in Bash shell, the shell performs several operations on your commands before finally executing them. Thus, understanding how your original command will be tranformed by the shell is important to avoid any fatal errors. This is especially true for Bash as one of the problems with Bash shell is that it does not easily let you know that there is something wrong with your command. So it is very likely that you have some fatal errors without ever knowing them until the very end.</p>
 <p>One of these operations is called “word splitting.” This is a process where shell splits the results of the expansions (brace expansion, arithmetic expansion, etc) into separate words based on the characters of the IFS variable.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p>Why can this be problematic? Word splitting works almost on every unquoted expansions. So the results of your commands can be problematic if you do not consider this.</p>
 <p>Still wondering what would happen? Try this and you will see.</p>
@@ -249,10 +249,10 @@ index.qmd
 index.rmarkdown</code></pre>
 </div>
 </div>
-<p>This created 5 files named “1”, “2”, “3”, “4”, “5”.</p>
+<p>This creates 5 files named “1”, “2”, “3”, “4”, “5”.</p>
 </section>
-<section id="case-1-quoting-expansion" class="level4">
-<h4 class="anchored" data-anchor-id="case-1-quoting-expansion">Case 1 (quoting expansion)</h4>
+<section id="case-2-quoting-expansion" class="level4">
+<h4 class="anchored" data-anchor-id="case-2-quoting-expansion">Case 2 (quoting expansion)</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>    <span class="va">name</span><span class="op">=</span><span class="st">"1 2 3 4 5"</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mkdir</span> <span class="st">"</span><span class="va">$name</span><span class="st">"</span></span>
@@ -264,8 +264,8 @@ index.qmd
 index.rmarkdown</code></pre>
 </div>
 </div>
-<p>This created one file named “1 2 3 4 5”.</p>
-<p>Hence it is best practice always to quote the expansion.</p>
+<p>This creates one file named “1 2 3 4 5”.</p>
+<p>Hence, it is always a best practice to quote the expansion.</p>
 </section>
 </section>
 <section id="bash-is-sensitive-to-space-white-character" class="level3">
@@ -274,12 +274,11 @@ index.rmarkdown</code></pre>
 <section id="example-1-space-gives-you-error2" class="level4">
 <h4 class="anchored" data-anchor-id="example-1-space-gives-you-error2">Example 1: Space gives you error<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Wrong!</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">car</span> = 7<span class="kw">;</span> <span class="bu">echo</span> <span class="va">$?</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Correct!</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="va">car</span><span class="op">=</span>7<span class="kw">;</span> <span class="bu">echo</span> <span class="va">$?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Wrong!</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">car</span> = 7<span class="kw">;</span> <span class="bu">echo</span> <span class="va">$?</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Correct!</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="va">car</span><span class="op">=</span>7<span class="kw">;</span> <span class="bu">echo</span> <span class="va">$?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>bash: line 2: car: command not found
 127
@@ -290,12 +289,11 @@ index.rmarkdown</code></pre>
 <section id="example-2-sometimes-though-you-need-space" class="level4">
 <h4 class="anchored" data-anchor-id="example-2-sometimes-though-you-need-space">Example 2: Sometimes though, you need space</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Wrong!</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">[10</span> <span class="at">-et</span> 10]<span class="kw">;</span> <span class="bu">echo</span> <span class="va">$?</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Correct!</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> 10 -et 10 <span class="bu">]</span><span class="kw">;</span> <span class="bu">echo</span> <span class="va">$?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Wrong!</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">[10</span> <span class="at">-et</span> 10]<span class="kw">;</span> <span class="bu">echo</span> <span class="va">$?</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Correct!</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> 10 -et 10 <span class="bu">]</span><span class="kw">;</span> <span class="bu">echo</span> <span class="va">$?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>bash: line 2: [10: command not found
 127
