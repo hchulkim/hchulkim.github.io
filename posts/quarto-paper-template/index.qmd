@@ -11,7 +11,7 @@ I just dropped a new Quarto format working paper template that is often used in 
 
 ### Why use Quarto?[^1]
 
-1. You can easily create scientific reproducible, production quality articles n various formats including LaTeX, PDF, Word, html, and more.
+1. You can easily create scientific reproducible, production quality articles in various formats including LaTeX, PDF, Word, html, and more.
 
 2. You can write using Pandoc markdown, including equations, citations, crossrefs, figure panels, callouts, advanced layout, and more.
 
