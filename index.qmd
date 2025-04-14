@@ -28,4 +28,6 @@ I am a first-year Ph.D. student in <span style="color:#011F5B;">**Applied Econom
 
 You can either call me <span style="color:#011F5B;">**Hyoungchul (H-Young-Cheol)**</span> or <span style="color:#011F5B;">**Kent (my english name)**</span>.
 
+I am currently interested in urban and environmental topics using tools from international trade and industrial organization.
+
 For inquiries about software, email me or use the issue tracker at github.
