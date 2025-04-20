@@ -105,11 +105,18 @@
     "text": "Quarto working paper template for Economics: [github link] [Blog post]\n\n\n\n\n\nDockerfile for empirical analysis (R, Python, Julia with dependency management setup): [link]"
   },
   {
+    "objectID": "misc/index.html#math",
+    "href": "misc/index.html#math",
+    "title": "Misc.",
+    "section": "Math",
+    "text": "Math\n\n(Partial) Solutions\n\nIntroduction to set theory (Hrbacek and Jech)\nReal analysis (Folland)"
+  },
+  {
     "objectID": "misc/index.html#courses",
     "href": "misc/index.html#courses",
     "title": "Misc.",
     "section": "Courses",
-    "text": "Courses\nThese are some info on the courses that I took or self-studied.\n\n\nList of courses\n\n\nPhD Microeconomic Theory I (ECON 7100, UPenn, Fall 2024): [Personal summary]\nPhD Macroeconomic Theory I (ECON 7200, UPenn, Fall 2024): [Personal summary]\nPhD Econometrics I (ECON 7300, UPenn, Fall 2024): [Personal summary]\nPhD Game Theory and Applications (ECON 6110, UPenn, Spring 2025): [Personal summary]\nPhD Applied Econometrics (HCMG 9010, UPenn, Spring 2025): [Personal summary]\nPhD Advanced Real Estate and Urban Economics (REAL 9470, UPenn, Spring 2025): [Personal summary]\nPhD Cities in Developing Countries (REAL 9490, UPenn, Spring 2025): [Personal summary]\nPhD Public Economics (BEPP 9330, UPenn, Spring 2025): [Personal summary] [PS1-solutions]\nPhD opics in Empirical Microeconomics: Spatial Economic Analysis (ECON 8400, UPenn, Spring 2025): [Personal summary]"
+    "text": "Courses\nThese are some info on the courses that I took or self-studied.\n\n\nList of courses\n\n\nPhD Microeconomic Theory I (ECON 7100, UPenn, Fall 2024): [Personal summary]\nPhD Macroeconomic Theory I (ECON 7200, UPenn, Fall 2024): [Personal summary]\nPhD Econometrics I (ECON 7300, UPenn, Fall 2024): [Personal summary]\nPhD Game Theory and Applications (ECON 6110, UPenn, Spring 2025): [Personal summary]\nPhD Applied Econometrics (HCMG 9010, UPenn, Spring 2025): [Personal summary]\nPhD Advanced Real Estate and Urban Economics (REAL 9470, UPenn, Spring 2025): [Personal summary]\nPhD Cities in Developing Countries (REAL 9490, UPenn, Spring 2025): [Personal summary]\nPhD Public Economics (BEPP 9330, UPenn, Spring 2025): [Personal summary] [PS1-solutions] [PS2-solutions]\nPhD Topics in Empirical Microeconomics: Spatial Economic Analysis (ECON 8400, UPenn, Spring 2025): [Personal summary]"
   },
   {
     "objectID": "posts/dockerfile-template/index.html",
