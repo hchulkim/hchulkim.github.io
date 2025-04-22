@@ -1,0 +1,15 @@
+{
+  "hash": "a68747c3488570794473b4be3b8717e2",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Makefile: build automation software\"\ndescription: \"Making automation workflow with `Makefile`\"\ndate: \"2025-04-22\"\nengine: knitr\ntoc: false\ncategories:\n  - software\n---\n\n\n\nIf you haven't used `Make` yet, you should do it now! `Make` is a software that can help your research worfklow by automating certain procedures. For example, you can use `Make` to re-run all your necessary codes whenever there is a change in the raw data in your folder.\n\nBelow I provide a very simple example of `Makefile` which is used to run `Make`. The code below checks all the folders that have git installed and can do `git pull` and `git push` for all the folders instead of manually going into the subfolders and run the command separately.\n\n**ENJOY!**\n\n\n\n::: {.cell}\n\n```{.bash .cell-code}\n.PHONY: pull-all push-all\n\nSUBDIRS := $(shell find . -mindepth 1 -maxdepth 1 -type d)\n\npull-all:\n\t@for dir in $(SUBDIRS); do \\\n\t\tif [ -d \"$$dir/.git\" ]; then \\\n\t\t\techo \"Pulling in $$dir...\"; \\\n\t\t\t(cd $$dir && git pull); \\\n\t\telse \\\n\t\t\techo \"Skipping $$dir (not a git repo)\"; \\\n\t\tfi \\\n\tdone\n\npush-all:\n\t@for dir in $(SUBDIRS); do \\\n\t\tif [ -d \"$$dir/.git\" ]; then \\\n\t\t\techo \"Pushing in $$dir...\"; \\\n\t\t\t(cd $$dir && git push); \\\n\t\telse \\\n\t\t\techo \"Skipping $$dir (not a git repo)\"; \\\n\t\tfi \\\n\tdone\n```\n:::",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

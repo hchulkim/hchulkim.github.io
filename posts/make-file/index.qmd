@@ -1,0 +1,43 @@
+---
+title: "Makefile: build automation software"
+description: "Making automation workflow with `Makefile`"
+date: "2025-04-22"
+engine: knitr
+toc: false
+categories:
+  - software
+---
+
+If you haven't used `Make` yet, you should do it now! `Make` is a software that can help your research worfklow by automating certain procedures. For example, you can use `Make` to re-run all your necessary codes whenever there is a change in the raw data in your folder.
+
+Below I provide a very simple example of `Makefile` which is used to run `Make`. The code below checks all the folders that have git installed and can do `git pull` and `git push` for all the folders instead of manually going into the subfolders and run the command separately.
+
+**ENJOY!**
+
+```{bash}
+#| eval: false
+ 
+.PHONY: pull-all push-all
+
+SUBDIRS := $(shell find . -mindepth 1 -maxdepth 1 -type d)
+
+pull-all:
+	@for dir in $(SUBDIRS); do \
+		if [ -d "$$dir/.git" ]; then \
+			echo "Pulling in $$dir..."; \
+			(cd $$dir && git pull); \
+		else \
+			echo "Skipping $$dir (not a git repo)"; \
+		fi \
+	done
+
+push-all:
+	@for dir in $(SUBDIRS); do \
+		if [ -d "$$dir/.git" ]; then \
+			echo "Pushing in $$dir..."; \
+			(cd $$dir && git push); \
+		else \
+			echo "Skipping $$dir (not a git repo)"; \
+		fi \
+	done
+```
