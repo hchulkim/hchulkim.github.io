@@ -39,7 +39,7 @@
     "href": "misc/index.html#courses",
     "title": "Misc.",
     "section": "Courses",
-    "text": "Courses\nThese are some info on the courses that I took or self-studied.\n\n\nList of courses\n\n\nPhD Microeconomic Theory I (ECON 7100, UPenn, Fall 2024): Personal summary\nPhD Macroeconomic Theory I (ECON 7200, UPenn, Fall 2024): [Personal summary]\nPhD Econometrics I (ECON 7300, UPenn, Fall 2024): [Personal summary]\nPhD Game Theory and Applications (ECON 6110, UPenn, Spring 2025): [Personal summary]\nPhD Applied Econometrics (HCMG 9010, UPenn, Spring 2025): [Personal summary]\nPhD Advanced Real Estate and Urban Economics (REAL 9470, UPenn, Spring 2025): [Personal summary]\nPhD Cities in Developing Countries (REAL 9490, UPenn, Spring 2025): [Personal summary]\nPhD Public Economics (BEPP 9330, UPenn, Spring 2025): [Personal summary]\nPhD Topics in Empirical Microeconomics: Spatial Economic Analysis (ECON 8400, UPenn, Spring 2025): [Personal summary]"
+    "text": "Courses\nThese are some info on the courses that I took or self-studied.\n\n\nList of courses\n\n\nPhD Microeconomic Theory I (ECON 7100, UPenn, Fall 2024): [Personal summary]\nPhD Macroeconomic Theory I (ECON 7200, UPenn, Fall 2024): [Personal summary]\nPhD Econometrics I (ECON 7300, UPenn, Fall 2024): [Personal summary]\nPhD Game Theory and Applications (ECON 6110, UPenn, Spring 2025): [Personal summary]\nPhD Applied Econometrics (HCMG 9010, UPenn, Spring 2025): [Personal summary]\nPhD Advanced Real Estate and Urban Economics (REAL 9470, UPenn, Spring 2025): [Personal summary]\nPhD Cities in Developing Countries (REAL 9490, UPenn, Spring 2025): [Personal summary]\nPhD Public Economics (BEPP 9330, UPenn, Spring 2025): [Personal summary]\nPhD Topics in Empirical Microeconomics: Spatial Economic Analysis (ECON 8400, UPenn, Spring 2025): [Personal summary]"
   },
   {
     "objectID": "posts/make-file/index.html",
@@ -165,7 +165,7 @@
     "href": "misc/personal/econ6110.html",
     "title": "ECON-6110",
     "section": "",
-    "text": "This is an informal notes to record what I thought about or what I thought was important in the Game theory class.\n\nAdverse selection\nI thought it was interesting to learn that the key takeaway from adverse selection isn’t just the presence of information asymmetry between agents, but that this asymmetry impacts other agents’ payoffs. In fact, this is the main factor leading to the presence of adverse selection. In the famous lemon market example, adverse selection will not occur if there were separate and independent dimensions of utility for the seller and buyer."
+    "text": "This is an informal note to record what I thought about or what I thought was important in the Game theory class.\n\nAdverse selection\nI thought it was interesting to learn that the key takeaway from adverse selection isn’t just the presence of information asymmetry between agents, but that this asymmetry impacts other agents’ payoffs. In fact, this is the main factor leading to the presence of adverse selection. In the famous lemon market example, adverse selection will not occur if there were separate and independent dimensions of utility for the seller and buyer."
   },
   {
     "objectID": "index.html",
