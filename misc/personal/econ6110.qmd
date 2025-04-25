@@ -5,7 +5,7 @@ date: "2025-04-25"
 toc: false
 ---
 
-This is an informal notes to record what I thought about or what I thought was important in the Game theory class.
+This is an informal note to record what I thought about or what I thought was important in the Game theory class.
 
 ### Adverse selection
 
