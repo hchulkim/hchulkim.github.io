@@ -26,7 +26,7 @@ These are some info on the courses that I took or self-studied.
 
 <details>
 <summary><strong>List of courses</strong></summary>
-- PhD Microeconomic Theory I (ECON 7100, UPenn, Fall 2024): [Personal summary]
+- PhD Microeconomic Theory I (ECON 7100, UPenn, Fall 2024): [Personal summary](personal/econ6110.qmd)
 
 - PhD Macroeconomic Theory I (ECON 7200, UPenn, Fall 2024): [Personal summary]
 
@@ -40,7 +40,7 @@ These are some info on the courses that I took or self-studied.
 
 - PhD Cities in Developing Countries (REAL 9490, UPenn, Spring 2025): [Personal summary]
 
-- PhD Public Economics (BEPP 9330, UPenn, Spring 2025): [Personal summary] [\[PS1-solutions\]](ps/bepp-9330-1.pdf) [\[PS2-solutions\]](ps/bepp-9330-2.pdf) 
+- PhD Public Economics (BEPP 9330, UPenn, Spring 2025): [Personal summary] 
 
 - PhD Topics in Empirical Microeconomics: Spatial Economic Analysis (ECON 8400, UPenn, Spring 2025): [Personal summary]
 
