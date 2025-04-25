@@ -3,9 +3,6 @@ title: "ECON-6110"
 description: "Notes on what I thought about"
 date: "2025-04-25"
 toc: false
-engine: knitr
-categories:
-  - software
 ---
 
 This is an informal notes to record what I thought about or what I thought was important in the Game theory class.
