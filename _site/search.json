@@ -102,7 +102,7 @@
     "href": "misc/index.html#courses",
     "title": "Misc.",
     "section": "Courses",
-    "text": "Courses\nThese are some info on the courses that I took or self-studied.\n\n\nList of courses\n\n\nPhD Microeconomic Theory I (ECON 7100, UPenn, Fall 2024): Personal summary\nPhD Macroeconomic Theory I (ECON 7200, UPenn, Fall 2024): [Personal summary]\nPhD Econometrics I (ECON 7300, UPenn, Fall 2024): [Personal summary]\nPhD Game Theory and Applications (ECON 6110, UPenn, Spring 2025): [Personal summary]\nPhD Applied Econometrics (HCMG 9010, UPenn, Spring 2025): [Personal summary]\nPhD Advanced Real Estate and Urban Economics (REAL 9470, UPenn, Spring 2025): [Personal summary]\nPhD Cities in Developing Countries (REAL 9490, UPenn, Spring 2025): [Personal summary]\nPhD Public Economics (BEPP 9330, UPenn, Spring 2025): [Personal summary]\nPhD Topics in Empirical Microeconomics: Spatial Economic Analysis (ECON 8400, UPenn, Spring 2025): [Personal summary]"
+    "text": "Courses\nThese are some info on the courses that I took or self-studied.\n\n\nList of courses\n\n\nPhD Microeconomic Theory I (ECON 7100, UPenn, Fall 2024): [Personal summary]\nPhD Macroeconomic Theory I (ECON 7200, UPenn, Fall 2024): [Personal summary]\nPhD Econometrics I (ECON 7300, UPenn, Fall 2024): [Personal summary]\nPhD Game Theory and Applications (ECON 6110, UPenn, Spring 2025): [Personal summary]\nPhD Applied Econometrics (HCMG 9010, UPenn, Spring 2025): [Personal summary]\nPhD Advanced Real Estate and Urban Economics (REAL 9470, UPenn, Spring 2025): [Personal summary]\nPhD Cities in Developing Countries (REAL 9490, UPenn, Spring 2025): [Personal summary]\nPhD Public Economics (BEPP 9330, UPenn, Spring 2025): [Personal summary]\nPhD Topics in Empirical Microeconomics: Spatial Economic Analysis (ECON 8400, UPenn, Spring 2025): [Personal summary]"
   },
   {
     "objectID": "misc/index.html#software",
@@ -186,6 +186,27 @@
     "href": "misc/personal/econ6110.html",
     "title": "ECON-6110",
     "section": "",
-    "text": "This is an informal notes to record what I thought about or what I thought was important in the Game theory class.\n\nAdverse selection\nI thought it was interesting to learn that the key takeaway from adverse selection isn’t just the presence of information asymmetry between agents, but that this asymmetry impacts other agents’ payoffs. In fact, this is the main factor leading to the presence of adverse selection. In the famous lemon market example, adverse selection will not occur if there were separate and independent dimensions of utility for the seller and buyer."
+    "text": "This is an informal note to record what I thought about or what I thought was important in the Game theory class.\n\nEx-ante, interim, ex-post\nWhen talking about (expected) payoff of agents, it is important to know whether the agents are maximizing ex-ante, intermin, or ex-post. For example, revenue equivalence theorem in auction is about equivalence of autioneer’s expected payoff ex-ante, not ex-post. Fortunately, chatgpt did a good job in summarizin the definition in a table.\n\n\n\nNormal form and extensive form\nIt is important to note that the main difference between normal form game and extensive form game is not the timing. That is, fundamental difference between normal form and extensive form game is not whether the agents make decisions at the same time or not. For example, think of a game where agents makes decisions at different timing but they cannot observe others’ actions. In this setting, the game is still a normal form. The game becomes “extensive” when some agents can observe other agents’ actions before making their own decisions. Thus, the main factor that differentiates normal form and extensive form is whether agents make their actions after observing other’s actions.\n\n\nAdverse selection\nI thought it was interesting to learn that the key takeaway from adverse selection isn’t just the presence of information asymmetry between agents, but that this asymmetry impacts other agents’ payoffs. In fact, this is the main factor leading to the presence of adverse selection. In the famous lemon market example, adverse selection will not occur if there were separate and independent dimensions of utility for the seller and buyer."
+  },
+  {
+    "objectID": "misc/personal/econ7200.html",
+    "href": "misc/personal/econ7200.html",
+    "title": "ECON-7200",
+    "section": "",
+    "text": "This is an informal note to record what I thought about or what I thought was important in the Macroeconomics I class.\n\ntba"
+  },
+  {
+    "objectID": "misc/personal/econ7100.html",
+    "href": "misc/personal/econ7100.html",
+    "title": "ECON-7100",
+    "section": "",
+    "text": "This is an informal note to record what I thought about or what I thought was important in the Microeconomics I class.\n\ntba"
+  },
+  {
+    "objectID": "misc/personal/econ7300.html",
+    "href": "misc/personal/econ7300.html",
+    "title": "ECON-7300",
+    "section": "",
+    "text": "This is an informal note to record what I thought about or what I thought was important in the Metrics I class.\n\ntba"
   }
 ]
