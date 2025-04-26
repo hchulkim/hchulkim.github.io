@@ -26,13 +26,13 @@ These are some info on the courses that I took or self-studied.
 
 <details>
 <summary><strong>List of courses</strong></summary>
-- PhD Microeconomic Theory I (ECON 7100, UPenn, Fall 2024): [\[Personal summary\]](personal/econ6110.qmd)
+- PhD Microeconomic Theory I (ECON 7100, UPenn, Fall 2024): [\[Personal summary\]](personal/econ7100.qmd)
 
-- PhD Macroeconomic Theory I (ECON 7200, UPenn, Fall 2024): [Personal summary]
+- PhD Macroeconomic Theory I (ECON 7200, UPenn, Fall 2024): [\[Personal summary\]](personal/econ7200.qmd)
 
-- PhD Econometrics I (ECON 7300, UPenn, Fall 2024): [Personal summary]
+- PhD Econometrics I (ECON 7300, UPenn, Fall 2024): [\[Personal summary\]](personal/econ7300.qmd)
 
-- PhD Game Theory and Applications (ECON 6110, UPenn, Spring 2025): [Personal summary]
+- PhD Game Theory and Applications (ECON 6110, UPenn, Spring 2025): [\[Personal summary\]](personal/econ6110.qmd)
 
 - PhD Applied Econometrics (HCMG 9010, UPenn, Spring 2025): [Personal summary] 
 

@@ -1,0 +1,10 @@
+---
+title: "ECON-7100"
+description: "Notes on what I thought about"
+date: "2025-04-25"
+toc: false
+---
+
+This is an informal note to record what I thought about or what I thought was important in the Microeconomics I class.
+
+### tba
