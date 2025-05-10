@@ -7,6 +7,10 @@ toc: false
 
 This is an informal note to record what I thought about or what I thought was important in the Game theory class.
 
+## Hemi-continuity and fixed point theorem
+
+When I was first learned about hemi-continuity in math camp, I was not sure why we need to know this concept. The only intuition I had was that it is sort of a generalization of the continuity definition to correspondence. But after taking the game theory course, I finally realized that we need this condition to apply Kakutani fixed point theorem. FYI, we need kakutani fixed point theorem to prove that Nash eqm exists.
+
 ### Ex-ante, interim, ex-post
 
 When talking about (expected) payoff of agents, it is important to know whether the agents are maximizing ex-ante, interim, or ex-post. For example, revenue equivalence theorem in auction is about equivalence of autioneer's expected payoff ex-ante, not ex-post. Fortunately, chatgpt did a good job in summarizing the definition in a table.
@@ -20,3 +24,7 @@ It is important to note that the main difference between normal form game and ex
 ### Adverse selection
 
 I thought it was interesting to learn that the key takeaway from **adverse selection** isn't just the presence of information asymmetry between agents, but that this asymmetry impacts other agents' payoffs. In fact, this is the main factor leading to the presence of adverse selection. In the famous lemon market example, adverse selection will not occur if there were separate and independent dimensions of utility for the seller and buyer.
+
+### Revenue equivalence theorem
+
+Although I learned this concept in undergraduate micro class, it was still very cool to know that ex-ante expected revenue becomes equivalent for all standard auction games.

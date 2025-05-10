@@ -7,4 +7,8 @@ toc: false
 
 This is an informal note to record what I thought about or what I thought was important in the Macroeconomics I class.
 
-### tba
+### Competitive eqm, efficiency, and GE
+
+I don't know why, but I always feel that macro course does a better job of explaining the concep of GE, competitive eqm, and the welfare theorem than the second portion of micro course. It was nice to see how we start with simple Arrow-Debreu setup and derive the competitive equilibrium. Then we use welfare theorem to connect the competitive eqm to pareto efficiency.
+
+### Dynamics
