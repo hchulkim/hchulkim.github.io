@@ -1,0 +1,25 @@
+---
+title: Research idea checklist
+toc: true
+---
+
+### High-level (at least two for JMP, one for decent paper)
+
+- [ ] New? (literature frontier).
+- [ ] Interesting? (Real-world relevance, policy implementation).
+- [ ] Data? (New data).
+
+### RQ specification
+
+- [ ] Find concrete real-life example or policy.
+- [ ] Check data.
+- [ ] Specify trade-off.
+- [ ] Specify the setting (agents, outcomes, etc). 
+- [ ] Specify potential research design (identification).
+- [ ] Specify simple economic model.
+
+### Final checklist
+
+- [ ] Talk to other PhDs.
+- [ ] Talk to faculties (2+).
+- [ ] Present preliminary ideas. 
