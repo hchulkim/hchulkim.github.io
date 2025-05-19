@@ -1,0 +1,98 @@
+---
+title: "OverTheWire wargames"
+description: "Personal solutions for overthewire wargames"
+date: today
+toc: false
+engine: knitr
+categories:
+  - study
+---
+
+In this post, I write down my solutions for the [**OverTheWire wargames**](https://overthewire.org/wargames/). 
+
+## Bandit
+
+### 0
+
+Just get used to the concept of `ssh`. `ssh` is *secure shell* which allows secured access to the remote machine from the local computer.
+
+```{bash}
+#| eval: false
+ 
+ssh bandit0@bandit.labs.overthewire.org -p 2220
+
+# You will be asked to type in the password.
+```
+
+### 0 to 1
+
+```{bash}
+#| eval: false
+
+# print out the file
+cat readme
+
+exit
+ 
+ssh bandit1@bandit.labs.overthewire.org -p 2220
+
+# You will be asked to type in the password.
+```
+
+### 1 to 2
+
+```{bash}
+#| eval: false
+
+# Special character - . Need to specify the full location of the file. 
+cat ./-
+
+```
+
+### 2 to 3
+
+```{bash}
+#| eval: false
+
+# enclose the filenames using double quote, or use \ before white space.
+
+```
+
+### 3 to 4
+
+```{bash}
+#| eval: false
+
+# list all files using -a argument
+ls inhere/ -a
+
+```
+
+### 4 to 5
+
+```{bash}
+#| eval: false
+
+# find ASCII text files
+# -exec file {} + executes the file command to get info on the content
+find inhere -type f -exec file {} + | grep ASCII
+
+
+```
+
+### 5 to 6
+
+```{bash}
+#| eval: false
+
+find inhere -type f -size 1033c ! -executable -exec file {} + | grep ASCII
+```
+
+### 6 to 7
+
+```{bash}
+#| eval: false
+# since we don't know where the file is, we will search from the root directory
+find / -user bandit7 -group bandit6 -size 33c -type f 2>/dev/null -exec cat {} \;
+
+```
