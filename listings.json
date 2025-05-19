@@ -2,14 +2,15 @@
   {
     "listing": "/posts/index.html",
     "items": [
+      "/posts/bandit/index.html",
       "/posts/make-file/index.html",
       "/posts/bash-caveats/1 2 3 4 5/index.html",
       "/posts/dockerfile-template/index.html",
       "/posts/quarto-paper-template/index.html",
       "/posts/first-cite/index.html",
-      "/posts/empirical-econ/index.html",
-      "/posts/reproducible-coding-lecture/index.html",
       "/posts/admission-econ/index.html",
+      "/posts/reproducible-coding-lecture/index.html",
+      "/posts/empirical-econ/index.html",
       "/posts/hello-quarto/index.html",
       "/posts/sql-info/index.html"
     ]
