@@ -96,3 +96,27 @@ find inhere -type f -size 1033c ! -executable -exec file {} + | grep ASCII
 find / -user bandit7 -group bandit6 -size 33c -type f 2>/dev/null -exec cat {} \;
 
 ```
+
+### 7 to 8
+
+```{bash}
+#| eval: false
+
+grep -w "millionth" data.txt
+```
+
+### 8 to 9
+
+```{bash}
+#| eval: false
+
+sort data.txt | uniq -u data.txt
+```
+
+### 9 to 10
+
+```{bash}
+#| eval: false
+
+strings data.txt | grep "=="
+```
