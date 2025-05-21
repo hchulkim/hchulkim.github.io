@@ -120,3 +120,27 @@ sort data.txt | uniq -u data.txt
 
 strings data.txt | grep "=="
 ```
+
+### 10 to 11
+
+```{bash}
+#| eval: false
+
+cat data.txt | base64 -d
+```
+
+### 11 to 12
+
+```{bash}
+#| eval: false
+
+cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+```
+
+### 12 to 13
+
+```{bash}
+#| eval: false
+
+TBD
+```
