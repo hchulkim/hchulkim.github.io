@@ -142,5 +142,30 @@ cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 ```{bash}
 #| eval: false
 
-TBD
+ls
+head data.txt
+mkdir /tmp/random_dir
+cd /tmp/random_dir
+cp ~/data.txt .
+mv data.txt data
+xxd -r data > binary
+file binary
+mv binary binary.gz
+gunzip binary.gz
+bunzip2 binary
+mv binary.out binary.gz
+gunzip binary.gz
+tar -xf binary
+
+# do similar procedure multiple times
+FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
+```
+
+### 13 to 14
+
+```{bash}
+#| eval: false
+
+ssh -i sshkey.private -p 2220 bandit14@localhost # This will log you in as user bandit14 and allow you to see the password.
+MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
 ```
