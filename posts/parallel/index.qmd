@@ -1,0 +1,154 @@
+---
+title: "Parallel programming"
+description: "Learning basic parallel programming in R"
+date: today
+toc: false
+engine: knitr
+categories:
+  - study
+---
+
+In this post, I write down the materials I studied on parallel programming. All the things below are from [Grant McDermott's lecture](https://raw.githack.com/uo-ec607/lectures/master/12-parallel/12-parallel.html) so none of it should be credited as my work. It is just a reminder post for applying parallel programming.
+
+## Load packages
+
+```{r}
+#| warning: false
+#| message: false
+
+## Load and install the packages that we'll be using today
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tictoc, parallel, pbapply, future, future.apply, tidyverse, 
+               hrbrthemes, furrr, RhpcBLASctl, memoise, here)
+## My preferred ggplot2 plotting theme (optional)
+theme_set(hrbrthemes::theme_ipsum())
+
+## Set future::plan() resolution strategy
+plan(multisession)
+```
+
+## Example 1
+
+```{r}
+# library(tidyverse) ## Already loaded
+
+## Emulate slow function
+slow_square = 
+  function(x = 1) {
+    x_sq = x^2 
+    d = tibble(value = x, value_squared = x_sq)
+    Sys.sleep(2)
+    return(d)
+    }
+
+# library(tictoc) ## Already loaded
+
+tic()
+serial_ex = lapply(1:12, slow_square) %>% bind_rows()
+toc()
+```
+
+```{r}
+# future::availableCores() ## Another option
+detectCores()
+
+```
+
+**Use `future.apply`**
+
+```{r}
+# library(future.apply)  ## Already loaded
+# plan(multisession)     ## Already set above
+
+tic()
+future_ex = future_lapply(1:12, slow_square) %>% bind_rows()
+toc(log = TRUE)
+
+```
+
+Execution time has greatly reduced! The results are also equivalent:
+
+```{r}
+all.equal(serial_ex, future_ex)
+
+```
+
+`purrr` package also has something similar:
+
+```{r}
+# library(furrr)      ## Already loaded
+# plan(multisession)  ## Already set above
+
+tic()
+furrr_ex = future_map(1:12, slow_square) |> list_rbind()
+toc()
+
+```
+
+## Example 2
+
+This is another example. I will not run this to save rendering time.
+
+```{r}
+#| eval: false
+
+## Set seed (for reproducibility)
+set.seed(1234)
+# Set sample size
+n = 1e6
+
+## Generate a large data frame of fake data for a regression
+our_data = 
+  tibble(x = rnorm(n), e = rnorm(n)) %>%
+  mutate(y = 3 + 2*x + e)
+
+## Function that draws a sample of 10,000 observations, runs a regression and
+## extracts the coefficient value on the x variable (should be around 2).
+bootstrp = 
+  function(i) {
+  ## Sample the data
+  sample_data = sample_n(our_data, size = 1e4, replace = TRUE)
+  ## Run the regression on our sampled data and extract the extract the x
+  ## coefficient.
+  x_coef = lm(y ~ x, data = sample_data)$coef[2]
+  ## Return value
+  return(tibble(x_coef = x_coef))
+  }
+
+set.seed(123L) ## Optional to ensure that the results are the same
+
+## 10,000-iteration simulation
+tic()
+sim_serial = lapply(1:1e4, bootstrp) %>% bind_rows()
+toc(log = TRUE)
+
+# Takes about 36 seconds.
+```
+
+## Summary of parallel programming packages in `R`
+
+`future` ecosystem is very useful. It provides simple and unified approach to implementing parallel programming. You can usually apply this ecosystem by using `future.apply` or `furrr` package.
+
+## If in Linux or Mac, try forking!
+
+There two different ways to run parallel programming:
+
+forking| parallel sockets (PSOCKS)
+-----|:-----
+Fast and memory efficient.|Slower and more memory-intensive (than forking).
+Only available for Unix-based systems.|Works on every operating system, incl. Windows.
+Potentially unstable in an IDE like RStudio.|Fine to use in an IDE like RStudio.
+
+**How to do this**
+
+1. Change your resolution plan to `plan(multicore)`, and
+2. Run your R script from the terminal using, say, `$ Rscript -e 'rmarkdown::render("mydoc.Rmd", "all")'` or `$ Rscript myfile.R`.
+
+## Implicit parallel programming
+
+Some packages actually apply parallel programming implicitly (e.g. `data.table`). So in this case, you might not need to resort too much in explicit parallel programming.
+
+## Setting how many cores to use
+
+`plan(multisession)` or `plan(multicore)` automatically default to using all your cores. You can change that by running, say, `plan(multisession(workers = detectCores()-1))`.
+

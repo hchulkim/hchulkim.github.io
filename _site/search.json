@@ -243,5 +243,68 @@
     "title": "OverTheWire wargames",
     "section": "Bandit",
     "text": "Bandit\n\n0\nJust get used to the concept of ssh. ssh is secure shell which allows secured access to the remote machine from the local computer.\n\nssh bandit0@bandit.labs.overthewire.org -p 2220\n\n# You will be asked to type in the password.\n\n\n\n0 to 1\n\n# print out the file\ncat readme\n\nexit\n \nssh bandit1@bandit.labs.overthewire.org -p 2220\n\n# You will be asked to type in the password.\n\n\n\n1 to 2\n\n# Special character - . Need to specify the full location of the file. \ncat ./-\n\n\n\n2 to 3\n\n# enclose the filenames using double quote, or use \\ before white space.\n\n\n\n3 to 4\n\n# list all files using -a argument\nls inhere/ -a\n\n\n\n4 to 5\n\n# find ASCII text files\n# -exec file {} + executes the file command to get info on the content\nfind inhere -type f -exec file {} + | grep ASCII\n\n\n\n5 to 6\n\nfind inhere -type f -size 1033c ! -executable -exec file {} + | grep ASCII\n\n\n\n6 to 7\n\n# since we don't know where the file is, we will search from the root directory\nfind / -user bandit7 -group bandit6 -size 33c -type f 2&gt;/dev/null -exec cat {} \\;\n\n\n\n7 to 8\n\ngrep -w \"millionth\" data.txt\n\n\n\n8 to 9\n\nsort data.txt | uniq -u data.txt\n\n\n\n9 to 10\n\nstrings data.txt | grep \"==\"\n\n\n\n10 to 11\n\ncat data.txt | base64 -d\n\n\n\n11 to 12\n\ncat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'\n\n\n\n12 to 13\n\nls\nhead data.txt\nmkdir /tmp/random_dir\ncd /tmp/random_dir\ncp ~/data.txt .\nmv data.txt data\nxxd -r data &gt; binary\nfile binary\nmv binary binary.gz\ngunzip binary.gz\nbunzip2 binary\nmv binary.out binary.gz\ngunzip binary.gz\ntar -xf binary\n\n# do similar procedure multiple times\nFO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn\n\n\n\n13 to 14\n\nssh -i sshkey.private -p 2220 bandit14@localhost # This will log you in as user bandit14 and allow you to see the password.\nMU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS"
+  },
+  {
+    "objectID": "posts/parallel/index.html",
+    "href": "posts/parallel/index.html",
+    "title": "Parallel programming",
+    "section": "",
+    "text": "In this post, I write down the materials I studied on parallel programming. All the things below are from Grant McDermott’s lecture so none of it should be credited as my work. It is just a reminder post for applying parallel programming."
+  },
+  {
+    "objectID": "posts/parallel/index.html#load-packages",
+    "href": "posts/parallel/index.html#load-packages",
+    "title": "Parallel programming",
+    "section": "Load packages",
+    "text": "Load packages\n\n## Load and install the packages that we'll be using today\nif (!require(\"pacman\")) install.packages(\"pacman\")\npacman::p_load(tictoc, parallel, pbapply, future, future.apply, tidyverse, \n               hrbrthemes, furrr, RhpcBLASctl, memoise, here)\n## My preferred ggplot2 plotting theme (optional)\ntheme_set(hrbrthemes::theme_ipsum())\n\n## Set future::plan() resolution strategy\nplan(multisession)"
+  },
+  {
+    "objectID": "posts/parallel/index.html#example-1",
+    "href": "posts/parallel/index.html#example-1",
+    "title": "Parallel programming",
+    "section": "Example 1",
+    "text": "Example 1\n\n# library(tidyverse) ## Already loaded\n\n## Emulate slow function\nslow_square = \n  function(x = 1) {\n    x_sq = x^2 \n    d = tibble(value = x, value_squared = x_sq)\n    Sys.sleep(2)\n    return(d)\n    }\n\n# library(tictoc) ## Already loaded\n\ntic()\nserial_ex = lapply(1:12, slow_square) %&gt;% bind_rows()\ntoc()\n\n24.083 sec elapsed\n\n\n\n# future::availableCores() ## Another option\ndetectCores()\n\n[1] 10\n\n\nUse future.apply\n\n# library(future.apply)  ## Already loaded\n# plan(multisession)     ## Already set above\n\ntic()\nfuture_ex = future_lapply(1:12, slow_square) %&gt;% bind_rows()\ntoc(log = TRUE)\n\n6.812 sec elapsed\n\n\nExecution time has greatly reduced! The results are also equivalent:\n\nall.equal(serial_ex, future_ex)\n\n[1] TRUE\n\n\npurrr package also has something similar:\n\n# library(furrr)      ## Already loaded\n# plan(multisession)  ## Already set above\n\ntic()\nfurrr_ex = future_map(1:12, slow_square) |&gt; list_rbind()\ntoc()\n\n5.081 sec elapsed"
+  },
+  {
+    "objectID": "posts/parallel/index.html#example-2",
+    "href": "posts/parallel/index.html#example-2",
+    "title": "Parallel programming",
+    "section": "Example 2",
+    "text": "Example 2\nThis is another example. I will not run this to save rendering time.\n\n## Set seed (for reproducibility)\nset.seed(1234)\n# Set sample size\nn = 1e6\n\n## Generate a large data frame of fake data for a regression\nour_data = \n  tibble(x = rnorm(n), e = rnorm(n)) %&gt;%\n  mutate(y = 3 + 2*x + e)\n\n## Function that draws a sample of 10,000 observations, runs a regression and\n## extracts the coefficient value on the x variable (should be around 2).\nbootstrp = \n  function(i) {\n  ## Sample the data\n  sample_data = sample_n(our_data, size = 1e4, replace = TRUE)\n  ## Run the regression on our sampled data and extract the extract the x\n  ## coefficient.\n  x_coef = lm(y ~ x, data = sample_data)$coef[2]\n  ## Return value\n  return(tibble(x_coef = x_coef))\n  }\n\nset.seed(123L) ## Optional to ensure that the results are the same\n\n## 10,000-iteration simulation\ntic()\nsim_serial = lapply(1:1e4, bootstrp) %&gt;% bind_rows()\ntoc(log = TRUE)\n\n# Takes about 36 seconds."
+  },
+  {
+    "objectID": "posts/parallel/index.html#summary-of-parallel-programming-packages-in-r",
+    "href": "posts/parallel/index.html#summary-of-parallel-programming-packages-in-r",
+    "title": "Parallel programming",
+    "section": "Summary of parallel programming packages in R",
+    "text": "Summary of parallel programming packages in R\nfuture ecosystem is very useful. It provides simple and unified approach to implementing parallel programming. You can usually apply this ecosystem by using future.apply or furrr package."
+  },
+  {
+    "objectID": "posts/parallel/index.html#if-in-linux-try-forking",
+    "href": "posts/parallel/index.html#if-in-linux-try-forking",
+    "title": "Parallel programming",
+    "section": "If in Linux, try forking!",
+    "text": "If in Linux, try forking!\nThere two different ways to run parallel programming:\n\n\n\n\n\n\n\nforking\nparallel sockets (PSOCKS)\n\n\n\n\nFast and memory efficient.\nSlower and more memory-intensive (than forking).\n\n\nOnly available for Unix-based systems.\nWorks on every operating system, incl. Windows.\n\n\nPotentially unstable in an IDE like RStudio.\nFine to use in an IDE like RStudio."
+  },
+  {
+    "objectID": "posts/parallel/index.html#if-in-linux-or-mac-try-forking",
+    "href": "posts/parallel/index.html#if-in-linux-or-mac-try-forking",
+    "title": "Parallel programming",
+    "section": "If in Linux or Mac, try forking!",
+    "text": "If in Linux or Mac, try forking!\nThere two different ways to run parallel programming:\n\n\n\n\n\n\n\nforking\nparallel sockets (PSOCKS)\n\n\n\n\nFast and memory efficient.\nSlower and more memory-intensive (than forking).\n\n\nOnly available for Unix-based systems.\nWorks on every operating system, incl. Windows.\n\n\nPotentially unstable in an IDE like RStudio.\nFine to use in an IDE like RStudio.\n\n\n\nHow to do this\n\nChange your resolution plan to plan(multicore), and\nRun your R script from the terminal using, say, $ Rscript -e 'rmarkdown::render(\"mydoc.Rmd\", \"all\")' or $ Rscript myfile.R."
+  },
+  {
+    "objectID": "posts/parallel/index.html#setting-how-many-cores-to-use",
+    "href": "posts/parallel/index.html#setting-how-many-cores-to-use",
+    "title": "Parallel programming",
+    "section": "Setting how many cores to use",
+    "text": "Setting how many cores to use\nplan(multisession) or plan(multicore) automatically default to using all your cores. You can change that by running, say, plan(multisession(workers = detectCores()-1))."
+  },
+  {
+    "objectID": "posts/parallel/index.html#implicit-parallel-programming",
+    "href": "posts/parallel/index.html#implicit-parallel-programming",
+    "title": "Parallel programming",
+    "section": "Implicit parallel programming",
+    "text": "Implicit parallel programming\nSome packages actually apply parallel programming implicitly (e.g. data.table). So in this case, you might not need to resort too much in explicit parallel programming."
   }
 ]
