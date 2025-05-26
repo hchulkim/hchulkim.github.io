@@ -8,9 +8,9 @@
 
 <meta name="author" content="Hyoungchul Kim">
 <meta name="dcterms.date" content="2025-05-26">
-<meta name="description" content="Personal solutions for overthewire wargames">
+<meta name="description" content="Learning basic parallel programming in R">
 
-<title>OverTheWire wargames – Hyoungchul Kim</title>
+<title>Parallel programming – Hyoungchul Kim</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,8 +110,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="OverTheWire wargames – Hyoungchul Kim">
-<meta property="og:description" content="Personal solutions for overthewire wargames">
+<meta property="og:title" content="Parallel programming – Hyoungchul Kim">
+<meta property="og:description" content="Learning basic parallel programming in R">
 <meta property="og:site_name" content="Hyoungchul Kim">
 </head>
 
@@ -183,10 +183,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">OverTheWire wargames</h1>
+      <h1 class="title">Parallel programming</h1>
                   <div>
         <div class="description">
-          Personal solutions for overthewire wargames
+          Learning basic parallel programming in R
         </div>
       </div>
                           <div class="quarto-categories">
@@ -227,133 +227,168 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>In this post, I write down my solutions for the <a href="https://overthewire.org/wargames/"><strong>OverTheWire wargames</strong></a>.</p>
-<section id="bandit" class="level2">
-<h2 class="anchored" data-anchor-id="bandit">Bandit</h2>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section">0</h3>
-<p>Just get used to the concept of <code>ssh</code>. <code>ssh</code> is <em>secure shell</em> which allows secured access to the remote machine from the local computer.</p>
+<p>In this post, I write down the materials I studied on parallel programming. All the things below are from <a href="https://raw.githack.com/uo-ec607/lectures/master/12-parallel/12-parallel.html">Grant McDermott’s lecture</a> so none of it should be credited as my work. It is just a reminder post for applying parallel programming.</p>
+<section id="load-packages" class="level2">
+<h2 class="anchored" data-anchor-id="load-packages">Load packages</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> bandit0@bandit.labs.overthewire.org <span class="at">-p</span> 2220</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># You will be asked to type in the password.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Load and install the packages that we'll be using today</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">"pacman"</span>)) <span class="fu">install.packages</span>(<span class="st">"pacman"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(tictoc, parallel, pbapply, future, future.apply, tidyverse, </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>               hrbrthemes, furrr, RhpcBLASctl, memoise, here)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="do">## My preferred ggplot2 plotting theme (optional)</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(hrbrthemes<span class="sc">::</span><span class="fu">theme_ipsum</span>())</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="do">## Set future::plan() resolution strategy</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">plan</span>(multisession)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="to-1" class="level3">
-<h3 class="anchored" data-anchor-id="to-1">0 to 1</h3>
+<section id="example-1" class="level2">
+<h2 class="anchored" data-anchor-id="example-1">Example 1</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># print out the file</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> readme</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">exit</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> bandit1@bandit.labs.overthewire.org <span class="at">-p</span> 2220</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># You will be asked to type in the password.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># library(tidyverse) ## Already loaded</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="do">## Emulate slow function</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>slow_square <span class="ot">=</span> </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">function</span>(<span class="at">x =</span> <span class="dv">1</span>) {</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    x_sq <span class="ot">=</span> x<span class="sc">^</span><span class="dv">2</span> </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    d <span class="ot">=</span> <span class="fu">tibble</span>(<span class="at">value =</span> x, <span class="at">value_squared =</span> x_sq)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Sys.sleep</span>(<span class="dv">2</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(d)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># library(tictoc) ## Already loaded</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu">tic</span>()</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>serial_ex <span class="ot">=</span> <span class="fu">lapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>, slow_square) <span class="sc">%&gt;%</span> <span class="fu">bind_rows</span>()</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>24.083 sec elapsed</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># future::availableCores() ## Another option</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">detectCores</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 10</code></pre>
+</div>
+</div>
+<p><strong>Use <code>future.apply</code></strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># library(future.apply)  ## Already loaded</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># plan(multisession)     ## Already set above</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">tic</span>()</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>future_ex <span class="ot">=</span> <span class="fu">future_lapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>, slow_square) <span class="sc">%&gt;%</span> <span class="fu">bind_rows</span>()</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>(<span class="at">log =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>6.812 sec elapsed</code></pre>
+</div>
+</div>
+<p>Execution time has greatly reduced! The results are also equivalent:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">all.equal</span>(serial_ex, future_ex)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<p><code>purrr</code> package also has something similar:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># library(furrr)      ## Already loaded</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co"># plan(multisession)  ## Already set above</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">tic</span>()</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>furrr_ex <span class="ot">=</span> <span class="fu">future_map</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>, slow_square) <span class="sc">|&gt;</span> <span class="fu">list_rbind</span>()</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>5.081 sec elapsed</code></pre>
+</div>
 </div>
 </section>
-<section id="to-2" class="level3">
-<h3 class="anchored" data-anchor-id="to-2">1 to 2</h3>
+<section id="example-2" class="level2">
+<h2 class="anchored" data-anchor-id="example-2">Example 2</h2>
+<p>This is another example. I will not run this to save rendering time.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Special character - . Need to specify the full location of the file. </span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> ./-</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Set seed (for reproducibility)</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Set sample size</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>n <span class="ot">=</span> <span class="fl">1e6</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="do">## Generate a large data frame of fake data for a regression</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>our_data <span class="ot">=</span> </span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">rnorm</span>(n), <span class="at">e =</span> <span class="fu">rnorm</span>(n)) <span class="sc">%&gt;%</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">y =</span> <span class="dv">3</span> <span class="sc">+</span> <span class="dv">2</span><span class="sc">*</span>x <span class="sc">+</span> e)</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="do">## Function that draws a sample of 10,000 observations, runs a regression and</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="do">## extracts the coefficient value on the x variable (should be around 2).</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>bootstrp <span class="ot">=</span> </span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">function</span>(i) {</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>  <span class="do">## Sample the data</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>  sample_data <span class="ot">=</span> <span class="fu">sample_n</span>(our_data, <span class="at">size =</span> <span class="fl">1e4</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>  <span class="do">## Run the regression on our sampled data and extract the extract the x</span></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>  <span class="do">## coefficient.</span></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>  x_coef <span class="ot">=</span> <span class="fu">lm</span>(y <span class="sc">~</span> x, <span class="at">data =</span> sample_data)<span class="sc">$</span>coef[<span class="dv">2</span>]</span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>  <span class="do">## Return value</span></span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">tibble</span>(<span class="at">x_coef =</span> x_coef))</span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>L) <span class="do">## Optional to ensure that the results are the same</span></span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a><span class="do">## 10,000-iteration simulation</span></span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a><span class="fu">tic</span>()</span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a>sim_serial <span class="ot">=</span> <span class="fu">lapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="fl">1e4</span>, bootstrp) <span class="sc">%&gt;%</span> <span class="fu">bind_rows</span>()</span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a><span class="fu">toc</span>(<span class="at">log =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Takes about 36 seconds.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="to-3" class="level3">
-<h3 class="anchored" data-anchor-id="to-3">2 to 3</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># enclose the filenames using double quote, or use \ before white space.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="summary-of-parallel-programming-packages-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="summary-of-parallel-programming-packages-in-r">Summary of parallel programming packages in <code>R</code></h2>
+<p><code>future</code> ecosystem is very useful. It provides simple and unified approach to implementing parallel programming. You can usually apply this ecosystem by using <code>future.apply</code> or <code>furrr</code> package.</p>
 </section>
-<section id="to-4" class="level3">
-<h3 class="anchored" data-anchor-id="to-4">3 to 4</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># list all files using -a argument</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> inhere/ <span class="at">-a</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="if-in-linux-or-mac-try-forking" class="level2">
+<h2 class="anchored" data-anchor-id="if-in-linux-or-mac-try-forking">If in Linux or Mac, try forking!</h2>
+<p>There two different ways to run parallel programming:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 45%">
+<col style="width: 54%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>forking</th>
+<th style="text-align: left;">parallel sockets (PSOCKS)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fast and memory efficient.</td>
+<td style="text-align: left;">Slower and more memory-intensive (than forking).</td>
+</tr>
+<tr class="even">
+<td>Only available for Unix-based systems.</td>
+<td style="text-align: left;">Works on every operating system, incl.&nbsp;Windows.</td>
+</tr>
+<tr class="odd">
+<td>Potentially unstable in an IDE like RStudio.</td>
+<td style="text-align: left;">Fine to use in an IDE like RStudio.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>How to do this</strong></p>
+<ol type="1">
+<li>Change your resolution plan to <code>plan(multicore)</code>, and</li>
+<li>Run your R script from the terminal using, say, <code>$ Rscript -e 'rmarkdown::render("mydoc.Rmd", "all")'</code> or <code>$ Rscript myfile.R</code>.</li>
+</ol>
 </section>
-<section id="to-5" class="level3">
-<h3 class="anchored" data-anchor-id="to-5">4 to 5</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># find ASCII text files</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># -exec file {} + executes the file command to get info on the content</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> inhere <span class="at">-type</span> f <span class="at">-exec</span> file {} + <span class="kw">|</span> <span class="fu">grep</span> ASCII</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="implicit-parallel-programming" class="level2">
+<h2 class="anchored" data-anchor-id="implicit-parallel-programming">Implicit parallel programming</h2>
+<p>Some packages actually apply parallel programming implicitly (e.g.&nbsp;<code>data.table</code>). So in this case, you might not need to resort too much in explicit parallel programming.</p>
 </section>
-<section id="to-6" class="level3">
-<h3 class="anchored" data-anchor-id="to-6">5 to 6</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> inhere <span class="at">-type</span> f <span class="at">-size</span> 1033c ! <span class="at">-executable</span> <span class="at">-exec</span> file {} + <span class="kw">|</span> <span class="fu">grep</span> ASCII</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-7" class="level3">
-<h3 class="anchored" data-anchor-id="to-7">6 to 7</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># since we don't know where the file is, we will search from the root directory</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> / <span class="at">-user</span> bandit7 <span class="at">-group</span> bandit6 <span class="at">-size</span> 33c <span class="at">-type</span> f <span class="dv">2</span><span class="op">&gt;</span>/dev/null <span class="at">-exec</span> cat {} <span class="dt">\;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-8" class="level3">
-<h3 class="anchored" data-anchor-id="to-8">7 to 8</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-w</span> <span class="st">"millionth"</span> data.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-9" class="level3">
-<h3 class="anchored" data-anchor-id="to-9">8 to 9</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sort</span> data.txt <span class="kw">|</span> <span class="fu">uniq</span> <span class="at">-u</span> data.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-10" class="level3">
-<h3 class="anchored" data-anchor-id="to-10">9 to 10</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">strings</span> data.txt <span class="kw">|</span> <span class="fu">grep</span> <span class="st">"=="</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-11" class="level3">
-<h3 class="anchored" data-anchor-id="to-11">10 to 11</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> data.txt <span class="kw">|</span> <span class="fu">base64</span> <span class="at">-d</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-12" class="level3">
-<h3 class="anchored" data-anchor-id="to-12">11 to 12</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> data.txt <span class="kw">|</span> <span class="fu">tr</span> <span class="st">'A-Za-z'</span> <span class="st">'N-ZA-Mn-za-m'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-13" class="level3">
-<h3 class="anchored" data-anchor-id="to-13">12 to 13</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> data.txt</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> /tmp/random_dir</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /tmp/random_dir</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> ~/data.txt .</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> data.txt data</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="ex">xxd</span> <span class="at">-r</span> data <span class="op">&gt;</span> binary</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="fu">file</span> binary</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> binary binary.gz</span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="fu">gunzip</span> binary.gz</span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="fu">bunzip2</span> binary</span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> binary.out binary.gz</span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="fu">gunzip</span> binary.gz</span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-xf</span> binary</span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="co"># do similar procedure multiple times</span></span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="ex">FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-14" class="level3">
-<h3 class="anchored" data-anchor-id="to-14">13 to 14</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-i</span> sshkey.private <span class="at">-p</span> 2220 bandit14@localhost <span class="co"># This will log you in as user bandit14 and allow you to see the password.</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ex">MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="setting-how-many-cores-to-use" class="level2">
+<h2 class="anchored" data-anchor-id="setting-how-many-cores-to-use">Setting how many cores to use</h2>
+<p><code>plan(multisession)</code> or <code>plan(multicore)</code> automatically default to using all your cores. You can change that by running, say, <code>plan(multisession(workers = detectCores()-1))</code>.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
