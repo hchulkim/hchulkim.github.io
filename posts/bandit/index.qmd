@@ -167,5 +167,53 @@ FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
 #| eval: false
 
 ssh -i sshkey.private -p 2220 bandit14@localhost # This will log you in as user bandit14 and allow you to see the password.
-MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+```
+
+### 14 to 15
+
+```{bash}
+#| eval: false
+
+netcat localhost 30000
+# Then submit the password of the current level.
+```
+
+### 15 to 16
+
+```{bash}
+#| eval: false
+
+openssl s_client -connect localhost:30001
+# Then submit the password of the current level.
+```
+
+### 16 to 17
+
+```{bash}
+#| eval: false
+
+# I feel this part is bit too complicated and not useful for me. So I just provide the link to someone else's solution
+# https://medium.com/@rushi.padhiyar098/overthewire-bandit-level-16-and-level-17-walkthrough-by-cyph3r-ryx-95c1ccdbb76b
+```
+
+### 17 to 18
+
+```{bash}
+#| eval: false
+
+diff passwords.new passwords.old
+```
+
+### 18 to 19
+
+```{bash}
+#| eval: false
+
+# check shell other than bash
+cat /etc/shells
+
+# use it to login
+ssh bandit18@bandit.labs.overthewire.org -p 2220 -t "/bin/sh"
+
+cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8
 ```
