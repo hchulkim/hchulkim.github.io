@@ -1,0 +1,37 @@
+---
+title: "First-year Ph.D. in retrospect"
+description: "Summarizing my first-year Ph.D. in Economics experience"
+date: "2025-06-06"
+toc: true
+categories:
+  - personal
+---
+
+## Back to mono, or ... the rabbit hole
+
+> We have nothing to declare except our ignorances.[^1]
+
+[^1]: Personal twist of the quotes by good ol' Oscar Wilde.
+
+Recently, my first-year PhD ended.[^2] Overall, it was an unique and a bizarre experience in a sense that I was in this whirlpool of the research frontier and the utmost ignorance. During my first-year, I had chances to experience the works of so many great minds. There were seminars everywhere. Periodically there would be some invited speakers whose papers I have read in my undergraduate or masters. Not only that, the school was constantly filled with people with interesting ideas and thoughts. Just talking to some upper years about their research projects made me excited. As someone once said, it was lucky to be alive to be in this time. 
+
+[^2]: In case you don't know already, I am currently doing PhD in Applied Economics at The Wharton School, UPenn.
+
+But this was not the only experience I had. First-year PhD was also the time when I was constantly reminded of my ignorance. Mingling with so many great people also made me realize how empty I am. Sometimes I was bit scared that I did not have much to say if someone asked me what my interests are. Although I was very interested in the field of economics, it was quite hard to exactly specify which part of economics I am interested and want to learn about. 
+
+In the end, I think first-year was a nice new start for me. It just made me realize that I am surrounded by so many great minds and that there is still so much things I have to do. So Back to mono it is.
+
+## Somethings I tried to do in my first-year
+
+1. So, did I find my production function?: I think I did although it is kind of hard to formalize it in words. 
+
+2. What is my work-life balance?: Personally, I think I am okay with working a lot as long as I can study or work in nice places time to time (cafes, beach, etc).
+
+3. What did I study?: Mostly core classes or course! I also personally studied about *demand estimation in IO* which I think was very helpful. At least now I think I kind of understand the process of BLP (in theory).
+
+4. Relationships: I have such a great time in Philly. I believe my cohorts and people around me are just awesome.
+
+## Goal for the second-year
+
+1. Start doing more research: This is what I am paid to do anyway!
+2. Finding the research frontier: I still feel I am not quite sure of the literature frontier that I am on right now. Hopefully taking field courses and personal times will help me get a better sense of what that is.
