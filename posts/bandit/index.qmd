@@ -217,3 +217,24 @@ ssh bandit18@bandit.labs.overthewire.org -p 2220 -t "/bin/sh"
 
 cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8
 ```
+
+### 19 to 20
+
+```{bash}
+#| eval: false
+
+./bandit20-do
+
+./bandit20-do ls /etc/bandit_pass
+
+./bandit20-do cat /etc/bandit_pass/bandit20
+```
+
+### 20 to 21
+
+```{bash}
+#| eval: false
+ 
+# I feel this part is not useful for me. So I just provide the link to someone else's solution
+EeoULMCra2q0dSkYj561DX7s1CpBuOBt 
+```
