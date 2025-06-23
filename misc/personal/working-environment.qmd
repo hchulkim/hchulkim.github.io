@@ -1,0 +1,100 @@
+---
+title: "Setting up working environment"
+date: today
+toc: true
+engine: knitr
+---
+
+# Preface
+
+This is just a note for myself to re-setup my working environment on Linux (I am using Ubuntu) so that I don't forget what I need to do.
+
+# Terminal
+
+### Install `fastfetch`
+
+```{bash}
+#| eval: false
+sudo add-apt-repository ppa:fastfetch/stable
+sudo apt install fastfetch 
+
+# add `fastfetch` in `.bashrc` file.
+```
+
+# Vim
+
+### Install Vim and set it as default text editor
+
+```{bash}
+#| eval: false
+sudo apt update
+sudo apt install vim
+
+sudo update-alternatives --config editor
+```
+
+### Install `Vim-plugin`
+
+Follow this link: [LINK](https://github.com/junegunn/vim-plug)
+
+**Some plugins I use (Example of `.vimrc` file)**
+
+```{bash}
+#| eval: false
+
+call plug#begin()
+
+" List your plugins here
+Plug 'sirver/ultisnips'
+Plug 'lervag/vimtex'
+Plug 'KeitaNakamura/tex-conceal.vim'
+Plug 'arcticicestudio/nord-vim'
+Plug 'preservim/nerdtree'
+
+call plug#end()
+
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+let g:vimtex_view_method = 'zathura'
+let g:vimtex_quickfix_mode = 0
+let g:lightline = {'colorscheme' : 'nord'}
+
+setlocal spell
+set spelllang=en_us
+inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+
+colorscheme nord
+```
+
+### Setup `Vimtex` with `zathura`
+
+Follow this: https://github.com/lervag/vimtex. Also remember that you need to install separate tex compiler to use tex. 
+
+# Install R
+
+Just follow this site: https://pmassicotte.github.io/linux-mint-dev-environment/installr.html.
+
+I will just post my current `.Rprofile` file for reference:
+
+```{bash}
+#| eval: false
+
+if (interactive() && Sys.getenv("RSTUDIO") == "") {
+  Sys.setenv(TERM_PROGRAM = "vscode")
+  if ("httpgd" %in% .packages(all.available = TRUE)) {
+    options(vsc.plot = FALSE)
+    options(device = function(...) {
+      httpgd::hgd(silent = TRUE)
+      .vsc.browser(httpgd::hgd_url(history = FALSE), viewer = "Beside")
+    })
+  }
+  source(file.path(Sys.getenv(if (.Platform$OS.type == "windows") "USERPROFILE" else "HOME"), ".vscode-R", "init.R"))
+}
+
+options(repos="https://packagemanager.rstudio.com/cran/__linux__/jammy/latest")
+
+# This is important if you are using RSPM on Linux outside RStudio
+options(HTTPUserAgent = sprintf("R/%s R (%s)", getRversion(), paste(getRversion(), R.version["platform"], R.version["arch"], R.version["os"])))
+
+```

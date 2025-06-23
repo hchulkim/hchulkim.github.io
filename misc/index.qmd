@@ -5,6 +5,10 @@ toc: true
 
 ## Software
 
+### Setting up my working environment
+
+- [\[LINK\]](personal/working-environment.qmd)
+
 ### Quarto
 
 - Quarto working paper template for Economics: [\[github link\]](https://github.com/hchulkim/econ-paper-template/tree/main) [\[Blog post\]](https://hchulkim.github.io/posts/quarto-paper-template/)

@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-06-22">
 
-<title>Misc. – Hyoungchul Kim</title>
+<title>Setting up working environment – Hyoungchul Kim</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +21,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../favicon.ico" rel="icon">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-76a985aa22ccd12130a26cea3e021208.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-76a985aa22ccd12130a26cea3e021208.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,8 +105,8 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Misc. – Hyoungchul Kim">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Setting up working environment – Hyoungchul Kim">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="Hyoungchul Kim">
 </head>
@@ -83,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Hyoungchul Kim</span>
     </a>
   </div>
@@ -94,27 +129,27 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../vita/cv-kim.pdf"> 
+    <a class="nav-link" href="../../vita/cv-kim.pdf"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../research/index.html"> 
+    <a class="nav-link" href="../../research/index.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../teaching/index.html"> 
+    <a class="nav-link" href="../../teaching/index.html"> 
 <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../posts/index.html"> 
+    <a class="nav-link" href="../../posts/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../misc/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../misc/index.html"> 
 <span class="menu-text">Misc.</span></a>
   </li>  
 </ul>
@@ -149,17 +184,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#software" id="toc-software" class="nav-link active" data-scroll-target="#software">Software</a>
+  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
+  <li><a href="#terminal" id="toc-terminal" class="nav-link" data-scroll-target="#terminal">Terminal</a>
   <ul class="collapse">
-  <li><a href="#setting-up-my-working-environment" id="toc-setting-up-my-working-environment" class="nav-link" data-scroll-target="#setting-up-my-working-environment">Setting up my working environment</a></li>
-  <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto">Quarto</a></li>
-  <li><a href="#scripts" id="toc-scripts" class="nav-link" data-scroll-target="#scripts">Scripts</a></li>
+  <li><a href="#install-fastfetch" id="toc-install-fastfetch" class="nav-link" data-scroll-target="#install-fastfetch">Install <code>fastfetch</code></a></li>
   </ul></li>
-  <li><a href="#math" id="toc-math" class="nav-link" data-scroll-target="#math">Math</a>
+  <li><a href="#vim" id="toc-vim" class="nav-link" data-scroll-target="#vim">Vim</a>
   <ul class="collapse">
-  <li><a href="#partial-solutions" id="toc-partial-solutions" class="nav-link" data-scroll-target="#partial-solutions">(Partial) Solutions</a></li>
+  <li><a href="#install-vim-and-set-it-as-default-text-editor" id="toc-install-vim-and-set-it-as-default-text-editor" class="nav-link" data-scroll-target="#install-vim-and-set-it-as-default-text-editor">Install Vim and set it as default text editor</a></li>
+  <li><a href="#install-vim-plugin" id="toc-install-vim-plugin" class="nav-link" data-scroll-target="#install-vim-plugin">Install <code>Vim-plugin</code></a></li>
+  <li><a href="#setup-vimtex-with-zathura" id="toc-setup-vimtex-with-zathura" class="nav-link" data-scroll-target="#setup-vimtex-with-zathura">Setup <code>Vimtex</code> with <code>zathura</code></a></li>
   </ul></li>
-  <li><a href="#courses" id="toc-courses" class="nav-link" data-scroll-target="#courses">Courses</a></li>
+  <li><a href="#install-r" id="toc-install-r" class="nav-link" data-scroll-target="#install-r">Install R</a></li>
   </ul>
 </nav>
     </div>
@@ -168,7 +204,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Misc.</h1>
+<h1 class="title">Setting up working environment</h1>
 </div>
 
 
@@ -176,6 +212,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 22, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -185,56 +227,90 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="software" class="level2">
-<h2 class="anchored" data-anchor-id="software">Software</h2>
-<section id="setting-up-my-working-environment" class="level3">
-<h3 class="anchored" data-anchor-id="setting-up-my-working-environment">Setting up my working environment</h3>
-<ul>
-<li><a href="../misc/personal/working-environment.html">[LINK]</a></li>
-</ul>
+<section id="preface" class="level1">
+<h1>Preface</h1>
+<p>This is just a note for myself to re-setup my working environment on Linux (I am using Ubuntu) so that I don’t forget what I need to do.</p>
 </section>
-<section id="quarto" class="level3">
-<h3 class="anchored" data-anchor-id="quarto">Quarto</h3>
-<ul>
-<li>Quarto working paper template for Economics: <a href="https://github.com/hchulkim/econ-paper-template/tree/main">[github link]</a> <a href="https://hchulkim.github.io/posts/quarto-paper-template/">[Blog post]</a></li>
-</ul>
-</section>
-<section id="scripts" class="level3">
-<h3 class="anchored" data-anchor-id="scripts">Scripts</h3>
-<ul>
-<li><code>Dockerfile</code> for empirical analysis (<code>R</code>, <code>Python</code>, <code>Julia</code> with dependency management setup): <a href="https://hchulkim.github.io/posts/dockerfile-template/">[link]</a></li>
-</ul>
+<section id="terminal" class="level1">
+<h1>Terminal</h1>
+<section id="install-fastfetch" class="level3">
+<h3 class="anchored" data-anchor-id="install-fastfetch">Install <code>fastfetch</code></h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> add-apt-repository ppa:fastfetch/stable</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install fastfetch </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># add `fastfetch` in `.bashrc` file.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 </section>
-<section id="math" class="level2">
-<h2 class="anchored" data-anchor-id="math">Math</h2>
-<section id="partial-solutions" class="level3">
-<h3 class="anchored" data-anchor-id="partial-solutions">(Partial) Solutions</h3>
-<ul>
-<li><a href="https://hchulkim.github.io/tools-site/teaching/set.html">Introduction to set theory (Hrbacek and Jech)</a></li>
-<li><a href="https://hchulkim.github.io/tools-site/teaching/metrics.html">Real analysis (Folland)</a></li>
-</ul>
+<section id="vim" class="level1">
+<h1>Vim</h1>
+<section id="install-vim-and-set-it-as-default-text-editor" class="level3">
+<h3 class="anchored" data-anchor-id="install-vim-and-set-it-as-default-text-editor">Install Vim and set it as default text editor</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install vim</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> update-alternatives <span class="at">--config</span> editor</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="install-vim-plugin" class="level3">
+<h3 class="anchored" data-anchor-id="install-vim-plugin">Install <code>Vim-plugin</code></h3>
+<p>Follow this link: <a href="https://github.com/junegunn/vim-plug">LINK</a></p>
+<p><strong>Some plugins I use (Example of <code>.vimrc</code> file)</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">call</span> plug#begin<span class="er">(</span><span class="kw">)</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="st">" List your plugins here</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="st">Plug 'sirver/ultisnips'</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="st">Plug 'lervag/vimtex'</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="st">Plug 'KeitaNakamura/tex-conceal.vim'</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="st">Plug 'arcticicestudio/nord-vim'</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="st">Plug 'preservim/nerdtree'</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="st">call plug#end()</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="st">let g:UltiSnipsExpandTrigger = '&lt;tab&gt;'</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="st">let g:UltiSnipsJumpForwardTrigger = '&lt;tab&gt;'</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="st">let g:UltiSnipsJumpBackwardTrigger = '&lt;s-tab&gt;'</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="st">let g:vimtex_view_method = 'zathura'</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="st">let g:vimtex_quickfix_mode = 0</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="st">let g:lightline = {'colorscheme' : 'nord'}</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="st">setlocal spell</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="st">set spelllang=en_us</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="st">inoremap &lt;C-l&gt; &lt;c-g&gt;u&lt;Esc&gt;[s1z=</span><span class="kw">`</span><span class="ex">]a</span><span class="op">&lt;</span>c-g<span class="op">&gt;</span>u</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="ex">colorscheme</span> nord</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="setup-vimtex-with-zathura" class="level3">
+<h3 class="anchored" data-anchor-id="setup-vimtex-with-zathura">Setup <code>Vimtex</code> with <code>zathura</code></h3>
+<p>Follow this: https://github.com/lervag/vimtex. Also remember that you need to install separate tex compiler to use tex.</p>
 </section>
 </section>
-<section id="courses" class="level2">
-<h2 class="anchored" data-anchor-id="courses">Courses</h2>
-<p>These are some info on the courses that I took or self-studied.</p>
-<details>
-<summary>
-<strong>List of courses</strong>
-</summary>
-<ul>
-<li><p>PhD Microeconomic Theory I (ECON 7100, UPenn, Fall 2024): <a href="../misc/personal/econ7100.html">[Personal summary]</a></p></li>
-<li><p>PhD Macroeconomic Theory I (ECON 7200, UPenn, Fall 2024): <a href="../misc/personal/econ7200.html">[Personal summary]</a></p></li>
-<li><p>PhD Econometrics I (ECON 7300, UPenn, Fall 2024): <a href="../misc/personal/econ7300.html">[Personal summary]</a></p></li>
-<li><p>PhD Game Theory and Applications (ECON 6110, UPenn, Spring 2025): <a href="../misc/personal/econ6110.html">[Personal summary]</a></p></li>
-<li><p>PhD Applied Econometrics (HCMG 9010, UPenn, Spring 2025): [Personal summary]</p></li>
-<li><p>PhD Advanced Real Estate and Urban Economics (REAL 9470, UPenn, Spring 2025): [Personal summary]</p></li>
-<li><p>PhD Cities in Developing Countries (REAL 9490, UPenn, Spring 2025): [Personal summary]</p></li>
-<li><p>PhD Public Economics (BEPP 9330, UPenn, Spring 2025): [Personal summary]</p></li>
-<li><p>PhD Topics in Empirical Microeconomics: Spatial Economic Analysis (ECON 8400, UPenn, Spring 2025): [Personal summary]</p></li>
-</ul>
-</details>
+<section id="install-r" class="level1">
+<h1>Install R</h1>
+<p>Just follow this site: https://pmassicotte.github.io/linux-mint-dev-environment/installr.html.</p>
+<p>I will just post my current <code>.Rprofile</code> file for reference:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">(</span><span class="fu">interactive()</span> <span class="kw">&amp;&amp;</span> <span class="ex">Sys.getenv</span><span class="er">(</span><span class="st">"RSTUDIO"</span><span class="kw">)</span> <span class="ex">==</span> <span class="st">""</span><span class="kw">)</span> <span class="kw">{</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="ex">Sys.setenv</span><span class="er">(</span><span class="ex">TERM_PROGRAM</span> = <span class="st">"vscode"</span><span class="kw">)</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="kw">(</span><span class="st">"httpgd"</span> %in% .packages<span class="er">(</span><span class="ex">all.available</span> = TRUE<span class="kw">))</span> <span class="kw">{</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">options</span><span class="er">(</span><span class="ex">vsc.plot</span> = FALSE<span class="kw">)</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="ex">options</span><span class="er">(</span><span class="ex">device</span> = function<span class="er">(</span><span class="ex">...</span><span class="kw">)</span> <span class="kw">{</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>      <span class="ex">httpgd::hgd</span><span class="er">(</span><span class="ex">silent</span> = TRUE<span class="kw">)</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>      <span class="ex">.vsc.browser</span><span class="er">(</span><span class="ex">httpgd::hgd_url</span><span class="er">(</span><span class="bu">history</span> = FALSE<span class="kw">)</span><span class="ex">,</span> viewer = <span class="st">"Beside"</span><span class="kw">)</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">})</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">}</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="bu">source</span><span class="er">(</span><span class="ex">file.path</span><span class="er">(</span><span class="ex">Sys.getenv</span><span class="er">(</span><span class="cf">if</span> <span class="kw">(</span><span class="ex">.Platform</span><span class="va">$OS</span><span class="ex">.type</span> == <span class="st">"windows"</span><span class="kw">)</span> <span class="st">"USERPROFILE"</span> else <span class="st">"HOME"</span><span class="kw">)</span><span class="ex">,</span> <span class="st">".vscode-R"</span>, <span class="st">"init.R"</span><span class="kw">))</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="ex">options</span><span class="er">(</span><span class="va">repos</span><span class="op">=</span><span class="st">"https://packagemanager.rstudio.com/cran/__linux__/jammy/latest"</span><span class="kw">)</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co"># This is important if you are using RSPM on Linux outside RStudio</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="ex">options</span><span class="er">(</span><span class="ex">HTTPUserAgent</span> = sprintf<span class="er">(</span><span class="st">"R/%s R (%s)"</span><span class="ex">,</span> getRversion<span class="er">(</span><span class="kw">)</span><span class="ex">,</span> paste<span class="er">(</span><span class="fu">getRversion()</span><span class="ex">,</span> R.version<span class="pp">[</span><span class="st">"platform"</span><span class="pp">]</span>, R.version<span class="pp">[</span><span class="st">"arch"</span><span class="pp">]</span>, R.version<span class="pp">[</span><span class="st">"os"</span><span class="pp">]</span><span class="kw">)))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
 </section>
