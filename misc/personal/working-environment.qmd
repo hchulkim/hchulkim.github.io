@@ -92,6 +92,7 @@ if (interactive() && Sys.getenv("RSTUDIO") == "") {
   source(file.path(Sys.getenv(if (.Platform$OS.type == "windows") "USERPROFILE" else "HOME"), ".vscode-R", "init.R"))
 }
 
+# Connect to public package manager
 options(repos = c(CRAN = "https://packagemanager.posit.co/cran/__linux__/rhel9/latest"))
 
 # This is important if you are using RSPM on Linux outside RStudio

@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-06-22">
+<meta name="dcterms.date" content="2025-06-23">
 
 <title>Setting up working environment – Hyoungchul Kim</title>
 <style>
@@ -215,7 +215,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 22, 2025</p>
+      <p class="date">June 23, 2025</p>
     </div>
   </div>
   
@@ -306,10 +306,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="bu">source</span><span class="er">(</span><span class="ex">file.path</span><span class="er">(</span><span class="ex">Sys.getenv</span><span class="er">(</span><span class="cf">if</span> <span class="kw">(</span><span class="ex">.Platform</span><span class="va">$OS</span><span class="ex">.type</span> == <span class="st">"windows"</span><span class="kw">)</span> <span class="st">"USERPROFILE"</span> else <span class="st">"HOME"</span><span class="kw">)</span><span class="ex">,</span> <span class="st">".vscode-R"</span>, <span class="st">"init.R"</span><span class="kw">))</span></span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="ex">options</span><span class="er">(</span><span class="va">repos</span><span class="op">=</span><span class="st">"https://packagemanager.rstudio.com/cran/__linux__/jammy/latest"</span><span class="kw">)</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co"># This is important if you are using RSPM on Linux outside RStudio</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="ex">options</span><span class="er">(</span><span class="ex">HTTPUserAgent</span> = sprintf<span class="er">(</span><span class="st">"R/%s R (%s)"</span><span class="ex">,</span> getRversion<span class="er">(</span><span class="kw">)</span><span class="ex">,</span> paste<span class="er">(</span><span class="fu">getRversion()</span><span class="ex">,</span> R.version<span class="pp">[</span><span class="st">"platform"</span><span class="pp">]</span>, R.version<span class="pp">[</span><span class="st">"arch"</span><span class="pp">]</span>, R.version<span class="pp">[</span><span class="st">"os"</span><span class="pp">]</span><span class="kw">)))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Connect to public package manager</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="ex">options</span><span class="er">(</span><span class="ex">repos</span> = c<span class="er">(</span><span class="ex">CRAN</span> = <span class="st">"https://packagemanager.posit.co/cran/__linux__/rhel9/latest"</span><span class="kw">))</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co"># This is important if you are using RSPM on Linux outside RStudio</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="ex">options</span><span class="er">(</span><span class="ex">HTTPUserAgent</span> = sprintf<span class="er">(</span><span class="st">"R/%s R (%s)"</span><span class="ex">,</span> getRversion<span class="er">(</span><span class="kw">)</span><span class="ex">,</span> paste<span class="er">(</span><span class="fu">getRversion()</span><span class="ex">,</span> R.version<span class="pp">[</span><span class="st">"platform"</span><span class="pp">]</span>, R.version<span class="pp">[</span><span class="st">"arch"</span><span class="pp">]</span>, R.version<span class="pp">[</span><span class="st">"os"</span><span class="pp">]</span><span class="kw">)))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
