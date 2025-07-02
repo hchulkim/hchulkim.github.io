@@ -1,5 +1,96 @@
 [
   {
+    "objectID": "misc/index.html",
+    "href": "misc/index.html",
+    "title": "Misc.",
+    "section": "",
+    "text": "[LINK]\n\n\n\n\n\nQuarto working paper template for Economics: [github link] [Blog post]\n\n\n\n\n\nDockerfile for empirical analysis (R, Python, Julia with dependency management setup): [link]"
+  },
+  {
+    "objectID": "misc/index.html#software",
+    "href": "misc/index.html#software",
+    "title": "Misc.",
+    "section": "",
+    "text": "[LINK]\n\n\n\n\n\nQuarto working paper template for Economics: [github link] [Blog post]\n\n\n\n\n\nDockerfile for empirical analysis (R, Python, Julia with dependency management setup): [link]"
+  },
+  {
+    "objectID": "misc/index.html#math",
+    "href": "misc/index.html#math",
+    "title": "Misc.",
+    "section": "Math",
+    "text": "Math\n\n(Partial) Solutions\n\nIntroduction to set theory (Hrbacek and Jech)\nReal analysis (Folland)"
+  },
+  {
+    "objectID": "misc/index.html#courses",
+    "href": "misc/index.html#courses",
+    "title": "Misc.",
+    "section": "Courses",
+    "text": "Courses\nThese are some info on the courses that I took or self-studied.\n\n\nList of courses\n\n\nPhD Microeconomic Theory I (ECON 7100, UPenn, Fall 2024): [Personal summary]\nPhD Macroeconomic Theory I (ECON 7200, UPenn, Fall 2024): [Personal summary]\nPhD Econometrics I (ECON 7300, UPenn, Fall 2024): [Personal summary]\nPhD Game Theory and Applications (ECON 6110, UPenn, Spring 2025): [Personal summary]\nPhD Applied Econometrics (HCMG 9010, UPenn, Spring 2025): [Personal summary]\nPhD Advanced Real Estate and Urban Economics (REAL 9470, UPenn, Spring 2025): [Personal summary]\nPhD Cities in Developing Countries (REAL 9490, UPenn, Spring 2025): [Personal summary]\nPhD Public Economics (BEPP 9330, UPenn, Spring 2025): [Personal summary]\nPhD Topics in Empirical Microeconomics: Spatial Economic Analysis (ECON 8400, UPenn, Spring 2025): [Personal summary]"
+  },
+  {
+    "objectID": "misc/personal/econ6110.html",
+    "href": "misc/personal/econ6110.html",
+    "title": "ECON-6110",
+    "section": "",
+    "text": "This is an informal note to record what I thought about or what I thought was important in the Game theory class."
+  },
+  {
+    "objectID": "misc/personal/econ6110.html#hemi-continuity-and-fixed-point-theorem",
+    "href": "misc/personal/econ6110.html#hemi-continuity-and-fixed-point-theorem",
+    "title": "ECON-6110",
+    "section": "Hemi-continuity and fixed point theorem",
+    "text": "Hemi-continuity and fixed point theorem\nWhen I was first learned about hemi-continuity in math camp, I was not sure why we need to know this concept. The only intuition I had was that it is sort of a generalization of the continuity definition to correspondence. But after taking the game theory course, I finally realized that we need this condition to apply Kakutani fixed point theorem. FYI, we need kakutani fixed point theorem to prove that Nash eqm exists.\n\nEx-ante, interim, ex-post\nWhen talking about (expected) payoff of agents, it is important to know whether the agents are maximizing ex-ante, interim, or ex-post. For example, revenue equivalence theorem in auction is about equivalence of autioneer’s expected payoff ex-ante, not ex-post. Fortunately, chatgpt did a good job in summarizing the definition in a table.\n\n\n\nNormal form and extensive form\nIt is important to note that the main difference between normal form game and extensive form game is not the timing. That is, fundamental difference between normal form and extensive form game is not whether the agents make decisions at the same time or not. For example, think of a game where agents makes decisions at different timing but they cannot observe others’ actions. In this setting, the game is still a normal form. The game becomes “extensive” when some agents can observe other agents’ actions before making their own decisions. Thus, the main factor that differentiates normal form and extensive form is whether agents make their actions after observing other’s actions.\n\n\nAdverse selection\nI thought it was interesting to learn that the key takeaway from adverse selection isn’t just the presence of information asymmetry between agents, but that this asymmetry impacts other agents’ payoffs. In fact, this is the main factor leading to the presence of adverse selection. In the famous lemon market example, adverse selection will not occur if there were separate and independent dimensions of utility for the seller and buyer.\n\n\nRevenue equivalence theorem\nAlthough I learned this concept in undergraduate micro class, it was still very cool to know that ex-ante expected revenue becomes equivalent for all standard auction games."
+  },
+  {
+    "objectID": "misc/personal/working-environment.html",
+    "href": "misc/personal/working-environment.html",
+    "title": "Setting up working environment",
+    "section": "",
+    "text": "Preface\nThis is just a note for myself to re-setup my working environment on Linux (I am using Ubuntu) so that I don’t forget what I need to do.\n\n\nTerminal\n\nInstall fastfetch\n\nsudo add-apt-repository ppa:fastfetch/stable\nsudo apt install fastfetch \n\n# add `fastfetch` in `.bashrc` file.\n\n\n\n\nVim\n\nInstall Vim and set it as default text editor\n\nsudo apt update\nsudo apt install vim\n\nsudo update-alternatives --config editor\n\n\n\nInstall Vim-plugin\nFollow this link: LINK\nSome plugins I use (Example of .vimrc file)\n\ncall plug#begin()\n\n\" List your plugins here\nPlug 'sirver/ultisnips'\nPlug 'lervag/vimtex'\nPlug 'KeitaNakamura/tex-conceal.vim'\nPlug 'arcticicestudio/nord-vim'\nPlug 'preservim/nerdtree'\n\ncall plug#end()\n\nlet g:UltiSnipsExpandTrigger = '&lt;tab&gt;'\nlet g:UltiSnipsJumpForwardTrigger = '&lt;tab&gt;'\nlet g:UltiSnipsJumpBackwardTrigger = '&lt;s-tab&gt;'\nlet g:vimtex_view_method = 'zathura'\nlet g:vimtex_quickfix_mode = 0\nlet g:lightline = {'colorscheme' : 'nord'}\n\nsetlocal spell\nset spelllang=en_us\ninoremap &lt;C-l&gt; &lt;c-g&gt;u&lt;Esc&gt;[s1z=`]a&lt;c-g&gt;u\n\ncolorscheme nord\n\n\n\nSetup Vimtex with zathura\nFollow this: https://github.com/lervag/vimtex. Also remember that you need to install separate tex compiler to use tex.\n\n\n\nInstall R\nJust follow this site: https://pmassicotte.github.io/linux-mint-dev-environment/installr.html.\nI will just post my current .Rprofile file for reference:\n\nif (interactive() && Sys.getenv(\"RSTUDIO\") == \"\") {\n  Sys.setenv(TERM_PROGRAM = \"vscode\")\n  if (\"httpgd\" %in% .packages(all.available = TRUE)) {\n    options(vsc.plot = FALSE)\n    options(device = function(...) {\n      httpgd::hgd(silent = TRUE)\n      .vsc.browser(httpgd::hgd_url(history = FALSE), viewer = \"Beside\")\n    })\n  }\n  source(file.path(Sys.getenv(if (.Platform$OS.type == \"windows\") \"USERPROFILE\" else \"HOME\"), \".vscode-R\", \"init.R\"))\n}\n\n# Connect to public package manager\noptions(repos = c(CRAN = \"https://packagemanager.posit.co/cran/__linux__/rhel9/latest\"))\n\n# This is important if you are using RSPM on Linux outside RStudio\noptions(HTTPUserAgent = sprintf(\"R/%s R (%s)\", getRversion(), paste(getRversion(), R.version[\"platform\"], R.version[\"arch\"], R.version[\"os\"])))"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Hyoungchul Kim",
+    "section": "",
+    "text": "I am a first-year Ph.D. student in Applied Economics at The Wharton School, University of Pennsylvania.\nYou can either call me Hyoungchul (H-Young-Cheol) or Kent (my english name).\nI am currently interested in urban and environmental topics using tools from international trade and industrial organization.\nFor inquiries about software, email me or use the issue tracker at github."
+  },
+  {
+    "objectID": "posts/bash-caveats/1 2 3 4 5/index.html",
+    "href": "posts/bash-caveats/1 2 3 4 5/index.html",
+    "title": "Beware of Bash",
+    "section": "",
+    "text": "In this post, I list some important precautions and best practices when working with the Bash shell. Note that this will be updated as I find more of it."
+  },
+  {
+    "objectID": "posts/bash-caveats/1 2 3 4 5/index.html#footnotes",
+    "href": "posts/bash-caveats/1 2 3 4 5/index.html#footnotes",
+    "title": "Beware of Bash",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThe IFS variable is a string of special characters that works as delimiters between words. The default value of IFS is space, tab, newline.↩︎\nYou might wonder what 127 and 0 mean in the output. In Bash, every command gives off return code. If it is 0, it means execute code was run without problem. If it has some other values, it means there is something wrong with the command.↩︎"
+  },
+  {
+    "objectID": "posts/quarto-paper-template/index.html",
+    "href": "posts/quarto-paper-template/index.html",
+    "title": "Quarto format Econ. working paper template",
+    "section": "",
+    "text": "I just dropped a new Quarto format working paper template that is often used in the field of Economics. You can check the rendered pdf demo here. I also have a github repository for this."
+  },
+  {
+    "objectID": "posts/quarto-paper-template/index.html#footnotes",
+    "href": "posts/quarto-paper-template/index.html#footnotes",
+    "title": "Quarto format Econ. working paper template",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nCited from Quarto official website.↩︎"
+  },
+  {
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "OverTheWire wargames\n\n\n\nstudy\n\n\n\nPersonal solutions for overthewire wargames\n\n\n\n\n\nJul 2, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nFirst-year Ph.D. in retrospect\n\n\n\npersonal\n\n\n\nSummarizing my first-year Ph.D. in Economics experience\n\n\n\n\n\nJun 6, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nParallel programming\n\n\n\nstudy\n\n\n\nLearning basic parallel programming in R\n\n\n\n\n\nMay 26, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nMakefile: build automation software\n\n\n\nsoftware\n\n\n\nMaking automation workflow with Makefile\n\n\n\n\n\nApr 22, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nBeware of Bash\n\n\n\nsoftware\n\n\n\nSome warnings when using Bash\n\n\n\n\n\nMar 21, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nPersonal Dockerfile for data science\n\n\n\nsoftware\n\n\n\nPersonal Dockerfile template for my research workflow\n\n\n\n\n\nMar 15, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto format Econ. working paper template\n\n\n\nsoftware\n\n\n\nI just dropped a new quarto format working paper template in github\n\n\n\n\n\nMar 9, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nFirst academic citation\n\n\n\nresearch\n\n\n\nI am celebrating my first citation\n\n\n\n\n\nMar 1, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nReproducible coding crash course\n\n\n\nlecture\n\n\n\nMy slide and resources on reproducible coding\n\n\n\n\n\nJan 20, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nSummary of my understanding of terms in empirical economics\n\n\n\nlecture\n\n\n\nSummary of some terms and jargons in the field of empirical economics\n\n\n\n\n\nJan 20, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nAdmission tips for Econ. Ph.D. (by Ph.D. student)\n\n\n\nlecture\n\n\n\nAdmission tips slide I wrote for master students at Alma Mater\n\n\n\n\n\nJan 20, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nHello, Quarto\n\n\n\nannouncement\n\n\n\nMigrating from hugo github page\n\n\n\n\n\nJan 19, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nSQL materials\n\n\n\nstudy\n\n\n\nResources for learning SQL\n\n\n\n\n\nJan 17, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "posts/parallel/index.html",
     "href": "posts/parallel/index.html",
     "title": "Parallel programming",
@@ -56,18 +147,18 @@
     "text": "Setting how many cores to use\nplan(multisession) or plan(multicore) automatically default to using all your cores. You can change that by running, say, plan(multisession(workers = detectCores()-1))."
   },
   {
-    "objectID": "posts/index.html",
-    "href": "posts/index.html",
-    "title": "Blog",
-    "section": "",
-    "text": "OverTheWire wargames\n\n\n\nstudy\n\n\n\nPersonal solutions for overthewire wargames\n\n\n\n\n\nJun 23, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nFirst-year Ph.D. in retrospect\n\n\n\npersonal\n\n\n\nSummarizing my first-year Ph.D. in Economics experience\n\n\n\n\n\nJun 6, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nParallel programming\n\n\n\nstudy\n\n\n\nLearning basic parallel programming in R\n\n\n\n\n\nMay 26, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nMakefile: build automation software\n\n\n\nsoftware\n\n\n\nMaking automation workflow with Makefile\n\n\n\n\n\nApr 22, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nBeware of Bash\n\n\n\nsoftware\n\n\n\nSome warnings when using Bash\n\n\n\n\n\nMar 21, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nPersonal Dockerfile for data science\n\n\n\nsoftware\n\n\n\nPersonal Dockerfile template for my research workflow\n\n\n\n\n\nMar 15, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto format Econ. working paper template\n\n\n\nsoftware\n\n\n\nI just dropped a new quarto format working paper template in github\n\n\n\n\n\nMar 9, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nFirst academic citation\n\n\n\nresearch\n\n\n\nI am celebrating my first citation\n\n\n\n\n\nMar 1, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nAdmission tips for Econ. Ph.D. (by Ph.D. student)\n\n\n\nlecture\n\n\n\nAdmission tips slide I wrote for master students at Alma Mater\n\n\n\n\n\nJan 20, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nSummary of my understanding of terms in empirical economics\n\n\n\nlecture\n\n\n\nSummary of some terms and jargons in the field of empirical economics\n\n\n\n\n\nJan 20, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nReproducible coding crash course\n\n\n\nlecture\n\n\n\nMy slide and resources on reproducible coding\n\n\n\n\n\nJan 20, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nHello, Quarto\n\n\n\nannouncement\n\n\n\nMigrating from hugo github page\n\n\n\n\n\nJan 19, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nSQL materials\n\n\n\nstudy\n\n\n\nResources for learning SQL\n\n\n\n\n\nJan 17, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "posts/empirical-econ/index.html",
     "href": "posts/empirical-econ/index.html",
     "title": "Summary of my understanding of terms in empirical economics",
     "section": "",
     "text": "I had some time last year to study about some terms and jargons used in empirical economics. I decided to share this slide on my website. You can find it here.\n\nDisclaimer\nThis is just a summary of the things I have read and studied. That being said, none of it should be credited as my work."
+  },
+  {
+    "objectID": "posts/first-cite/index.html",
+    "href": "posts/first-cite/index.html",
+    "title": "First academic citation",
+    "section": "",
+    "text": "I just realized that I got my first-ever citation for one of my published papers.\n\n\n\nMy first citation\n\n\nIf getting a paper published is a first-order effect of academic achievement, I think having someone cite your paper is a second-order effect. In essence, I believe one of the main reasons we do academic research is to share it with other scholars and expand the current literature. In that sense, citation is important because it is an indicator that verifies that your research is (at least marginally) helping other scholars.\nThus, it is an epsilon leap for the academia, but a giant leap for myself."
   },
   {
     "objectID": "posts/hello-quarto/index.html",
@@ -82,6 +173,90 @@
     "title": "Hello, Quarto",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nIn case you want to check out my past hugo website, click here↩︎"
+  },
+  {
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "Research",
+    "section": "",
+    "text": "“The effect of remote working on household waste: Evidence from South Korea” with Hee-Seung Yang. Mar. 2025. [Working paper].\n\n\nAbstract\n\nRemote working, or Work-From-Home (WFH), is now one of the prevalent work arrangement around the world. However, its impact on the social welfare—such as waste generation—is largely unexplored. This paper examines the causal impact of remote working on household waste generation in South Korea using COVID-19 as a natural experiment. The findings reveal mixed results. While overall household waste in district remain unaffected, districts with higher WFH levels experience increased plastic and textile waste but decreased food waste. These results suggest that remote working may influence current consumption patterns and lifestyle. Understanding these environmental implications is crucial for promoting sustainable work models and responsible waste management in a digital and remote world.\n\n“The China shock and internal migration: Evidence from bilateral migration flows” with Jaerim Choi and Seung Hoon Lee. Mar. 2025. [Working paper]. Revise and Resubmit (Major revision) at Canadian Journal of Economics.\n\n\nAbstract\n\nUsing Korean administrative datasets spanning almost two decades and covering nearly the entire bilateral internal migration flows between local labor markets, we identify the causal impact of the China trade shock on internal migration. The trade shock affects in-migration, but not out-migration. Separating further the China trade shock into export and import shocks, we find that export expansion increases in-migration, whereas import competition reduces in-migration. By decomposing the impact of trade shock into age groups, we find that effects of trade shocks in destination are robust and statistically significant across age groups; and most pronounced for middle-aged people between the ages of 45 and 64. Finally, households with male heads are more likely to be influenced by the trade shock compared to those with female heads, due to the greater reliance of the manufacturing sector on male labor."
+  },
+  {
+    "objectID": "research/index.html#working-papers",
+    "href": "research/index.html#working-papers",
+    "title": "Research",
+    "section": "",
+    "text": "“The effect of remote working on household waste: Evidence from South Korea” with Hee-Seung Yang. Mar. 2025. [Working paper].\n\n\nAbstract\n\nRemote working, or Work-From-Home (WFH), is now one of the prevalent work arrangement around the world. However, its impact on the social welfare—such as waste generation—is largely unexplored. This paper examines the causal impact of remote working on household waste generation in South Korea using COVID-19 as a natural experiment. The findings reveal mixed results. While overall household waste in district remain unaffected, districts with higher WFH levels experience increased plastic and textile waste but decreased food waste. These results suggest that remote working may influence current consumption patterns and lifestyle. Understanding these environmental implications is crucial for promoting sustainable work models and responsible waste management in a digital and remote world.\n\n“The China shock and internal migration: Evidence from bilateral migration flows” with Jaerim Choi and Seung Hoon Lee. Mar. 2025. [Working paper]. Revise and Resubmit (Major revision) at Canadian Journal of Economics.\n\n\nAbstract\n\nUsing Korean administrative datasets spanning almost two decades and covering nearly the entire bilateral internal migration flows between local labor markets, we identify the causal impact of the China trade shock on internal migration. The trade shock affects in-migration, but not out-migration. Separating further the China trade shock into export and import shocks, we find that export expansion increases in-migration, whereas import competition reduces in-migration. By decomposing the impact of trade shock into age groups, we find that effects of trade shocks in destination are robust and statistically significant across age groups; and most pronounced for middle-aged people between the ages of 45 and 64. Finally, households with male heads are more likely to be influenced by the trade shock compared to those with female heads, due to the greater reliance of the manufacturing sector on male labor."
+  },
+  {
+    "objectID": "research/index.html#publications",
+    "href": "research/index.html#publications",
+    "title": "Research",
+    "section": "Publications",
+    "text": "Publications\n[2] “Does political conflict hurt immigration? Evidence from the South Korea – China THAAD Dispute” with Jongkwan Lee. Aug. 2024. Published in Southern Economic Journal [Paper].\n[1] “The well-being of cities: Estimating migration attractiveness from internal migration across Korean cities” with Seung Hoon Lee and Ji Sub Park. Feb. 2024. Published in Global Economic Review [Paper]."
+  },
+  {
+    "objectID": "research-idea/index.html",
+    "href": "research-idea/index.html",
+    "title": "Research idea checklist",
+    "section": "",
+    "text": "High-level (at least two for JMP, one for decent paper)\n\nNew? (literature frontier).\nInteresting? (Real-world relevance, policy implementation).\nData? (New data).\n\n\n\nRQ specification\n\nFind concrete real-life example or policy.\nCheck data.\nSpecify trade-off.\nSpecify the setting (agents, outcomes, etc).\nSpecify potential research design (identification).\nSpecify simple economic model.\n\n\n\nFinal checklist\n\nTalk to other PhDs.\nTalk to faculties (2+).\nPresent preliminary ideas."
+  },
+  {
+    "objectID": "teaching/index.html",
+    "href": "teaching/index.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "For more detailed resources, check out this site."
+  },
+  {
+    "objectID": "teaching/index.html#the-wharton-school-upenn-t.a.",
+    "href": "teaching/index.html#the-wharton-school-upenn-t.a.",
+    "title": "Teaching",
+    "section": "The Wharton School, UPenn (T.A.)",
+    "text": "The Wharton School, UPenn (T.A.)"
+  },
+  {
+    "objectID": "posts/reproducible-coding-lecture/index.html",
+    "href": "posts/reproducible-coding-lecture/index.html",
+    "title": "Reproducible coding crash course",
+    "section": "",
+    "text": "I recently did a crash course on “reproducible coding” at my alma mater. Here is my material for the course. It mostly deals with Bash, Project environment (Renv, Poetry), Automation (Make), Docker."
+  },
+  {
+    "objectID": "posts/dockerfile-template/index.html",
+    "href": "posts/dockerfile-template/index.html",
+    "title": "Personal Dockerfile for data science",
+    "section": "",
+    "text": "During spring break, I had some time to finalize the Dockerfile template for my research workflow. If you don’t know what a Docker is, check it out here. TL;DR, it is a light virtual machine that contains all the necessary resources for your empirical analysis. It is as if you are shipping your computer to other people that wants to try out your analysis.\nIf you want the exact replication project folder, click here.\nThis is the final Dockerfile (for now):\n\n# Use Rocker image as the base for R\nFROM rocker/r-ver:4.4.0\n\nLABEL maintainer=\"Hyoungchul Kim &lt;hchul.kim96@gmail.com&gt;\"\n\n## Update and install system dependencies\nRUN apt-get update && apt-get install -y \\\n    libcurl4-openssl-dev \\\n    libssl-dev \\\n    libfontconfig1-dev \\\n    libharfbuzz-dev \\\n    libfribidi-dev \\\n    libfreetype6-dev \\\n    libpng-dev \\\n    libtiff5-dev \\\n    libjpeg-dev \\\n    libglpk-dev \\\n    libxml2-dev \\\n    libcairo2-dev \\\n    libgit2-dev \\\n    libpq-dev \\\n    libsasl2-dev \\\n    libsqlite3-dev \\\n    libssh2-1-dev \\\n    libxt-dev \\\n    libgdal-dev \\\n    wget \\\n    curl \\\n    vim \\\n    git \n\n## Install Pandoc and Quarto (Required for RMarkdown, Quarto, etc.)\n# RUN /rocker_scripts/install_pandoc.sh\n# RUN /rocker_scripts/install_quarto.sh\n\n## Install Python & Poetry\nRUN /rocker_scripts/install_python.sh && \\\n    pip3 install --upgrade pip && \\\n    pip3 install poetry\n\n# Ensure Poetry installs dependencies in the system environment\nRUN poetry config virtualenvs.create false\n\n# Copy Poetry files and install dependencies\nCOPY pyproject.toml poetry.lock .\nRUN poetry install --no-interaction --no-root\n\n## Install Julia 1.11.3 (to match Manifest.toml)\nENV JULIA_VERSION=1.11.3\nRUN /rocker_scripts/install_julia.sh\n\n## Set working directory\nWORKDIR /project\n\n## Copy renv.lock file into the folder\nCOPY renv.lock .\n\n# Set environment variables for renv\nENV RENV_VERSION=1.0.7\nENV RENV_PATHS_CACHE=/renv/cache\nENV RENV_CONFIG_REPOS_OVERRIDE=https://cloud.r-project.org\nENV RENV_CONFIG_AUTOLOADER_ENABLED=FALSE\nENV RENV_WATCHDOG_ENABLED=FALSE\nRUN echo \"options(renv.consent = TRUE)\" &gt;&gt; .Rprofile\nRUN echo \"options(RETICULATE_MINICONDA_ENABLED = FALSE)\" &gt;&gt; .Rprofile\n\n# Install renv from CRAN (avoiding bootstrapping by specifying version)\nRUN R -e \"install.packages('renv', repos = c(CRAN = 'https://cloud.r-project.org'))\"\nRUN R -e \"renv::consent(provided = TRUE)\"\n\n# Run renv restore to restore the environment\nRUN R -e \"renv::restore(confirm = FALSE)\"\n\n# Install Julia packages and manage dependencies\nCOPY Manifest.toml Project.toml .\nENV JULIA_PROJECT=/project\nRUN julia -e \"import Pkg; Pkg.activate(\\\".\\\"); Pkg.instantiate()\"\n\n# Copy over the rest of the project files\nCOPY . .\n\n# Default command\nCMD [\"bash\"]\n\nAlthough most of the commands are self-explanatory from the comments, here is some additional info on what my Dockerfile does:\n\nIn my personal Dockerfile, I have added three major programming languages that I use: R, Python, and Julia.\nI have also added some necessary dependencies and useful programs (e.g. git, vim) for my analysis.\nI have also added dependency management software for all of the languages. renv for R, poetry for Python, and Pkg environment for Julia. This allows you to use the exact versions of the packages that you installed in your analysis.\nFor this code to fully work, you would need to setup some files (e.g. Project.toml, Manifest.toml, etc).\nSave the above code as Dockerfile (no extensions) right inside your project directory.\n\n\nQuick terminology\n\nDockerfile: “The sheet music.” The list of layers and instructions for building a Docker image.\nImage: “The MP3 file.” This is the tarball.\nContainer: “Song playing on my phone.” A container is a running instance of an image.\n\n\n\nDocker workflow\n\nCreate Dockerfile.\nBuild Docker image using Dockerfile.\n\n\n# IMPORTANT: If this does not go through, maybe try sudo command\ndocker build --network=host --tag &lt;PROJECT_NAME&gt;:VERSION . \n\n# Above command might not work well in computers such as Macbook with Apple Silicon (Ofc...). This is mainly because it has a different cpu architecture (arm64 instead of amd64) so the base image is different. I am not sure if this is the best solution but try this code below.\n# docker build --platform=linux/amd64 --tag &lt;PROJECT_NAME&gt;:VERSION .\n\n\nRun Docker image.\n\n\ndocker run -it --rm &lt;PROJECT_NAME&gt;:VERSION\n\n\n\nSome useful Docker-related commands\n\n# check cached docker images\ndocker images\n\n# check docker containers that are running\ndocker ps\n\n# remove the docker image\ndocker rmi &lt;IMAGE_NAME&gt;\n\n# remove all dangling images and caches (do it periodically to save space)\ndocker system prune"
+  },
+  {
+    "objectID": "posts/admission-econ/index.html",
+    "href": "posts/admission-econ/index.html",
+    "title": "Admission tips for Econ. Ph.D. (by Ph.D. student)",
+    "section": "",
+    "text": "I had a chance to talk about some admission tips for master students in my university after my application process (It happened later year). I decided to share this slide on my website. You can find it here.\n\nDisclaimer\nThis slides only consist of my personal experience. That being said, lot of it can have some misinformation. Also, some of the contents are tailored to the students in my alma mater."
+  },
+  {
+    "objectID": "posts/make-file/index.html",
+    "href": "posts/make-file/index.html",
+    "title": "Makefile: build automation software",
+    "section": "",
+    "text": "If you haven’t used Make yet, you should do it now! Make is a software that can help your research worfklow by automating certain procedures. For example, you can use Make to re-run all your necessary codes whenever there is a change in the raw data in your folder.\nBelow I provide a very simple example of Makefile which is used to run Make. The code below checks all the folders that have git installed and can do git pull and git push for all the folders instead of manually going into the subfolders and run the command separately.\nENJOY!\n\n.PHONY: pull-all push-all\n\nSUBDIRS := $(shell find . -mindepth 1 -maxdepth 1 -type d)\n\npull-all:\n    @for dir in $(SUBDIRS); do \\\n        if [ -d \"$$dir/.git\" ]; then \\\n            echo \"Pulling in $$dir...\"; \\\n            (cd $$dir && git pull); \\\n        else \\\n            echo \"Skipping $$dir (not a git repo)\"; \\\n        fi \\\n    done\n\npush-all:\n    @for dir in $(SUBDIRS); do \\\n        if [ -d \"$$dir/.git\" ]; then \\\n            echo \"Pushing in $$dir...\"; \\\n            (cd $$dir && git push); \\\n        else \\\n            echo \"Skipping $$dir (not a git repo)\"; \\\n        fi \\\n    done"
+  },
+  {
+    "objectID": "posts/bandit/index.html",
+    "href": "posts/bandit/index.html",
+    "title": "OverTheWire wargames",
+    "section": "",
+    "text": "In this post, I write down my solutions for the OverTheWire wargames."
+  },
+  {
+    "objectID": "posts/bandit/index.html#bandit",
+    "href": "posts/bandit/index.html#bandit",
+    "title": "OverTheWire wargames",
+    "section": "Bandit",
+    "text": "Bandit\n\n0\nJust get used to the concept of ssh. ssh is secure shell which allows secured access to the remote machine from the local computer.\n\nssh bandit0@bandit.labs.overthewire.org -p 2220\n\n# You will be asked to type in the password.\n\n\n\n0 to 1\n\n# print out the file\ncat readme\n\nexit\n \nssh bandit1@bandit.labs.overthewire.org -p 2220\n\n# You will be asked to type in the password.\n\n\n\n1 to 2\n\n# Special character - . Need to specify the full location of the file. \ncat ./-\n\n\n\n2 to 3\n\n# enclose the filenames using double quote, or use \\ before white space.\n\n\n\n3 to 4\n\n# list all files using -a argument\nls inhere/ -a\n\n\n\n4 to 5\n\n# find ASCII text files\n# -exec file {} + executes the file command to get info on the content\nfind inhere -type f -exec file {} + | grep ASCII\n\n\n\n5 to 6\n\nfind inhere -type f -size 1033c ! -executable -exec file {} + | grep ASCII\n\n\n\n6 to 7\n\n# since we don't know where the file is, we will search from the root directory\nfind / -user bandit7 -group bandit6 -size 33c -type f 2&gt;/dev/null -exec cat {} \\;\n\n\n\n7 to 8\n\ngrep -w \"millionth\" data.txt\n\n\n\n8 to 9\n\nsort data.txt | uniq -u data.txt\n\n\n\n9 to 10\n\nstrings data.txt | grep \"==\"\n\n\n\n10 to 11\n\ncat data.txt | base64 -d\n\n\n\n11 to 12\n\ncat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'\n\n\n\n12 to 13\n\nls\nhead data.txt\nmkdir /tmp/random_dir\ncd /tmp/random_dir\ncp ~/data.txt .\nmv data.txt data\nxxd -r data &gt; binary\nfile binary\nmv binary binary.gz\ngunzip binary.gz\nbunzip2 binary\nmv binary.out binary.gz\ngunzip binary.gz\ntar -xf binary\n\n# do similar procedure multiple times\nFO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn\n\n\n\n13 to 14\n\nssh -i sshkey.private -p 2220 bandit14@localhost # This will log you in as user bandit14 and allow you to see the password.\n\n\n\n14 to 15\n\nnetcat localhost 30000\n# Then submit the password of the current level.\n\n\n\n15 to 16\n\nopenssl s_client -connect localhost:30001\n# Then submit the password of the current level.\n\n\n\n16 to 17\n\n# I feel this part is bit too complicated and not useful for me. So I just provide the link to someone else's solution\n# https://medium.com/@rushi.padhiyar098/overthewire-bandit-level-16-and-level-17-walkthrough-by-cyph3r-ryx-95c1ccdbb76b\n\n\n\n17 to 18\n\ndiff passwords.new passwords.old\n\n\n\n18 to 19\n\n# check shell other than bash\ncat /etc/shells\n\n# use it to login\nssh bandit18@bandit.labs.overthewire.org -p 2220 -t \"/bin/sh\"\n\ncGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8\n\n\n\n19 to 20\n\n./bandit20-do\n\n./bandit20-do ls /etc/bandit_pass\n\n./bandit20-do cat /etc/bandit_pass/bandit20\n\n\n\n20 to 21\n\n# I feel this part is not useful for me. So I just provide the link to someone else's solution\nEeoULMCra2q0dSkYj561DX7s1CpBuOBt"
   },
   {
     "objectID": "posts/first-year/index.html",
@@ -119,53 +294,11 @@
     "text": "Footnotes\n\n\nPersonal twist of the quotes by good ol’ Oscar Wilde.↩︎\nIn case you don’t know already, I am currently doing PhD in Applied Economics at The Wharton School, UPenn.↩︎"
   },
   {
-    "objectID": "posts/dockerfile-template/index.html",
-    "href": "posts/dockerfile-template/index.html",
-    "title": "Personal Dockerfile for data science",
+    "objectID": "posts/sql-info/index.html",
+    "href": "posts/sql-info/index.html",
+    "title": "SQL materials",
     "section": "",
-    "text": "During spring break, I had some time to finalize the Dockerfile template for my research workflow. If you don’t know what a Docker is, check it out here. TL;DR, it is a light virtual machine that contains all the necessary resources for your empirical analysis. It is as if you are shipping your computer to other people that wants to try out your analysis.\nIf you want the exact replication project folder, click here.\nThis is the final Dockerfile (for now):\n\n# Use Rocker image as the base for R\nFROM rocker/r-ver:4.4.0\n\nLABEL maintainer=\"Hyoungchul Kim &lt;hchul.kim96@gmail.com&gt;\"\n\n## Update and install system dependencies\nRUN apt-get update && apt-get install -y \\\n    libcurl4-openssl-dev \\\n    libssl-dev \\\n    libfontconfig1-dev \\\n    libharfbuzz-dev \\\n    libfribidi-dev \\\n    libfreetype6-dev \\\n    libpng-dev \\\n    libtiff5-dev \\\n    libjpeg-dev \\\n    libglpk-dev \\\n    libxml2-dev \\\n    libcairo2-dev \\\n    libgit2-dev \\\n    libpq-dev \\\n    libsasl2-dev \\\n    libsqlite3-dev \\\n    libssh2-1-dev \\\n    libxt-dev \\\n    libgdal-dev \\\n    wget \\\n    curl \\\n    vim \\\n    git \n\n## Install Pandoc and Quarto (Required for RMarkdown, Quarto, etc.)\n# RUN /rocker_scripts/install_pandoc.sh\n# RUN /rocker_scripts/install_quarto.sh\n\n## Install Python & Poetry\nRUN /rocker_scripts/install_python.sh && \\\n    pip3 install --upgrade pip && \\\n    pip3 install poetry\n\n# Ensure Poetry installs dependencies in the system environment\nRUN poetry config virtualenvs.create false\n\n# Copy Poetry files and install dependencies\nCOPY pyproject.toml poetry.lock .\nRUN poetry install --no-interaction --no-root\n\n## Install Julia 1.11.3 (to match Manifest.toml)\nENV JULIA_VERSION=1.11.3\nRUN /rocker_scripts/install_julia.sh\n\n## Set working directory\nWORKDIR /project\n\n## Copy renv.lock file into the folder\nCOPY renv.lock .\n\n# Set environment variables for renv\nENV RENV_VERSION=1.0.7\nENV RENV_PATHS_CACHE=/renv/cache\nENV RENV_CONFIG_REPOS_OVERRIDE=https://cloud.r-project.org\nENV RENV_CONFIG_AUTOLOADER_ENABLED=FALSE\nENV RENV_WATCHDOG_ENABLED=FALSE\nRUN echo \"options(renv.consent = TRUE)\" &gt;&gt; .Rprofile\nRUN echo \"options(RETICULATE_MINICONDA_ENABLED = FALSE)\" &gt;&gt; .Rprofile\n\n# Install renv from CRAN (avoiding bootstrapping by specifying version)\nRUN R -e \"install.packages('renv', repos = c(CRAN = 'https://cloud.r-project.org'))\"\nRUN R -e \"renv::consent(provided = TRUE)\"\n\n# Run renv restore to restore the environment\nRUN R -e \"renv::restore(confirm = FALSE)\"\n\n# Install Julia packages and manage dependencies\nCOPY Manifest.toml Project.toml .\nENV JULIA_PROJECT=/project\nRUN julia -e \"import Pkg; Pkg.activate(\\\".\\\"); Pkg.instantiate()\"\n\n# Copy over the rest of the project files\nCOPY . .\n\n# Default command\nCMD [\"bash\"]\n\nAlthough most of the commands are self-explanatory from the comments, here is some additional info on what my Dockerfile does:\n\nIn my personal Dockerfile, I have added three major programming languages that I use: R, Python, and Julia.\nI have also added some necessary dependencies and useful programs (e.g. git, vim) for my analysis.\nI have also added dependency management software for all of the languages. renv for R, poetry for Python, and Pkg environment for Julia. This allows you to use the exact versions of the packages that you installed in your analysis.\nFor this code to fully work, you would need to setup some files (e.g. Project.toml, Manifest.toml, etc).\nSave the above code as Dockerfile (no extensions) right inside your project directory.\n\n\nQuick terminology\n\nDockerfile: “The sheet music.” The list of layers and instructions for building a Docker image.\nImage: “The MP3 file.” This is the tarball.\nContainer: “Song playing on my phone.” A container is a running instance of an image.\n\n\n\nDocker workflow\n\nCreate Dockerfile.\nBuild Docker image using Dockerfile.\n\n\n# IMPORTANT: If this does not go through, maybe try sudo command\ndocker build --network=host --tag &lt;PROJECT_NAME&gt;:VERSION . \n\n# Above command might not work well in computers such as Macbook with Apple Silicon (Ofc...). This is mainly because it has a different cpu architecture (arm64 instead of amd64) so the base image is different. I am not sure if this is the best solution but try this code below.\n# docker build --platform=linux/amd64 --tag &lt;PROJECT_NAME&gt;:VERSION .\n\n\nRun Docker image.\n\n\ndocker run -it --rm &lt;PROJECT_NAME&gt;:VERSION\n\n\n\nSome useful Docker-related commands\n\n# check cached docker images\ndocker images\n\n# check docker containers that are running\ndocker ps\n\n# remove the docker image\ndocker rmi &lt;IMAGE_NAME&gt;\n\n# remove all dangling images and caches (do it periodically to save space)\ndocker system prune"
-  },
-  {
-    "objectID": "posts/first-cite/index.html",
-    "href": "posts/first-cite/index.html",
-    "title": "First academic citation",
-    "section": "",
-    "text": "I just realized that I got my first-ever citation for one of my published papers.\n\n\n\nMy first citation\n\n\nIf getting a paper published is a first-order effect of academic achievement, I think having someone cite your paper is a second-order effect. In essence, I believe one of the main reasons we do academic research is to share it with other scholars and expand the current literature. In that sense, citation is important because it is an indicator that verifies that your research is (at least marginally) helping other scholars.\nThus, it is an epsilon leap for the academia, but a giant leap for myself."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Hyoungchul Kim",
-    "section": "",
-    "text": "I am a first-year Ph.D. student in Applied Economics at The Wharton School, University of Pennsylvania.\nYou can either call me Hyoungchul (H-Young-Cheol) or Kent (my english name).\nI am currently interested in urban and environmental topics using tools from international trade and industrial organization.\nFor inquiries about software, email me or use the issue tracker at github."
-  },
-  {
-    "objectID": "teaching/index.html",
-    "href": "teaching/index.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "For more detailed resources, check out this site."
-  },
-  {
-    "objectID": "teaching/index.html#the-wharton-school-upenn-t.a.",
-    "href": "teaching/index.html#the-wharton-school-upenn-t.a.",
-    "title": "Teaching",
-    "section": "The Wharton School, UPenn (T.A.)",
-    "text": "The Wharton School, UPenn (T.A.)"
-  },
-  {
-    "objectID": "misc/personal/econ6110.html",
-    "href": "misc/personal/econ6110.html",
-    "title": "ECON-6110",
-    "section": "",
-    "text": "This is an informal note to record what I thought about or what I thought was important in the Game theory class."
-  },
-  {
-    "objectID": "misc/personal/econ6110.html#hemi-continuity-and-fixed-point-theorem",
-    "href": "misc/personal/econ6110.html#hemi-continuity-and-fixed-point-theorem",
-    "title": "ECON-6110",
-    "section": "Hemi-continuity and fixed point theorem",
-    "text": "Hemi-continuity and fixed point theorem\nWhen I was first learned about hemi-continuity in math camp, I was not sure why we need to know this concept. The only intuition I had was that it is sort of a generalization of the continuity definition to correspondence. But after taking the game theory course, I finally realized that we need this condition to apply Kakutani fixed point theorem. FYI, we need kakutani fixed point theorem to prove that Nash eqm exists.\n\nEx-ante, interim, ex-post\nWhen talking about (expected) payoff of agents, it is important to know whether the agents are maximizing ex-ante, interim, or ex-post. For example, revenue equivalence theorem in auction is about equivalence of autioneer’s expected payoff ex-ante, not ex-post. Fortunately, chatgpt did a good job in summarizing the definition in a table.\n\n\n\nNormal form and extensive form\nIt is important to note that the main difference between normal form game and extensive form game is not the timing. That is, fundamental difference between normal form and extensive form game is not whether the agents make decisions at the same time or not. For example, think of a game where agents makes decisions at different timing but they cannot observe others’ actions. In this setting, the game is still a normal form. The game becomes “extensive” when some agents can observe other agents’ actions before making their own decisions. Thus, the main factor that differentiates normal form and extensive form is whether agents make their actions after observing other’s actions.\n\n\nAdverse selection\nI thought it was interesting to learn that the key takeaway from adverse selection isn’t just the presence of information asymmetry between agents, but that this asymmetry impacts other agents’ payoffs. In fact, this is the main factor leading to the presence of adverse selection. In the famous lemon market example, adverse selection will not occur if there were separate and independent dimensions of utility for the seller and buyer.\n\n\nRevenue equivalence theorem\nAlthough I learned this concept in undergraduate micro class, it was still very cool to know that ex-ante expected revenue becomes equivalent for all standard auction games."
+    "text": "Here are some of the resources that I used (or plan to use) to understand SQL.\n\nSQL masterclass\nTeach SQL in grad school\nDuckDB and Polars\nTrue order of SQL\nSQL order of operations\nGoogle big query using R"
   },
   {
     "objectID": "misc/personal/econ7100.html",
@@ -173,20 +306,6 @@
     "title": "ECON-7100",
     "section": "",
     "text": "This is an informal note to record what I thought about or what I thought was important in the Microeconomics I class.\n\ntba"
-  },
-  {
-    "objectID": "misc/personal/working-environment.html",
-    "href": "misc/personal/working-environment.html",
-    "title": "Setting up working environment",
-    "section": "",
-    "text": "Preface\nThis is just a note for myself to re-setup my working environment on Linux (I am using Ubuntu) so that I don’t forget what I need to do.\n\n\nTerminal\n\nInstall fastfetch\n\nsudo add-apt-repository ppa:fastfetch/stable\nsudo apt install fastfetch \n\n# add `fastfetch` in `.bashrc` file.\n\n\n\n\nVim\n\nInstall Vim and set it as default text editor\n\nsudo apt update\nsudo apt install vim\n\nsudo update-alternatives --config editor\n\n\n\nInstall Vim-plugin\nFollow this link: LINK\nSome plugins I use (Example of .vimrc file)\n\ncall plug#begin()\n\n\" List your plugins here\nPlug 'sirver/ultisnips'\nPlug 'lervag/vimtex'\nPlug 'KeitaNakamura/tex-conceal.vim'\nPlug 'arcticicestudio/nord-vim'\nPlug 'preservim/nerdtree'\n\ncall plug#end()\n\nlet g:UltiSnipsExpandTrigger = '&lt;tab&gt;'\nlet g:UltiSnipsJumpForwardTrigger = '&lt;tab&gt;'\nlet g:UltiSnipsJumpBackwardTrigger = '&lt;s-tab&gt;'\nlet g:vimtex_view_method = 'zathura'\nlet g:vimtex_quickfix_mode = 0\nlet g:lightline = {'colorscheme' : 'nord'}\n\nsetlocal spell\nset spelllang=en_us\ninoremap &lt;C-l&gt; &lt;c-g&gt;u&lt;Esc&gt;[s1z=`]a&lt;c-g&gt;u\n\ncolorscheme nord\n\n\n\nSetup Vimtex with zathura\nFollow this: https://github.com/lervag/vimtex. Also remember that you need to install separate tex compiler to use tex.\n\n\n\nInstall R\nJust follow this site: https://pmassicotte.github.io/linux-mint-dev-environment/installr.html.\nI will just post my current .Rprofile file for reference:\n\nif (interactive() && Sys.getenv(\"RSTUDIO\") == \"\") {\n  Sys.setenv(TERM_PROGRAM = \"vscode\")\n  if (\"httpgd\" %in% .packages(all.available = TRUE)) {\n    options(vsc.plot = FALSE)\n    options(device = function(...) {\n      httpgd::hgd(silent = TRUE)\n      .vsc.browser(httpgd::hgd_url(history = FALSE), viewer = \"Beside\")\n    })\n  }\n  source(file.path(Sys.getenv(if (.Platform$OS.type == \"windows\") \"USERPROFILE\" else \"HOME\"), \".vscode-R\", \"init.R\"))\n}\n\n# Connect to public package manager\noptions(repos = c(CRAN = \"https://packagemanager.posit.co/cran/__linux__/rhel9/latest\"))\n\n# This is important if you are using RSPM on Linux outside RStudio\noptions(HTTPUserAgent = sprintf(\"R/%s R (%s)\", getRversion(), paste(getRversion(), R.version[\"platform\"], R.version[\"arch\"], R.version[\"os\"])))"
-  },
-  {
-    "objectID": "research-idea/index.html",
-    "href": "research-idea/index.html",
-    "title": "Research idea checklist",
-    "section": "",
-    "text": "High-level (at least two for JMP, one for decent paper)\n\nNew? (literature frontier).\nInteresting? (Real-world relevance, policy implementation).\nData? (New data).\n\n\n\nRQ specification\n\nFind concrete real-life example or policy.\nCheck data.\nSpecify trade-off.\nSpecify the setting (agents, outcomes, etc).\nSpecify potential research design (identification).\nSpecify simple economic model.\n\n\n\nFinal checklist\n\nTalk to other PhDs.\nTalk to faculties (2+).\nPresent preliminary ideas."
   },
   {
     "objectID": "misc/personal/econ7300.html",
@@ -201,124 +320,5 @@
     "title": "ECON-7200",
     "section": "",
     "text": "This is an informal note to record what I thought about or what I thought was important in the Macroeconomics I class.\n\nCompetitive eqm, efficiency, and GE\nI don’t know why, but I always feel that macro course does a better job of explaining the concep of GE, competitive eqm, and the welfare theorem than the second portion of micro course. It was nice to see how we start with simple Arrow-Debreu setup and derive the competitive equilibrium. Then we use welfare theorem to connect the competitive eqm to pareto efficiency.\n\n\nDynamics"
-  },
-  {
-    "objectID": "misc/index.html",
-    "href": "misc/index.html",
-    "title": "Misc.",
-    "section": "",
-    "text": "[LINK]\n\n\n\n\n\nQuarto working paper template for Economics: [github link] [Blog post]\n\n\n\n\n\nDockerfile for empirical analysis (R, Python, Julia with dependency management setup): [link]"
-  },
-  {
-    "objectID": "misc/index.html#software",
-    "href": "misc/index.html#software",
-    "title": "Misc.",
-    "section": "",
-    "text": "[LINK]\n\n\n\n\n\nQuarto working paper template for Economics: [github link] [Blog post]\n\n\n\n\n\nDockerfile for empirical analysis (R, Python, Julia with dependency management setup): [link]"
-  },
-  {
-    "objectID": "misc/index.html#math",
-    "href": "misc/index.html#math",
-    "title": "Misc.",
-    "section": "Math",
-    "text": "Math\n\n(Partial) Solutions\n\nIntroduction to set theory (Hrbacek and Jech)\nReal analysis (Folland)"
-  },
-  {
-    "objectID": "misc/index.html#courses",
-    "href": "misc/index.html#courses",
-    "title": "Misc.",
-    "section": "Courses",
-    "text": "Courses\nThese are some info on the courses that I took or self-studied.\n\n\nList of courses\n\n\nPhD Microeconomic Theory I (ECON 7100, UPenn, Fall 2024): [Personal summary]\nPhD Macroeconomic Theory I (ECON 7200, UPenn, Fall 2024): [Personal summary]\nPhD Econometrics I (ECON 7300, UPenn, Fall 2024): [Personal summary]\nPhD Game Theory and Applications (ECON 6110, UPenn, Spring 2025): [Personal summary]\nPhD Applied Econometrics (HCMG 9010, UPenn, Spring 2025): [Personal summary]\nPhD Advanced Real Estate and Urban Economics (REAL 9470, UPenn, Spring 2025): [Personal summary]\nPhD Cities in Developing Countries (REAL 9490, UPenn, Spring 2025): [Personal summary]\nPhD Public Economics (BEPP 9330, UPenn, Spring 2025): [Personal summary]\nPhD Topics in Empirical Microeconomics: Spatial Economic Analysis (ECON 8400, UPenn, Spring 2025): [Personal summary]"
-  },
-  {
-    "objectID": "research/index.html",
-    "href": "research/index.html",
-    "title": "Research",
-    "section": "",
-    "text": "“The effect of remote working on household waste: Evidence from South Korea” with Hee-Seung Yang. Mar. 2025. [Working paper].\n\n\nAbstract\n\nRemote working, or Work-From-Home (WFH), is now one of the prevalent work arrangement around the world. However, its impact on the social welfare—such as waste generation—is largely unexplored. This paper examines the causal impact of remote working on household waste generation in South Korea using COVID-19 as a natural experiment. The findings reveal mixed results. While overall household waste in district remain unaffected, districts with higher WFH levels experience increased plastic and textile waste but decreased food waste. These results suggest that remote working may influence current consumption patterns and lifestyle. Understanding these environmental implications is crucial for promoting sustainable work models and responsible waste management in a digital and remote world.\n\n“The China shock and internal migration: Evidence from bilateral migration flows” with Jaerim Choi and Seung Hoon Lee. Mar. 2025. [Working paper]. Submitted.\n\n\nAbstract\n\nUsing Korean administrative datasets spanning almost two decades and covering nearly the entire bilateral internal migration flows between local labor markets, we identify the causal impact of the China trade shock on internal migration. The trade shock affects in-migration, but not out-migration. Separating further the China trade shock into export and import shocks, we find that export expansion increases in-migration, whereas import competition reduces in-migration. By decomposing the impact of trade shock into age groups, we find that effects of trade shocks in destination are robust and statistically significant across age groups; and most pronounced for middle-aged people between the ages of 45 and 64. Finally, households with male heads are more likely to be influenced by the trade shock compared to those with female heads, due to the greater reliance of the manufacturing sector on male labor."
-  },
-  {
-    "objectID": "research/index.html#working-papers",
-    "href": "research/index.html#working-papers",
-    "title": "Research",
-    "section": "",
-    "text": "“The effect of remote working on household waste: Evidence from South Korea” with Hee-Seung Yang. Mar. 2025. [Working paper].\n\n\nAbstract\n\nRemote working, or Work-From-Home (WFH), is now one of the prevalent work arrangement around the world. However, its impact on the social welfare—such as waste generation—is largely unexplored. This paper examines the causal impact of remote working on household waste generation in South Korea using COVID-19 as a natural experiment. The findings reveal mixed results. While overall household waste in district remain unaffected, districts with higher WFH levels experience increased plastic and textile waste but decreased food waste. These results suggest that remote working may influence current consumption patterns and lifestyle. Understanding these environmental implications is crucial for promoting sustainable work models and responsible waste management in a digital and remote world.\n\n“The China shock and internal migration: Evidence from bilateral migration flows” with Jaerim Choi and Seung Hoon Lee. Mar. 2025. [Working paper]. Submitted.\n\n\nAbstract\n\nUsing Korean administrative datasets spanning almost two decades and covering nearly the entire bilateral internal migration flows between local labor markets, we identify the causal impact of the China trade shock on internal migration. The trade shock affects in-migration, but not out-migration. Separating further the China trade shock into export and import shocks, we find that export expansion increases in-migration, whereas import competition reduces in-migration. By decomposing the impact of trade shock into age groups, we find that effects of trade shocks in destination are robust and statistically significant across age groups; and most pronounced for middle-aged people between the ages of 45 and 64. Finally, households with male heads are more likely to be influenced by the trade shock compared to those with female heads, due to the greater reliance of the manufacturing sector on male labor."
-  },
-  {
-    "objectID": "research/index.html#publications",
-    "href": "research/index.html#publications",
-    "title": "Research",
-    "section": "Publications",
-    "text": "Publications\n[2] “Does political conflict hurt immigration? Evidence from the South Korea – China THAAD Dispute” with Jongkwan Lee. Aug. 2024. Published in Southern Economic Journal [Paper].\n[1] “The well-being of cities: Estimating migration attractiveness from internal migration across Korean cities” with Seung Hoon Lee and Ji Sub Park. Feb. 2024. Published in Global Economic Review [Paper]."
-  },
-  {
-    "objectID": "posts/bash-caveats/1 2 3 4 5/index.html",
-    "href": "posts/bash-caveats/1 2 3 4 5/index.html",
-    "title": "Beware of Bash",
-    "section": "",
-    "text": "In this post, I list some important precautions and best practices when working with the Bash shell. Note that this will be updated as I find more of it."
-  },
-  {
-    "objectID": "posts/bash-caveats/1 2 3 4 5/index.html#footnotes",
-    "href": "posts/bash-caveats/1 2 3 4 5/index.html#footnotes",
-    "title": "Beware of Bash",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nThe IFS variable is a string of special characters that works as delimiters between words. The default value of IFS is space, tab, newline.↩︎\nYou might wonder what 127 and 0 mean in the output. In Bash, every command gives off return code. If it is 0, it means execute code was run without problem. If it has some other values, it means there is something wrong with the command.↩︎"
-  },
-  {
-    "objectID": "posts/bandit/index.html",
-    "href": "posts/bandit/index.html",
-    "title": "OverTheWire wargames",
-    "section": "",
-    "text": "In this post, I write down my solutions for the OverTheWire wargames."
-  },
-  {
-    "objectID": "posts/bandit/index.html#bandit",
-    "href": "posts/bandit/index.html#bandit",
-    "title": "OverTheWire wargames",
-    "section": "Bandit",
-    "text": "Bandit\n\n0\nJust get used to the concept of ssh. ssh is secure shell which allows secured access to the remote machine from the local computer.\n\nssh bandit0@bandit.labs.overthewire.org -p 2220\n\n# You will be asked to type in the password.\n\n\n\n0 to 1\n\n# print out the file\ncat readme\n\nexit\n \nssh bandit1@bandit.labs.overthewire.org -p 2220\n\n# You will be asked to type in the password.\n\n\n\n1 to 2\n\n# Special character - . Need to specify the full location of the file. \ncat ./-\n\n\n\n2 to 3\n\n# enclose the filenames using double quote, or use \\ before white space.\n\n\n\n3 to 4\n\n# list all files using -a argument\nls inhere/ -a\n\n\n\n4 to 5\n\n# find ASCII text files\n# -exec file {} + executes the file command to get info on the content\nfind inhere -type f -exec file {} + | grep ASCII\n\n\n\n5 to 6\n\nfind inhere -type f -size 1033c ! -executable -exec file {} + | grep ASCII\n\n\n\n6 to 7\n\n# since we don't know where the file is, we will search from the root directory\nfind / -user bandit7 -group bandit6 -size 33c -type f 2&gt;/dev/null -exec cat {} \\;\n\n\n\n7 to 8\n\ngrep -w \"millionth\" data.txt\n\n\n\n8 to 9\n\nsort data.txt | uniq -u data.txt\n\n\n\n9 to 10\n\nstrings data.txt | grep \"==\"\n\n\n\n10 to 11\n\ncat data.txt | base64 -d\n\n\n\n11 to 12\n\ncat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'\n\n\n\n12 to 13\n\nls\nhead data.txt\nmkdir /tmp/random_dir\ncd /tmp/random_dir\ncp ~/data.txt .\nmv data.txt data\nxxd -r data &gt; binary\nfile binary\nmv binary binary.gz\ngunzip binary.gz\nbunzip2 binary\nmv binary.out binary.gz\ngunzip binary.gz\ntar -xf binary\n\n# do similar procedure multiple times\nFO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn\n\n\n\n13 to 14\n\nssh -i sshkey.private -p 2220 bandit14@localhost # This will log you in as user bandit14 and allow you to see the password.\n\n\n\n14 to 15\n\nnetcat localhost 30000\n# Then submit the password of the current level.\n\n\n\n15 to 16\n\nopenssl s_client -connect localhost:30001\n# Then submit the password of the current level.\n\n\n\n16 to 17\n\n# I feel this part is bit too complicated and not useful for me. So I just provide the link to someone else's solution\n# https://medium.com/@rushi.padhiyar098/overthewire-bandit-level-16-and-level-17-walkthrough-by-cyph3r-ryx-95c1ccdbb76b\n\n\n\n17 to 18\n\ndiff passwords.new passwords.old\n\n\n\n18 to 19\n\n# check shell other than bash\ncat /etc/shells\n\n# use it to login\nssh bandit18@bandit.labs.overthewire.org -p 2220 -t \"/bin/sh\"\n\ncGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8\n\n\n\n19 to 20\n\n./bandit20-do\n\n./bandit20-do ls /etc/bandit_pass\n\n./bandit20-do cat /etc/bandit_pass/bandit20\n\n\n\n20 to 21\n\n# I feel this part is not useful for me. So I just provide the link to someone else's solution\nEeoULMCra2q0dSkYj561DX7s1CpBuOBt"
-  },
-  {
-    "objectID": "posts/admission-econ/index.html",
-    "href": "posts/admission-econ/index.html",
-    "title": "Admission tips for Econ. Ph.D. (by Ph.D. student)",
-    "section": "",
-    "text": "I had a chance to talk about some admission tips for master students in my university after my application process (It happened later year). I decided to share this slide on my website. You can find it here.\n\nDisclaimer\nThis slides only consist of my personal experience. That being said, lot of it can have some misinformation. Also, some of the contents are tailored to the students in my alma mater."
-  },
-  {
-    "objectID": "posts/make-file/index.html",
-    "href": "posts/make-file/index.html",
-    "title": "Makefile: build automation software",
-    "section": "",
-    "text": "If you haven’t used Make yet, you should do it now! Make is a software that can help your research worfklow by automating certain procedures. For example, you can use Make to re-run all your necessary codes whenever there is a change in the raw data in your folder.\nBelow I provide a very simple example of Makefile which is used to run Make. The code below checks all the folders that have git installed and can do git pull and git push for all the folders instead of manually going into the subfolders and run the command separately.\nENJOY!\n\n.PHONY: pull-all push-all\n\nSUBDIRS := $(shell find . -mindepth 1 -maxdepth 1 -type d)\n\npull-all:\n    @for dir in $(SUBDIRS); do \\\n        if [ -d \"$$dir/.git\" ]; then \\\n            echo \"Pulling in $$dir...\"; \\\n            (cd $$dir && git pull); \\\n        else \\\n            echo \"Skipping $$dir (not a git repo)\"; \\\n        fi \\\n    done\n\npush-all:\n    @for dir in $(SUBDIRS); do \\\n        if [ -d \"$$dir/.git\" ]; then \\\n            echo \"Pushing in $$dir...\"; \\\n            (cd $$dir && git push); \\\n        else \\\n            echo \"Skipping $$dir (not a git repo)\"; \\\n        fi \\\n    done"
-  },
-  {
-    "objectID": "posts/sql-info/index.html",
-    "href": "posts/sql-info/index.html",
-    "title": "SQL materials",
-    "section": "",
-    "text": "Here are some of the resources that I used (or plan to use) to understand SQL.\n\nSQL masterclass\nTeach SQL in grad school\nDuckDB and Polars\nTrue order of SQL\nSQL order of operations\nGoogle big query using R"
-  },
-  {
-    "objectID": "posts/reproducible-coding-lecture/index.html",
-    "href": "posts/reproducible-coding-lecture/index.html",
-    "title": "Reproducible coding crash course",
-    "section": "",
-    "text": "I recently did a crash course on “reproducible coding” at my alma mater. Here is my material for the course. It mostly deals with Bash, Project environment (Renv, Poetry), Automation (Make), Docker."
-  },
-  {
-    "objectID": "posts/quarto-paper-template/index.html",
-    "href": "posts/quarto-paper-template/index.html",
-    "title": "Quarto format Econ. working paper template",
-    "section": "",
-    "text": "I just dropped a new Quarto format working paper template that is often used in the field of Economics. You can check the rendered pdf demo here. I also have a github repository for this."
-  },
-  {
-    "objectID": "posts/quarto-paper-template/index.html#footnotes",
-    "href": "posts/quarto-paper-template/index.html#footnotes",
-    "title": "Quarto format Econ. working paper template",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nCited from Quarto official website.↩︎"
   }
 ]
