@@ -24,9 +24,9 @@ about:
 
 ---
 
-I am a first-year Ph.D. student in <span style="color:#011F5B;">**Applied Economics**</span> at <span style="color:#011F5B;">**The Wharton School**</span>, <span style="color:#011F5B;">**University of Pennsylvania**</span>. 
+I am a Ph.D. student in <span style="color:#011F5B;">**Applied Economics**</span> at <span style="color:#011F5B;">**The Wharton School**</span>, <span style="color:#011F5B;">**University of Pennsylvania**</span>. 
 
-You can either call me <span style="color:#011F5B;">**Hyoungchul (H-Young-Cheol)**</span> or <span style="color:#011F5B;">**Kent (my english name)**</span>.
+You can either call me <span style="color:#011F5B;">**Hyoungchul (H-Young-Cheol, rhymes with "Null")**</span> or <span style="color:#011F5B;">**Kent (my english name)**</span>.
 
 I am currently interested in urban and environmental topics using tools from international trade and industrial organization.
 
