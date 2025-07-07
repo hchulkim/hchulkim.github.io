@@ -6,11 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Hyoungchul Kim">
 <meta name="dcterms.date" content="2025-07-07">
-<meta name="description" content="Personal solutions for overthewire wargames">
+<meta name="description" content="@ Seoul, South Korea">
 
-<title>OverTheWire wargames – Hyoungchul Kim</title>
+<title>Travel tips and recommendations – Hyoungchul Kim</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,41 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -110,15 +74,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="OverTheWire wargames – Hyoungchul Kim">
-<meta property="og:description" content="Personal solutions for overthewire wargames">
+<meta property="og:title" content="Travel tips and recommendations – Hyoungchul Kim">
+<meta property="og:description" content="@ Seoul, South Korea">
 <meta property="og:site_name" content="Hyoungchul Kim">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -180,235 +144,90 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">OverTheWire wargames</h1>
-                  <div>
-        <div class="description">
-          Personal solutions for overthewire wargames
-        </div>
-      </div>
-                          <div class="quarto-categories">
-                <div class="quarto-category">study</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Hyoungchul Kim </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">July 7, 2025</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Travel tips and recommendations</h1>
+</div>
 
-
-
-
-<p>In this post, I write down my solutions for the <a href="https://overthewire.org/wargames/"><strong>OverTheWire wargames</strong></a>.</p>
-<section id="bandit" class="level2">
-<h2 class="anchored" data-anchor-id="bandit">Bandit</h2>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section">0</h3>
-<p>Just get used to the concept of <code>ssh</code>. <code>ssh</code> is <em>secure shell</em> which allows secured access to the remote machine from the local computer.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> bandit0@bandit.labs.overthewire.org <span class="at">-p</span> 2220</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># You will be asked to type in the password.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-1" class="level3">
-<h3 class="anchored" data-anchor-id="to-1">0 to 1</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># print out the file</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> readme</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">exit</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> bandit1@bandit.labs.overthewire.org <span class="at">-p</span> 2220</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># You will be asked to type in the password.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-2" class="level3">
-<h3 class="anchored" data-anchor-id="to-2">1 to 2</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Special character - . Need to specify the full location of the file. </span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> ./-</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-3" class="level3">
-<h3 class="anchored" data-anchor-id="to-3">2 to 3</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># enclose the filenames using double quote, or use \ before white space.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-4" class="level3">
-<h3 class="anchored" data-anchor-id="to-4">3 to 4</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># list all files using -a argument</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> inhere/ <span class="at">-a</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-5" class="level3">
-<h3 class="anchored" data-anchor-id="to-5">4 to 5</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># find ASCII text files</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># -exec file {} + executes the file command to get info on the content</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> inhere <span class="at">-type</span> f <span class="at">-exec</span> file {} + <span class="kw">|</span> <span class="fu">grep</span> ASCII</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-6" class="level3">
-<h3 class="anchored" data-anchor-id="to-6">5 to 6</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> inhere <span class="at">-type</span> f <span class="at">-size</span> 1033c ! <span class="at">-executable</span> <span class="at">-exec</span> file {} + <span class="kw">|</span> <span class="fu">grep</span> ASCII</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-7" class="level3">
-<h3 class="anchored" data-anchor-id="to-7">6 to 7</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># since we don't know where the file is, we will search from the root directory</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> / <span class="at">-user</span> bandit7 <span class="at">-group</span> bandit6 <span class="at">-size</span> 33c <span class="at">-type</span> f <span class="dv">2</span><span class="op">&gt;</span>/dev/null <span class="at">-exec</span> cat {} <span class="dt">\;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-8" class="level3">
-<h3 class="anchored" data-anchor-id="to-8">7 to 8</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-w</span> <span class="st">"millionth"</span> data.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-9" class="level3">
-<h3 class="anchored" data-anchor-id="to-9">8 to 9</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sort</span> data.txt <span class="kw">|</span> <span class="fu">uniq</span> <span class="at">-u</span> data.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-10" class="level3">
-<h3 class="anchored" data-anchor-id="to-10">9 to 10</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">strings</span> data.txt <span class="kw">|</span> <span class="fu">grep</span> <span class="st">"=="</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-11" class="level3">
-<h3 class="anchored" data-anchor-id="to-11">10 to 11</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> data.txt <span class="kw">|</span> <span class="fu">base64</span> <span class="at">-d</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-12" class="level3">
-<h3 class="anchored" data-anchor-id="to-12">11 to 12</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> data.txt <span class="kw">|</span> <span class="fu">tr</span> <span class="st">'A-Za-z'</span> <span class="st">'N-ZA-Mn-za-m'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-13" class="level3">
-<h3 class="anchored" data-anchor-id="to-13">12 to 13</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> data.txt</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> /tmp/random_dir</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /tmp/random_dir</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> ~/data.txt .</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> data.txt data</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="ex">xxd</span> <span class="at">-r</span> data <span class="op">&gt;</span> binary</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="fu">file</span> binary</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> binary binary.gz</span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="fu">gunzip</span> binary.gz</span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="fu">bunzip2</span> binary</span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> binary.out binary.gz</span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="fu">gunzip</span> binary.gz</span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-xf</span> binary</span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="co"># do similar procedure multiple times</span></span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="ex">FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-14" class="level3">
-<h3 class="anchored" data-anchor-id="to-14">13 to 14</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-i</span> sshkey.private <span class="at">-p</span> 2220 bandit14@localhost <span class="co"># This will log you in as user bandit14 and allow you to see the password.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-15" class="level3">
-<h3 class="anchored" data-anchor-id="to-15">14 to 15</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">netcat</span> localhost 30000</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Then submit the password of the current level.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-16" class="level3">
-<h3 class="anchored" data-anchor-id="to-16">15 to 16</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openssl</span> s_client <span class="at">-connect</span> localhost:30001</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Then submit the password of the current level.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-17" class="level3">
-<h3 class="anchored" data-anchor-id="to-17">16 to 17</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># I feel this part is bit too complicated and not useful for me. So I just provide the link to someone else's solution</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co"># https://medium.com/@rushi.padhiyar098/overthewire-bandit-level-16-and-level-17-walkthrough-by-cyph3r-ryx-95c1ccdbb76b</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-18" class="level3">
-<h3 class="anchored" data-anchor-id="to-18">17 to 18</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">diff</span> passwords.new passwords.old</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-19" class="level3">
-<h3 class="anchored" data-anchor-id="to-19">18 to 19</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># check shell other than bash</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> /etc/shells</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co"># use it to login</span></span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> bandit18@bandit.labs.overthewire.org <span class="at">-p</span> 2220 <span class="at">-t</span> <span class="st">"/bin/sh"</span></span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="ex">cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-20" class="level3">
-<h3 class="anchored" data-anchor-id="to-20">19 to 20</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./bandit20-do</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="ex">./bandit20-do</span> ls /etc/bandit_pass</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="ex">./bandit20-do</span> cat /etc/bandit_pass/bandit20</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-21" class="level3">
-<h3 class="anchored" data-anchor-id="to-21">20 to 21</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># I feel this part is not useful for me. So I just provide the link to someone else's solution</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="ex">EeoULMCra2q0dSkYj561DX7s1CpBuOBt</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div>
+  <div class="description">
+    @ Seoul, South Korea
+  </div>
 </div>
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 7, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="general-tips" class="level2">
+<h2 class="anchored" data-anchor-id="general-tips">General tips</h2>
+<ul>
+<li><p><strong>IMPORTANT</strong>: Summer in Korea is very hot and humid! When planning outdoor activities make sure you check out the weather beforehand. Fortunately, most buildings in Korea have ACs so try to stay indoor a lot during the summer.</p></li>
+<li><p>In general, “information friction” seems to be quite low in South Korea. That being said, be aware that popular places that you search for on the internet will be quite crowded. Do expect some queue lines and make sure you consider the tradeoff of visiting a nice place and spending lot of time in the queue (But also take into account that most good places will have large volume of people on average. So you will need to wait in most places you want to visit).</p></li>
+<li><p><strong>Maps</strong>: Like many other East Asia countries, lot of systems in Korea are country-specific (unfortunately). If you tend to travel in Korea, I strongly recommend you download either “Naver map” or “Kakao map” on your phone. They are the google map equivalent app in Seoul. Note that google map will not work very well in Korea.</p></li>
+<li><p><strong>Transportation card</strong>: Unfortunately, you cannot use your regular credit cards to pay for the public transportation. You will have to buy some pre-paid card. For short-term trips, you can buy them at the station. I recommend you try out [Climate card] which is a relatively new pre-paid pass card that came out in Seoul. Also, remember to <strong>TAP IN and TAP OUT</strong> on both buses and subways!</p></li>
+<li><p><strong>Ordering in restaurant</strong>: In Korea, there is no tip culture. That being said, no servers are assigned to your table (like in US). So do not passively wait for them to come get your order. In Korea, you can just call the server by raising your hand and calling out “excuse me”. This is not considered impolite and you will see that many people do that. Otherwise, they are not going to periodically check on you. Also, unlike other countries, you don’t pay the bill in your table. When you are done eating, just go to the counter and pay for the meal.</p></li>
+<li><p><strong>Public safety</strong>: I would say Seoul is one of the most safe cities in the world(in terms of traveling). You don’t need to worry too much about where you are going (within Seoul, it will be very unlikely that you stumble into some dangerous regions) and you can walk around at night. Many people will just walk around Seoul at 2, 3am and it would be fine.</p></li>
+<li><p><strong>Drinking</strong>: One nice thing about Korea’s drinking culture is that you can drink your bottle outside. I would suggest you take some nighttime picnic to Hangang river with some drinks. There are lot of parks near the river where you will see people drinking and enjoying the view.</p></li>
+<li><p><strong>Bicycle</strong>: Seoul also has [public bicycle system]. I didn’t try it often but I heard it’s pretty good. But warning: Unlike US or European countries, there are not many lanes strictly designated to bicycle in Korea. Also, it is bit rare for bicycle to go on the same road with the cars. In fact, it will be more common to just ride the bicycle in the pedestrian way. So when traveling in bicycle, just use the pedestrian way and be careful of the people. You should also keep an eye on the street for bicycle as you walk.</p></li>
+</ul>
 </section>
+<section id="transportation-tips" class="level2">
+<h2 class="anchored" data-anchor-id="transportation-tips">Transportation tips</h2>
+<ul>
+<li><p><strong>Airport to Seoul(bus)</strong>: There are few ways to go from Incheon international airport to Seoul. Easiest way (but little bit more expensive) is airport bus (a.k.a. limousine bus). You can buy the ticket in the airport and they cover most major places in Seoul. You can also use the subway although I have never tried it.</p></li>
+<li><p><strong>Transportation within Seoul(bus and subway)</strong>: If you stay in Seoul, you will be able to access most (to be honest, all) locations in the city using public transportation. Main transportation is “bus” and “subway.” Another advantage of Seoul is that bus and subway system are very well interconnected. You only pay by the distance (even the rate of increment for distance is pretty generous within Seoul) and transferring to other bus or subway do not have extra cost (except very few subway or system run by different region). Arrival rates are also pretty good so make sure you use it a lot.</p></li>
+<li><p><strong>Transportation at night(taxi)</strong>: That being said, you won’t need to use other transportation within Seoul unless you are moving very late at night. Lot of subways and buses stop working around 11pm~12am-ish. If you tend to stay far away from your home at night, you will have to use taxi. You can get a taxi either by catching them on the go or by app (sth like kakao taxi). Just be warned that it is bit harder to catch taxi at night as there are less supply.</p></li>
+</ul>
+</section>
+<section id="general-travel-places-recommendation" class="level2">
+<h2 class="anchored" data-anchor-id="general-travel-places-recommendation">General travel places recommendation</h2>
+<p>For full lists of places you can go, try out this <a href="https://en.namu.wiki/w/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C/%EA%B4%80%EA%B4%91">LINK</a></p>
+</section>
+<section id="brief-personal-recommendations" class="level2">
+<h2 class="anchored" data-anchor-id="brief-personal-recommendations">Brief personal recommendations</h2>
+<ul>
+<li><p>Places around “seoul forest” are quite nice. The park is very nice with small pond and place near the park (Seongsu-dong) has sort of New York Brooklyn vibe(shameless comparison, I know…). Just be aware that there tends to be lot of people around.</p></li>
+<li><p>Try out places around the old city. There places are generally called “within four doors.” This is because in the past, the Seoul walled city had four main doors for entry. Unlike other places in Seoul which are now pretty modern, old city area still has lot of traditional places. Try out some traditional Korean house villages (like Bukchon Hanok Village and Seochon). I personally like area around Seochon. They are also close to the palaces so you will be able to visit them as well. Overall, area around the palaces (Seochon or Bukchon are all places surrounding the old palaces) are generally nice place to walk around.</p></li>
+<li><p>Walking along the river is nice. Especially try out Cheong-gye-cheon stream at night. Having a night picnic near Han-gang river is also a nice experience.</p></li>
+<li><p>Try out some traditional markets: Places like Gwang-jang market or Tong-in market are very interesting places to go and eat some snack foods.</p></li>
+<li><p>If you have time, you could go to Sincheon which has university (Yonsei University) I am from. Although it is not as fancy as universities in Europe or US, it is overall clean and nice. Even though place is bit dying now, Sincheon is also known as one of the popular places for university students. You will be able to feel some freshman(?) vibe.</p></li>
+<li><p>Although not my favorite, I guess you will probably be visiting Gangnam at least once when you are in Seoul. It is sort of like SOHO in UK. I do think it is a bit tourist-trap place but it does have some nice restaurants and places.</p></li>
+<li><p>If you are a “park person”, try out Olympic park. It is also pretty close to Seok-chon lake which is also a famous place for a walk. But note that the place might be packed with people depending on when you go.</p></li>
+</ul>
+</section>
+<section id="personal-food-recommendations" class="level2">
+<h2 class="anchored" data-anchor-id="personal-food-recommendations">Personal food recommendations</h2>
+<ul>
+<li><p>Korean BBQ: I think Korean BBQ is now quite popular even outside of Korea. Big advantage of eating Korean BBQ in Korea is that it is relatively cheaper. If you have time, try places like “ha-nam pig house”, “Go-ban sik-dang”, “byeok-je kalbi”, etc.</p></li>
+<li><p>Korean fried chicken: Korean fried chicken is very tasty. There are many places (e.g.&nbsp;BBQ chicken, BHC chicken, etc) you can get it from and they all have their own specialties. I recommend you get a take-out and eat it near Han-gang river with some beer.</p></li>
+<li><p>Cold noodles (e.g.&nbsp;Pyeong-yang Neng-myeon): Korea also has nice cold noodles. Peyong-yang Neng-myeon is my favorite but opinions are divided (some people don’t like it because it tastes quite bland). Try places like “ure-ok”, “bong-phee-yang”, “ul-ji-myeon-ok”, “ul-mil-dae”.</p></li>
+<li><p>Traditional Korean food restaurant: TBD.</p></li>
+</ul>
+
+
 </section>
 
 </main> <!-- /main -->
