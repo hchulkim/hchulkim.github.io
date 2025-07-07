@@ -17,13 +17,6 @@ toc: true
 
 - `Dockerfile` for empirical analysis (`R`, `Python`, `Julia` with dependency management setup): [\[link\]](https://hchulkim.github.io/posts/dockerfile-template/)
 
-## Math
-
-### (Partial) Solutions
-
-- [Introduction to set theory (Hrbacek and Jech)](https://hchulkim.github.io/tools-site/teaching/set.html)
-- [Real analysis (Folland)](https://hchulkim.github.io/tools-site/teaching/metrics.html)
-
 ## Courses
 
 These are some info on the courses that I took or self-studied.
@@ -47,5 +40,14 @@ These are some info on the courses that I took or self-studied.
 - PhD Public Economics (BEPP 9330, UPenn, Spring 2025): [Personal summary] 
 
 - PhD Topics in Empirical Microeconomics: Spatial Economic Analysis (ECON 8400, UPenn, Spring 2025): [Personal summary]
+
+</details>
+
+## Personal tips
+
+<details>
+<summary><strong>List of tips</strong></summary>
+
+- [Travel tips and recommendations (@Seoul, South Korea)](personal/seoul.qmd)
 
 </details>
