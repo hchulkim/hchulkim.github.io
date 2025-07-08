@@ -13,27 +13,29 @@ toc: false
 
 - **Maps**: Like many other East Asia countries, lot of systems in Korea are country-specific (unfortunately). If you tend to travel in Korea, I strongly recommend you download either “Naver map” or “Kakao map” on your phone. They are the google map equivalent app in Seoul. Note that google map will not work very well in Korea.
 
-- **Transportation card**: Unfortunately, you cannot use your regular credit cards to pay for the public transportation. You will have to buy some pre-paid card. For short-term trips, you can buy them at the station. I recommend you try out [Climate card] which is a relatively new pre-paid pass card that came out in Seoul. Also, remember to **TAP IN and TAP OUT** on both buses and subways!
+- **Transportation card**: Unfortunately, you cannot use your regular credit cards to pay for the public transportation. You will have to buy some pre-paid card. For short-term trips, you can buy them at the station. I recommend you try out [Climate card](https://chillandtravel.com/climate-card-seoul-guide/) which is a relatively new pre-paid pass card that came out in Seoul. Also, remember to **TAP IN and TAP OUT** on both buses and subways!
 
 - **Ordering in restaurant**: In Korea, there is no tip culture. That being said, no servers are assigned to your table (like in US). So do not passively wait for them to come get your order. In Korea, you can just call the server by raising your hand and calling out “excuse me”. This is not considered impolite and you will see that many people do that. Otherwise, they are not going to periodically check on you. Also, unlike other countries, you don’t pay the bill in your table. When you are done eating, just go to the counter and pay for the meal.
 
 - **Public safety**: I would say Seoul is one of the most safe cities in the world(in terms of traveling). You don’t need to worry too much about where you are going (within Seoul, it will be very unlikely that you stumble into some dangerous regions) and you can walk around at night. Many people will just walk around Seoul at 2, 3am and it would be fine. 
 
-- **Drinking**: One nice thing about Korea’s drinking culture is that you can drink your bottle outside. I would suggest you take some nighttime picnic to Hangang river with some drinks. There are lot of parks near the river where you will see people drinking and enjoying the view.
+- **Drinking**: One nice thing about Korea’s drinking culture is that you can drink your bottle outside. I would suggest you take some night-time picnic to Hangang river with some drinks. There are lot of parks near the river where you will see people drinking and enjoying the view.
 
-- **Bicycle**: Seoul also has [public bicycle system]. I didn’t try it often but I heard it’s pretty good. But warning: Unlike US or European countries, there are not many lanes strictly designated to bicycle in Korea. Also, it is bit rare for bicycle to go on the same road with the cars. In fact, it will be more common to just ride the bicycle in the pedestrian way. So when traveling in bicycle, just use the pedestrian way and be careful of the people. You should also keep an eye on the street for bicycle as you walk.
+- **Bicycle**: Seoul also has [public bicycle system](https://www.bikeseoul.com:457/main.do?lang=en). I didn’t try it often but I heard it’s pretty good. But warning: Unlike US or European countries, there are not many lanes strictly designated to bicycle in Korea. Also, it is bit rare for bicycle to go on the same road with the cars. In fact, it will be more common to just ride the bicycle in the pedestrian way. So when traveling in bicycle, just use the pedestrian way and be careful of the people. You should also keep an eye on the street for bicycle as you walk.
 
 ## Transportation tips
 
-- **Airport to Seoul(bus)**: There are few ways to go from Incheon international airport to Seoul. Easiest way (but little bit more expensive) is airport bus (a.k.a. limousine bus). You can buy the ticket in the airport and they cover most major places in Seoul. You can also use the subway although I have never tried it.
+- **Airport to Seoul (bus)**: There are few ways to go from Incheon international airport to Seoul. Easiest way (but little bit more expensive) is airport bus (a.k.a. limousine bus). You can buy the ticket in the airport and they cover most major places in Seoul. You can also use the subway although I have never tried it.
 
-- **Transportation within Seoul(bus and subway)**: If you stay in Seoul, you will be able to access most (to be honest, all) locations in the city using public transportation. Main transportation is “bus” and “subway.” Another advantage of Seoul is that bus and subway system are very well interconnected. You only pay by the distance (even the rate of increment for distance is pretty generous within Seoul) and transferring to other bus or subway do not have extra cost (except very few subway or system run by different region). Arrival rates are also pretty good so make sure you use it a lot.
+- **Transportation within Seoul (bus and subway)**: If you stay in Seoul, you will be able to access most (to be honest, all) locations in the city using public transportation. Main transportation is “bus” and “subway.” Another advantage of Seoul is that bus and subway system are very well interconnected. You only pay by the distance (even the rate of increment for distance is pretty generous within Seoul) and transferring to other bus or subway do not have extra cost (except very few subway or system run by different region). Arrival rates are also pretty good so make sure you use it a lot.
 
-- **Transportation at night(taxi)**: That being said, you won’t need to use other transportation within Seoul unless you are moving very late at night. Lot of subways and buses stop working around 11pm~12am-ish. If you tend to stay far away from your home at night, you will have to use taxi. You can get a taxi either by catching them on the go or by app (sth like kakao taxi). Just be warned that it is bit harder to catch taxi at night as there are less supply.
+- **Transportation at night (taxi)**: That being said, you won’t need to use other transportation within Seoul unless you are moving very late at night. Lot of subways and buses stop working around 11pm~12am-ish. If you tend to stay far away from your home at night, you will have to use taxi. You can get a taxi either by catching them on the go or by app (sth like kakao taxi). Just be warned that it is bit harder to catch taxi at night as there are less supply.
 
 ## General travel places recommendation
 
-For full lists of places you can go, try out this [LINK](https://en.namu.wiki/w/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C/%EA%B4%80%EA%B4%91)
+- Official visitor guide: [LINK](https://english.visitseoul.net/)
+
+- For full lists of places you can go, try out this [LINK](https://en.namu.wiki/w/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C/%EA%B4%80%EA%B4%91)
 
 ## Brief personal recommendations
 
@@ -50,6 +52,10 @@ For full lists of places you can go, try out this [LINK](https://en.namu.wiki/w/
 - Although not my favorite, I guess you will probably be visiting Gangnam at least once when you are in Seoul. It is sort of like SOHO in UK. I do think it is a bit tourist-trap place but it does have some nice restaurants and places. 
 
 - If you are a “park person”, try out Olympic park. It is also pretty close to Seok-chon lake which is also a famous place for a walk. But note that the place might be packed with people depending on when you go.
+
+- If you like theme parks, **[Lotte World Adventure](https://adventure.lotteworld.com/eng/main/index.do)**. It used to be the biggest **In-door Theme park** until 2010. It is also known for having many *[dark rides](https://en.wikipedia.org/wiki/Dark_ride)*. It also close to shopping mall (Lotte mall is right next to it) and **Lotte World Tower** which is currenlty the tallest building in Korea.[^1]
+
+[^1]: It also holds few other records: (1) 8th tallest building in the world, (2) Tallest building out of all OECD countries.
 
 ## Personal food recommendations
 
