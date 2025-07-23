@@ -25,3 +25,7 @@ toc: true
 
 [1] "The well-being of cities: Estimating migration attractiveness from internal migration across Korean cities" with [Seung Hoon Lee](https://sites.google.com/view/seunghoon/home) and Ji Sub Park. Feb. 2024. Published in **_Global Economic Review_** \[[Paper](https://www.tandfonline.com/doi/full/10.1080/1226508X.2023.2282622?scroll=top&needAccess=true)\].
 
+## Work in progress
+
+TBA
+
