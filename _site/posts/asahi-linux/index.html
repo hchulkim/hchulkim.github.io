@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Hyoungchul Kim">
-<meta name="dcterms.date" content="2025-03-09">
-<meta name="description" content="I just dropped a new quarto format working paper template in github">
+<meta name="dcterms.date" content="2025-08-02">
+<meta name="description" content="My first experience with asahi-linux on Macbook Pro">
 
-<title>Quarto format Econ. working paper template – Hyoungchul Kim</title>
+<title>Asahi-linux on Macbook Pro – Hyoungchul Kim</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +22,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -75,8 +110,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Quarto format Econ. working paper template – Hyoungchul Kim">
-<meta property="og:description" content="I just dropped a new quarto format working paper template in github">
+<meta property="og:title" content="Asahi-linux on Macbook Pro – Hyoungchul Kim">
+<meta property="og:description" content="My first experience with asahi-linux on Macbook Pro">
 <meta property="og:site_name" content="Hyoungchul Kim">
 </head>
 
@@ -148,10 +183,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Quarto format Econ. working paper template</h1>
+      <h1 class="title">Asahi-linux on Macbook Pro</h1>
                   <div>
         <div class="description">
-          I just dropped a new quarto format working paper template in github
+          My first experience with asahi-linux on Macbook Pro
         </div>
       </div>
                           <div class="quarto-categories">
@@ -173,7 +208,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">March 9, 2025</p>
+        <p class="date">August 2, 2025</p>
       </div>
     </div>
     
@@ -192,35 +227,51 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>I just dropped a new Quarto format working paper template that is often used in the field of Economics. You can check the rendered pdf demo <a href="template.pdf">here</a>. I also have a <a href="https://github.com/hchulkim/econ-paper-template">github repository</a> for this.</p>
-<section id="why-use-quarto1" class="level3">
-<h3 class="anchored" data-anchor-id="why-use-quarto1">Why use Quarto?<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h3>
-<ol type="1">
-<li><p>You can easily create scientific reproducible, production quality articles in various formats including LaTeX, PDF, Word, html, and more.</p></li>
-<li><p>You can write using Pandoc markdown, including equations, citations, crossrefs, figure panels, callouts, advanced layout, and more.</p></li>
-<li><p>You can also use the typical LaTeX syntax directly in the document.</p></li>
-<li><p>You can create dynamic content with Python, R, Julia, and Observable. It is language-agnostic.</p></li>
-</ol>
-<p>For Econ folks, this template can be thought of as an easier version of LyX. Not only does the quarto template provide an easier way to typeset your paper (markdown way), it also allows you to have the output in tex, pdf, and html at the same time.</p>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>If you have been following up my blog posts, you might have guessed that I am slowly transitioning to using Linux. It took a long 3-stage process to get me there. Windows, macOS, and Linux. It was mostly great, even though there were some small annoyances and hastles along the way (dependencies for installing some R packages, setting up Dropbox, etc). But there was another experiment I wanted to try out: <strong>setting up Linux on my Macbook Pro (MBP)</strong>. While I feel that MBP is just getting too overpriced (one of the reasons I started to transition to Linux in the first place), I still love the design and the build quality of the machine. So I decided to give it a try. But as you all know, setting up Linux on Mac is a painful and hardcore process. That’s when I found out about <a href="https://asahilinux.org/">Asahi-linux</a>.</p>
 </section>
-<section id="basic-usage" class="level3">
-<h3 class="anchored" data-anchor-id="basic-usage">Basic usage</h3>
-<p>Unfortunately, the current version is a bit preliminary. This means there can be some glitches that are not yet spotted by the contributors. If there is any problem with the current version, do not hesitate to contact me or my other contributors. You can also use issue tracker or pull-requests to contact us.</p>
-<p><strong>You can use the quarto template by following the instructions at my <a href="https://github.com/hchulkim/econ-paper-template">github repo</a>!</strong></p>
-<details>
-<summary>
-Outdated
-</summary>
-<p>Also, I have not yet made the current version incorporated into the Quarto official journal extension. I requested to add my version but it will take some time since the Quarto team has to approve it. If this is approved, you will be able to download the template by using simple command in the terminal.</p>
-<p>Until then, easy way to use this template is as follows:</p>
+<section id="asahi-linux" class="level2">
+<h2 class="anchored" data-anchor-id="asahi-linux">Asahi-linux</h2>
+<p>Asahi-linux is a Linux distribution that is designed to run on Apple Silicon Macs. It is based on Fedora Linux.It is a community-driven project and is not officially supported by Apple.</p>
+<p>Another good thing about Asahi-linux is that it is completely legal to use. It is not a hack or a jailbreak. Thus, you don’t have to worry about getting your machine banned or your warranty voided. In fact, it is pretty easy to uninstall it so it shouldn’t be much of an issue.</p>
+<p>It is sort of similar to the good ol’ bootcamp we used to have for Intel Macs for Linux. Basically we are setting up some partition on the disk to run Linux.</p>
+</section>
+<section id="caveats" class="level2">
+<h2 class="anchored" data-anchor-id="caveats">Caveats</h2>
+<p>While Asahi-linux is amazing, it is not without its caveats. Most of it is due to the fact that it is built upon macOS.Let me write down some of them as a warning to others.</p>
+<ul>
+<li>It is not officially supported by Apple. So you might not get the best support from Apple.</li>
+<li>It is not yet as stable as macOS. So you might encounter some issues.</li>
+<li>Currently, only M1 and M2 chips are supported. If you have an older machine or newer chips, it will not work.</li>
+<li>Due to ARM architecture, you cannot run x86_64 applications. So some softwares may not work in Asahi-linux.</li>
+</ul>
+</section>
+<section id="setting-up-asahi-linux" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-asahi-linux">Setting up Asahi-linux</h2>
 <ol type="1">
-<li><p>Download (or use git clone) the template from the repository.</p></li>
-<li><p>Make sure you have Quarto and TeX compilers installed in your local computer (this can take you some time. But I promise it is worth it).</p></li>
-<li><p>Start writing your paper in the <code>template.qmd</code> file.</p></li>
-<li><p>If you need to change the title format or preambles like in LaTeX, use <code>before-body.tex</code> or <code>_include-in-header.tex</code> files in <code>_extensions/aea/partials/</code> folder.</p></li>
-<li><p>After writing your paper, type <code>quarto render template.qmd</code> in the terminal to obtain your output in PDF, TeX, and html. Note that you need to run this command in the directory that contains the qmd file.</p></li>
+<li><p>First, make sure your machine is compatible with Asahi-linux. You can check the <a href="https://asahilinux.org/fedora/#device-support">Asahi-linux website</a> for the list of compatible machines.</p></li>
+<li><p>Also make sure you have enough disk space. Asahi-linux is a bit larger than macOS. You need to have at least 100GB of free space.</p></li>
+<li><p>Use the following command in terminal:</p></li>
 </ol>
-</details>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> https://alx.sh <span class="kw">|</span> <span class="fu">sh</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="4" type="1">
+<li>Follow the instructions in the terminal. It will guide you through the process of setting up Asahi-linux.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
+</ol>
+<ol start="5" type="1">
+<li><p>Your machine will reboot and you will see the option to boot into Asahi-linux.</p></li>
+<li><p>If you need to boot into macOS, turn the power off and hold the power button until “loading startup options…” appears. Then select “macOS” and press enter.</p></li>
+<li><p>You are all set!</p></li>
+</ol>
+</section>
+<section id="current-experience" class="level2">
+<h2 class="anchored" data-anchor-id="current-experience">Current experience</h2>
+<p>For now, I am early in the game and trying out the power of Asahi-linux. I will probably use it as my additional machine along with my ThinkPad Ubuntu machine. I will update this section as I go along.</p>
+<ul>
+<li>Unlike Ubuntu, it is hard to install Dropbox. But fear not, there is a workaround. Try out <a href="https://maestral.app/">maestral</a> instead. For some reason, Docker image installation option did not work for me but python version worked fine.</li>
+</ul>
 
 
 </section>
@@ -229,7 +280,7 @@ Outdated
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>Cited from Quarto official website.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>It is very important to exactly follow the instructions in the terminal. If you don’t, you might end up with a broken system. e.g.&nbsp;I struggled a bit on my first try because I did not hold the power button until “loading startup options…” appeared.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
