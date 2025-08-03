@@ -8,9 +8,9 @@
 
 <meta name="author" content="Hyoungchul Kim">
 <meta name="dcterms.date" content="2025-08-02">
-<meta name="description" content="Personal solutions for overthewire wargames">
+<meta name="description" content="My first experience with asahi-linux on Macbook Pro">
 
-<title>OverTheWire wargames – Hyoungchul Kim</title>
+<title>Asahi-linux on Macbook Pro – Hyoungchul Kim</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,8 +110,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="OverTheWire wargames – Hyoungchul Kim">
-<meta property="og:description" content="Personal solutions for overthewire wargames">
+<meta property="og:title" content="Asahi-linux on Macbook Pro – Hyoungchul Kim">
+<meta property="og:description" content="My first experience with asahi-linux on Macbook Pro">
 <meta property="og:site_name" content="Hyoungchul Kim">
 </head>
 
@@ -183,14 +183,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">OverTheWire wargames</h1>
+      <h1 class="title">Asahi-linux on Macbook Pro</h1>
                   <div>
         <div class="description">
-          Personal solutions for overthewire wargames
+          My first experience with asahi-linux on Macbook Pro
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">study</div>
+                <div class="quarto-category">software</div>
               </div>
                   </div>
   </div>
@@ -227,191 +227,62 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>In this post, I write down my solutions for the <a href="https://overthewire.org/wargames/"><strong>OverTheWire wargames</strong></a>.</p>
-<section id="bandit" class="level2">
-<h2 class="anchored" data-anchor-id="bandit">Bandit</h2>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section">0</h3>
-<p>Just get used to the concept of <code>ssh</code>. <code>ssh</code> is <em>secure shell</em> which allows secured access to the remote machine from the local computer.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> bandit0@bandit.labs.overthewire.org <span class="at">-p</span> 2220</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># You will be asked to type in the password.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>If you have been following up my blog posts, you might have guessed that I am slowly transitioning to using Linux. It took a long 3-stage process to get me there. Windows, macOS, and Linux. It was mostly great, even though there were some small annoyances and hastles along the way (dependencies for installing some R packages, setting up Dropbox, etc). But there was another experiment I wanted to try out: <strong>setting up Linux on my Macbook Pro (MBP)</strong>. While I feel that MBP is just getting too overpriced (one of the reasons I started to transition to Linux in the first place), I still love the design and the build quality of the machine. So I decided to give it a try. But as you all know, setting up Linux on Mac is a painful and hardcore process. That’s when I found out about <a href="https://asahilinux.org/">Asahi-linux</a>.</p>
 </section>
-<section id="to-1" class="level3">
-<h3 class="anchored" data-anchor-id="to-1">0 to 1</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># print out the file</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> readme</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">exit</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> bandit1@bandit.labs.overthewire.org <span class="at">-p</span> 2220</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># You will be asked to type in the password.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="asahi-linux" class="level2">
+<h2 class="anchored" data-anchor-id="asahi-linux">Asahi-linux</h2>
+<p>Asahi-linux is a Linux distribution that is designed to run on Apple Silicon Macs. It is based on Fedora Linux.It is a community-driven project and is not officially supported by Apple.</p>
+<p>Another good thing about Asahi-linux is that it is completely legal to use. It is not a hack or a jailbreak. Thus, you don’t have to worry about getting your machine banned or your warranty voided. In fact, it is pretty easy to uninstall it so it shouldn’t be much of an issue.</p>
+<p>It is sort of similar to the good ol’ bootcamp we used to have for Intel Macs for Linux. Basically we are setting up some partition on the disk to run Linux.</p>
 </section>
-<section id="to-2" class="level3">
-<h3 class="anchored" data-anchor-id="to-2">1 to 2</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Special character - . Need to specify the full location of the file. </span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> ./-</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="caveats" class="level2">
+<h2 class="anchored" data-anchor-id="caveats">Caveats</h2>
+<p>While Asahi-linux is amazing, it is not without its caveats. Most of it is due to the fact that it is built upon macOS.Let me write down some of them as a warning to others.</p>
+<ul>
+<li>It is not officially supported by Apple. So you might not get the best support from Apple.</li>
+<li>It is not yet as stable as macOS. So you might encounter some issues.</li>
+<li>Currently, only M1 and M2 chips are supported. If you have an older machine or newer chips, it will not work.</li>
+<li>Due to ARM architecture, you cannot run x86_64 applications. So some softwares may not work in Asahi-linux.</li>
+</ul>
 </section>
-<section id="to-3" class="level3">
-<h3 class="anchored" data-anchor-id="to-3">2 to 3</h3>
+<section id="setting-up-asahi-linux" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-asahi-linux">Setting up Asahi-linux</h2>
+<ol type="1">
+<li><p>First, make sure your machine is compatible with Asahi-linux. You can check the <a href="https://asahilinux.org/fedora/#device-support">Asahi-linux website</a> for the list of compatible machines.</p></li>
+<li><p>Also make sure you have enough disk space. Asahi-linux is a bit larger than macOS. You need to have at least 100GB of free space.</p></li>
+<li><p>Use the following command in terminal:</p></li>
+</ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># enclose the filenames using double quote, or use \ before white space.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> https://alx.sh <span class="kw">|</span> <span class="fu">sh</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<ol start="4" type="1">
+<li>Follow the instructions in the terminal. It will guide you through the process of setting up Asahi-linux.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
+</ol>
+<ol start="5" type="1">
+<li><p>Your machine will reboot and you will see the option to boot into Asahi-linux.</p></li>
+<li><p>If you need to boot into macOS, turn the power off and hold the power button until “loading startup options…” appears. Then select “macOS” and press enter.</p></li>
+<li><p>You are all set!</p></li>
+</ol>
 </section>
-<section id="to-4" class="level3">
-<h3 class="anchored" data-anchor-id="to-4">3 to 4</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># list all files using -a argument</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> inhere/ <span class="at">-a</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-5" class="level3">
-<h3 class="anchored" data-anchor-id="to-5">4 to 5</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># find ASCII text files</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># -exec file {} + executes the file command to get info on the content</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> inhere <span class="at">-type</span> f <span class="at">-exec</span> file {} + <span class="kw">|</span> <span class="fu">grep</span> ASCII</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-6" class="level3">
-<h3 class="anchored" data-anchor-id="to-6">5 to 6</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> inhere <span class="at">-type</span> f <span class="at">-size</span> 1033c ! <span class="at">-executable</span> <span class="at">-exec</span> file {} + <span class="kw">|</span> <span class="fu">grep</span> ASCII</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-7" class="level3">
-<h3 class="anchored" data-anchor-id="to-7">6 to 7</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># since we don't know where the file is, we will search from the root directory</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> / <span class="at">-user</span> bandit7 <span class="at">-group</span> bandit6 <span class="at">-size</span> 33c <span class="at">-type</span> f <span class="dv">2</span><span class="op">&gt;</span>/dev/null <span class="at">-exec</span> cat {} <span class="dt">\;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-8" class="level3">
-<h3 class="anchored" data-anchor-id="to-8">7 to 8</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-w</span> <span class="st">"millionth"</span> data.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-9" class="level3">
-<h3 class="anchored" data-anchor-id="to-9">8 to 9</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sort</span> data.txt <span class="kw">|</span> <span class="fu">uniq</span> <span class="at">-u</span> data.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-10" class="level3">
-<h3 class="anchored" data-anchor-id="to-10">9 to 10</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">strings</span> data.txt <span class="kw">|</span> <span class="fu">grep</span> <span class="st">"=="</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-11" class="level3">
-<h3 class="anchored" data-anchor-id="to-11">10 to 11</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> data.txt <span class="kw">|</span> <span class="fu">base64</span> <span class="at">-d</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-12" class="level3">
-<h3 class="anchored" data-anchor-id="to-12">11 to 12</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> data.txt <span class="kw">|</span> <span class="fu">tr</span> <span class="st">'A-Za-z'</span> <span class="st">'N-ZA-Mn-za-m'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-13" class="level3">
-<h3 class="anchored" data-anchor-id="to-13">12 to 13</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> data.txt</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> /tmp/random_dir</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /tmp/random_dir</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> ~/data.txt .</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> data.txt data</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="ex">xxd</span> <span class="at">-r</span> data <span class="op">&gt;</span> binary</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="fu">file</span> binary</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> binary binary.gz</span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="fu">gunzip</span> binary.gz</span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="fu">bunzip2</span> binary</span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> binary.out binary.gz</span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="fu">gunzip</span> binary.gz</span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-xf</span> binary</span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="co"># do similar procedure multiple times</span></span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="ex">FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-14" class="level3">
-<h3 class="anchored" data-anchor-id="to-14">13 to 14</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-i</span> sshkey.private <span class="at">-p</span> 2220 bandit14@localhost <span class="co"># This will log you in as user bandit14 and allow you to see the password.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-15" class="level3">
-<h3 class="anchored" data-anchor-id="to-15">14 to 15</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">netcat</span> localhost 30000</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Then submit the password of the current level.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-16" class="level3">
-<h3 class="anchored" data-anchor-id="to-16">15 to 16</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openssl</span> s_client <span class="at">-connect</span> localhost:30001</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Then submit the password of the current level.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-17" class="level3">
-<h3 class="anchored" data-anchor-id="to-17">16 to 17</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># I feel this part is bit too complicated and not useful for me. So I just provide the link to someone else's solution</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co"># https://medium.com/@rushi.padhiyar098/overthewire-bandit-level-16-and-level-17-walkthrough-by-cyph3r-ryx-95c1ccdbb76b</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-18" class="level3">
-<h3 class="anchored" data-anchor-id="to-18">17 to 18</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">diff</span> passwords.new passwords.old</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-19" class="level3">
-<h3 class="anchored" data-anchor-id="to-19">18 to 19</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># check shell other than bash</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> /etc/shells</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co"># use it to login</span></span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> bandit18@bandit.labs.overthewire.org <span class="at">-p</span> 2220 <span class="at">-t</span> <span class="st">"/bin/sh"</span></span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="ex">cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-20" class="level3">
-<h3 class="anchored" data-anchor-id="to-20">19 to 20</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./bandit20-do</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="ex">./bandit20-do</span> ls /etc/bandit_pass</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="ex">./bandit20-do</span> cat /etc/bandit_pass/bandit20</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="to-21" class="level3">
-<h3 class="anchored" data-anchor-id="to-21">20 to 21</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># I feel this part is not useful for me. So I just provide the link to someone else's solution</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="ex">EeoULMCra2q0dSkYj561DX7s1CpBuOBt</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="current-experience" class="level2">
+<h2 class="anchored" data-anchor-id="current-experience">Current experience</h2>
+<p>For now, I am early in the game and trying out the power of Asahi-linux. I will probably use it as my additional machine along with my ThinkPad Ubuntu machine. I will update this section as I go along.</p>
+<ul>
+<li>Unlike Ubuntu, it is hard to install Dropbox. But fear not, there is a workaround. Try out <a href="https://maestral.app/">maestral</a> instead. For some reason, Docker image installation option did not work for me but python version worked fine.</li>
+</ul>
 
 
 </section>
-</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>It is very important to exactly follow the instructions in the terminal. If you don’t, you might end up with a broken system. e.g.&nbsp;I struggled a bit on my first try because I did not hold the power button until “loading startup options…” appeared.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

@@ -2,6 +2,7 @@
   {
     "listing": "/posts/index.html",
     "items": [
+      "/posts/asahi-linux/index.html",
       "/posts/bandit/index.html",
       "/posts/first-year/index.html",
       "/posts/parallel/index.html",
