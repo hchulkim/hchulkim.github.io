@@ -466,7 +466,7 @@
     "href": "posts/asahi-linux/index.html#caveats",
     "title": "Asahi-linux on Macbook Pro",
     "section": "Caveats",
-    "text": "Caveats\nWhile Asahi-linux is amazing, it is not without its caveats. Most of it is due to the fact that it is built upon macOS.Let me write down some of them as a warning to others.\n\nIt is not officially supported by Apple. So you might not get the best support from Apple.\nIt is not yet as stable as macOS. So you might encounter some issues.\nCurrently, only M1 and M2 chips are supported. If you have an older machine or newer chips, it will not work.\nDue to ARM architecture, you cannot run x86_64 applications. So some softwares may not work in Asahi-linux."
+    "text": "Caveats\nWhile Asahi-linux is amazing, it is not without its caveats. Most of it is due to the fact that it is built upon macOS.Let me write down some of them as a warning to others.\n\nIt is not officially supported by Apple. So you might not get the best support from Apple.\nReverse engineering is not yet fully accomplished. Some features are not yet available (USB-C display, touchid, etc).\nIt is not yet as stable as macOS. So you might encounter some issues.\nCurrently, only M1 and M2 chips are supported. If you have an older machine or newer chips, it will not work.\nDue to ARM architecture, you cannot run x86_64 applications. So some softwares may not work in Asahi-linux."
   },
   {
     "objectID": "posts/asahi-linux/index.html#footnotes",
