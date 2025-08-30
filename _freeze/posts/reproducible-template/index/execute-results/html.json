@@ -1,0 +1,15 @@
+{
+  "hash": "7b0d46be7fcb27b5a775dfaa7a284f8e",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Hands-on reproducible research workflow\"\ndescription: \"This is a detailed post on how to use my replication template (or template for reproducible research workflow) in GitHub\"\ndate: \"2025-08-30\"\ntoc: false\nengine: knitr\ncategories:\n  - software\n---\n\n## Motivation for having reproducible research workflow\n\nWith the replication crisis in social science now widely recognized, it may seem unnecessary to restate the motivation for building reproducible research workflows. Nonetheless, I will re-iterate it here once more for both their importance and the urgency of adopting them—the time for such practices has truly arrived.",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

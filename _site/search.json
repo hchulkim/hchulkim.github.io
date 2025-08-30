@@ -481,5 +481,19 @@
     "title": "Asahi-linux on Macbook Pro",
     "section": "Current experience",
     "text": "Current experience\nFor now, I am early in the game and trying out the power of Asahi-linux. I will probably use it as my additional machine along with my ThinkPad Ubuntu machine. I will update this section as I go along.\n\nUnlike Ubuntu, it is hard to install Dropbox. But fear not, there is a workaround. Try out maestral instead. For some reason, Docker image installation option did not work for me but python version worked fine."
+  },
+  {
+    "objectID": "posts/reproducible-template/index.html",
+    "href": "posts/reproducible-template/index.html",
+    "title": "Hands-on reproducible research workflow",
+    "section": "",
+    "text": "With the replication crisis in social science now widely recognized, it may seem unnecessary to restate the motivation for building reproducible research workflows. Nonetheless, I will re-iterate it here once more for both their importance and the urgency of adopting them—the time for such practices has truly arrived."
+  },
+  {
+    "objectID": "posts/reproducible-template/index.html#motivation-for-having-reproducible-research-workflow",
+    "href": "posts/reproducible-template/index.html#motivation-for-having-reproducible-research-workflow",
+    "title": "Hands-on reproducible research workflow",
+    "section": "",
+    "text": "With the replication crisis in social science now widely recognized, it may seem unnecessary to restate the motivation for building reproducible research workflows. Nonetheless, I will re-iterate it here once more for both their importance and the urgency of adopting them—the time for such practices has truly arrived."
   }
 ]
