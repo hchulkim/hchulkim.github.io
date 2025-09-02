@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -80,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
 <meta property="og:site_name" content="Hyoungchul Kim">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -184,7 +219,43 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#motivation-why-do-we-need-reproducible-research-workflow" id="toc-motivation-why-do-we-need-reproducible-research-workflow" class="nav-link active" data-scroll-target="#motivation-why-do-we-need-reproducible-research-workflow">Motivation: why do we need reproducible research workflow?</a></li>
+  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation">Documentation</a>
+  <ul class="collapse">
+  <li><a href="#follow-the-standard" id="toc-follow-the-standard" class="nav-link" data-scroll-target="#follow-the-standard">Follow the standard</a></li>
+  <li><a href="#document-everything" id="toc-document-everything" class="nav-link" data-scroll-target="#document-everything">Document everything</a></li>
+  <li><a href="#comment-almost-everything" id="toc-comment-almost-everything" class="nav-link" data-scroll-target="#comment-almost-everything">Comment (almost) everything</a></li>
+  </ul></li>
+  <li><a href="#data-management" id="toc-data-management" class="nav-link" data-scroll-target="#data-management">Data management</a>
+  <ul class="collapse">
+  <li><a href="#have-consistent-project-structure" id="toc-have-consistent-project-structure" class="nav-link" data-scroll-target="#have-consistent-project-structure">Have consistent project structure</a></li>
+  <li><a href="#dont-directly-modify-the-raw-data" id="toc-dont-directly-modify-the-raw-data" class="nav-link" data-scroll-target="#dont-directly-modify-the-raw-data">Don’t directly modify the raw data</a></li>
+  <li><a href="#automate-the-data-download-process-if-possible" id="toc-automate-the-data-download-process-if-possible" class="nav-link" data-scroll-target="#automate-the-data-download-process-if-possible">Automate the data download process (if possible)</a></li>
+  </ul></li>
+  <li><a href="#coding" id="toc-coding" class="nav-link" data-scroll-target="#coding">Coding</a>
+  <ul class="collapse">
+  <li><a href="#set-environment-independent-environment" id="toc-set-environment-independent-environment" class="nav-link" data-scroll-target="#set-environment-independent-environment">Set environment-independent environment</a></li>
+  <li><a href="#relative-relative-relative-path" id="toc-relative-relative-relative-path" class="nav-link" data-scroll-target="#relative-relative-relative-path">Relative, relative, relative (path)!</a></li>
+  <li><a href="#get-used-to-shell-scripting" id="toc-get-used-to-shell-scripting" class="nav-link" data-scroll-target="#get-used-to-shell-scripting">Get used to shell scripting</a></li>
+  <li><a href="#use-version-control" id="toc-use-version-control" class="nav-link" data-scroll-target="#use-version-control">Use version control</a></li>
+  <li><a href="#use-docker-to-ship-your-computer" id="toc-use-docker-to-ship-your-computer" class="nav-link" data-scroll-target="#use-docker-to-ship-your-computer">Use Docker to “ship” your computer</a></li>
+  <li><a href="#use-package-dependencies-managers" id="toc-use-package-dependencies-managers" class="nav-link" data-scroll-target="#use-package-dependencies-managers">Use package dependencies managers</a></li>
+  <li><a href="#use-build-automation-tools" id="toc-use-build-automation-tools" class="nav-link" data-scroll-target="#use-build-automation-tools">Use build automation tools</a></li>
+  <li><a href="#use-symlinks-to-avoid-storing-big-data-in-the-repository" id="toc-use-symlinks-to-avoid-storing-big-data-in-the-repository" class="nav-link" data-scroll-target="#use-symlinks-to-avoid-storing-big-data-in-the-repository">Use symlinks to avoid storing big data in the repository</a></li>
+  <li><a href="#make-you-code-invulnerable-to-restart-session" id="toc-make-you-code-invulnerable-to-restart-session" class="nav-link" data-scroll-target="#make-you-code-invulnerable-to-restart-session">Make you code invulnerable to “restart session”</a></li>
+  </ul></li>
+  <li><a href="#os" id="toc-os" class="nav-link" data-scroll-target="#os">OS</a>
+  <ul class="collapse">
+  <li><a href="#try-using-linux" id="toc-try-using-linux" class="nav-link" data-scroll-target="#try-using-linux">Try using Linux</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -192,11 +263,152 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="motivation-for-having-reproducible-research-workflow" class="level2">
-<h2 class="anchored" data-anchor-id="motivation-for-having-reproducible-research-workflow">Motivation for having reproducible research workflow</h2>
-<p>With the replication crisis in social science now widely recognized, it may seem unnecessary to restate the motivation for building reproducible research workflows. Nonetheless, I will re-iterate it here once more for both their importance and the urgency of adopting them—the time for such practices has truly arrived.</p>
+<section id="motivation-why-do-we-need-reproducible-research-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="motivation-why-do-we-need-reproducible-research-workflow">Motivation: why do we need reproducible research workflow?</h2>
+<p>With the <a href="https://freakonomics.com/podcast/why-is-there-so-much-fraud-in-academia/">replication crisis in social science</a> now widely recognized, it may seem unnecessary to restate the motivation for building reproducible research workflows. Nonetheless, I will re-iterate it here once more for both their importance and the urgency of adopting them—the time for such practices has truly arrived.</p>
+<p>Innovations in computation tools and access to big data have opened a new era for researchers in social science. In terms of theory, such innovations have allowed researchers to create a more rich and flexible model that represent the real world. It also allowed researchers to test their models using the beneifts of wider access to data. In terms of empirical research, researchers can now answer many interesting questions that were not possible before due to the limitations of data availability. But this did not come without a cost. Unfortunately, sudden rise in the computation power and wider access to data were not fully accompanied by the development of best practices in reproducible research. It didn’t take long for researchers to realize that large portion of the academic research had serious issues in reproducibility. Many journals did not have any standard policy for replication package. Many researchers were having hard time in replicating results from published papers. This was a serious issue as it was making the academic research process less transparent and less reliable. In order to address this issue, many journals and researches started to emphasize the need for creating standard for reproducible research.</p>
+<p>However, having a reproducible research workflow is not an easy task. It does have some steep learning curve that takes time and effort. This is where this blog post comes in. I will walk you through the process of building a reproducible research workflow. I will also share some tips and personal experiences that I have gathered from my own journey of building a reproducible research workflow.</p>
+</section>
+<section id="documentation" class="level2">
+<h2 class="anchored" data-anchor-id="documentation">Documentation</h2>
+<p>First step of every reproducible research workflow is <strong>documentation</strong>. Essence of reproducible research workflow is about creating a set of records that can be used by others to reproduced the results of the research. This is basically a researcher talking to other researchers about the detailed steps to reproduce the results of the research. Since we can not physically be present in the other researcher’s office, we need to have a set of records that can be used by others to reproduced the results of the research.</p>
+<section id="follow-the-standard" class="level3">
+<h3 class="anchored" data-anchor-id="follow-the-standard">Follow the standard</h3>
+<p>When in doubt, follow the standard. Fortunately, you don’t need to reinvent the wheel for the necessary documentation for reproducible workflow. In fact, there are many official guidlines that you can consult to. For example, data editors of the journals of the American Economic Association, the Royal Economic Society, the Review of Economic Studies, the Canadian Journal of Economics, and Economic Inquiry have created the <a href="https://datacodestandard.org/">Data and Code Availability Standard (DCAS)</a>. This standard allows researchers to have a consistent way to document the data and code availability of their research.</p>
+</section>
+<section id="document-everything" class="level3">
+<h3 class="anchored" data-anchor-id="document-everything">Document everything</h3>
+<p>When in doubt, document everything. Marginal utility of documenting additional information is mostly non-negative for other researchers. Thus, when you are unsure whether this additional information is useful or not, just document it and think later.</p>
+</section>
+<section id="comment-almost-everything" class="level3">
+<h3 class="anchored" data-anchor-id="comment-almost-everything">Comment (almost) everything</h3>
+<p>When in doubt, comment everything in your code. This should also obvious as I am pretty sure you had many experiences of going through someone else’s codes and getting frustrated by 1,000 lines of convoluted codes with no explanations as all.</p>
+<p>For example, imagine you have to decode <a href="https://en.wikipedia.org/wiki/International_Obfuscated_C_Code_Contest">this</a> (I know this is a bit extreme…):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include                                     </span><span class="im">&lt;math.h&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include                                   </span><span class="im">&lt;sys/time.h&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#include                                   </span><span class="im">&lt;X11/Xlib.h&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="pp">#include                                  </span><span class="im">&lt;X11/keysym.h&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>                                          <span class="dt">double</span> L <span class="op">,</span>o <span class="op">,</span>P</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>                                         <span class="op">,</span>_<span class="op">=</span>dt<span class="op">,</span>T<span class="op">,</span>Z<span class="op">,</span>D<span class="op">=</span><span class="dv">1</span><span class="op">,</span>d<span class="op">,</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>                                         s<span class="op">[</span><span class="dv">999</span><span class="op">],</span>E<span class="op">,</span>h<span class="op">=</span> <span class="dv">8</span><span class="op">,</span>I<span class="op">,</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                                         J<span class="op">,</span>K<span class="op">,</span>w<span class="op">[</span><span class="dv">999</span><span class="op">],</span>M<span class="op">,</span>m<span class="op">,</span>O</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>                                        <span class="op">,</span>n<span class="op">[</span><span class="dv">999</span><span class="op">],</span>j<span class="op">=</span><span class="fl">33e-3</span><span class="op">,</span>i<span class="op">=</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>                                        <span class="fl">1E3</span><span class="op">,</span>r<span class="op">,</span>t<span class="op">,</span> u<span class="op">,</span>v <span class="op">,</span>W<span class="op">,</span>S<span class="op">=</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>                                        <span class="fl">74.5</span><span class="op">,</span>l<span class="op">=</span><span class="dv">221</span><span class="op">,</span>X<span class="op">=</span><span class="fl">7.26</span><span class="op">,</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>                                        a<span class="op">,</span>B<span class="op">,</span>A<span class="op">=</span><span class="fl">32.2</span><span class="op">,</span>c<span class="op">,</span> F<span class="op">,</span>H<span class="op">;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>                                        <span class="dt">int</span> N<span class="op">,</span>q<span class="op">,</span> C<span class="op">,</span> y<span class="op">,</span>p<span class="op">,</span>U<span class="op">;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>                                       Window z<span class="op">;</span> <span class="dt">char</span> f<span class="op">[</span><span class="dv">52</span><span class="op">]</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                                    <span class="op">;</span> GC k<span class="op">;</span> main<span class="op">(){</span> Display<span class="op">*</span>e<span class="op">=</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a> XOpenDisplay<span class="op">(</span> <span class="dv">0</span><span class="op">);</span> z<span class="op">=</span>RootWindow<span class="op">(</span>e<span class="op">,</span><span class="dv">0</span><span class="op">);</span> <span class="cf">for</span> <span class="op">(</span>XSetForeground<span class="op">(</span>e<span class="op">,</span>k<span class="op">=</span>XCreateGC <span class="op">(</span>e<span class="op">,</span>z<span class="op">,</span><span class="dv">0</span><span class="op">,</span><span class="dv">0</span><span class="op">),</span>BlackPixel<span class="op">(</span>e<span class="op">,</span><span class="dv">0</span><span class="op">))</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="op">;</span> scanf<span class="op">(</span><span class="st">"</span><span class="sc">%lf%lf%lf</span><span class="st">"</span><span class="op">,</span>y <span class="op">+</span>n<span class="op">,</span>w<span class="op">+</span>y<span class="op">,</span> y<span class="op">+</span>s<span class="op">)+</span><span class="dv">1</span><span class="op">;</span> y <span class="op">++);</span> XSelectInput<span class="op">(</span>e<span class="op">,</span>z<span class="op">=</span> XCreateSimpleWindow<span class="op">(</span>e<span class="op">,</span>z<span class="op">,</span><span class="dv">0</span><span class="op">,</span><span class="dv">0</span><span class="op">,</span><span class="dv">400</span><span class="op">,</span><span class="dv">400</span><span class="op">,</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span><span class="op">,</span><span class="dv">0</span><span class="op">,</span>WhitePixel<span class="op">(</span>e<span class="op">,</span><span class="dv">0</span><span class="op">)</span> <span class="op">),</span>KeyPressMask<span class="op">);</span> <span class="cf">for</span><span class="op">(</span>XMapWindow<span class="op">(</span>e<span class="op">,</span>z<span class="op">);</span> <span class="op">;</span> T<span class="op">=</span>sin<span class="op">(</span>O<span class="op">)){</span> <span class="kw">struct</span> timeval G<span class="op">={</span> <span class="dv">0</span><span class="op">,</span>dt<span class="op">*</span><span class="fl">1e6</span><span class="op">}</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="op">;</span> K<span class="op">=</span> cos<span class="op">(</span>j<span class="op">);</span> N<span class="op">=</span><span class="fl">1e4</span><span class="op">;</span> M<span class="op">+=</span> H<span class="op">*</span>_<span class="op">;</span> Z<span class="op">=</span>D<span class="op">*</span>K<span class="op">;</span> F<span class="op">+=</span>_<span class="op">*</span>P<span class="op">;</span> r<span class="op">=</span>E<span class="op">*</span>K<span class="op">;</span> W<span class="op">=</span>cos<span class="op">(</span> O<span class="op">);</span> m<span class="op">=</span>K<span class="op">*</span>W<span class="op">;</span> H<span class="op">=</span>K<span class="op">*</span>T<span class="op">;</span> O<span class="op">+=</span>D<span class="op">*</span>_<span class="op">*</span>F<span class="op">/</span> K<span class="op">+</span>d<span class="op">/</span>K<span class="op">*</span>E<span class="op">*</span>_<span class="op">;</span> B<span class="op">=</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>sin<span class="op">(</span>j<span class="op">);</span> a<span class="op">=</span>B<span class="op">*</span>T<span class="op">*</span>D<span class="op">-</span>E<span class="op">*</span>W<span class="op">;</span> XClearWindow<span class="op">(</span>e<span class="op">,</span>z<span class="op">);</span> t<span class="op">=</span>T<span class="op">*</span>E<span class="op">+</span> D<span class="op">*</span>B<span class="op">*</span>W<span class="op">;</span> j<span class="op">+=</span>d<span class="op">*</span>_<span class="op">*</span>D<span class="op">-</span>_<span class="op">*</span>F<span class="op">*</span>E<span class="op">;</span> P<span class="op">=</span>W<span class="op">*</span>E<span class="op">*</span>B<span class="op">-</span>T<span class="op">*</span>D<span class="op">;</span> <span class="cf">for</span> <span class="op">(</span>o<span class="op">+=(</span>I<span class="op">=</span>D<span class="op">*</span>W<span class="op">+</span>E</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="op">*</span>T<span class="op">*</span>B<span class="op">,</span>E<span class="op">*</span>d<span class="op">/</span>K <span class="op">*</span>B<span class="op">+</span>v<span class="op">+</span>B<span class="op">/</span>K<span class="op">*</span>F<span class="op">*</span>D<span class="op">)*</span>_<span class="op">;</span> p<span class="op">&lt;</span>y<span class="op">;</span> <span class="op">){</span> T<span class="op">=</span>p<span class="op">[</span>s<span class="op">]+</span>i<span class="op">;</span> E<span class="op">=</span>c<span class="op">-</span>p<span class="op">[</span>w<span class="op">];</span> D<span class="op">=</span>n<span class="op">[</span>p<span class="op">]-</span>L<span class="op">;</span> K<span class="op">=</span>D<span class="op">*</span>m<span class="op">-</span>B<span class="op">*</span>T<span class="op">-</span>H<span class="op">*</span>E<span class="op">;</span> <span class="cf">if</span><span class="op">(</span>p <span class="op">[</span>n<span class="op">]+</span>w<span class="op">[</span> p<span class="op">]+</span>p<span class="op">[</span>s</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="op">]==</span> <span class="dv">0</span><span class="op">|</span>K <span class="op">&lt;</span>fabs<span class="op">(</span>W<span class="op">=</span>T<span class="op">*</span>r<span class="op">-</span>I<span class="op">*</span>E <span class="op">+</span>D<span class="op">*</span>P<span class="op">)</span> <span class="op">|</span>fabs<span class="op">(</span>D<span class="op">=</span>t <span class="op">*</span>D<span class="op">+</span>Z <span class="op">*</span>T<span class="op">-</span>a <span class="op">*</span>E<span class="op">)&gt;</span> K<span class="op">)</span>N<span class="op">=</span><span class="fl">1e4</span><span class="op">;</span> <span class="cf">else</span><span class="op">{</span> q<span class="op">=</span>W<span class="op">/</span>K <span class="op">*</span><span class="fl">4E2</span><span class="op">+</span><span class="fl">2e2</span><span class="op">;</span> C<span class="op">=</span> <span class="fl">2E2</span><span class="op">+</span><span class="fl">4e2</span><span class="op">/</span> K</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a> <span class="op">*</span>D<span class="op">;</span> N<span class="op">-</span><span class="fl">1E4</span><span class="op">&amp;&amp;</span> XDrawLine<span class="op">(</span>e <span class="op">,</span>z<span class="op">,</span>k<span class="op">,</span>N <span class="op">,</span>U<span class="op">,</span>q<span class="op">,</span>C<span class="op">);</span> N<span class="op">=</span>q<span class="op">;</span> U<span class="op">=</span>C<span class="op">;</span> <span class="op">}</span> <span class="op">++</span>p<span class="op">;</span> <span class="op">}</span> L<span class="op">+=</span>_<span class="op">*</span> <span class="op">(</span>X<span class="op">*</span>t <span class="op">+</span>P<span class="op">*</span>M<span class="op">+</span>m<span class="op">*</span>l<span class="op">);</span> T<span class="op">=</span>X<span class="op">*</span>X<span class="op">+</span> l<span class="op">*</span>l<span class="op">+</span>M <span class="op">*</span>M<span class="op">;</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  XDrawString<span class="op">(</span>e<span class="op">,</span>z<span class="op">,</span>k <span class="op">,</span><span class="dv">20</span><span class="op">,</span><span class="dv">380</span><span class="op">,</span>f<span class="op">,</span><span class="dv">17</span><span class="op">);</span> D<span class="op">=</span>v<span class="op">/</span>l<span class="op">*</span><span class="dv">15</span><span class="op">;</span> i<span class="op">+=(</span>B <span class="op">*</span>l<span class="op">-</span>M<span class="op">*</span>r <span class="op">-</span>X<span class="op">*</span>Z<span class="op">)*</span>_<span class="op">;</span> <span class="cf">for</span><span class="op">(;</span> XPending<span class="op">(</span>e<span class="op">);</span> u <span class="op">*=</span>CS<span class="op">!=</span>N<span class="op">){</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>                                   XEvent z<span class="op">;</span> XNextEvent<span class="op">(</span>e <span class="op">,&amp;</span>z<span class="op">);</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>                                       <span class="op">++*((</span>N<span class="op">=</span>XLookupKeysym</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>                                         <span class="op">(&amp;</span>z<span class="op">.</span>xkey<span class="op">,</span><span class="dv">0</span><span class="op">))-</span>IT<span class="op">?</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>                                         N<span class="op">-</span>LT<span class="op">?</span> UP<span class="op">-</span>N<span class="op">?&amp;</span> E<span class="op">:&amp;</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>                                         J<span class="op">:&amp;</span> u<span class="op">:</span> <span class="op">&amp;</span>h<span class="op">);</span> <span class="op">--*(</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>                                         DN <span class="op">-</span>N<span class="op">?</span> N<span class="op">-</span>DT <span class="op">?</span>N<span class="op">==</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>                                         RT<span class="op">?&amp;</span>u<span class="op">:</span> <span class="op">&amp;</span> W<span class="op">:&amp;</span>h<span class="op">:&amp;</span>J</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>                                          <span class="op">);</span> <span class="op">}</span> m<span class="op">=</span><span class="dv">15</span><span class="op">*</span>F<span class="op">/</span>l<span class="op">;</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>                                          c<span class="op">+=(</span>I<span class="op">=</span>M<span class="op">/</span> l<span class="op">,</span>l<span class="op">*</span>H</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>                                          <span class="op">+</span>I<span class="op">*</span>M<span class="op">+</span>a<span class="op">*</span>X<span class="op">)*</span>_<span class="op">;</span> H</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>                                          <span class="op">=</span>A<span class="op">*</span>r<span class="op">+</span>v<span class="op">*</span>X<span class="op">-</span>F<span class="op">*</span>l<span class="op">+(</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>                                          E<span class="op">=</span><span class="fl">.1</span><span class="op">+</span>X<span class="op">*</span><span class="fl">4.9</span><span class="op">/</span>l<span class="op">,</span>t</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>                                          <span class="op">=</span>T<span class="op">*</span>m<span class="op">/</span><span class="dv">32</span><span class="op">-</span>I<span class="op">*</span>T<span class="op">/</span><span class="dv">24</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>                                           <span class="op">)/</span>S<span class="op">;</span> K<span class="op">=</span>F<span class="op">*</span>M<span class="op">+(</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>                                           h<span class="op">*</span> <span class="fl">1e4</span><span class="op">/</span>l<span class="op">-(</span>T<span class="op">+</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>                                           E<span class="op">*</span><span class="dv">5</span><span class="op">*</span>T<span class="op">*</span>E<span class="op">)/</span><span class="fl">3e2</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>                                           <span class="op">)/</span>S<span class="op">-</span>X<span class="op">*</span>d<span class="op">-</span>B<span class="op">*</span>A<span class="op">;</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>                                           a<span class="op">=</span><span class="fl">2.63</span> <span class="op">/</span>l<span class="op">*</span>d<span class="op">;</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>                                           X<span class="op">+=(</span> d<span class="op">*</span>l<span class="op">-</span>T<span class="op">/</span>S</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>                                            <span class="op">*(</span><span class="fl">.19</span><span class="op">*</span>E <span class="op">+</span>a</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>                                            <span class="op">*</span><span class="fl">.64</span><span class="op">+</span>J<span class="op">/</span><span class="fl">1e3</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>                                            <span class="op">)-</span>M<span class="op">*</span> v <span class="op">+</span>A<span class="op">*</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>                                            Z<span class="op">)*</span>_<span class="op">;</span> l <span class="op">+=</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>                                            K <span class="op">*</span>_<span class="op">;</span> W<span class="op">=</span>d<span class="op">;</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>                                            sprintf<span class="op">(</span>f<span class="op">,</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>                                            <span class="st">"</span><span class="sc">%5d</span><span class="st">  </span><span class="sc">%3d</span><span class="st">"</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>                                            <span class="st">"</span><span class="sc">%7d</span><span class="st">"</span><span class="op">,</span>p <span class="op">=</span>l</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>                                           <span class="op">/</span><span class="fl">1.7</span><span class="op">,(</span>C<span class="op">=</span><span class="fl">9E3</span><span class="op">+</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>                              O<span class="op">*</span><span class="fl">57.3</span><span class="op">)%</span><span class="bn">0550</span><span class="op">,(</span><span class="dt">int</span><span class="op">)</span>i<span class="op">);</span> d<span class="op">+=</span>T<span class="op">*(</span><span class="fl">.45</span><span class="op">-</span><span class="dv">14</span><span class="op">/</span>l<span class="op">*</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>                             X<span class="op">-</span>a<span class="op">*</span><span class="dv">130</span><span class="op">-</span>J<span class="op">*</span> <span class="fl">.14</span><span class="op">)*</span>_<span class="op">/</span><span class="fl">125e2</span><span class="op">+</span>F<span class="op">*</span>_<span class="op">*</span>v<span class="op">;</span> P<span class="op">=(</span>T<span class="op">*(</span><span class="dv">47</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>                             <span class="op">*</span>I<span class="op">-</span>m<span class="op">*</span> <span class="dv">52</span><span class="op">+</span>E<span class="op">*</span><span class="dv">94</span> <span class="op">*</span>D<span class="op">-</span>t<span class="op">*</span><span class="fl">.38</span><span class="op">+</span>u<span class="op">*</span><span class="fl">.21</span><span class="op">*</span>E<span class="op">)</span> <span class="op">/</span><span class="fl">1e2</span><span class="op">+</span>W<span class="op">*</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>                             <span class="dv">179</span><span class="op">*</span>v<span class="op">)/</span><span class="dv">2312</span><span class="op">;</span> select<span class="op">(</span>p<span class="op">=</span><span class="dv">0</span><span class="op">,</span><span class="dv">0</span><span class="op">,</span><span class="dv">0</span><span class="op">,</span><span class="dv">0</span><span class="op">,&amp;</span>G<span class="op">);</span> v<span class="op">-=(</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>                              W<span class="op">*</span>F<span class="op">-</span>T<span class="op">*(</span><span class="fl">.63</span><span class="op">*</span>m<span class="op">-</span>I<span class="op">*</span><span class="fl">.086</span><span class="op">+</span>m<span class="op">*</span>E<span class="op">*</span><span class="dv">19</span><span class="op">-</span>D<span class="op">*</span><span class="dv">25</span><span class="op">-</span><span class="fl">.11</span><span class="op">*</span>u</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>                               <span class="op">)/</span><span class="fl">107e2</span><span class="op">)*</span>_<span class="op">;</span> D<span class="op">=</span>cos<span class="op">(</span>o<span class="op">);</span> E<span class="op">=</span>sin<span class="op">(</span>o<span class="op">);</span> <span class="op">}</span> <span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="data-management" class="level2">
+<h2 class="anchored" data-anchor-id="data-management">Data management</h2>
+<section id="have-consistent-project-structure" class="level3">
+<h3 class="anchored" data-anchor-id="have-consistent-project-structure">Have consistent project structure</h3>
+<p>Mens sana in corpore sano–same for reproducible research workflow. Healthy reproducible habit comes from having a clear, reproducible folder structure for your research. How can you easily automate certain process in your workflow if you don’t know where your raw data is in your folder? You would be very error-prone if you have your source codes everywhere. If you are having hard time following what you did in your own workflow, other people will do much worse. Thus, having a consistent folder structure for your research is one of the first steps of reproducible research workflow.</p>
+<p>Fortunately, answer to this is quite simple: setup a consistent project structure. <strong>Project structure</strong> means you module your research into a project with consistent set of folders. Crucial point about project structure is that everything necessary to run your research should be contained within the project. This includes your source codes, data, environment, etc. This ensures that you isolate the materials for your research from other unnecessary materials that could corrupt your workflow. Within the project parent folder, you should also have some consistent sets of folders that divide files by their functions. For example, you might have <code>src</code> folder to contain all your source codes, <code>input</code> folder for all your data, etc. In fact, this is how my replication template is structured.</p>
+</section>
+<section id="dont-directly-modify-the-raw-data" class="level3">
+<h3 class="anchored" data-anchor-id="dont-directly-modify-the-raw-data">Don’t directly modify the raw data</h3>
+<p>NEVER directly modify the raw data. First, it is very hard to remember how you modified the raw data. If you forget this process, reproducibility of the every subsequent analysis can be severely impaired. Second, if it is hard to for you do re-do this modification, it will be even harder for other replicators. Always use source code and create a new file from the raw data if you want to modify it. If you have no choice but to manually modify the raw data due to some reasons, save the result as a new file instead of overwriting it.</p>
+</section>
+<section id="automate-the-data-download-process-if-possible" class="level3">
+<h3 class="anchored" data-anchor-id="automate-the-data-download-process-if-possible">Automate the data download process (if possible)</h3>
+<p>Humans are so error-prone. That being said, don’t expect them to be very good at understanding your document. People will always make mistakes. Thus, it is always best to automate certain process in your workflow rather than telling people some instructions in the document.</p>
+</section>
+</section>
+<section id="coding" class="level2">
+<h2 class="anchored" data-anchor-id="coding">Coding</h2>
+<section id="set-environment-independent-environment" class="level3">
+<h3 class="anchored" data-anchor-id="set-environment-independent-environment">Set environment-independent environment</h3>
+</section>
+<section id="relative-relative-relative-path" class="level3">
+<h3 class="anchored" data-anchor-id="relative-relative-relative-path">Relative, relative, relative (path)!</h3>
+<p>Please please don’t have something like this in the first line of your source code:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">""</span>C<span class="sc">:</span>\Users\jenny\path\that\only\I\have<span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If you do, I swear I will <a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">come to your office and set your computer on fire</a>.</p>
+</section>
+<section id="get-used-to-shell-scripting" class="level3">
+<h3 class="anchored" data-anchor-id="get-used-to-shell-scripting">Get used to shell scripting</h3>
+</section>
+<section id="use-version-control" class="level3">
+<h3 class="anchored" data-anchor-id="use-version-control">Use version control</h3>
+</section>
+<section id="use-docker-to-ship-your-computer" class="level3">
+<h3 class="anchored" data-anchor-id="use-docker-to-ship-your-computer">Use Docker to “ship” your computer</h3>
+</section>
+<section id="use-package-dependencies-managers" class="level3">
+<h3 class="anchored" data-anchor-id="use-package-dependencies-managers">Use package dependencies managers</h3>
+</section>
+<section id="use-build-automation-tools" class="level3">
+<h3 class="anchored" data-anchor-id="use-build-automation-tools">Use build automation tools</h3>
+</section>
+<section id="use-symlinks-to-avoid-storing-big-data-in-the-repository" class="level3">
+<h3 class="anchored" data-anchor-id="use-symlinks-to-avoid-storing-big-data-in-the-repository">Use symlinks to avoid storing big data in the repository</h3>
+</section>
+<section id="make-you-code-invulnerable-to-restart-session" class="level3">
+<h3 class="anchored" data-anchor-id="make-you-code-invulnerable-to-restart-session">Make you code invulnerable to “restart session”</h3>
+<p>Please please don’t have something like this in the first line of your source code:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If you do, I swear I will <strong>again</strong> <a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">come to your office and set your computer on fire</a>.</p>
+</section>
+</section>
+<section id="os" class="level2">
+<h2 class="anchored" data-anchor-id="os">OS</h2>
+<section id="try-using-linux" class="level3">
+<h3 class="anchored" data-anchor-id="try-using-linux">Try using Linux</h3>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
