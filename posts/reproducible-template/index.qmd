@@ -113,6 +113,20 @@ NEVER directly modify the raw data. First, it is very hard to remember how you m
 
 Humans are so error-prone. That being said, don't expect them to be very good at understanding your document. People will always make mistakes. Thus, it is always best to automate certain process in your workflow rather than telling people some instructions in the document.
 
+One example of this is the data download process. Instead of manually clicing and downloading the data from the website, you can automate this process by using a bash script. First, locate the data download link in the website. You can get this by right-clicking the link and selecting "Copy link address". Then, you can write a bash script as follows:
+
+```{bash}
+#| eval: false
+ 
+#!/bin/bash
+
+wget -nc -P [file_path] [data_download_link]
+```
+
+`wget` is a command-line tool that allows you to download files from the internet. `-nc` option means "no clobber", which means it will not download the file if it already exists. `-P` option means "directory path", which means it will download the file to the specified directory. 
+
+Also, lot of the bulk data nowadays provide API to download the data using code script. If they provide such API, you can use it to write a script that automatically download the data.
+
 ## Coding
 
 ### Set environment-independent environment

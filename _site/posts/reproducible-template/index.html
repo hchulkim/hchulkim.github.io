@@ -360,6 +360,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="automate-the-data-download-process-if-possible" class="level3">
 <h3 class="anchored" data-anchor-id="automate-the-data-download-process-if-possible">Automate the data download process (if possible)</h3>
 <p>Humans are so error-prone. That being said, don’t expect them to be very good at understanding your document. People will always make mistakes. Thus, it is always best to automate certain process in your workflow rather than telling people some instructions in the document.</p>
+<p>One example of this is the data download process. Instead of manually clicing and downloading the data from the website, you can automate this process by using a bash script. First, locate the data download link in the website. You can get this by right-clicking the link and selecting “Copy link address”. Then, you can write a bash script as follows:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> <span class="at">-nc</span> <span class="at">-P</span> <span class="pp">[</span><span class="ss">file_path</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">data_download_link</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>wget</code> is a command-line tool that allows you to download files from the internet. <code>-nc</code> option means “no clobber”, which means it will not download the file if it already exists. <code>-P</code> option means “directory path”, which means it will download the file to the specified directory.</p>
+<p>Also, lot of the bulk data nowadays provide API to download the data using code script. If they provide such API, you can use it to write a script that automatically download the data.</p>
 </section>
 </section>
 <section id="coding" class="level2">
@@ -371,7 +379,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="relative-relative-relative-path">Relative, relative, relative (path)!</h3>
 <p>Please please don’t have something like this in the first line of your source code:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">""</span>C<span class="sc">:</span>\Users\jenny\path\that\only\I\have<span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">""</span>C<span class="sc">:</span>\Users\jenny\path\that\only\I\have<span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If you do, I swear I will <a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">come to your office and set your computer on fire</a>.</p>
 </section>
@@ -397,7 +405,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="make-you-code-invulnerable-to-restart-session">Make you code invulnerable to “restart session”</h3>
 <p>Please please don’t have something like this in the first line of your source code:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If you do, I swear I will <strong>again</strong> <a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">come to your office and set your computer on fire</a>.</p>
 </section>
