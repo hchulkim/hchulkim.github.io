@@ -23,7 +23,9 @@ First step of every reproducible research workflow is **documentation**. Essence
 
 ### Follow the standard
 
-When in doubt, follow the standard. Fortunately, you don't need to reinvent the wheel for the necessary documentation for reproducible workflow. In fact, there are many official guidlines that you can consult to. For example, data editors of the journals of the American Economic Association, the Royal Economic Society, the Review of Economic Studies, the Canadian Journal of Economics, and Economic Inquiry have created the [Data and Code Availability Standard (DCAS)](https://datacodestandard.org/). This standard allows researchers to have a consistent way to document the data and code availability of their research.
+When in doubt, follow the standard. Fortunately, you don't need to reinvent the wheel for the necessary documentation for reproducible workflow. In fact, there are many official guidlines that you can consult to. For example, data editors of the journals of the American Economic Association, the Royal Economic Society, the Review of Economic Studies, the Canadian Journal of Economics, and Economic Inquiry have created the [Data and Code Availability Standard (DCAS)](https://datacodestandard.org/). This standard allows researchers to have a consistent way to document the data and code availability of their research. 
+
+In my template, I follow the DCAS standard and incorporated it into the README.md file. You can use the example in the README as a template for your own documentation.
 
 ### Document everything
 
@@ -127,9 +129,13 @@ wget -nc -P [file_path] [data_download_link]
 
 Also, lot of the bulk data nowadays provide API to download the data using code script. If they provide such API, you can use it to write a script that automatically download the data.
 
+We will later discuss it in the build automation section, but I have included this logic in the `Makefile` file.
+
 ## Coding
 
 ### Set environment-independent environment
+
+In general, having reproducible workflow means your code can be run in different environments. Different environments can range from different coding packages to different operating systems. But how can we do this? Best pratice is to always setup your research workflow so that you can setup the environment you used in your research in other people's computer. This can be usually done by using several tools: `Docker`, package dependencies manager, etc. We will discuss this in more detail in the upcoming sections.
 
 ### Relative, relative, relative (path)!
 
@@ -138,16 +144,77 @@ Please please don't have something like this in the first line of your source co
 ```{r}
 #| eval: false
 
-setwd(""C:\Users\jenny\path\that\only\I\have"")
+setwd("C:\Users\jenny\path\that\only\I\have")
 ```
 
 If you do, I swear I will [come to your office and set your computer on fire](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/).
 
+You can clearly see that this violates the environment-independent environment principle we were discussing earlier. There is just no chance that other people's computer will have the same absolute path to the data as yours. Thus, all your codes will break if you embed this directly in your code.
 
+Then what should we do? The answer is simple: use relative path. Relative path is a path that is relative to the current working directory. For example, if you are in the `C:\Users\jenny\path\that\only\I\have` directory, the relative path to the data is `data/data.csv`. This is because the data is in the `data` folder.
+
+Way to implement this is very simple. In case of `R`, you can use the R project with the `here` package. `here` package allows you to use relative path for your research project. All you need to do is to have either R project file or `.here` file in your project root directory. Then, you can use `here()` function to get the relative path to the data.
+
+Let's suppose that your project has the following structure:
+
+```{bash}
+#| eval: false
+
+project/
+├── data/
+├── src/code.R
+├── README.md
+├── .here
+```
+
+using `here` package, you can use relative path in your `code.R` file as follows:
+
+```{r}
+#| eval: false
+ 
+library(here)
+data_path <- here("data", "data.csv")
+```
+
+In this code, `here("data", "data.csv")` will return something like `/home/usrs/project/data/data.csv` regardless of the current working directory. Thus, `here` package takes care of the relative/absolute path issue without you having to worry about it.
+
+If you are familiar with the `R` and the R project, you might be wondering whty you need to use the `here` package explicitly. After all, if you have the R project, you can juse use the relative path in your code even without using the `here()` function. There are several reasons. First, other researchers might want to run the code in the terminal. In this case, the terminal not automatically detect the R project file and lead to path errors. Second, using `here()` function is more robust to different operating systems. For example, Windows and Linux have different path separator. `here()` function takes care of this issue for you.
+
+These sort of project environment are common in many different programming languages. Thus, you should have no problem using this in your own research workflow if you use other programming languages.
 
 ### Get used to shell scripting
 
+Why use shell/bash/zsh/terminal, etc? There are several reasons.
+
+1. It is more efficient to use shell scripting to automate the process.
+
+Suppose you need to create 100 files names such as `file_1.txt`, `file_2.txt`, `file_3.txt`, ..., `file_100.txt`. You can write a shell script to do this as follows:
+
+```{bash}
+#| eval: false
+
+touch file_{1..100}.txt
+```
+
+You can also delete them all as follows:
+
+```{bash}
+#| eval: false
+
+rm file_*.txt
+```
+
+2. Many tools used for reproducible research workflow are designed to be used in the terminal. For example, `Docker` is designed to be used in the terminal. If you are using `Docker`, it will be lot easier to use it in the terminal. Same for makefiles.
+
+3. Powerful tools helpful for your research use terminal as their interface. For example, HPC clusters usually use linux and most of the tools are designed to be work in the terminal.
+
+In my template, `bash` will be used a lot in the `Makefile` file.
+
 ### Use version control
+
+Remember writing a final version of your documents? `final-version.pdf`, `final-final-version.pdf`, `really-really-final-version.pdf`, etc. This is just inefficient because (1) it is hard to keep track of all the versions, (2) file name is not descriptive enough to know what is the difference between the versions, (3) it is hard to revert to a previous version if you need to, (4) you might accidentally overwrite the previous version if you are not careful.
+
+Same problem applies to your source code. When you write your code, you will always be changing its content. You might add on to it, delete some parts, or go back and forth between different versions. If you are not careful, this might lead to all sorts of errors. This is where version control systems come in. Version control systems allow you to keep track of all the versions of your code and revert to a previous version if you need to. In the coding world, `Git` is the industry standard for version control systems. If you don't know about `Git` yet, please learn it ASAP. While learning `Git`, you should also learn about `GitHub` as it is the most popular platform for hosting `Git` repositories.
 
 ### Use Docker to "ship" your computer
 
@@ -169,7 +236,9 @@ rm(list = ls())
 
 If you do, I swear I will **again** [come to your office and set your computer on fire](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/).
 
+This is because it does not exactly do what you intend to do. When you run this code, you are probably trying to clean up the environment and start from a fresh state. However, this code will not do that. It will only remove the global objects in the environment. That being said, it will still have the non-data portions of the environment. For example, it will still have the packages that you loaded in the environment.
 
+Then what should we do? Instead of using the above code, you should just restart the whole session. This ensures that your session is completely fresh. It also gives you good discipline since your code should be able to run from a fresh state.
 
 ## OS
 
