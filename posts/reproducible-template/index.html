@@ -275,6 +275,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="follow-the-standard" class="level3">
 <h3 class="anchored" data-anchor-id="follow-the-standard">Follow the standard</h3>
 <p>When in doubt, follow the standard. Fortunately, you don’t need to reinvent the wheel for the necessary documentation for reproducible workflow. In fact, there are many official guidlines that you can consult to. For example, data editors of the journals of the American Economic Association, the Royal Economic Society, the Review of Economic Studies, the Canadian Journal of Economics, and Economic Inquiry have created the <a href="https://datacodestandard.org/">Data and Code Availability Standard (DCAS)</a>. This standard allows researchers to have a consistent way to document the data and code availability of their research.</p>
+<p>In my template, I follow the DCAS standard and incorporated it into the README.md file. You can use the example in the README as a template for your own documentation.</p>
 </section>
 <section id="document-everything" class="level3">
 <h3 class="anchored" data-anchor-id="document-everything">Document everything</h3>
@@ -368,26 +369,66 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><code>wget</code> is a command-line tool that allows you to download files from the internet. <code>-nc</code> option means “no clobber”, which means it will not download the file if it already exists. <code>-P</code> option means “directory path”, which means it will download the file to the specified directory.</p>
 <p>Also, lot of the bulk data nowadays provide API to download the data using code script. If they provide such API, you can use it to write a script that automatically download the data.</p>
+<p>We will later discuss it in the build automation section, but I have included this logic in the <code>Makefile</code> file.</p>
 </section>
 </section>
 <section id="coding" class="level2">
 <h2 class="anchored" data-anchor-id="coding">Coding</h2>
 <section id="set-environment-independent-environment" class="level3">
 <h3 class="anchored" data-anchor-id="set-environment-independent-environment">Set environment-independent environment</h3>
+<p>In general, having reproducible workflow means your code can be run in different environments. Different environments can range from different coding packages to different operating systems. But how can we do this? Best pratice is to always setup your research workflow so that you can setup the environment you used in your research in other people’s computer. This can be usually done by using several tools: <code>Docker</code>, package dependencies manager, etc. We will discuss this in more detail in the upcoming sections.</p>
 </section>
 <section id="relative-relative-relative-path" class="level3">
 <h3 class="anchored" data-anchor-id="relative-relative-relative-path">Relative, relative, relative (path)!</h3>
 <p>Please please don’t have something like this in the first line of your source code:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">""</span>C<span class="sc">:</span>\Users\jenny\path\that\only\I\have<span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"C:\Users\jenny\path</span><span class="sc">\t</span><span class="st">hat\only\I\have"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If you do, I swear I will <a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">come to your office and set your computer on fire</a>.</p>
+<p>You can clearly see that this violates the environment-independent environment principle we were discussing earlier. There is just no chance that other people’s computer will have the same absolute path to the data as yours. Thus, all your codes will break if you embed this directly in your code.</p>
+<p>Then what should we do? The answer is simple: use relative path. Relative path is a path that is relative to the current working directory. For example, if you are in the <code>C:\Users\jenny\path\that\only\I\have</code> directory, the relative path to the data is <code>data/data.csv</code>. This is because the data is in the <code>data</code> folder.</p>
+<p>Way to implement this is very simple. In case of <code>R</code>, you can use the R project with the <code>here</code> package. <code>here</code> package allows you to use relative path for your research project. All you need to do is to have either R project file or <code>.here</code> file in your project root directory. Then, you can use <code>here()</code> function to get the relative path to the data.</p>
+<p>Let’s suppose that your project has the following structure:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">project/</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> data/</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> src/code.R</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> README.md</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> .here</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>using <code>here</code> package, you can use relative path in your <code>code.R</code> file as follows:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>data_path <span class="ot">&lt;-</span> <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"data.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>In this code, <code>here("data", "data.csv")</code> will return something like <code>/home/usrs/project/data/data.csv</code> regardless of the current working directory. Thus, <code>here</code> package takes care of the relative/absolute path issue without you having to worry about it.</p>
+<p>If you are familiar with the <code>R</code> and the R project, you might be wondering whty you need to use the <code>here</code> package explicitly. After all, if you have the R project, you can juse use the relative path in your code even without using the <code>here()</code> function. There are several reasons. First, other researchers might want to run the code in the terminal. In this case, the terminal not automatically detect the R project file and lead to path errors. Second, using <code>here()</code> function is more robust to different operating systems. For example, Windows and Linux have different path separator. <code>here()</code> function takes care of this issue for you.</p>
+<p>These sort of project environment are common in many different programming languages. Thus, you should have no problem using this in your own research workflow if you use other programming languages.</p>
 </section>
 <section id="get-used-to-shell-scripting" class="level3">
 <h3 class="anchored" data-anchor-id="get-used-to-shell-scripting">Get used to shell scripting</h3>
+<p>Why use shell/bash/zsh/terminal, etc? There are several reasons.</p>
+<ol type="1">
+<li>It is more efficient to use shell scripting to automate the process.</li>
+</ol>
+<p>Suppose you need to create 100 files names such as <code>file_1.txt</code>, <code>file_2.txt</code>, <code>file_3.txt</code>, …, <code>file_100.txt</code>. You can write a shell script to do this as follows:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> file_<span class="dt">{</span><span class="dv">1</span><span class="dt">..</span><span class="dv">100</span><span class="dt">}</span>.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You can also delete them all as follows:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> file_<span class="pp">*</span>.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="2" type="1">
+<li><p>Many tools used for reproducible research workflow are designed to be used in the terminal. For example, <code>Docker</code> is designed to be used in the terminal. If you are using <code>Docker</code>, it will be lot easier to use it in the terminal. Same for makefiles.</p></li>
+<li><p>Powerful tools helpful for your research use terminal as their interface. For example, HPC clusters usually use linux and most of the tools are designed to be work in the terminal.</p></li>
+</ol>
+<p>In my template, <code>bash</code> will be used a lot in the <code>Makefile</code> file.</p>
 </section>
 <section id="use-version-control" class="level3">
 <h3 class="anchored" data-anchor-id="use-version-control">Use version control</h3>
+<p>Remember writing a final version of your documents? <code>final-version.pdf</code>, <code>final-final-version.pdf</code>, <code>really-really-final-version.pdf</code>, etc. This is just inefficient because (1) it is hard to keep track of all the versions, (2) file name is not descriptive enough to know what is the difference between the versions, (3) it is hard to revert to a previous version if you need to, (4) you might accidentally overwrite the previous version if you are not careful.</p>
+<p>Same problem applies to your source code. When you write your code, you will always be changing its content. You might add on to it, delete some parts, or go back and forth between different versions. If you are not careful, this might lead to all sorts of errors. This is where version control systems come in. Version control systems allow you to keep track of all the versions of your code and revert to a previous version if you need to. In the coding world, <code>Git</code> is the industry standard for version control systems. If you don’t know about <code>Git</code> yet, please learn it ASAP. While learning <code>Git</code>, you should also learn about <code>GitHub</code> as it is the most popular platform for hosting <code>Git</code> repositories.</p>
 </section>
 <section id="use-docker-to-ship-your-computer" class="level3">
 <h3 class="anchored" data-anchor-id="use-docker-to-ship-your-computer">Use Docker to “ship” your computer</h3>
@@ -405,9 +446,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="make-you-code-invulnerable-to-restart-session">Make you code invulnerable to “restart session”</h3>
 <p>Please please don’t have something like this in the first line of your source code:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If you do, I swear I will <strong>again</strong> <a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">come to your office and set your computer on fire</a>.</p>
+<p>This is because it does not exactly do what you intend to do. When you run this code, you are probably trying to clean up the environment and start from a fresh state. However, this code will not do that. It will only remove the global objects in the environment. That being said, it will still have the non-data portions of the environment. For example, it will still have the packages that you loaded in the environment.</p>
+<p>Then what should we do? Instead of using the above code, you should just restart the whole session. This ensures that your session is completely fresh. It also gives you good discipline since your code should be able to run from a fresh state.</p>
 </section>
 </section>
 <section id="os" class="level2">
