@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,14 +71,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-d68be38d83eca2bb035acf846ffba811.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-1713c1db1ad41a796903378fc9ac7b2b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -122,6 +123,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Hyoungchul Kim</span>
     </a>
@@ -239,19 +242,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#coding" id="toc-coding" class="nav-link" data-scroll-target="#coding">Coding</a>
   <ul class="collapse">
-  <li><a href="#set-environment-independent-environment" id="toc-set-environment-independent-environment" class="nav-link" data-scroll-target="#set-environment-independent-environment">Set environment-independent environment</a></li>
+  <li><a href="#set-same-environment-for-all-environments" id="toc-set-same-environment-for-all-environments" class="nav-link" data-scroll-target="#set-same-environment-for-all-environments">Set same environment for all environments</a></li>
   <li><a href="#relative-relative-relative-path" id="toc-relative-relative-relative-path" class="nav-link" data-scroll-target="#relative-relative-relative-path">Relative, relative, relative (path)!</a></li>
   <li><a href="#get-used-to-shell-scripting" id="toc-get-used-to-shell-scripting" class="nav-link" data-scroll-target="#get-used-to-shell-scripting">Get used to shell scripting</a></li>
   <li><a href="#use-version-control" id="toc-use-version-control" class="nav-link" data-scroll-target="#use-version-control">Use version control</a></li>
   <li><a href="#use-docker-to-ship-your-computer" id="toc-use-docker-to-ship-your-computer" class="nav-link" data-scroll-target="#use-docker-to-ship-your-computer">Use Docker to “ship” your computer</a></li>
   <li><a href="#use-package-dependencies-managers" id="toc-use-package-dependencies-managers" class="nav-link" data-scroll-target="#use-package-dependencies-managers">Use package dependencies managers</a></li>
   <li><a href="#use-build-automation-tools" id="toc-use-build-automation-tools" class="nav-link" data-scroll-target="#use-build-automation-tools">Use build automation tools</a></li>
-  <li><a href="#use-symlinks-to-avoid-storing-big-data-in-the-repository" id="toc-use-symlinks-to-avoid-storing-big-data-in-the-repository" class="nav-link" data-scroll-target="#use-symlinks-to-avoid-storing-big-data-in-the-repository">Use symlinks to avoid storing big data in the repository</a></li>
-  <li><a href="#make-you-code-invulnerable-to-restart-session" id="toc-make-you-code-invulnerable-to-restart-session" class="nav-link" data-scroll-target="#make-you-code-invulnerable-to-restart-session">Make you code invulnerable to “restart session”</a></li>
-  </ul></li>
-  <li><a href="#os" id="toc-os" class="nav-link" data-scroll-target="#os">OS</a>
-  <ul class="collapse">
-  <li><a href="#try-using-linux" id="toc-try-using-linux" class="nav-link" data-scroll-target="#try-using-linux">Try using Linux</a></li>
+  <li><a href="#make-your-code-invulnerable-to-restart-session" id="toc-make-your-code-invulnerable-to-restart-session" class="nav-link" data-scroll-target="#make-your-code-invulnerable-to-restart-session">Make your code invulnerable to “restart session”</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -286,7 +284,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>When in doubt, comment everything in your code. This should also obvious as I am pretty sure you had many experiences of going through someone else’s codes and getting frustrated by 1,000 lines of convoluted codes with no explanations as all.</p>
 <p>For example, imagine you have to decode <a href="https://en.wikipedia.org/wiki/International_Obfuscated_C_Code_Contest">this</a> (I know this is a bit extreme…):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include                                     </span><span class="im">&lt;math.h&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include                                     </span><span class="im">&lt;math.h&gt;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include                                   </span><span class="im">&lt;sys/time.h&gt;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#include                                   </span><span class="im">&lt;X11/Xlib.h&gt;</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="pp">#include                                  </span><span class="im">&lt;X11/keysym.h&gt;</span></span>
@@ -343,7 +341,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>                             <span class="op">*</span>I<span class="op">-</span>m<span class="op">*</span> <span class="dv">52</span><span class="op">+</span>E<span class="op">*</span><span class="dv">94</span> <span class="op">*</span>D<span class="op">-</span>t<span class="op">*</span><span class="fl">.38</span><span class="op">+</span>u<span class="op">*</span><span class="fl">.21</span><span class="op">*</span>E<span class="op">)</span> <span class="op">/</span><span class="fl">1e2</span><span class="op">+</span>W<span class="op">*</span></span>
 <span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>                             <span class="dv">179</span><span class="op">*</span>v<span class="op">)/</span><span class="dv">2312</span><span class="op">;</span> select<span class="op">(</span>p<span class="op">=</span><span class="dv">0</span><span class="op">,</span><span class="dv">0</span><span class="op">,</span><span class="dv">0</span><span class="op">,</span><span class="dv">0</span><span class="op">,&amp;</span>G<span class="op">);</span> v<span class="op">-=(</span></span>
 <span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>                              W<span class="op">*</span>F<span class="op">-</span>T<span class="op">*(</span><span class="fl">.63</span><span class="op">*</span>m<span class="op">-</span>I<span class="op">*</span><span class="fl">.086</span><span class="op">+</span>m<span class="op">*</span>E<span class="op">*</span><span class="dv">19</span><span class="op">-</span>D<span class="op">*</span><span class="dv">25</span><span class="op">-</span><span class="fl">.11</span><span class="op">*</span>u</span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>                               <span class="op">)/</span><span class="fl">107e2</span><span class="op">)*</span>_<span class="op">;</span> D<span class="op">=</span>cos<span class="op">(</span>o<span class="op">);</span> E<span class="op">=</span>sin<span class="op">(</span>o<span class="op">);</span> <span class="op">}</span> <span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>                               <span class="op">)/</span><span class="fl">107e2</span><span class="op">)*</span>_<span class="op">;</span> D<span class="op">=</span>cos<span class="op">(</span>o<span class="op">);</span> E<span class="op">=</span>sin<span class="op">(</span>o<span class="op">);</span> <span class="op">}</span> <span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 </section>
@@ -363,9 +361,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Humans are so error-prone. That being said, don’t expect them to be very good at understanding your document. People will always make mistakes. Thus, it is always best to automate certain process in your workflow rather than telling people some instructions in the document.</p>
 <p>One example of this is the data download process. Instead of manually clicing and downloading the data from the website, you can automate this process by using a bash script. First, locate the data download link in the website. You can get this by right-clicking the link and selecting “Copy link address”. Then, you can write a bash script as follows:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> <span class="at">-nc</span> <span class="at">-P</span> <span class="pp">[</span><span class="ss">file_path</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">data_download_link</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> <span class="at">-nc</span> <span class="at">-P</span> <span class="pp">[</span><span class="ss">file_path</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">data_download_link</span><span class="pp">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><code>wget</code> is a command-line tool that allows you to download files from the internet. <code>-nc</code> option means “no clobber”, which means it will not download the file if it already exists. <code>-P</code> option means “directory path”, which means it will download the file to the specified directory.</p>
 <p>Also, lot of the bulk data nowadays provide API to download the data using code script. If they provide such API, you can use it to write a script that automatically download the data.</p>
@@ -374,15 +372,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="coding" class="level2">
 <h2 class="anchored" data-anchor-id="coding">Coding</h2>
-<section id="set-environment-independent-environment" class="level3">
-<h3 class="anchored" data-anchor-id="set-environment-independent-environment">Set environment-independent environment</h3>
+<section id="set-same-environment-for-all-environments" class="level3">
+<h3 class="anchored" data-anchor-id="set-same-environment-for-all-environments">Set same environment for all environments</h3>
+<p>If you have been coding for a while, probably you would have experienced either of the following:</p>
+<ol type="1">
+<li>My code works on my computer but not on other people’s computer.</li>
+<li>Code that I wrote 6 months ago does not work anymore because of the new package update.</li>
+<li>My code that worked on MacOS does not work on Windows.</li>
+</ol>
+<p>Even though they look just incidental, these are all very serious issues that can severely impair the reproducibility of your research. How can we trust your results if it does not work after 6 months? In fact, how can we trust your results if it does not even work on your own computer? Thus, it is very important to set the same environment for all environments. You need to ensure that your original environment is portable and can work on any other settings.</p>
 <p>In general, having reproducible workflow means your code can be run in different environments. Different environments can range from different coding packages to different operating systems. But how can we do this? Best pratice is to always setup your research workflow so that you can setup the environment you used in your research in other people’s computer. This can be usually done by using several tools: <code>Docker</code>, package dependencies manager, etc. We will discuss this in more detail in the upcoming sections.</p>
 </section>
 <section id="relative-relative-relative-path" class="level3">
 <h3 class="anchored" data-anchor-id="relative-relative-relative-path">Relative, relative, relative (path)!</h3>
 <p>Please please don’t have something like this in the first line of your source code:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"C:\Users\jenny\path</span><span class="sc">\t</span><span class="st">hat\only\I\have"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"C:\Users\jenny\path</span><span class="sc">\t</span><span class="st">hat\only\I\have"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>If you do, I swear I will <a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">come to your office and set your computer on fire</a>.</p>
 <p>You can clearly see that this violates the environment-independent environment principle we were discussing earlier. There is just no chance that other people’s computer will have the same absolute path to the data as yours. Thus, all your codes will break if you embed this directly in your code.</p>
@@ -390,16 +395,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Way to implement this is very simple. In case of <code>R</code>, you can use the R project with the <code>here</code> package. <code>here</code> package allows you to use relative path for your research project. All you need to do is to have either R project file or <code>.here</code> file in your project root directory. Then, you can use <code>here()</code> function to get the relative path to the data.</p>
 <p>Let’s suppose that your project has the following structure:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">project/</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">project/</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> data/</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> src/code.R</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> README.md</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> .here</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> .here</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>using <code>here</code> package, you can use relative path in your <code>code.R</code> file as follows:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>data_path <span class="ot">&lt;-</span> <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"data.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>data_path <span class="ot">&lt;-</span> <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"data.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>In this code, <code>here("data", "data.csv")</code> will return something like <code>/home/usrs/project/data/data.csv</code> regardless of the current working directory. Thus, <code>here</code> package takes care of the relative/absolute path issue without you having to worry about it.</p>
 <p>If you are familiar with the <code>R</code> and the R project, you might be wondering whty you need to use the <code>here</code> package explicitly. After all, if you have the R project, you can juse use the relative path in your code even without using the <code>here()</code> function. There are several reasons. First, other researchers might want to run the code in the terminal. In this case, the terminal not automatically detect the R project file and lead to path errors. Second, using <code>here()</code> function is more robust to different operating systems. For example, Windows and Linux have different path separator. <code>here()</code> function takes care of this issue for you.</p>
@@ -413,11 +418,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>Suppose you need to create 100 files names such as <code>file_1.txt</code>, <code>file_2.txt</code>, <code>file_3.txt</code>, …, <code>file_100.txt</code>. You can write a shell script to do this as follows:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> file_<span class="dt">{</span><span class="dv">1</span><span class="dt">..</span><span class="dv">100</span><span class="dt">}</span>.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> file_<span class="dt">{</span><span class="dv">1</span><span class="dt">..</span><span class="dv">100</span><span class="dt">}</span>.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>You can also delete them all as follows:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> file_<span class="pp">*</span>.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> file_<span class="pp">*</span>.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ol start="2" type="1">
 <li><p>Many tools used for reproducible research workflow are designed to be used in the terminal. For example, <code>Docker</code> is designed to be used in the terminal. If you are using <code>Docker</code>, it will be lot easier to use it in the terminal. Same for makefiles.</p></li>
@@ -432,31 +437,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="use-docker-to-ship-your-computer" class="level3">
 <h3 class="anchored" data-anchor-id="use-docker-to-ship-your-computer">Use Docker to “ship” your computer</h3>
+<p><code>Docker</code> is a tool that allows you to create a container that contains all the dependencies for your code. This means that you can “ship” your computer to other people and they can run your code without having to install all the dependencies on their own computer. This is very useful because it is highly likely that other replicators will be using different operating systems and different versions of the software. By using <code>Docker</code>, you can ensure that your code will work on any other computer.</p>
+<p>If you want to know the basics of <code>Docker</code>, check out <a href="https://raw.githack.com/uo-ec607/lectures/master/13-docker/13-docker.html#1">this</a>.</p>
 </section>
 <section id="use-package-dependencies-managers" class="level3">
 <h3 class="anchored" data-anchor-id="use-package-dependencies-managers">Use package dependencies managers</h3>
+<p>One of the reasons your old code does not work is because you have a newer version of the package which does not work with your old code. For example, suppose you had a R code that used <code>tidyverse</code> package version 1.0.2. After 2 years, you now have a newer version. Unfortunately, the newer version of the <code>tidyverse</code> package does not work anymore with your old code because there were some changes in the package. This is a very common issue that can seriously impact the reproducibility of your research.</p>
+<p>Fortunately, you can use package dependenceis managers to resolve this. Package dependencies managers record the version of the packages being installed and keep track of the dependencies between packages. Thus, you can easily create a new environment that has the same version of the packages as the original environment. Nowadays, most of the programming languages have their own package dependenceis managers. For example, <code>R</code> has <code>renv</code> and <code>Julia</code> has <code>Pkg</code>.</p>
 </section>
 <section id="use-build-automation-tools" class="level3">
 <h3 class="anchored" data-anchor-id="use-build-automation-tools">Use build automation tools</h3>
+<p>If you have multiple scripts, it is hard to remember which script to run and in what order. This is where build automation tools come in. Build automation tools allow you to define the order of the scripts to run and the dependencies between the scripts. This means that you can run your entire workflow with a single command.</p>
+<p>There are many build automations tools out there. One of the popular one is <a href="https://www.gnu.org/software/make/">GNU Make</a>.</p>
 </section>
-<section id="use-symlinks-to-avoid-storing-big-data-in-the-repository" class="level3">
-<h3 class="anchored" data-anchor-id="use-symlinks-to-avoid-storing-big-data-in-the-repository">Use symlinks to avoid storing big data in the repository</h3>
-</section>
-<section id="make-you-code-invulnerable-to-restart-session" class="level3">
-<h3 class="anchored" data-anchor-id="make-you-code-invulnerable-to-restart-session">Make you code invulnerable to “restart session”</h3>
+<section id="make-your-code-invulnerable-to-restart-session" class="level3">
+<h3 class="anchored" data-anchor-id="make-your-code-invulnerable-to-restart-session">Make your code invulnerable to “restart session”</h3>
 <p>Please please don’t have something like this in the first line of your source code:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>If you do, I swear I will <strong>again</strong> <a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">come to your office and set your computer on fire</a>.</p>
 <p>This is because it does not exactly do what you intend to do. When you run this code, you are probably trying to clean up the environment and start from a fresh state. However, this code will not do that. It will only remove the global objects in the environment. That being said, it will still have the non-data portions of the environment. For example, it will still have the packages that you loaded in the environment.</p>
 <p>Then what should we do? Instead of using the above code, you should just restart the whole session. This ensures that your session is completely fresh. It also gives you good discipline since your code should be able to run from a fresh state.</p>
-</section>
-</section>
-<section id="os" class="level2">
-<h2 class="anchored" data-anchor-id="os">OS</h2>
-<section id="try-using-linux" class="level3">
-<h3 class="anchored" data-anchor-id="try-using-linux">Try using Linux</h3>
 
 
 </section>
@@ -514,13 +516,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

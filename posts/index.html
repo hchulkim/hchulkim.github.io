@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -36,14 +36,15 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-d68be38d83eca2bb035acf846ffba811.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-1713c1db1ad41a796903378fc9ac7b2b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -117,7 +118,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -145,6 +146,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Hyoungchul Kim</span>
     </a>
@@ -238,7 +241,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="c29mdHdhcmU=" data-listing-date-sort="1756512000000" data-listing-file-modified-sort="1756961722849" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="22" data-listing-word-count-sort="4286">
+<div class="quarto-post image-right" data-index="0" data-categories="c29mdHdhcmU=" data-listing-date-sort="1756512000000" data-listing-file-modified-sort="1757794050265" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="24" data-listing-word-count-sort="4740">
 <div class="thumbnail"><a href="../posts/reproducible-template/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -268,7 +271,7 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="c3R1ZHk=" data-listing-date-sort="1754092800000" data-listing-file-modified-sort="1756961722844" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="436">
+<div class="quarto-post image-right" data-index="1" data-categories="c3R1ZHk=" data-listing-date-sort="1754092800000" data-listing-file-modified-sort="1757794050260" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="436">
 <div class="thumbnail"><a href="../posts/bandit/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -298,7 +301,7 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="c29mdHdhcmU=" data-listing-date-sort="1754092800000" data-listing-file-modified-sort="1756961722844" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="625">
+<div class="quarto-post image-right" data-index="2" data-categories="c29mdHdhcmU=" data-listing-date-sort="1754092800000" data-listing-file-modified-sort="1757794050260" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="625">
 <div class="thumbnail"><a href="../posts/asahi-linux/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -328,7 +331,7 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="cGVyc29uYWw=" data-listing-date-sort="1749168000000" data-listing-file-modified-sort="1756961722847" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="458">
+<div class="quarto-post image-right" data-index="3" data-categories="cGVyc29uYWw=" data-listing-date-sort="1749168000000" data-listing-file-modified-sort="1757794050263" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="458">
 <div class="thumbnail"><a href="../posts/first-year/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -358,7 +361,7 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="c3R1ZHk=" data-listing-date-sort="1748217600000" data-listing-file-modified-sort="1756961722847" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="528">
+<div class="quarto-post image-right" data-index="4" data-categories="c3R1ZHk=" data-listing-date-sort="1748217600000" data-listing-file-modified-sort="1757794050263" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="528">
 <div class="thumbnail"><a href="../posts/parallel/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -388,7 +391,7 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="c29mdHdhcmU=" data-listing-date-sort="1745280000000" data-listing-file-modified-sort="1756961722847" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="171">
+<div class="quarto-post image-right" data-index="5" data-categories="c29mdHdhcmU=" data-listing-date-sort="1745280000000" data-listing-file-modified-sort="1757794050263" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="171">
 <div class="thumbnail"><a href="../posts/make-file/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -418,7 +421,7 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="c29mdHdhcmU=" data-listing-date-sort="1742515200000" data-listing-file-modified-sort="1756961722845" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="404">
+<div class="quarto-post image-right" data-index="6" data-categories="c29mdHdhcmU=" data-listing-date-sort="1742515200000" data-listing-file-modified-sort="1757794050260" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="404">
 <div class="thumbnail"><a href="../posts/bash-caveats/1 2 3 4 5/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -448,7 +451,7 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="c29mdHdhcmU=" data-listing-date-sort="1741996800000" data-listing-file-modified-sort="1756961722845" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="678">
+<div class="quarto-post image-right" data-index="7" data-categories="c29mdHdhcmU=" data-listing-date-sort="1741996800000" data-listing-file-modified-sort="1757794050260" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="678">
 <div class="thumbnail"><a href="../posts/dockerfile-template/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -478,7 +481,7 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="c29mdHdhcmU=" data-listing-date-sort="1741478400000" data-listing-file-modified-sort="1756961722847" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="382">
+<div class="quarto-post image-right" data-index="8" data-categories="c29mdHdhcmU=" data-listing-date-sort="1741478400000" data-listing-file-modified-sort="1757794050263" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="382">
 <div class="thumbnail"><a href="../posts/quarto-paper-template/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -508,7 +511,7 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="cmVzZWFyY2g=" data-listing-date-sort="1740787200000" data-listing-file-modified-sort="1756961722847" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="102">
+<div class="quarto-post image-right" data-index="9" data-categories="cmVzZWFyY2g=" data-listing-date-sort="1740787200000" data-listing-file-modified-sort="1757794050263" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="102">
 <div class="thumbnail"><a href="../posts/first-cite/index.html" class="no-external">
 
 <p class="card-img-top"><img src="first-cite/cite.PNG"  class="thumbnail-image card-img"/></p>
@@ -538,7 +541,7 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="bGVjdHVyZQ==" data-listing-date-sort="1737331200000" data-listing-file-modified-sort="1756961722845" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="55">
+<div class="quarto-post image-right" data-index="10" data-categories="bGVjdHVyZQ==" data-listing-date-sort="1737331200000" data-listing-file-modified-sort="1757794050261" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="55">
 <div class="thumbnail"><a href="../posts/empirical-econ/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -568,7 +571,7 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="bGVjdHVyZQ==" data-listing-date-sort="1737331200000" data-listing-file-modified-sort="1756961722844" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="70">
+<div class="quarto-post image-right" data-index="11" data-categories="bGVjdHVyZQ==" data-listing-date-sort="1737331200000" data-listing-file-modified-sort="1757794050260" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="70">
 <div class="thumbnail"><a href="../posts/admission-econ/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -598,7 +601,7 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="bGVjdHVyZQ==" data-listing-date-sort="1737331200000" data-listing-file-modified-sort="1756961722849" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="32">
+<div class="quarto-post image-right" data-index="12" data-categories="bGVjdHVyZQ==" data-listing-date-sort="1737331200000" data-listing-file-modified-sort="1757794050265" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="32">
 <div class="thumbnail"><a href="../posts/reproducible-coding-lecture/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -628,7 +631,7 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="YW5ub3VuY2VtZW50" data-listing-date-sort="1737244800000" data-listing-file-modified-sort="1756961722847" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="332">
+<div class="quarto-post image-right" data-index="13" data-categories="YW5ub3VuY2VtZW50" data-listing-date-sort="1737244800000" data-listing-file-modified-sort="1757794050263" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="332">
 <div class="thumbnail"><a href="../posts/hello-quarto/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -658,7 +661,7 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="c3R1ZHk=" data-listing-date-sort="1737072000000" data-listing-file-modified-sort="1756961722849" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="39">
+<div class="quarto-post image-right" data-index="14" data-categories="c3R1ZHk=" data-listing-date-sort="1737072000000" data-listing-file-modified-sort="1757794050265" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="39">
 <div class="thumbnail"><a href="../posts/sql-info/index.html" class="no-external">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -745,13 +748,14 @@ Hyoungchul Kim
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
