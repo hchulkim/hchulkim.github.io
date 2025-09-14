@@ -2,6 +2,7 @@
   {
     "listing": "/posts/index.html",
     "items": [
+      "/posts/dockerfile-trial/index.html",
       "/posts/reproducible-template/index.html",
       "/posts/bandit/index.html",
       "/posts/asahi-linux/index.html",
