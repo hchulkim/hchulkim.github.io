@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -196,10 +231,40 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>I had a chance to create a replication package for my coding assignment this fall. While doing the assignment, I decided to use this opportunity to actually implement a Dockerfile that will work for most of the platforms (e.g.&nbsp;macOC, Linux, ARM/AMD architecture). This is a post on my trial and error on building Docker image with Dockerfile.</p>
+<section id="r-specific-incompatible-binary-issue-with-certain-packages" class="level2">
+<h2 class="anchored" data-anchor-id="r-specific-incompatible-binary-issue-with-certain-packages">(<code>R</code> specific) Incompatible binary issue with certain packages</h2>
+<p>If you have used linux, you would be very familiar with some of the installtion issues with <code>R</code> packages. It just take awful long time to install most of the packages in linux. The reasn is simple: unlike Windows or MacOS, lot of the packages do not have pre-compiled binary for linux. This is sort of due to the fact that there are so many different linux distributions. As Windows or MacOS is a popular OS (Ugh…), it is easier to maintain standard binary for them. However, this is not the case of linux. Due to this reason, linux users need to compile the source code of the package and literally create the binary for the package. Since most of the powerful packages require compilation (they use C/C++/Fortran for creating efficient package), it is not a surprise that it takes a long time to install the package. Even worse, sometimes compilation does not work because you do not have the necessary compilers or necessary system libraries. This means you need to pre-install all the necessary dependencies before compiling the package.</p>
+<p>Fortunately, this issue was recently solved through the help of <code>Rstudio (Posit) Public Package Manager</code>. This is a service that provides fall installtion of binary <code>R</code> packages for linux. Nowadays, most of the packages have their binary counterpart for linux. Thus, you can significantly reduce the time to install the package.</p>
+<p>The problem however, is that the package manager is not perfect. I am not exactly sure why, but it seems binary might not work for some newer version of linux distribution if they were built from some different version of system libraries. This seems to be case for packages like <code>sf</code> and <code>stringi</code>. In order to fix this, for some packages you need to manually install them from source code instead of using the package manager.</p>
+<p>For me, this was for <code>sf</code> and <code>stringi</code>. This gave me a lot of headache because I had the binary version recorded in the <code>renv</code> package. However, the solution was bit simple. I just need to pre-install the packages before initiating <code>renv::restore()</code> in the <code>Dockerfile</code> as follows:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install some R packages from source to avoid error</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">RUN</span> R <span class="at">-q</span> <span class="at">-e</span> <span class="st">"install.packages('stringi', type='source', repos='https://cloud.r-project.org')"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">RUN</span> R <span class="at">-q</span> <span class="at">-e</span> <span class="st">"install.packages('sf', type='source', repos='https://cloud.r-project.org')"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Since I was bit lazy, I did not set specific version for these packages.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> But I am sure you can set it using the <code>remotes</code> package.</p>
+</section>
+<section id="multi-platform-issue" class="level2">
+<h2 class="anchored" data-anchor-id="multi-platform-issue">Multi-platform issue</h2>
+<p>Going deep into reproducibility is that you need to realize that there are two main CPU architecture: <code>amd64 (x86_64)</code> and <code>aarch64 (arm64)</code>. The problem is that base Docker images built on certain CPU platform will not work for the other platform. Also, there are cases where different architecture will require different binary to install certain software. That is, some binary built for <code>amd64</code> will not work for <code>aarch64</code> and vice versa.</p>
+<p>Why should we care about this? Well, the reason is simple: both of the architecture are widely used in the world. <code>amd64</code> is very common architecture for many types of computers. <code>aarch64</code> is also a very common architecture. In fact, you are using <code>aarch64</code> architecture if you are using an Apple Silicon Mac. So the big problem is that if you are using a base Docker image built on <code>amd64</code>, it may not work for people using MacOS.</p>
+</section>
+<section id="another-multi-placform-issue-tinytex" class="level2">
+<h2 class="anchored" data-anchor-id="another-multi-placform-issue-tinytex">Another multi-placform issue: <code>tinytex</code></h2>
+</section>
+<section id="path-setting-for-tinytex-and-ctan-mirror-error" class="level2">
+<h2 class="anchored" data-anchor-id="path-setting-for-tinytex-and-ctan-mirror-error">Path setting for <code>tinytex</code> and CTAN mirror error</h2>
 
 
+</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>To be fair, I did not have too much issue with having different version of <code>stringi</code> and <code>sf</code>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
