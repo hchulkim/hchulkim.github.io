@@ -1,0 +1,15 @@
+{
+  "hash": "515192c4e8cc8b88a3c545ba04f637c1",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"My trial and error with Dockerfile\"\ndescription: \"This is a post on my trial and error on building Docker image with Dockerfile\"\ndate: \"2025-09-13\"\ntoc: false\nengine: knitr\ncategories:\n  - software\n---\n\nI had a chance to create a replication package for my coding assignment this fall. While doing the assignment, I decided to use this opportunity to actually implement a Dockerfile that will work for most of the platforms (e.g. macOC, Linux, ARM/AMD architecture). This is a post on my trial and error on building Docker image with Dockerfile.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

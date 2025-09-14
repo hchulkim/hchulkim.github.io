@@ -1,0 +1,11 @@
+---
+title: "My trial and error with Dockerfile"
+description: "This is a post on my trial and error on building Docker image with Dockerfile"
+date: "2025-09-13"
+toc: false
+engine: knitr
+categories:
+  - software
+---
+
+I had a chance to create a replication package for my coding assignment this fall. While doing the assignment, I decided to use this opportunity to actually implement a Dockerfile that will work for most of the platforms (e.g. macOC, Linux, ARM/AMD architecture). This is a post on my trial and error on building Docker image with Dockerfile.

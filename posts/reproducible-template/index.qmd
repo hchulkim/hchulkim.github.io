@@ -2,7 +2,7 @@
 title: "Hands-on reproducible research workflow"
 description: "This is a detailed post on how to use my replication template (or template for reproducible research workflow) in GitHub"
 date: "2025-08-30"
-toc: true
+toc: false
 engine: knitr
 categories:
   - software
