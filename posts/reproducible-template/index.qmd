@@ -228,7 +228,7 @@ Same problem applies to your source code. When you write your code, you will alw
 
 `Docker` is a tool that allows you to create a container that contains all the dependencies for your code. This means that you can "ship" your computer to other people and they can run your code without having to install all the dependencies on their own computer. This is very useful because it is highly likely that other replicators will be using different operating systems and different versions of the software. By using `Docker`, you can ensure that your code will work on any other computer.
 
-If you want to know the basics of `Docker`, check out [this](https://raw.githack.com/uo-ec607/lectures/master/13-docker/13-docker.html#1).
+If you want to know the basics of `Docker`, check out [this](https://raw.githack.com/uo-ec607/lectures/master/13-docker/13-docker.html#1). In my template, I included two `Dockerfile` files. One is `Dockerfile` which uses **R Rocker project** as the base image and installs some necessary system dependencies for installing certain R packages (e.g. `sf`). It also installs version 1.1.5 of `renv` package. The other is `Dockerfile_r_julia_quarto` which is based on my previously mentioned `Dockerfile` and adds `Julia` and `Quarto`. It also takes care of the issue with installing `tinytex` in AMD and ARM architecture.
 
 ### Use package dependencies managers
 
@@ -240,7 +240,7 @@ Fortunately, you can use package dependenceis managers to resolve this. Package 
 
 If you have multiple scripts, it is hard to remember which script to run and in what order. This is where build automation tools come in. Build automation tools allow you to define the order of the scripts to run and the dependencies between the scripts. This means that you can run your entire workflow with a single command.
 
-There are many build automations tools out there. One of the popular one is [GNU Make](https://www.gnu.org/software/make/).
+There are many build automations tools out there. One of the popular one is [GNU Make](https://www.gnu.org/software/make/). For reference, I have my own `Makefile` file in the template.
 
 ### Make your code invulnerable to "restart session"
 
