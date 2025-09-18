@@ -235,25 +235,107 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="r-specific-incompatible-binary-issue-with-certain-packages">(<code>R</code> specific) Incompatible binary issue with certain packages</h2>
 <p>If you have used linux, you would be very familiar with some of the installtion issues with <code>R</code> packages. It just take awful long time to install most of the packages in linux. The reasn is simple: unlike Windows or MacOS, lot of the packages do not have pre-compiled binary for linux. This is sort of due to the fact that there are so many different linux distributions. As Windows or MacOS is a popular OS (Ugh…), it is easier to maintain standard binary for them. However, this is not the case of linux. Due to this reason, linux users need to compile the source code of the package and literally create the binary for the package. Since most of the powerful packages require compilation (they use C/C++/Fortran for creating efficient package), it is not a surprise that it takes a long time to install the package. Even worse, sometimes compilation does not work because you do not have the necessary compilers or necessary system libraries. This means you need to pre-install all the necessary dependencies before compiling the package.</p>
 <p>Fortunately, this issue was recently solved through the help of <code>Rstudio (Posit) Public Package Manager</code>. This is a service that provides fall installtion of binary <code>R</code> packages for linux. Nowadays, most of the packages have their binary counterpart for linux. Thus, you can significantly reduce the time to install the package.</p>
-<p>The problem however, is that the package manager is not perfect. I am not exactly sure why, but it seems binary might not work for some newer version of linux distribution if they were built from some different version of system libraries. This seems to be case for packages like <code>sf</code> and <code>stringi</code>. In order to fix this, for some packages you need to manually install them from source code instead of using the package manager.</p>
-<p>For me, this was for <code>sf</code> and <code>stringi</code>. This gave me a lot of headache because I had the binary version recorded in the <code>renv</code> package. However, the solution was bit simple. I just need to pre-install the packages before initiating <code>renv::restore()</code> in the <code>Dockerfile</code> as follows:</p>
+<p>The problem however, is that the package manager is not perfect. I am not exactly sure why, but it seems binary might not work for some newer version of linux distribution if they were built from some different version of system libraries. This seems to be case for packages like <code>sf</code> and <code>stringi</code>.</p>
+<p>So how can we solve this? Well if you are using <code>renv</code> R package as your package dependency manager, you can simply use the following command in your <code>Dockerfile</code> to override the repository written in the <code>renv.lock</code> file:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install some R packages from source to avoid error</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">RUN</span> R <span class="at">-q</span> <span class="at">-e</span> <span class="st">"install.packages('stringi', type='source', repos='https://cloud.r-project.org')"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">RUN</span> R <span class="at">-q</span> <span class="at">-e</span> <span class="st">"install.packages('sf', type='source', repos='https://cloud.r-project.org')"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ENV</span> RENV_CONFIG_REPOS_OVERRIDE=https://packagemanager.posit.co/cran/__linux__/noble/latest</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Since I was bit lazy, I did not set specific version for these packages.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> But I am sure you can set it using the <code>remotes</code> package.</p>
+<p>This command will override the repository and install the packages from repository based on certain linux distribution you are using. In this case, I set it to <code>noble</code> which is the Ubuntu 24.04 LTS. This goes nicely with <code>R Rocker project</code> and GitHub Actions because their newest images are based on Ubuntu 24.04 LTS.</p>
+<p>But there is a caveat: current version (<code>1.1.5</code>) of <code>renv</code> package does not support this feature. This is a known issue (<a href="https://github.com/rstudio/renv/issues/2127">#2127</a>). Fortunately, this was resolved but the newer version is not yet released. For now, you need to use the development version of <code>renv</code> package.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> You can install it by running the following command:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">RUN</span> R <span class="at">-e</span> <span class="st">"install.packages('renv', repos = 'https://posit.r-universe.dev')"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section>
 <section id="multi-platform-issue" class="level2">
 <h2 class="anchored" data-anchor-id="multi-platform-issue">Multi-platform issue</h2>
 <p>Going deep into reproducibility is that you need to realize that there are two main CPU architecture: <code>amd64 (x86_64)</code> and <code>aarch64 (arm64)</code>. The problem is that base Docker images built on certain CPU platform will not work for the other platform. Also, there are cases where different architecture will require different binary to install certain software. That is, some binary built for <code>amd64</code> will not work for <code>aarch64</code> and vice versa.</p>
 <p>Why should we care about this? Well, the reason is simple: both of the architecture are widely used in the world. <code>amd64</code> is very common architecture for many types of computers. <code>aarch64</code> is also a very common architecture. In fact, you are using <code>aarch64</code> architecture if you are using an Apple Silicon Mac. So the big problem is that if you are using a base Docker image built on <code>amd64</code>, it may not work for people using MacOS.</p>
+<p>Fortunately, solution is simple: build both <code>amd64</code> and <code>aarch64</code> images. You can do this locally using <code>docker buildx</code> command or you can use this GitHub Actions yaml file:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">name:</span> build_docker</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">on:</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="ex">push:</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="ex">branches:</span> [ master, main ]</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ex">jobs:</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="ex">docker:</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="ex">runs-on:</span> ubuntu-latest</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="ex">env:</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>      <span class="ex">IMAGE_NAME:</span> r_4.5.1   <span class="co"># repo name on Docker Hub: DOCKERHUB_USERNAME/r_4.5.1</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="ex">steps:</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>      <span class="ex">-</span> name: Checkout</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        <span class="ex">uses:</span> actions/checkout@v4</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Enable QEMU so we can cross-build arm64 on amd64 runners</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>      <span class="ex">-</span> name: Set up QEMU</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>        <span class="ex">uses:</span> docker/setup-qemu-action@v3</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Set up Buildx builder</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>      <span class="ex">-</span> name: Set up Docker Buildx</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>        <span class="ex">uses:</span> docker/setup-buildx-action@v3</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>      <span class="ex">-</span> name: Login to Docker Hub</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>        <span class="ex">uses:</span> docker/login-action@v3</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>        <span class="ex">with:</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>          <span class="ex">username:</span> <span class="va">${</span><span class="er">{ secrets.DOCKERHUB_USERNAME </span><span class="va">}</span>}</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>          <span class="ex">password:</span> <span class="va">${</span><span class="er">{ secrets.DOCKERHUB_TOKEN </span><span class="va">}</span>}</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>      <span class="ex">-</span> name: Build and push <span class="er">(</span><span class="ex">multi-arch</span><span class="kw">)</span> <span class="ex">base</span> Dockerfile</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>        <span class="ex">uses:</span> docker/build-push-action@v6</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>        <span class="ex">with:</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>          <span class="ex">context:</span> .</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>          <span class="ex">file:</span> ./Dockerfile</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>          <span class="ex">platforms:</span> linux/amd64,linux/arm64   <span class="co"># &lt;-- key line</span></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>          <span class="ex">push:</span> true</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>          <span class="co"># tag strategy: latest + branch + short sha</span></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>          <span class="ex">tags:</span> <span class="kw">|</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>            <span class="va">${</span><span class="er">{ secrets.DOCKERHUB_USERNAME </span><span class="va">}</span><span class="ex">}/</span><span class="va">${</span><span class="er">{ env.IMAGE_NAME </span><span class="va">}</span><span class="ex">}:latest</span></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>            <span class="va">${</span><span class="er">{ secrets.DOCKERHUB_USERNAME </span><span class="va">}</span><span class="ex">}/</span><span class="va">${</span><span class="er">{ env.IMAGE_NAME </span><span class="va">}</span><span class="ex">}:</span><span class="va">${</span><span class="er">{ github.ref_name </span><span class="va">}</span><span class="ex">}</span></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>            <span class="va">${</span><span class="er">{ secrets.DOCKERHUB_USERNAME </span><span class="va">}</span><span class="ex">}/</span><span class="va">${</span><span class="er">{ env.IMAGE_NAME </span><span class="va">}</span><span class="ex">}:</span><span class="va">${</span><span class="er">{ github.ref_name </span><span class="va">}</span><span class="ex">}-</span><span class="va">${</span><span class="er">{ github.sha </span><span class="va">}</span><span class="ex">}</span></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>          <span class="ex">cache-from:</span> type=gha</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>          <span class="ex">cache-to:</span> type=gha,mode=max</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>          <span class="ex">pull:</span> true</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section>
-<section id="another-multi-placform-issue-tinytex" class="level2">
-<h2 class="anchored" data-anchor-id="another-multi-placform-issue-tinytex">Another multi-placform issue: <code>tinytex</code></h2>
+<section id="another-multi-platform-issue-tinytex" class="level2">
+<h2 class="anchored" data-anchor-id="another-multi-platform-issue-tinytex">Another multi-platform issue: <code>tinytex</code></h2>
+<p>I was also trying to install <code>Quarto</code> because I used it to render my assignment pdf. However, I encountered a problem when I was trying to install <code>tinytex</code> package. <code>Quarto</code> needs tex compiler to render the pdf. One that is used a lot is <code>tinytex</code> because it is a portable and light tex distribution. When I was installing <code>tinytex</code> in <code>amd64</code> image, it was fine because all I need to do is:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">RUN</span> quarto install tinytex</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>which is provided by <code>Quarto</code> command. The issue, however, was when I was trying to same thing for <code>aarch64</code> image. Apparently, it seems the previous command runs a binary that is based on <code>amd64</code> architecture. Thus this command cannot install <code>tinytex</code> for <code>aarch64</code> image. In order to solve this, I created this <code>if</code> statement in the <code>Dockerfile</code> to install <code>tinytex</code> for <code>aarch64</code> image.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Quarto</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ENV</span> QUARTO_VERSION=1.7.32</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">RUN</span> /rocker_scripts/install_quarto.sh</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># --- TinyTeX install (arm64 manual, amd64 via Quarto) ---</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="ex">RUN</span> set <span class="at">-eux</span><span class="kw">;</span> <span class="dt">\</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="bu">[</span> <span class="st">"</span><span class="va">$ARCH_TYPE</span><span class="st">"</span> <span class="ot">=</span> <span class="st">"arm64"</span> <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span> <span class="dt">\</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">wget</span> <span class="at">-qO-</span> <span class="st">"https://yihui.org/tinytex/install-unx.sh"</span> <span class="kw">|</span> <span class="fu">sh</span> <span class="at">-s</span> <span class="at">-</span> <span class="at">--admin</span> <span class="at">--no-path</span><span class="kw">;</span> <span class="dt">\</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> <span class="dt">\</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="ex">quarto</span> install tinytex<span class="kw">;</span> <span class="dt">\</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">fi</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Set TinyTeX path</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="ex">ENV</span> PATH=<span class="st">"/root/.TinyTeX/bin/aarch64-linux:/root/.TinyTeX/bin/x86_64-linux:</span><span class="va">${PATH}</span><span class="st">"</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Set CTAN mirror for tlmgr</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="ex">ENV</span> TEXLIVE_REPOSITORY=<span class="st">"https://ctan.math.illinois.edu/systems/texlive/tlnet"</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Set repo in tlmgr</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="ex">RUN</span> tlmgr option repository <span class="st">"</span><span class="va">$TEXLIVE_REPOSITORY</span><span class="st">"</span><span class="kw">;</span> <span class="dt">\</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>  <span class="ex">tlmgr</span> update <span class="at">--self</span><span class="kw">;</span> <span class="dt">\</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>  <span class="ex">tlmgr</span> update <span class="at">--all</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------------------------------</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Note that if you are only making <code>amd64</code> image, you don’t need to set the tinytex path. I am doing this because in <code>aarch64</code> image, <code>tinytex</code> is installed manually and path is not set by <code>Quarto</code> command.</p>
 </section>
-<section id="path-setting-for-tinytex-and-ctan-mirror-error" class="level2">
-<h2 class="anchored" data-anchor-id="path-setting-for-tinytex-and-ctan-mirror-error">Path setting for <code>tinytex</code> and CTAN mirror error</h2>
+<section id="tinytex-ctan-mirror-error" class="level2">
+<h2 class="anchored" data-anchor-id="tinytex-ctan-mirror-error"><code>tinytex</code> CTAN mirror error</h2>
+<p>This was the most annoying issue I encountered. When <code>tinytex</code> encounter <code>tex</code> package that is not installed in the local system, it uses <code>CTAN</code> mirror in install the necessary <code>tex</code> packages. The problem is that the mirror they refer to is very random… So if you don’t set the mirror, it might occasionally connect to stale one and not be able to install the necessary <code>tex</code> packages. To solve this, you just need to manually set the mirror that seems to be “working.” This is done in the previous code block.</p>
+<p>If you want to look at the full <code>Dockerfile</code>, you can find it <a href="https://github.com/hchulkim/replication-template">here</a>.</p>
 
 
 </section>
@@ -262,7 +344,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>To be fair, I did not have too much issue with having different version of <code>stringi</code> and <code>sf</code>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Let’s hope the newer version gets released soon…<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
