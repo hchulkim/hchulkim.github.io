@@ -8,6 +8,8 @@ categories:
   - software
 ---
 
+**Update: Recently I updated my Dockerfile for my research workflow. You can check it out [here](https://github.com/hchulkim/replication-template).**
+
 During spring break, I had some time to finalize the Dockerfile template for my research workflow. If you don't know what a Docker is, check it out [here](https://raw.githack.com/uo-ec607/lectures/master/13-docker/13-docker.html#1). TL;DR, it is a light virtual machine that contains all the necessary resources for your empirical analysis. It is as if you are shipping your computer to other people that wants to try out your analysis.
 
 If you want the exact replication project folder, click [here](https://github.com/hchulkim/replication-template).
