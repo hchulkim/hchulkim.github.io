@@ -5,10 +5,6 @@ toc: true
 
 ## Software
 
-### Setting up my working environment
-
-- [\[LINK\]](personal/working-environment.qmd)
-
 ### Replication template
 
 - [Replication template](https://github.com/hchulkim/replication-template): This is the replication template I use for my empirical papers. This template follows [DCAS](https://datacodestandards.org/), the Data and Code Availability Standard v1.0 and also follows the [Data and Code Availability Policy of the American Economic Association](https://aeaweb.org/journals/data/data-code-policy/).
@@ -34,16 +30,6 @@ These are some info on the courses that I took or self-studied.
 - PhD Econometrics I (ECON 7300, UPenn, Fall 2024): [\[Personal summary\]](personal/econ7300.qmd)
 
 - PhD Game Theory and Applications (ECON 6110, UPenn, Spring 2025): [\[Personal summary\]](personal/econ6110.qmd)
-
-- PhD Applied Econometrics (HCMG 9010, UPenn, Spring 2025): [Personal summary] 
-
-- PhD Advanced Real Estate and Urban Economics (REAL 9470, UPenn, Spring 2025): [Personal summary] 
-
-- PhD Cities in Developing Countries (REAL 9490, UPenn, Spring 2025): [Personal summary]
-
-- PhD Public Economics (BEPP 9330, UPenn, Spring 2025): [Personal summary] 
-
-- PhD Topics in Empirical Microeconomics: Spatial Economic Analysis (ECON 8400, UPenn, Spring 2025): [Personal summary]
 
 </details>
 
