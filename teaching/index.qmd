@@ -3,6 +3,4 @@ title: Teaching
 toc: true
 ---
  
-For more detailed resources, check out [**this site**](https://hchulkim.github.io/tools-site).
-
 ## The Wharton School, UPenn (T.A.)
