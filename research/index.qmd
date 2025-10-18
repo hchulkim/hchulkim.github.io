@@ -6,7 +6,7 @@ toc: true
 ## Working papers
 
 
-"The China shock and internal migration: Evidence from bilateral migration flows" with [Jaerim Choi](https://sites.google.com/view/jaerimchoi) and [Seung Hoon Lee](https://sites.google.com/view/seunghoon/home). Mar. 2025. [\[Working paper\]](working-paper/migration_china_shock.pdf). *Revise and Resubmit, Canadian Journal of Economics.*
+"The China shock and internal migration: evidence from bilateral migration flows" with [Jaerim Choi](https://sites.google.com/view/jaerimchoi) and [Seung Hoon Lee](https://sites.google.com/view/seunghoon/home). Mar. 2025. [\[Working paper\]](working-paper/migration_china_shock.pdf). *Revise and Resubmit, Canadian Journal of Economics.*
 
 <details>
   <summary>Abstract</summary>
@@ -17,7 +17,7 @@ toc: true
 
 [2] "Does political conflict hurt immigration? Evidence from the South Korea -- China THAAD Dispute" with [Jongkwan Lee](https://sites.google.com/site/kwanlee84/home?authuser=0). Aug. 2024. Published in **_Southern Economic Journal_** \[[Paper](https://onlinelibrary.wiley.com/doi/10.1002/soej.12723)\].
 
-[1] "The well-being of cities: Estimating migration attractiveness from internal migration across Korean cities" with [Seung Hoon Lee](https://sites.google.com/view/seunghoon/home) and Ji Sub Park. Feb. 2024. Published in **_Global Economic Review_** \[[Paper](https://www.tandfonline.com/doi/full/10.1080/1226508X.2023.2282622?scroll=top&needAccess=true)\].
+[1] "The well-being of cities: estimating migration attractiveness from internal migration across Korean cities" with [Seung Hoon Lee](https://sites.google.com/view/seunghoon/home) and Ji Sub Park. Feb. 2024. Published in **_Global Economic Review_** \[[Paper](https://www.tandfonline.com/doi/full/10.1080/1226508X.2023.2282622?scroll=top&needAccess=true)\].
 
 ## Work in progress
 
@@ -25,7 +25,7 @@ toc: true
 
 ## Dormant papers
 
-"The effect of remote working on household waste: Evidence from South Korea" with [Hee-Seung Yang](https://sites.google.com/site/heeseungyang/home). Mar. 2025. [\[Working paper\]](working-paper/wfh-waste.pdf).
+"The effect of remote working on household waste: evidence from South Korea" with [Hee-Seung Yang](https://sites.google.com/site/heeseungyang/home). Mar. 2025. [\[Working paper\]](working-paper/wfh-waste.pdf).
 
 <details>
   <summary>Abstract</summary>
