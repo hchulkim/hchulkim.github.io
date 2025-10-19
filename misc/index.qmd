@@ -17,7 +17,7 @@ toc: true
 
 - `Dockerfile` for empirical analysis (`R`, `Python`, `Julia` with dependency management setup): [\[link\]](https://hchulkim.github.io/posts/dockerfile-template/)
 
-## Courses
+<!-- ## Courses
 
 These are some info on the courses that I took or self-studied.
 
@@ -31,7 +31,7 @@ These are some info on the courses that I took or self-studied.
 
 - PhD Game Theory and Applications (ECON 6110, UPenn, Spring 2025): [\[Personal summary\]](personal/econ6110.qmd)
 
-</details>
+</details> -->
 
 ## Personal tips
 
@@ -41,3 +41,8 @@ These are some info on the courses that I took or self-studied.
 - [Travel tips and recommendations (@Seoul, South Korea)](personal/seoul.qmd)
 
 </details>
+
+## Pictures
+
+- [Past profile pictures](personal/profile_pictures.qmd)
+- [Memorable moments](personal/memorable_moments.qmd)

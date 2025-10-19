@@ -1,0 +1,21 @@
+---
+title: "Past profile pictures"
+date: "2025-10-19"
+toc: false
+fig-cap-location: bottom
+fig-align: left
+---
+
+This is a collection of my past profile pictures.
+
+## 2025
+
+## 2024
+
+![2024 Connections@Wharton event](pic/2024-1.png)
+
+## 2023
+
+![Sinchon, Seoul (near Yonsei University)](pic/2023-1.jpg){width=50%}
+
+
