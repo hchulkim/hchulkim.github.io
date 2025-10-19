@@ -203,18 +203,88 @@
     "text": "Replication template: This is the replication template I use for my empirical papers. This template follows DCAS, the Data and Code Availability Standard v1.0 and also follows the Data and Code Availability Policy of the American Economic Association.\n\n\n\n\n\nQuarto working paper template for Economics: [github link] [Blog post]\n\n\n\n\n\nDockerfile for empirical analysis (R, Python, Julia with dependency management setup): [link]"
   },
   {
-    "objectID": "misc/index.html#courses",
-    "href": "misc/index.html#courses",
-    "title": "Misc.",
-    "section": "Courses",
-    "text": "Courses\nThese are some info on the courses that I took or self-studied.\n\n\nList of courses\n\n\nPhD Microeconomic Theory I (ECON 7100, UPenn, Fall 2024): [Personal summary]\nPhD Macroeconomic Theory I (ECON 7200, UPenn, Fall 2024): [Personal summary]\nPhD Econometrics I (ECON 7300, UPenn, Fall 2024): [Personal summary]\nPhD Game Theory and Applications (ECON 6110, UPenn, Spring 2025): [Personal summary]"
-  },
-  {
     "objectID": "misc/index.html#personal-tips",
     "href": "misc/index.html#personal-tips",
     "title": "Misc.",
     "section": "Personal tips",
     "text": "Personal tips\n\n\nList of tips\n\n\nTravel tips and recommendations (@Seoul, South Korea)"
+  },
+  {
+    "objectID": "misc/index.html#pictures",
+    "href": "misc/index.html#pictures",
+    "title": "Misc.",
+    "section": "Pictures",
+    "text": "Pictures\n\nPast profile pictures\nMemorable moments"
+  },
+  {
+    "objectID": "misc/personal/econ7300.html",
+    "href": "misc/personal/econ7300.html",
+    "title": "ECON-7300",
+    "section": "",
+    "text": "This is an informal note to record what I thought about or what I thought was important in the Metrics I class.\n\nGMM\nIf I can only choose one thing to remember in Metrics I, I would definitely choose GMM. This is mostly because many of the methods we learn in Metrics (at least in the first semester) are in the end some specific form of GMM. For example, IV is just a particular type of GMM. Also, I feel lot of the metrics portion of the applied economics papers are just about finding some moment conditions and estimating the model.\n\n\nData cannot speak for itself\nAs long as we are concerned about some endogeneity problem (which is a common problem in economics), we always needs some assumption to move forward. Just having more data will not solve your problem. In order to identify the parameter of interest, we need economic theory to guide us."
+  },
+  {
+    "objectID": "misc/personal/memorable_moments.html",
+    "href": "misc/personal/memorable_moments.html",
+    "title": "Memorable moments",
+    "section": "",
+    "text": "This is a collection of my memorable moments."
+  },
+  {
+    "objectID": "misc/personal/memorable_moments.html#section",
+    "href": "misc/personal/memorable_moments.html#section",
+    "title": "Memorable moments",
+    "section": "2025-2026",
+    "text": "2025-2026\n\nSecond-year PhD"
+  },
+  {
+    "objectID": "misc/personal/memorable_moments.html#section-1",
+    "href": "misc/personal/memorable_moments.html#section-1",
+    "title": "Memorable moments",
+    "section": "2024-2025",
+    "text": "2024-2025\n\nFirst-year PhD"
+  },
+  {
+    "objectID": "misc/personal/econ6110.html",
+    "href": "misc/personal/econ6110.html",
+    "title": "ECON-6110",
+    "section": "",
+    "text": "This is an informal note to record what I thought about or what I thought was important in the Game theory class."
+  },
+  {
+    "objectID": "misc/personal/econ6110.html#hemi-continuity-and-fixed-point-theorem",
+    "href": "misc/personal/econ6110.html#hemi-continuity-and-fixed-point-theorem",
+    "title": "ECON-6110",
+    "section": "Hemi-continuity and fixed point theorem",
+    "text": "Hemi-continuity and fixed point theorem\nWhen I was first learned about hemi-continuity in math camp, I was not sure why we need to know this concept. The only intuition I had was that it is sort of a generalization of the continuity definition to correspondence. But after taking the game theory course, I finally realized that we need this condition to apply Kakutani fixed point theorem. FYI, we need kakutani fixed point theorem to prove that Nash eqm exists.\n\nEx-ante, interim, ex-post\nWhen talking about (expected) payoff of agents, it is important to know whether the agents are maximizing ex-ante, interim, or ex-post. For example, revenue equivalence theorem in auction is about equivalence of autioneer’s expected payoff ex-ante, not ex-post. Fortunately, chatgpt did a good job in summarizing the definition in a table.\n\n\n\nNormal form and extensive form\nIt is important to note that the main difference between normal form game and extensive form game is not the timing. That is, fundamental difference between normal form and extensive form game is not whether the agents make decisions at the same time or not. For example, think of a game where agents makes decisions at different timing but they cannot observe others’ actions. In this setting, the game is still a normal form. The game becomes “extensive” when some agents can observe other agents’ actions before making their own decisions. Thus, the main factor that differentiates normal form and extensive form is whether agents make their actions after observing other’s actions.\n\n\nAdverse selection\nI thought it was interesting to learn that the key takeaway from adverse selection isn’t just the presence of information asymmetry between agents, but that this asymmetry impacts other agents’ payoffs. In fact, this is the main factor leading to the presence of adverse selection. In the famous lemon market example, adverse selection will not occur if there were separate and independent dimensions of utility for the seller and buyer.\n\n\nRevenue equivalence theorem\nAlthough I learned this concept in undergraduate micro class, it was still very cool to know that ex-ante expected revenue becomes equivalent for all standard auction games."
+  },
+  {
+    "objectID": "misc/personal/econ7200.html",
+    "href": "misc/personal/econ7200.html",
+    "title": "ECON-7200",
+    "section": "",
+    "text": "This is an informal note to record what I thought about or what I thought was important in the Macroeconomics I class.\n\nCompetitive eqm, efficiency, and GE\nI don’t know why, but I always feel that macro course does a better job of explaining the concep of GE, competitive eqm, and the welfare theorem than the second portion of micro course. It was nice to see how we start with simple Arrow-Debreu setup and derive the competitive equilibrium. Then we use welfare theorem to connect the competitive eqm to pareto efficiency.\n\n\nDynamics"
+  },
+  {
+    "objectID": "research-idea/index.html",
+    "href": "research-idea/index.html",
+    "title": "Research idea checklist",
+    "section": "",
+    "text": "High-level (at least two for JMP, one for decent paper)\n\nNew? (literature frontier).\nInteresting? (Real-world relevance, policy implementation).\nData? (New data).\n\n\n\nRQ specification\n\nFind concrete real-life example or policy.\nCheck data.\nSpecify trade-off.\nSpecify the setting (agents, outcomes, etc).\nSpecify potential research design (identification).\nSpecify simple economic model.\n\n\n\nFinal checklist\n\nTalk to other PhDs.\nTalk to faculties (2+).\nPresent preliminary ideas."
+  },
+  {
+    "objectID": "misc/personal/working-environment.html",
+    "href": "misc/personal/working-environment.html",
+    "title": "Setting up working environment",
+    "section": "",
+    "text": "Preface\nThis is just a note for myself to re-setup my working environment on Linux (I am using Ubuntu) so that I don’t forget what I need to do.\n\n\nTerminal\n\nInstall fastfetch\n\nsudo add-apt-repository ppa:fastfetch/stable\nsudo apt install fastfetch \n\n# add `fastfetch` in `.bashrc` file.\n\n\n\n\nVim\n\nInstall Vim and set it as default text editor\n\nsudo apt update\nsudo apt install vim\n\nsudo update-alternatives --config editor\n\n\n\nInstall Vim-plugin\nFollow this link: LINK\nSome plugins I use (Example of .vimrc file)\n\ncall plug#begin()\n\n\" List your plugins here\nPlug 'sirver/ultisnips'\nPlug 'lervag/vimtex'\nPlug 'KeitaNakamura/tex-conceal.vim'\nPlug 'arcticicestudio/nord-vim'\nPlug 'preservim/nerdtree'\n\ncall plug#end()\n\nlet g:UltiSnipsExpandTrigger = '&lt;tab&gt;'\nlet g:UltiSnipsJumpForwardTrigger = '&lt;tab&gt;'\nlet g:UltiSnipsJumpBackwardTrigger = '&lt;s-tab&gt;'\nlet g:vimtex_view_method = 'zathura'\nlet g:vimtex_quickfix_mode = 0\nlet g:lightline = {'colorscheme' : 'nord'}\n\nsetlocal spell\nset spelllang=en_us\ninoremap &lt;C-l&gt; &lt;c-g&gt;u&lt;Esc&gt;[s1z=`]a&lt;c-g&gt;u\n\ncolorscheme nord\n\n\n\nSetup Vimtex with zathura\nFollow this: https://github.com/lervag/vimtex. Also remember that you need to install separate tex compiler to use tex.\n\n\n\nInstall R\nJust follow this site: https://pmassicotte.github.io/linux-mint-dev-environment/installr.html.\nI will just post my current .Rprofile file for reference:\n\nif (interactive() && Sys.getenv(\"RSTUDIO\") == \"\") {\n  Sys.setenv(TERM_PROGRAM = \"vscode\")\n  if (\"httpgd\" %in% .packages(all.available = TRUE)) {\n    options(vsc.plot = FALSE)\n    options(device = function(...) {\n      httpgd::hgd(silent = TRUE)\n      .vsc.browser(httpgd::hgd_url(history = FALSE), viewer = \"Beside\")\n    })\n  }\n  source(file.path(Sys.getenv(if (.Platform$OS.type == \"windows\") \"USERPROFILE\" else \"HOME\"), \".vscode-R\", \"init.R\"))\n}\n\n# Connect to public package manager\noptions(repos = c(CRAN = \"https://packagemanager.posit.co/cran/__linux__/rhel9/latest\"))\n\n# This is important if you are using RSPM on Linux outside RStudio\noptions(HTTPUserAgent = sprintf(\"R/%s R (%s)\", getRversion(), paste(getRversion(), R.version[\"platform\"], R.version[\"arch\"], R.version[\"os\"])))"
+  },
+  {
+    "objectID": "misc/personal/econ7100.html",
+    "href": "misc/personal/econ7100.html",
+    "title": "ECON-7100",
+    "section": "",
+    "text": "This is an informal note to record what I thought about or what I thought was important in the Microeconomics I class.\n\ntba"
   },
   {
     "objectID": "misc/personal/seoul.html",
@@ -266,53 +336,32 @@
     "text": "Footnotes\n\n\nIt also holds few other records: (1) 8th tallest building in the world, (2) Tallest building out of all OECD countries.↩︎\nJust be careful not to confuse Sinchon with Sincheon. The one I am referring to is located in the north of the river. On the other hand, Sincheon is located in the south.↩︎"
   },
   {
-    "objectID": "misc/personal/econ6110.html",
-    "href": "misc/personal/econ6110.html",
-    "title": "ECON-6110",
+    "objectID": "misc/personal/profile_pictures.html",
+    "href": "misc/personal/profile_pictures.html",
+    "title": "Past profile pictures",
     "section": "",
-    "text": "This is an informal note to record what I thought about or what I thought was important in the Game theory class."
+    "text": "This is a collection of my past profile pictures."
   },
   {
-    "objectID": "misc/personal/econ6110.html#hemi-continuity-and-fixed-point-theorem",
-    "href": "misc/personal/econ6110.html#hemi-continuity-and-fixed-point-theorem",
-    "title": "ECON-6110",
-    "section": "Hemi-continuity and fixed point theorem",
-    "text": "Hemi-continuity and fixed point theorem\nWhen I was first learned about hemi-continuity in math camp, I was not sure why we need to know this concept. The only intuition I had was that it is sort of a generalization of the continuity definition to correspondence. But after taking the game theory course, I finally realized that we need this condition to apply Kakutani fixed point theorem. FYI, we need kakutani fixed point theorem to prove that Nash eqm exists.\n\nEx-ante, interim, ex-post\nWhen talking about (expected) payoff of agents, it is important to know whether the agents are maximizing ex-ante, interim, or ex-post. For example, revenue equivalence theorem in auction is about equivalence of autioneer’s expected payoff ex-ante, not ex-post. Fortunately, chatgpt did a good job in summarizing the definition in a table.\n\n\n\nNormal form and extensive form\nIt is important to note that the main difference between normal form game and extensive form game is not the timing. That is, fundamental difference between normal form and extensive form game is not whether the agents make decisions at the same time or not. For example, think of a game where agents makes decisions at different timing but they cannot observe others’ actions. In this setting, the game is still a normal form. The game becomes “extensive” when some agents can observe other agents’ actions before making their own decisions. Thus, the main factor that differentiates normal form and extensive form is whether agents make their actions after observing other’s actions.\n\n\nAdverse selection\nI thought it was interesting to learn that the key takeaway from adverse selection isn’t just the presence of information asymmetry between agents, but that this asymmetry impacts other agents’ payoffs. In fact, this is the main factor leading to the presence of adverse selection. In the famous lemon market example, adverse selection will not occur if there were separate and independent dimensions of utility for the seller and buyer.\n\n\nRevenue equivalence theorem\nAlthough I learned this concept in undergraduate micro class, it was still very cool to know that ex-ante expected revenue becomes equivalent for all standard auction games."
+    "objectID": "misc/personal/profile_pictures.html#section",
+    "href": "misc/personal/profile_pictures.html#section",
+    "title": "Past profile pictures",
+    "section": "2025",
+    "text": "2025"
   },
   {
-    "objectID": "misc/personal/econ7200.html",
-    "href": "misc/personal/econ7200.html",
-    "title": "ECON-7200",
-    "section": "",
-    "text": "This is an informal note to record what I thought about or what I thought was important in the Macroeconomics I class.\n\nCompetitive eqm, efficiency, and GE\nI don’t know why, but I always feel that macro course does a better job of explaining the concep of GE, competitive eqm, and the welfare theorem than the second portion of micro course. It was nice to see how we start with simple Arrow-Debreu setup and derive the competitive equilibrium. Then we use welfare theorem to connect the competitive eqm to pareto efficiency.\n\n\nDynamics"
+    "objectID": "misc/personal/profile_pictures.html#section-1",
+    "href": "misc/personal/profile_pictures.html#section-1",
+    "title": "Past profile pictures",
+    "section": "2024",
+    "text": "2024\n\n\n\n2024 Connections@Wharton event"
   },
   {
-    "objectID": "research-idea/index.html",
-    "href": "research-idea/index.html",
-    "title": "Research idea checklist",
-    "section": "",
-    "text": "High-level (at least two for JMP, one for decent paper)\n\nNew? (literature frontier).\nInteresting? (Real-world relevance, policy implementation).\nData? (New data).\n\n\n\nRQ specification\n\nFind concrete real-life example or policy.\nCheck data.\nSpecify trade-off.\nSpecify the setting (agents, outcomes, etc).\nSpecify potential research design (identification).\nSpecify simple economic model.\n\n\n\nFinal checklist\n\nTalk to other PhDs.\nTalk to faculties (2+).\nPresent preliminary ideas."
-  },
-  {
-    "objectID": "misc/personal/working-environment.html",
-    "href": "misc/personal/working-environment.html",
-    "title": "Setting up working environment",
-    "section": "",
-    "text": "Preface\nThis is just a note for myself to re-setup my working environment on Linux (I am using Ubuntu) so that I don’t forget what I need to do.\n\n\nTerminal\n\nInstall fastfetch\n\nsudo add-apt-repository ppa:fastfetch/stable\nsudo apt install fastfetch \n\n# add `fastfetch` in `.bashrc` file.\n\n\n\n\nVim\n\nInstall Vim and set it as default text editor\n\nsudo apt update\nsudo apt install vim\n\nsudo update-alternatives --config editor\n\n\n\nInstall Vim-plugin\nFollow this link: LINK\nSome plugins I use (Example of .vimrc file)\n\ncall plug#begin()\n\n\" List your plugins here\nPlug 'sirver/ultisnips'\nPlug 'lervag/vimtex'\nPlug 'KeitaNakamura/tex-conceal.vim'\nPlug 'arcticicestudio/nord-vim'\nPlug 'preservim/nerdtree'\n\ncall plug#end()\n\nlet g:UltiSnipsExpandTrigger = '&lt;tab&gt;'\nlet g:UltiSnipsJumpForwardTrigger = '&lt;tab&gt;'\nlet g:UltiSnipsJumpBackwardTrigger = '&lt;s-tab&gt;'\nlet g:vimtex_view_method = 'zathura'\nlet g:vimtex_quickfix_mode = 0\nlet g:lightline = {'colorscheme' : 'nord'}\n\nsetlocal spell\nset spelllang=en_us\ninoremap &lt;C-l&gt; &lt;c-g&gt;u&lt;Esc&gt;[s1z=`]a&lt;c-g&gt;u\n\ncolorscheme nord\n\n\n\nSetup Vimtex with zathura\nFollow this: https://github.com/lervag/vimtex. Also remember that you need to install separate tex compiler to use tex.\n\n\n\nInstall R\nJust follow this site: https://pmassicotte.github.io/linux-mint-dev-environment/installr.html.\nI will just post my current .Rprofile file for reference:\n\nif (interactive() && Sys.getenv(\"RSTUDIO\") == \"\") {\n  Sys.setenv(TERM_PROGRAM = \"vscode\")\n  if (\"httpgd\" %in% .packages(all.available = TRUE)) {\n    options(vsc.plot = FALSE)\n    options(device = function(...) {\n      httpgd::hgd(silent = TRUE)\n      .vsc.browser(httpgd::hgd_url(history = FALSE), viewer = \"Beside\")\n    })\n  }\n  source(file.path(Sys.getenv(if (.Platform$OS.type == \"windows\") \"USERPROFILE\" else \"HOME\"), \".vscode-R\", \"init.R\"))\n}\n\n# Connect to public package manager\noptions(repos = c(CRAN = \"https://packagemanager.posit.co/cran/__linux__/rhel9/latest\"))\n\n# This is important if you are using RSPM on Linux outside RStudio\noptions(HTTPUserAgent = sprintf(\"R/%s R (%s)\", getRversion(), paste(getRversion(), R.version[\"platform\"], R.version[\"arch\"], R.version[\"os\"])))"
-  },
-  {
-    "objectID": "misc/personal/econ7100.html",
-    "href": "misc/personal/econ7100.html",
-    "title": "ECON-7100",
-    "section": "",
-    "text": "This is an informal note to record what I thought about or what I thought was important in the Microeconomics I class.\n\ntba"
-  },
-  {
-    "objectID": "misc/personal/econ7300.html",
-    "href": "misc/personal/econ7300.html",
-    "title": "ECON-7300",
-    "section": "",
-    "text": "This is an informal note to record what I thought about or what I thought was important in the Metrics I class.\n\nGMM\nIf I can only choose one thing to remember in Metrics I, I would definitely choose GMM. This is mostly because many of the methods we learn in Metrics (at least in the first semester) are in the end some specific form of GMM. For example, IV is just a particular type of GMM. Also, I feel lot of the metrics portion of the applied economics papers are just about finding some moment conditions and estimating the model.\n\n\nData cannot speak for itself\nAs long as we are concerned about some endogeneity problem (which is a common problem in economics), we always needs some assumption to move forward. Just having more data will not solve your problem. In order to identify the parameter of interest, we need economic theory to guide us."
+    "objectID": "misc/personal/profile_pictures.html#section-2",
+    "href": "misc/personal/profile_pictures.html#section-2",
+    "title": "Past profile pictures",
+    "section": "2023",
+    "text": "2023\n\n\n\nSinchon, Seoul (near Yonsei University)"
   },
   {
     "objectID": "posts/sql-info/index.html",
