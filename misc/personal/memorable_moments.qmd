@@ -15,3 +15,13 @@ This is a collection of my memorable moments.
 ## 2024-2025
 
 ### First-year PhD
+
+### Chiang Mai, Thailand
+
+::: {layout-ncol=2}
+![](pic/elephant1.JPG)
+
+![](pic/elephant3.JPG)
+
+![](pic/elephant2.JPG)
+:::

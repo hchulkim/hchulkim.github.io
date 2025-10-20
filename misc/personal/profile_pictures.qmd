@@ -10,6 +10,12 @@ This is a collection of my past profile pictures.
 
 ## 2025
 
+::: {layout-ncol=2}
+![@Locust Walk, Wharton Penn](pic/2025-1.jpeg)
+
+![](pic/2025-3.jpeg)
+:::
+
 ## 2024
 
 ![2024 Connections@Wharton event](pic/2024-1.png)
