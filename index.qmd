@@ -1,6 +1,6 @@
 ---
 title: "Hyoungchul Kim"
-image: bio-picture.png
+image: bio-picture.jpeg
 about:
   template: solana #jolla trestles
   links:
