@@ -28,6 +28,6 @@ I am a Ph.D. student in <span style="color:#011F5B;">**Applied Economics**</span
 
 You can either call me <span style="color:#011F5B;">**Hyoungchul (H-Young-Cheol, rhymes with "Null")**</span> or <span style="color:#011F5B;">**Kent (my english name)**</span>.
 
-I am currently interested in the intersection of international trade and industrial organization, with a particular focus on topics in environment.
+I am currently interested in urban and environmental topics using tools from international trade and industrial organization.
 
 For inquiries about software, email me or use the issue tracker at GitHub.
