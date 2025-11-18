@@ -23,6 +23,10 @@ toc: true
 
 - "Investment and deforestation under uncertain market access: evidence from the Mexican avocado boom" with [Prakash Mishra](https://sites.google.com/mishra.org/prakashmishra), [Sebastian Sardon](https://sites.northwestern.edu/ssardon/) and [James E. Sayre](http://jaysayre.com)
 
+## Other works
+
+[1] A comment on “Malaria suitability, urbanization and persistence: Evidence from China over more than 2000 years” with [Marc Joëts](https://www.marcjoets.com/), [Stefania Lovo](https://sites.google.com/site/stefanialovo/) and [Niklas Murken](https://www.rwi-essen.de/rwi/team/person/niklas-murken). Nov. 2025. _UKRN replication game_. **_Institute for Replication_**.
+
 <!-- ## Dormant papers
 
 "The effect of remote working on household waste: evidence from South Korea" with [Hee-Seung Yang](https://sites.google.com/site/heeseungyang/home). Mar. 2025. [\[Working paper\]](working-paper/wfh-waste.pdf).
