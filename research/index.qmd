@@ -25,7 +25,7 @@ toc: true
 
 ## Other works
 
-[1] A comment on “Malaria suitability, urbanization and persistence: Evidence from China over more than 2000 years” with [Marc Joëts](https://www.marcjoets.com/), [Stefania Lovo](https://sites.google.com/site/stefanialovo/) and [Niklas Murken](https://www.rwi-essen.de/rwi/team/person/niklas-murken). Nov. 2025. _UKRN replication game_. **_Institute for Replication_**.
+[1] A comment on “Malaria suitability, urbanization and persistence: Evidence from China over more than 2000 years” with [Marc Joëts](https://www.marcjoets.com/), [Stefania Lovo](https://sites.google.com/site/stefanialovo/) and [Niklas Murken](https://www.rwi-essen.de/rwi/team/person/niklas-murken). Nov. 2025. _UKRN replication game_. **_Institute for Replication_**. \[[Paper](working-paper/malaria_urban_china_EER.pdf)\]
 
 <!-- ## Dormant papers
 
