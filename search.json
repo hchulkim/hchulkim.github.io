@@ -4,14 +4,14 @@
     "href": "misc/index.html",
     "title": "Misc.",
     "section": "",
-    "text": "Replication template: This is the replication template I use for my empirical papers. This template follows DCAS, the Data and Code Availability Standard v1.0 and also follows the Data and Code Availability Policy of the American Economic Association.\n\n\n\n\n\nQuarto working paper template for Economics: [github link] [Blog post]\n\n\n\n\n\nDockerfile for empirical analysis (R, Python, Julia with dependency management setup): [link]"
+    "text": "Replication template with nix (rix): I updated the past replication template to use nix (rix) for package management. This is a more modern and flexible way to manage packages for your research workflow.\nReplication template (legacy): This is the replication template I use for my empirical papers. This template follows DCAS, the Data and Code Availability Standard v1.0 and also follows the Data and Code Availability Policy of the American Economic Association.\n\n\n\n\n\nQuarto working paper template for Economics: [github link] [Blog post]\n\n\n\n\n\nDockerfile for empirical analysis (R, Python, Julia with dependency management setup): [link]"
   },
   {
     "objectID": "misc/index.html#software",
     "href": "misc/index.html#software",
     "title": "Misc.",
     "section": "",
-    "text": "Replication template: This is the replication template I use for my empirical papers. This template follows DCAS, the Data and Code Availability Standard v1.0 and also follows the Data and Code Availability Policy of the American Economic Association.\n\n\n\n\n\nQuarto working paper template for Economics: [github link] [Blog post]\n\n\n\n\n\nDockerfile for empirical analysis (R, Python, Julia with dependency management setup): [link]"
+    "text": "Replication template with nix (rix): I updated the past replication template to use nix (rix) for package management. This is a more modern and flexible way to manage packages for your research workflow.\nReplication template (legacy): This is the replication template I use for my empirical papers. This template follows DCAS, the Data and Code Availability Standard v1.0 and also follows the Data and Code Availability Policy of the American Economic Association.\n\n\n\n\n\nQuarto working paper template for Economics: [github link] [Blog post]\n\n\n\n\n\nDockerfile for empirical analysis (R, Python, Julia with dependency management setup): [link]"
   },
   {
     "objectID": "misc/index.html#personal-tips",
