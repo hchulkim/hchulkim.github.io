@@ -7,7 +7,8 @@ toc: true
 
 ### Replication template
 
-- [Replication template](https://github.com/hchulkim/replication-template): This is the replication template I use for my empirical papers. This template follows [DCAS](https://datacodestandards.org/), the Data and Code Availability Standard v1.0 and also follows the [Data and Code Availability Policy of the American Economic Association](https://aeaweb.org/journals/data/data-code-policy/).
+- [Replication template with nix (rix)](https://github.com/hchulkim/replication-template-nix): I updated the past replication template to use nix (rix) for package management. This is a more modern and flexible way to manage packages for your research workflow.
+- [Replication template (legacy)](https://github.com/hchulkim/replication-template): This is the replication template I use for my empirical papers. This template follows [DCAS](https://datacodestandards.org/), the Data and Code Availability Standard v1.0 and also follows the [Data and Code Availability Policy of the American Economic Association](https://aeaweb.org/journals/data/data-code-policy/).
 
 ### Quarto
 
