@@ -1,0 +1,168 @@
+---
+title: "My first trial and error with installing Arch Linux"
+description: "Installing Arch Linux on Tuxedo Computers InfinityBook Pro 15"
+date: "2026--1-25"
+toc: false
+engine: knitr
+categories:
+  - software
+---
+
+I had some time to try Arch Linux on my Tuxedo Computers InfinityBook Pro 15. It was a bit of a hassle but I managed to get it working. For most of the installation, I followed the [Arch Linux installation guide](https://wiki.archlinux.org/title/Installation_guide). Fortunately, Arch Linux has a very helpful up-to-date documentation so you will not have much trouble following the guide. However, there were some additional hassle that were not super explicit in the documentation. In this blog, I will try to write them down just for reference. 
+
+# Before and during installtion
+
+## Creating a bootable USB drive
+
+In order to install Arch Linux, you need to create a bootable USB drive. There are many options to do this. I used [Ventoy](ventoy.net) which was very intuitive.
+
+## Setting up wifi
+
+Before installing Arch Linux, you need to set up wifi first. If you have a wired connection, you can skip this section.
+
+```{bash}
+#| echo: true
+#| eval: false
+
+# type iwctl to get into the interactive prompt given by iwd (wireless daemon)
+iwctl
+
+# list device names for wireless network connection
+station list # probably you will see something like wlan0
+
+# scan and get networks available
+station wlan0 scan
+station wlan0 get-networks
+
+# enter name for the network
+station wlan0 connect <network-name>
+
+# enter password for the network when prompted
+
+# exit the iwctl prompt
+exit
+
+# check if the connection is successful
+ping -c 4 google.com
+
+```
+
+## Enabling wifi connection after installation
+
+During the installtion, I installed networkmanager to manage wifi connections. You can do this by additionaly installing `networkmanager` package when you are following the installation guide on `pacstrap`. Also, make sure to enable the service by running `systemctl enable NetworkManager`.
+
+However, unlike other installation guide, I found out that the wifi connection was not automatically connected after installation. In order to fix this, you need to run the following command after you boot into the new system:
+
+```{bash}
+#| echo: true
+#| eval: false
+
+# this command will get you into a GUI-like wifi connection system. 
+# You can use it to connect to your wifi.
+nmtui 
+
+```
+
+## Adding a user and giving them sudo permission
+
+When you are using the computer, it is very likely that you will be login yourself as some user. During the installtion, make sure you create a user using this command:
+
+```{bash}
+#| echo: true
+#| eval: false
+
+# add user
+useradd -m -G wheel -s /bin/bash [USERNAME]
+
+# create password for the user
+passwd [USERNAME]
+
+# give sudo permission to the user. 
+# To do this, use the command below to go into the script and uncomment the section where it says "uncomment to allow members of group wheel to execute any command."
+EDITOR=vim visudo
+```
+
+## Installing GRUB
+
+After you have installed the system, you need to install GRUB to the disk. This is done by running the following command:[^1]
+
+[^1]: I am using UEFI boot mode. If you are using BIOS boot mode, you need to use different command. Also, make sure to use the correct target and efi-directory that is specific to your system. It seems that sometimes this command works even if you don't specify the target and efi-directory. But for me, I had to specify them.
+
+```{bash}
+#| echo: true
+#| eval: false
+
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
+```
+
+You also need to generate a configuration file for GRUB. To do that use the following command:
+
+```{bash}
+#| echo: true
+#| eval: false
+
+grub-mkconfig -o /boot/grub/grub.cfg 
+
+```
+
+## Unmounting all the drives
+
+After following all the installation steps, you need to unmount all the drives. This is done by running the following command:
+
+```{bash}
+#| echo: true
+#| eval: false
+
+# unmount all the drives
+umount -a
+```
+
+## Rebooting the system
+
+After you have unmounted all the drives, you can reboot the system by running the following command:
+
+```{bash}
+#| echo: true
+#| eval: false
+
+# reboot the system
+reboot
+```
+
+# Post-installation
+
+## Using audio and bluetooth
+
+You need to install some packages to use the audio of the computer. I used `pulseaudio` but heard `pipewire` is something people use more nowadays.
+
+To use bluetooth, you need to type following commands:
+
+```{bash}
+#| echo: true
+#| eval: false
+
+# install packages necessary to use bluetooth
+sudo pacman -S bluez bluez-utils
+
+# enable the bluetooth system
+sudo systemctl enable bluetooth.service
+
+# start bluetooth interactive prompt to starting connecting your device
+bluetoothctl
+
+# turn on the power and do necessary steps before connecting
+power on
+agent on
+default-agent
+
+# turn on the scan to get the bluetooth ID for your device
+scan on
+
+# finish connecting the device
+# for some devices, you might have to enter password shown in the terminal
+trust [BLUETOOTH ID]
+pair [BLUETOOTH ID]
+connect [BLUETOOTH ID]
+
+# After that, make sure you auto enable the bluetooth my going into the `/etc/bluetooth/main.conf` and uncomment the line that says `AutoEnable=true`.
+```

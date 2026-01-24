@@ -21,8 +21,8 @@ website:
         href: https://github.com/hchulkim
       - icon: twitter
         href: https://x.com/hckim_econ
-      - text: "{{< iconify fa6-brands:bluesky >}}"
-        href: https://bsky.app/profile/himakun.bsky.social
+      # - text: "{{< iconify fa6-brands:bluesky >}}"
+      #   href: https://bsky.app/profile/himakun.bsky.social
   favicon: favicon.ico
   open-graph: true
 format:

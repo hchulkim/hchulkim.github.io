@@ -2,55 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://hchulkim.github.io/posts/hello-quarto/index.html</loc>
-    <lastmod>2025-11-18T05:03:26.784Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.423Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/research/index.html</loc>
-    <lastmod>2025-12-05T17:21:46.902Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.424Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/index.html</loc>
-    <lastmod>2025-11-28T01:41:41.570Z</lastmod>
+    <lastmod>2026-01-24T17:49:53.691Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/teaching/index.html</loc>
-    <lastmod>2025-11-18T05:03:26.790Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.433Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/posts/index.html</loc>
-    <lastmod>2025-11-18T05:03:26.784Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.423Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/posts/sql-info/index.html</loc>
-    <lastmod>2025-11-18T05:03:26.786Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.424Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/posts/reproducible-coding-lecture/index.html</loc>
-    <lastmod>2025-11-18T05:03:26.786Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.424Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/posts/admission-econ/index.html</loc>
-    <lastmod>2025-11-18T05:03:26.782Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.423Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/posts/first-cite/index.html</loc>
-    <lastmod>2025-11-18T05:03:26.784Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.423Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/posts/empirical-econ/index.html</loc>
-    <lastmod>2025-11-18T05:03:26.783Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.423Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/misc/index.html</loc>
-    <lastmod>2025-12-05T17:23:45.372Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.386Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/posts/quarto-paper-template/index.html</loc>
-    <lastmod>2025-11-18T05:03:26.785Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.423Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/posts/dockerfile-template/index.html</loc>
-    <lastmod>2025-11-18T05:03:26.782Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.423Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/posts/bash-caveats/index.html</loc>
@@ -58,70 +58,74 @@
   </url>
   <url>
     <loc>https://hchulkim.github.io/posts/bash-caveats/1 2 3 4 5/index.html</loc>
-    <lastmod>2025-11-18T05:03:26.782Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.423Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/posts/make-file/index.html</loc>
-    <lastmod>2025-11-18T05:03:26.785Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.423Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/misc/personal/econ6110.html</loc>
-    <lastmod>2025-11-18T05:03:26.721Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.388Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/misc/personal/econ7200.html</loc>
-    <lastmod>2025-11-18T05:03:26.721Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.388Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/misc/personal/econ7100.html</loc>
-    <lastmod>2025-11-18T05:03:26.721Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.388Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/misc/personal/econ7300.html</loc>
-    <lastmod>2025-11-18T05:03:26.730Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.388Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/research-idea/index.html</loc>
-    <lastmod>2025-11-18T05:03:26.786Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.424Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/posts/bandit/index.html</loc>
-    <lastmod>2025-11-18T05:03:26.782Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.423Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/posts/parallel/index.html</loc>
-    <lastmod>2025-11-18T05:03:26.785Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.423Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/posts/first-year/index.html</loc>
-    <lastmod>2025-11-18T05:03:26.784Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.423Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/misc/personal/working-environment.html</loc>
-    <lastmod>2025-11-18T05:03:26.781Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.420Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/misc/personal/seoul.html</loc>
-    <lastmod>2025-11-18T05:03:26.781Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.420Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/posts/asahi-linux/index.html</loc>
-    <lastmod>2025-11-18T05:03:26.782Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.423Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/posts/reproducible-template/index.html</loc>
-    <lastmod>2025-11-18T05:03:26.786Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.424Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/posts/dockerfile-trial/index.html</loc>
-    <lastmod>2025-11-18T05:03:26.783Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.423Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/misc/personal/profile_pictures.html</loc>
-    <lastmod>2025-11-18T05:03:26.780Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.420Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/misc/personal/memorable_moments.html</loc>
-    <lastmod>2025-11-18T05:03:26.730Z</lastmod>
+    <lastmod>2026-01-24T17:08:19.388Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hchulkim.github.io/posts/arch-install/index.html</loc>
+    <lastmod>2026-01-24T17:49:18.006Z</lastmod>
   </url>
 </urlset>

@@ -4,8 +4,8 @@
     "items": [
       "/posts/dockerfile-trial/index.html",
       "/posts/reproducible-template/index.html",
-      "/posts/bandit/index.html",
       "/posts/asahi-linux/index.html",
+      "/posts/bandit/index.html",
       "/posts/first-year/index.html",
       "/posts/parallel/index.html",
       "/posts/make-file/index.html",
@@ -13,8 +13,8 @@
       "/posts/dockerfile-template/index.html",
       "/posts/quarto-paper-template/index.html",
       "/posts/first-cite/index.html",
-      "/posts/admission-econ/index.html",
       "/posts/empirical-econ/index.html",
+      "/posts/admission-econ/index.html",
       "/posts/reproducible-coding-lecture/index.html",
       "/posts/hello-quarto/index.html",
       "/posts/sql-info/index.html"
