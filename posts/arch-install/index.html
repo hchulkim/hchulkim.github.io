@@ -7,10 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Hyoungchul Kim">
-<meta name="dcterms.date" content="2025-01-19">
-<meta name="description" content="Migrating from hugo github page">
+<meta name="description" content="Installing Arch Linux on Tuxedo Computers InfinityBook Pro 15">
 
-<title>Hello, Quarto – Hyoungchul Kim</title>
+<title>My first trial and error with installing Arch Linux – Hyoungchul Kim</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +21,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -75,8 +109,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Hello, Quarto – Hyoungchul Kim">
-<meta property="og:description" content="Migrating from hugo github page">
+<meta property="og:title" content="My first trial and error with installing Arch Linux – Hyoungchul Kim">
+<meta property="og:description" content="Installing Arch Linux on Tuxedo Computers InfinityBook Pro 15">
 <meta property="og:site_name" content="Hyoungchul Kim">
 </head>
 
@@ -144,14 +178,14 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Hello, Quarto</h1>
+      <h1 class="title">My first trial and error with installing Arch Linux</h1>
                   <div>
         <div class="description">
-          Migrating from hugo github page
+          Installing Arch Linux on Tuxedo Computers InfinityBook Pro 15
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">announcement</div>
+                <div class="quarto-category">software</div>
               </div>
                   </div>
   </div>
@@ -169,7 +203,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 19, 2025</p>
+        <p class="date">Invalid Date</p>
       </div>
     </div>
     
@@ -188,18 +222,134 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Recently, I successfully migrated my website over to <a href="https://quarto.org">Quarto</a>. My past website using Hugo<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> was not that bad but it was bit too glitchy for me. Luckily, I was able to learn that it was possible to make a website using Quarto. After some trial and error, I was able to set it up.</p>
-<p>For me, migrating was not that painful as I did not have much information on my website. In fact, this was partially due to the fragility of my past website. For some reason, my website would sometimes go full <span style="color: red;">404</span> when I commit new info on my website. In order to solve this, I had to make some meaningless changes to re-commit my git repository. This problem does not seem to occur in Quarto. Finally, I will be able to actively use my Blog section.</p>
-<p>FYI, I will write down some words about the problems I faced when migrating. I was bit stuck when I had to type <code>quarto publish gh-pages</code>. According to Quarto documentation, this code “will confirm that you want to publish, render your content, copy the output to a special <code>gh-pages</code> branch, push that branch to GitHub, and then open a browser to view your site once it is deployed.” The problem was that my command will not go through in the deployment process. The deployment will go on forever. I googled it and one of the solutions seems to be that I need to delete my <code>gh-pages</code> branch and old deployment point to re-initiate it. But I solved it by typing <code>quarto publish gh-pages --no-browser</code>. This is bit weird because Quarto documentation says you should use this option when you are publishing to a private website. While I don’t think my website is a private one, this somehow made my command go through.</p>
-<p>Also, I had to specify <code>gh-pages</code> branch manually in the repo settings in the github repository.</p>
+<p>I had some time to try Arch Linux on my Tuxedo Computers InfinityBook Pro 15. It was a bit of a hassle but I managed to get it working. For most of the installation, I followed the <a href="https://wiki.archlinux.org/title/Installation_guide">Arch Linux installation guide</a>. Fortunately, Arch Linux has a very helpful up-to-date documentation so you will not have much trouble following the guide. However, there were some additional hassle that were not super explicit in the documentation. In this blog, I will try to write them down just for reference.</p>
+<section id="before-and-during-installtion" class="level1">
+<h1>Before and during installtion</h1>
+<section id="creating-a-bootable-usb-drive" class="level2">
+<h2 class="anchored" data-anchor-id="creating-a-bootable-usb-drive">Creating a bootable USB drive</h2>
+<p>In order to install Arch Linux, you need to create a bootable USB drive. There are many options to do this. I used <a href="ventoy.net">Ventoy</a> which was very intuitive.</p>
+</section>
+<section id="setting-up-wifi" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-wifi">Setting up wifi</h2>
+<p>Before installing Arch Linux, you need to set up wifi first. If you have a wired connection, you can skip this section.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># type iwctl to get into the interactive prompt given by iwd (wireless daemon)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">iwctl</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># list device names for wireless network connection</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">station</span> list <span class="co"># probably you will see something like wlan0</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># scan and get networks available</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">station</span> wlan0 scan</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ex">station</span> wlan0 get-networks</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># enter name for the network</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ex">station</span> wlan0 connect <span class="op">&lt;</span>network-name<span class="op">&gt;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># enter password for the network when prompted</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># exit the iwctl prompt</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="bu">exit</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># check if the connection is successful</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">ping</span> <span class="at">-c</span> 4 google.com</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="enabling-wifi-connection-after-installation" class="level2">
+<h2 class="anchored" data-anchor-id="enabling-wifi-connection-after-installation">Enabling wifi connection after installation</h2>
+<p>During the installtion, I installed networkmanager to manage wifi connections. You can do this by additionaly installing <code>networkmanager</code> package when you are following the installation guide on <code>pacstrap</code>. Also, make sure to enable the service by running <code>systemctl enable NetworkManager</code>.</p>
+<p>However, unlike other installation guide, I found out that the wifi connection was not automatically connected after installation. In order to fix this, you need to run the following command after you boot into the new system:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this command will get you into a GUI-like wifi connection system. </span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># You can use it to connect to your wifi.</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">nmtui</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="adding-a-user-and-giving-them-sudo-permission" class="level2">
+<h2 class="anchored" data-anchor-id="adding-a-user-and-giving-them-sudo-permission">Adding a user and giving them sudo permission</h2>
+<p>When you are using the computer, it is very likely that you will be login yourself as some user. During the installtion, make sure you create a user using this command:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add user</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">useradd</span> <span class="at">-m</span> <span class="at">-G</span> wheel <span class="at">-s</span> /bin/bash <span class="pp">[</span><span class="ss">USERNAME</span><span class="pp">]</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># create password for the user</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">passwd</span> <span class="pp">[</span><span class="ss">USERNAME</span><span class="pp">]</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># give sudo permission to the user. </span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># To do this, use the command below to go into the script and uncomment the section where it says "uncomment to allow members of group wheel to execute any command."</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="va">EDITOR</span><span class="op">=</span>vim <span class="ex">visudo</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="installing-grub" class="level2">
+<h2 class="anchored" data-anchor-id="installing-grub">Installing GRUB</h2>
+<p>After you have installed the system, you need to install GRUB to the disk. This is done by running the following command:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">grub-install</span> <span class="at">--target</span><span class="op">=</span>x86_64-efi <span class="at">--efi-directory</span><span class="op">=</span>/boot/efi <span class="at">--bootloader-id</span><span class="op">=</span>GRUB</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>You also need to generate a configuration file for GRUB. To do that use the following command:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">grub-mkconfig</span> <span class="at">-o</span> /boot/grub/grub.cfg </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="unmounting-all-the-drives" class="level2">
+<h2 class="anchored" data-anchor-id="unmounting-all-the-drives">Unmounting all the drives</h2>
+<p>After following all the installation steps, you need to unmount all the drives. This is done by running the following command:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># unmount all the drives</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">umount</span> <span class="at">-a</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="rebooting-the-system" class="level2">
+<h2 class="anchored" data-anchor-id="rebooting-the-system">Rebooting the system</h2>
+<p>After you have unmounted all the drives, you can reboot the system by running the following command:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># reboot the system</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">reboot</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+</section>
+<section id="post-installation" class="level1">
+<h1>Post-installation</h1>
+<section id="using-audio-and-bluetooth" class="level2">
+<h2 class="anchored" data-anchor-id="using-audio-and-bluetooth">Using audio and bluetooth</h2>
+<p>You need to install some packages to use the audio of the computer. I used <code>pulseaudio</code> but heard <code>pipewire</code> is something people use more nowadays.</p>
+<p>To use bluetooth, you need to type following commands:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install packages necessary to use bluetooth</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> pacman <span class="at">-S</span> bluez bluez-utils</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># enable the bluetooth system</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl enable bluetooth.service</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># start bluetooth interactive prompt to starting connecting your device</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="ex">bluetoothctl</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co"># turn on the power and do necessary steps before connecting</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="ex">power</span> on</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="ex">agent</span> on</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="ex">default-agent</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="co"># turn on the scan to get the bluetooth ID for your device</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="ex">scan</span> on</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="co"># finish connecting the device</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="co"># for some devices, you might have to enter password shown in the terminal</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="ex">trust</span> [BLUETOOTH ID]</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="ex">pair</span> [BLUETOOTH ID]</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="ex">connect</span> [BLUETOOTH ID]</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="co"># After that, make sure you auto enable the bluetooth my going into the `/etc/bluetooth/main.conf` and uncomment the line that says `AutoEnable=true`.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 
 
+</section>
+</section>
 
 
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>In case you want to check out my past hugo website, click <a href="https://github.com/hchulkim/past-hugo-website">here</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>I am using UEFI boot mode. If you are using BIOS boot mode, you need to use different command. Also, make sure to use the correct target and efi-directory that is specific to your system. It seems that sometimes this command works even if you don’t specify the target and efi-directory. But for me, I had to specify them.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
