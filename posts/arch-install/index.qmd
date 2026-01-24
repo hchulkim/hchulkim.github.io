@@ -1,7 +1,7 @@
 ---
 title: "My first trial and error with installing Arch Linux"
 description: "Installing Arch Linux on Tuxedo Computers InfinityBook Pro 15"
-date: "2026--1-25"
+date: "2026-1-25"
 toc: false
 engine: knitr
 categories:
