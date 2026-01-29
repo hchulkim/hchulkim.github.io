@@ -10,9 +10,27 @@ This is a collection of my memorable moments.
 
 ## 2025-2026
 
+### Thanksgiving
+
+![](pic/thnks.jpeg)
+
 ### Halloween
 
+::: {layout-ncol=2}
+![](pic/hallow1.jpeg)
+
+![](pic/hallow2.jpeg)
+:::
+
 ### Philly trade group seminar
+
+::: {layout-ncol=2}
+![](pic/arnold.jpg)
+
+![](pic/kortum.png)
+
+![](pic/treb.jpg)
+:::
 
 ## 2024-2025
 
@@ -20,15 +38,9 @@ This is a collection of my memorable moments.
 
 ### San Francisco
 
-### 
-
 ### Birthday
 
 ### Spring break (Florida keys)
-
-### Periodic trips to D.C.
-
-### Periodic trips to NYC
 
 ### Chiang Mai, Thailand
 
