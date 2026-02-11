@@ -8,7 +8,7 @@ about:
       text: CV
       href: vita/cv-kim.pdf
     - icon: github
-      text: Github
+      text: GitHub
       href: https://github.com/hchulkim
     - icon: linkedin
       text: LinkedIn
