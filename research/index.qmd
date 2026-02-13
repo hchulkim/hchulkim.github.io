@@ -6,7 +6,7 @@ toc: true
 ## Working papers
 
 
-"The China shock and internal migration: evidence from bilateral migration flows" with [Jaerim Choi](https://sites.google.com/view/jaerimchoi) and [Seung Hoon Lee](https://sites.google.com/view/seunghoon/home). Feb. 2026. **[\[Working paper\]](working-paper/migration_china_shock.pdf)**. *Revise and Resubmit, Canadian Journal of Economics.*
+"The China shock and internal migration: evidence from bilateral migration flows" with [Jaerim Choi](https://sites.google.com/view/jaerimchoi) and [Seung Hoon Lee](https://sites.google.com/view/seunghoon/home). Feb. 2026. \[[Working paper](working-paper/migration_china_shock.pdf)\] \[[Replication package](https://github.com/hchulkim/research_china-shock-migration)\]. *Revise and Resubmit, Canadian Journal of Economics.*
 
 <details>
   <summary>Abstract</summary>
