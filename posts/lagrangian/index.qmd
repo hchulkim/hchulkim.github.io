@@ -1,0 +1,272 @@
+---
+title: "Lagrangian, Shadow Price, and KKT: Intuition and Proofs"
+description: "My personal notes on constrained optimization for economics"
+date: "2026-03-27"
+engine: knitr
+toc: false
+categories:
+  - study
+---
+
+# Notes
+
+These are my personal notes on constrained optimization — specifically the Lagrangian method, the shadow price interpretation of multipliers, and how KKT conditions generalize the whole framework. Note that this is a living document and will be updated as I learn more things. This was created using Claude after having back-and-forth self-education chat with it. 
+
+## What are we doing when we write a Lagrangian?
+
+This section is not a formal proof of the Lagrange multiplier theorem. It is more about building the right intuition for *why* the Lagrangian works and what each piece means economically. This matters because constrained optimization is the backbone of almost everything in micro theory, IO, and metrics.
+
+- Economics is fundamentally about *constrained optimization* — agents maximize objectives subject to scarcity. The Lagrangian is the mathematical technology that converts a constrained problem into something that looks like an unconstrained one.
+- The penalty term $-\lambda[g(x) - c]$ builds the constraint directly into the objective. At the optimum the constraint holds, so the penalty vanishes and $\mathcal{L} = f$. But by optimizing over $(x, \lambda)$ jointly we recover the constrained solution via unconstrained calculus.
+- The multiplier $\lambda^*$ is not just a mathematical artifact. It is a **shadow price**: the rate at which the optimized objective improves per marginal unit of constraint relaxation. For a consumer it is the marginal utility of income; for a cost-minimizing firm it is marginal cost.
+
+## The Lagrangian: Setup and Geometry
+
+### The Basic Problem
+
+Consider:
+
+$$
+\max_{x} \; f(x) \quad \text{s.t.} \quad g(x) = c
+$$
+
+where $x \in \mathbb{R}^n$. The **Lagrangian** is:
+
+$$
+\mathcal{L}(x, \lambda) = f(x) - \lambda[g(x) - c]
+$$
+
+The first-order conditions (FOCs) are:
+
+$$
+\frac{\partial \mathcal{L}}{\partial x_i} = \frac{\partial f}{\partial x_i} - \lambda \frac{\partial g}{\partial x_i} = 0 \quad \forall\, i
+$$
+
+$$
+\frac{\partial \mathcal{L}}{\partial \lambda} = -(g(x) - c) = 0
+$$
+
+The first set says $\nabla f = \lambda \nabla g$. The second just enforces the constraint.
+
+### The Geometric Intuition
+
+At a constrained optimum, the level curve of $f$ is **tangent** to the constraint surface $g(x) = c$. If it weren't tangent, you could slide along the constraint and still improve $f$.
+
+Tangency means the gradients are parallel:
+
+$$
+\nabla f(x^*) = \lambda^* \nabla g(x^*)
+$$
+
+The scalar $\lambda^*$ is the ratio of the two gradients — it tells you how "aligned" the objective and the constraint are at the optimum.
+
+### Why Not Just Substitute?
+
+You *can* solve the constraint for one variable and substitute into $f$. But economists prefer the Lagrangian for three reasons:
+
+1. **It preserves the shadow price.** Substitution eliminates $\lambda$ and you lose the economic interpretation.
+2. **It scales.** With $m$ constraints, substitution becomes intractable. The Lagrangian just adds one multiplier per constraint.
+3. **It gives symmetric FOCs.** Dividing FOCs pairwise gives clean tangency conditions (e.g., MRS = price ratio in consumer theory) without ever solving for levels.
+
+### The Workflow
+
+1. Write $\mathcal{L} = f(x) - \sum_j \lambda_j [g_j(x) - c_j]$.
+2. Take FOCs: $\partial \mathcal{L}/\partial x_i = 0$ for all $i$, and $\partial \mathcal{L}/\partial \lambda_j = 0$ for all $j$.
+3. Divide FOCs pairwise to get tangency conditions (eliminates $\lambda$).
+4. Plug tangency conditions into the constraint equations to solve for levels.
+5. Back out $\lambda^*$ and interpret it as the shadow price.
+
+### Example: Consumer Utility Maximization
+
+Maximize $U(x_1, x_2) = x_1^\alpha x_2^{1-\alpha}$ subject to $p_1 x_1 + p_2 x_2 = M$.
+
+$$
+\mathcal{L} = x_1^\alpha x_2^{1-\alpha} - \lambda(p_1 x_1 + p_2 x_2 - M)
+$$
+
+FOCs:
+
+$$
+\alpha x_1^{\alpha-1} x_2^{1-\alpha} = \lambda p_1, \qquad (1-\alpha) x_1^\alpha x_2^{-\alpha} = \lambda p_2
+$$
+
+Dividing:
+
+$$
+\frac{\alpha x_2}{(1-\alpha) x_1} = \frac{p_1}{p_2} \quad \Longrightarrow \quad x_1^* = \frac{\alpha M}{p_1}, \quad x_2^* = \frac{(1-\alpha)M}{p_2}
+$$
+
+The multiplier $\lambda^* = \alpha^\alpha (1-\alpha)^{1-\alpha} M^{-1} \cdot (p_1/\alpha)^{-\alpha}(p_2/(1-\alpha))^{-(1-\alpha)}$ is the marginal utility of income.
+
+## The Shadow Value: Full Intuition and Proof
+
+### What the Multiplier Really Means
+
+Define the **value function**:
+
+$$
+V(c) = \max_{x}\; f(x) \quad \text{s.t.} \quad g(x) = c
+$$
+
+**Theorem (Envelope / Shadow Value):** Under standard regularity,
+
+$$
+\boxed{\frac{dV}{dc} = \lambda^*}
+$$
+
+The multiplier *is* the derivative of the optimized objective with respect to the constraint level.
+
+### Proof
+
+The Lagrangian is $\mathcal{L}(x, \lambda, c) = f(x) - \lambda[g(x) - c]$. At the optimum, $g(x^*) = c$ so $V(c) = \mathcal{L}(x^*(c), \lambda^*(c), c)$.
+
+By the envelope theorem, when differentiating a maximized function with respect to a parameter, indirect effects through $x^*$ vanish at the optimum. So:
+
+$$
+\frac{dV}{dc} = \frac{\partial \mathcal{L}}{\partial c}\bigg|_{x^*, \lambda^*} = \frac{\partial}{\partial c}\big[f(x) - \lambda(g(x) - c)\big]\bigg|_{x^*, \lambda^*} = \lambda^*
+$$
+
+More explicitly, by the chain rule:
+
+$$
+\frac{dV}{dc} = \sum_{i} \frac{\partial f}{\partial x_i}\frac{dx_i^*}{dc} = \sum_{i} \lambda^* \frac{\partial g}{\partial x_i}\frac{dx_i^*}{dc} = \lambda^* \cdot \frac{d}{dc}[g(x^*(c))] = \lambda^* \cdot 1
+$$
+
+where we used the FOC $\partial f/\partial x_i = \lambda^* \partial g/\partial x_i$ and the fact that $g(x^*(c)) = c$ for all $c$. $\square$
+
+### Why "Shadow" Price?
+
+It is called a **shadow** price because:
+
+- It is *not* observed in any market. You don't see it posted on a price tag.
+- It exists "in the shadow" of the optimization — it is an *implicit* value that falls out of the math.
+- It is the price the optimizer would be *willing to pay* for a marginal unit of the constrained resource.
+
+| Problem | Constraint $c$ | $\lambda^*$ means... |
+|---|---|---|
+| $\max U(x_1,x_2)$ s.t. budget $= M$ | Income $M$ | Marginal utility of income |
+| $\min C(L,K)$ s.t. output $= q$ | Output $q$ | Marginal cost of production |
+| $\max$ welfare s.t. resource $\leq R$ | Resource $R$ | Social value of one more unit |
+| $\max$ return s.t. variance $\leq \sigma^2$ | Risk budget $\sigma^2$ | Return per unit of extra risk |
+
+**Size of $\lambda^*$ matters:**
+
+- $\lambda^*$ large $\Rightarrow$ constraint is very binding — relaxing it even slightly yields big gains.
+- $\lambda^*$ small $\Rightarrow$ constraint barely matters at the margin.
+- $\lambda^* = 0$ $\Rightarrow$ constraint is non-binding — you wouldn't use an extra unit if given one.
+
+**Important caveat:** This is a *local, marginal* statement. It tells you the value of an infinitesimal relaxation. For a discrete change (e.g., doubling the budget), you need to re-solve the entire problem.
+
+## Multiple Constraints
+
+With $m$ equality constraints $g_j(x) = c_j$, the Lagrangian is:
+
+$$
+\mathcal{L} = f(x) - \sum_{j=1}^m \lambda_j [g_j(x) - c_j]
+$$
+
+Each $\lambda_j^*$ is the shadow price of constraint $j$: it tells you how much the optimum improves per marginal unit of resource $j$.
+
+**Example — Firm cost minimization with two constraints:** A firm minimizes cost $wL + rK$ subject to both an output target $F(L,K) = q$ and a regulatory constraint $P(L,K) \leq \bar{P}$:
+
+$$
+\mathcal{L} = wL + rK - \lambda_1[F(L,K) - q] - \lambda_2[P(L,K) - \bar{P}]
+$$
+
+Here $\lambda_1^*$ = marginal cost of output and $\lambda_2^*$ = marginal cost of the pollution regulation.
+
+**Regularity condition (constraint qualification):** The gradients $\nabla g_1, \ldots, \nabla g_m$ must be linearly independent at the optimum. If they fail to be, the Lagrangian FOCs may not hold.
+
+## From Lagrange to KKT: The Complete Picture
+
+### The Motivation: Inequality Constraints
+
+In economics, most real constraints are inequalities: you can spend *at most* $M$, pollution must be *at most* $\bar{P}$.
+
+$$
+\max_{x} f(x) \quad \text{s.t.} \quad g(x) \leq c
+$$
+
+With equality constraints, we know the constraint always binds. With inequalities, it might or might not — and this creates a new layer of logic.
+
+### What Happens at the Optimum?
+
+There are exactly two cases:
+
+**Case 1: The constraint binds**, $g(x^*) = c$. The optimizer would like to go further but can't. This is exactly the equality problem — Lagrange applies and $\lambda^* > 0$.
+
+**Case 2: The constraint is slack**, $g(x^*) < c$. The constraint is irrelevant at the margin. The optimizer is at an interior unconstrained optimum, so $\lambda^* = 0$.
+
+### The KKT Conditions
+
+For the problem $\max_x f(x)$ subject to $g_j(x) \leq c_j$ for $j = 1, \ldots, m$ and $h_k(x) = d_k$ for $k = 1, \ldots, p$, define:
+
+$$
+\mathcal{L} = f(x) - \sum_j \mu_j[g_j(x) - c_j] - \sum_k \lambda_k[h_k(x) - d_k]
+$$
+
+The **KKT conditions** are:
+
+**1. Stationarity:**
+$$\frac{\partial \mathcal{L}}{\partial x_i} = 0 \quad \forall\, i$$
+
+**2. Primal feasibility:**
+$$g_j(x^*) \leq c_j \quad \forall\, j, \qquad h_k(x^*) = d_k \quad \forall\, k$$
+
+**3. Dual feasibility (sign restriction):**
+$$\mu_j \geq 0 \quad \forall\, j$$
+
+**4. Complementary slackness:**
+$$\mu_j[g_j(x^*) - c_j] = 0 \quad \forall\, j$$
+
+Condition (4) is the key addition over Lagrange. It encodes the two-case logic: either the constraint binds ($g_j = c_j$, $\mu_j \geq 0$) or it's slack ($g_j < c_j$, $\mu_j = 0$). You never have $\mu_j > 0$ with a slack constraint.
+
+### Why the Sign Restriction $\mu_j \geq 0$?
+
+Intuitively: if relaxing the constraint (raising $c_j$) *helps* the optimizer, then the constraint is costly, so $\mu_j = dV/dc_j > 0$. If tightening the constraint would help (which can't happen since the optimizer chose optimally), $\mu_j$ would be negative — but that's impossible for a binding inequality constraint in a maximization problem.
+
+More formally, this follows from the geometry: for $g(x) \leq c$, the feasible set grows as $c$ increases, so $V(c)$ is non-decreasing in $c$, hence $\lambda^* = dV/dc \geq 0$.
+
+### Sufficiency
+
+The KKT conditions are *necessary* for any interior optimum (under constraint qualification). They are *sufficient* when:
+
+- $f$ is concave and all $g_j$ are convex (for maximization), or
+- $f$ is convex and all $g_j$ are convex (for minimization).
+
+Most well-posed economics problems (concave utility, convex costs, linear constraints) satisfy these conditions.
+
+### Lagrange vs. KKT: A Summary
+
+| | Lagrange | KKT |
+|---|---|---|
+| Constraint type | Equality: $g(x) = c$ | Equality + inequality |
+| Number of cases | 1 (always binds) | Up to $2^m$ |
+| Sign restriction on $\mu$ | None | $\mu_j \geq 0$ for $\leq$ constraints |
+| Complementary slackness | N/A (vacuous) | $\mu_j[g_j(x) - c_j] = 0$ |
+| Shadow price | $\lambda^* = dV/dc$ | $\mu_j^* = \partial V/\partial c_j$ |
+| Sufficient when | Concave $f$, linear $g$ | Concave $f$, convex $g_j$ |
+
+**The key insight:** Lagrange is literally KKT with all constraints being equalities. The sign restriction and complementary slackness become vacuous (the constraint always binds, so slackness is zero automatically; and there's no meaningful sign restriction for equality multipliers).
+
+## What Economists Do With This
+
+### It Yields Demand and Supply Functions
+
+Solving the consumer's Lagrangian gives Marshallian demands $x^*(p, M)$. Solving the firm's cost minimization gives factor demands $L^*(w, r, q)$ and $K^*(w, r, q)$, and thus the cost function $C(w, r, q) = wL^* + rK^*$.
+
+### It Gives Comparative Statics for Free
+
+Differentiate the FOCs with respect to a parameter (e.g., income $M$ or a price $p_i$). By the implicit function theorem, this gives how optimal choices respond to that parameter — without re-solving the whole system.
+
+### Duality
+
+The shadow price from one problem gives you the solution to the dual problem. This is the deep structure underlying:
+
+- **Shephard's Lemma:** $\partial C(w,r,q)/\partial w = L^*$ — the derivative of the cost function with respect to an input price equals the optimal input demand.
+- **Roy's Identity:** $x_i^*(p,M) = -(\partial V/\partial p_i)/(\partial V/\partial M)$ — Marshallian demands can be recovered from the indirect utility function.
+- **Slutsky Equation:** Decomposes the price effect into substitution and income effects using the duality between utility maximization and expenditure minimization.
+
+### The Optimal Pigouvian Tax
+
+The shadow price of a pollution constraint equals the socially optimal Pigouvian tax. This is a direct policy application: you don't need to observe the externality cost directly — the shadow price from the social planner's constrained optimization tells you exactly what the corrective tax should be.
