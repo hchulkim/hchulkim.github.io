@@ -2,6 +2,7 @@
   {
     "listing": "/posts/index.html",
     "items": [
+      "/posts/lagrangian/index.html",
       "/posts/demand-io/index.html",
       "/posts/notes-io/index.html",
       "/posts/arch-install/index.html",

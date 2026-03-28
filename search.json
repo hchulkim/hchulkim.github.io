@@ -88,399 +88,7 @@
     "href": "posts/index.html",
     "title": "Blog",
     "section": "",
-    "text": "Building demand system from scratch\n\n\n\nstudy\n\n\n\nMy personal notes on demand system in IO\n\n\n\n\n\nMar 27, 2026\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nNotes on IO\n\n\n\nstudy\n\n\n\nMy notes on IO\n\n\n\n\n\nMar 16, 2026\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nMy first trial and error with installing Arch Linux\n\n\n\nsoftware\n\n\n\nInstalling Arch Linux on Tuxedo Computers InfinityBook Pro 15\n\n\n\n\n\nJan 25, 2026\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nMy trial and error with Dockerfile\n\n\n\nsoftware\n\n\n\nThis is a post on my trial and error on building Docker image with Dockerfile\n\n\n\n\n\nSep 13, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nHands-on reproducible research workflow\n\n\n\nsoftware\n\n\n\nThis is a detailed post on how to use my replication template (or template for reproducible research workflow) in GitHub\n\n\n\n\n\nAug 30, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nOverTheWire wargames\n\n\n\nstudy\n\n\n\nPersonal solutions for overthewire wargames\n\n\n\n\n\nAug 2, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nAsahi-linux on Macbook Pro\n\n\n\nsoftware\n\n\n\nMy first experience with asahi-linux on Macbook Pro\n\n\n\n\n\nAug 2, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nFirst-year Ph.D. in retrospect\n\n\n\npersonal\n\n\n\nSummarizing my first-year Ph.D. in Economics experience\n\n\n\n\n\nJun 6, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nParallel programming\n\n\n\nstudy\n\n\n\nLearning basic parallel programming in R\n\n\n\n\n\nMay 26, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nMakefile: build automation software\n\n\n\nsoftware\n\n\n\nMaking automation workflow with Makefile\n\n\n\n\n\nApr 22, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nBeware of Bash\n\n\n\nsoftware\n\n\n\nSome warnings when using Bash\n\n\n\n\n\nMar 21, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nPersonal Dockerfile for data science\n\n\n\nsoftware\n\n\n\nPersonal Dockerfile template for my research workflow\n\n\n\n\n\nMar 15, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto format Econ. working paper template\n\n\n\nsoftware\n\n\n\nI just dropped a new quarto format working paper template in github\n\n\n\n\n\nMar 9, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nFirst academic citation\n\n\n\nresearch\n\n\n\nI am celebrating my first citation\n\n\n\n\n\nMar 1, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nReproducible coding crash course\n\n\n\nlecture\n\n\n\nMy slide and resources on reproducible coding\n\n\n\n\n\nJan 20, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nAdmission tips for Econ. Ph.D. (by Ph.D. student)\n\n\n\nlecture\n\n\n\nAdmission tips slide I wrote for master students at Alma Mater\n\n\n\n\n\nJan 20, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nSummary of my understanding of terms in empirical economics\n\n\n\nlecture\n\n\n\nSummary of some terms and jargons in the field of empirical economics\n\n\n\n\n\nJan 20, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nHello, Quarto\n\n\n\nannouncement\n\n\n\nMigrating from hugo github page\n\n\n\n\n\nJan 19, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nSQL materials\n\n\n\nstudy\n\n\n\nResources for learning SQL\n\n\n\n\n\nJan 17, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/dockerfile-template/index.html",
-    "href": "posts/dockerfile-template/index.html",
-    "title": "Personal Dockerfile for data science",
-    "section": "",
-    "text": "Update: Recently I updated my Dockerfile for my research workflow. You can check it out here.\nDuring spring break, I had some time to finalize the Dockerfile template for my research workflow. If you don’t know what a Docker is, check it out here. TL;DR, it is a light virtual machine that contains all the necessary resources for your empirical analysis. It is as if you are shipping your computer to other people that wants to try out your analysis.\nIf you want the exact replication project folder, click here.\nThis is the final Dockerfile (for now):\n\n# Use Rocker image as the base for R\nFROM rocker/r-ver:4.4.0\n\nLABEL maintainer=\"Hyoungchul Kim &lt;hchul.kim96@gmail.com&gt;\"\n\n## Update and install system dependencies\nRUN apt-get update && apt-get install -y \\\n    libcurl4-openssl-dev \\\n    libssl-dev \\\n    libfontconfig1-dev \\\n    libharfbuzz-dev \\\n    libfribidi-dev \\\n    libfreetype6-dev \\\n    libpng-dev \\\n    libtiff5-dev \\\n    libjpeg-dev \\\n    libglpk-dev \\\n    libxml2-dev \\\n    libcairo2-dev \\\n    libgit2-dev \\\n    libpq-dev \\\n    libsasl2-dev \\\n    libsqlite3-dev \\\n    libssh2-1-dev \\\n    libxt-dev \\\n    libgdal-dev \\\n    wget \\\n    curl \\\n    vim \\\n    git \n\n## Install Pandoc and Quarto (Required for RMarkdown, Quarto, etc.)\n# RUN /rocker_scripts/install_pandoc.sh\n# RUN /rocker_scripts/install_quarto.sh\n\n## Install Python & Poetry\nRUN /rocker_scripts/install_python.sh && \\\n    pip3 install --upgrade pip && \\\n    pip3 install poetry\n\n# Ensure Poetry installs dependencies in the system environment\nRUN poetry config virtualenvs.create false\n\n# Copy Poetry files and install dependencies\nCOPY pyproject.toml poetry.lock .\nRUN poetry install --no-interaction --no-root\n\n## Install Julia 1.11.3 (to match Manifest.toml)\nENV JULIA_VERSION=1.11.3\nRUN /rocker_scripts/install_julia.sh\n\n## Set working directory\nWORKDIR /project\n\n## Copy renv.lock file into the folder\nCOPY renv.lock .\n\n# Set environment variables for renv\nENV RENV_VERSION=1.0.7\nENV RENV_PATHS_CACHE=/renv/cache\nENV RENV_CONFIG_REPOS_OVERRIDE=https://cloud.r-project.org\nENV RENV_CONFIG_AUTOLOADER_ENABLED=FALSE\nENV RENV_WATCHDOG_ENABLED=FALSE\nRUN echo \"options(renv.consent = TRUE)\" &gt;&gt; .Rprofile\nRUN echo \"options(RETICULATE_MINICONDA_ENABLED = FALSE)\" &gt;&gt; .Rprofile\n\n# Install renv from CRAN (avoiding bootstrapping by specifying version)\nRUN R -e \"install.packages('renv', repos = c(CRAN = 'https://cloud.r-project.org'))\"\nRUN R -e \"renv::consent(provided = TRUE)\"\n\n# Run renv restore to restore the environment\nRUN R -e \"renv::restore(confirm = FALSE)\"\n\n# Install Julia packages and manage dependencies\nCOPY Manifest.toml Project.toml .\nENV JULIA_PROJECT=/project\nRUN julia -e \"import Pkg; Pkg.activate(\\\".\\\"); Pkg.instantiate()\"\n\n# Copy over the rest of the project files\nCOPY . .\n\n# Default command\nCMD [\"bash\"]\n\nAlthough most of the commands are self-explanatory from the comments, here is some additional info on what my Dockerfile does:\n\nIn my personal Dockerfile, I have added three major programming languages that I use: R, Python, and Julia.\nI have also added some necessary dependencies and useful programs (e.g. git, vim) for my analysis.\nI have also added dependency management software for all of the languages. renv for R, poetry for Python, and Pkg environment for Julia. This allows you to use the exact versions of the packages that you installed in your analysis.\nFor this code to fully work, you would need to setup some files (e.g. Project.toml, Manifest.toml, etc).\nSave the above code as Dockerfile (no extensions) right inside your project directory.\n\n\nQuick terminology\n\nDockerfile: “The sheet music.” The list of layers and instructions for building a Docker image.\nImage: “The MP3 file.” This is the tarball.\nContainer: “Song playing on my phone.” A container is a running instance of an image.\n\n\n\nDocker workflow\n\nCreate Dockerfile.\nBuild Docker image using Dockerfile.\n\n\n# IMPORTANT: If this does not go through, maybe try sudo command\ndocker build --network=host --tag &lt;PROJECT_NAME&gt;:VERSION . \n\n# Above command might not work well in computers such as Macbook with Apple Silicon (Ofc...). This is mainly because it has a different cpu architecture (arm64 instead of amd64) so the base image is different. I am not sure if this is the best solution but try this code below.\n# docker build --platform=linux/amd64 --tag &lt;PROJECT_NAME&gt;:VERSION .\n\n\nRun Docker image.\n\n\ndocker run -it --rm &lt;PROJECT_NAME&gt;:VERSION\n\n\n\nSome useful Docker-related commands\n\n# check cached docker images\ndocker images\n\n# check docker containers that are running\ndocker ps\n\n# remove the docker image\ndocker rmi &lt;IMAGE_NAME&gt;\n\n# remove all dangling images and caches (do it periodically to save space)\ndocker system prune"
-  },
-  {
-    "objectID": "posts/dockerfile-trial/index.html",
-    "href": "posts/dockerfile-trial/index.html",
-    "title": "My trial and error with Dockerfile",
-    "section": "",
-    "text": "I had a chance to create a replication package for my coding assignment this fall. While doing the assignment, I decided to use this opportunity to actually implement a Dockerfile that will work for most of the platforms (e.g. macOC, Linux, ARM/AMD architecture). This is a post on my trial and error on building Docker image with Dockerfile."
-  },
-  {
-    "objectID": "posts/dockerfile-trial/index.html#r-specific-incompatible-binary-issue-with-certain-packages",
-    "href": "posts/dockerfile-trial/index.html#r-specific-incompatible-binary-issue-with-certain-packages",
-    "title": "My trial and error with Dockerfile",
-    "section": "(R specific) Incompatible binary issue with certain packages",
-    "text": "(R specific) Incompatible binary issue with certain packages\nIf you have used linux, you would be very familiar with some of the installtion issues with R packages. It just take awful long time to install most of the packages in linux. The reasn is simple: unlike Windows or MacOS, lot of the packages do not have pre-compiled binary for linux. This is sort of due to the fact that there are so many different linux distributions. As Windows or MacOS is a popular OS (Ugh…), it is easier to maintain standard binary for them. However, this is not the case of linux. Due to this reason, linux users need to compile the source code of the package and literally create the binary for the package. Since most of the powerful packages require compilation (they use C/C++/Fortran for creating efficient package), it is not a surprise that it takes a long time to install the package. Even worse, sometimes compilation does not work because you do not have the necessary compilers or necessary system libraries. This means you need to pre-install all the necessary dependencies before compiling the package.\nFortunately, this issue was recently solved through the help of Rstudio (Posit) Public Package Manager. This is a service that provides fall installtion of binary R packages for linux. Nowadays, most of the packages have their binary counterpart for linux. Thus, you can significantly reduce the time to install the package.\nThe problem however, is that the package manager is not perfect. I am not exactly sure why, but it seems binary might not work for some newer version of linux distribution if they were built from some different version of system libraries. This seems to be case for packages like sf and stringi.\nSo how can we solve this? Well if you are using renv R package as your package dependency manager, you can simply use the following command in your Dockerfile to override the repository written in the renv.lock file:\n\nENV RENV_CONFIG_REPOS_OVERRIDE=https://packagemanager.posit.co/cran/__linux__/noble/latest\n\nThis command will override the repository and install the packages from repository based on certain linux distribution you are using. In this case, I set it to noble which is the Ubuntu 24.04 LTS. This goes nicely with R Rocker project and GitHub Actions because their newest images are based on Ubuntu 24.04 LTS.\nBut there is a caveat: current version (1.1.5) of renv package does not support this feature. This is a known issue (#2127). Fortunately, this was resolved but the newer version is not yet released. For now, you need to use the development version of renv package.1 You can install it by running the following command:\n\nRUN R -e \"install.packages('renv', repos = 'https://posit.r-universe.dev')\""
-  },
-  {
-    "objectID": "posts/dockerfile-trial/index.html#multi-platform-issue",
-    "href": "posts/dockerfile-trial/index.html#multi-platform-issue",
-    "title": "My trial and error with Dockerfile",
-    "section": "Multi-platform issue",
-    "text": "Multi-platform issue\nGoing deep into reproducibility is that you need to realize that there are two main CPU architecture: amd64 (x86_64) and aarch64 (arm64). The problem is that base Docker images built on certain CPU platform will not work for the other platform. Also, there are cases where different architecture will require different binary to install certain software. That is, some binary built for amd64 will not work for aarch64 and vice versa.\nWhy should we care about this? Well, the reason is simple: both of the architecture are widely used in the world. amd64 is very common architecture for many types of computers. aarch64 is also a very common architecture. In fact, you are using aarch64 architecture if you are using an Apple Silicon Mac. So the big problem is that if you are using a base Docker image built on amd64, it may not work for people using MacOS.\nFortunately, solution is simple: build both amd64 and aarch64 images. You can do this locally using docker buildx command or you can use this GitHub Actions yaml file:\n\nname: build_docker\n\non:\n  push:\n    branches: [ master, main ]\n\njobs:\n  docker:\n    runs-on: ubuntu-latest\n    env:\n      IMAGE_NAME: r_4.5.1   # repo name on Docker Hub: DOCKERHUB_USERNAME/r_4.5.1\n    steps:\n      - name: Checkout\n        uses: actions/checkout@v4\n\n      # Enable QEMU so we can cross-build arm64 on amd64 runners\n      - name: Set up QEMU\n        uses: docker/setup-qemu-action@v3\n\n      # Set up Buildx builder\n      - name: Set up Docker Buildx\n        uses: docker/setup-buildx-action@v3\n\n      - name: Login to Docker Hub\n        uses: docker/login-action@v3\n        with:\n          username: ${{ secrets.DOCKERHUB_USERNAME }}\n          password: ${{ secrets.DOCKERHUB_TOKEN }}\n\n      - name: Build and push (multi-arch) base Dockerfile\n        uses: docker/build-push-action@v6\n        with:\n          context: .\n          file: ./Dockerfile\n          platforms: linux/amd64,linux/arm64   # &lt;-- key line\n          push: true\n          # tag strategy: latest + branch + short sha\n          tags: |\n            ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest\n            ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.ref_name }}\n            ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.ref_name }}-${{ github.sha }}\n          cache-from: type=gha\n          cache-to: type=gha,mode=max\n          pull: true"
-  },
-  {
-    "objectID": "posts/dockerfile-trial/index.html#another-multi-platform-issue-tinytex",
-    "href": "posts/dockerfile-trial/index.html#another-multi-platform-issue-tinytex",
-    "title": "My trial and error with Dockerfile",
-    "section": "Another multi-platform issue: tinytex",
-    "text": "Another multi-platform issue: tinytex\nI was also trying to install Quarto because I used it to render my assignment pdf. However, I encountered a problem when I was trying to install tinytex package. Quarto needs tex compiler to render the pdf. One that is used a lot is tinytex because it is a portable and light tex distribution. When I was installing tinytex in amd64 image, it was fine because all I need to do is:\n\nRUN quarto install tinytex\n\nwhich is provided by Quarto command. The issue, however, was when I was trying to same thing for aarch64 image. Apparently, it seems the previous command runs a binary that is based on amd64 architecture. Thus this command cannot install tinytex for aarch64 image. In order to solve this, I created this if statement in the Dockerfile to install tinytex for aarch64 image.\n\n# Quarto\nENV QUARTO_VERSION=1.7.32\nRUN /rocker_scripts/install_quarto.sh\n\n# --- TinyTeX install (arm64 manual, amd64 via Quarto) ---\nRUN set -eux; \\\n  if [ \"$ARCH_TYPE\" = \"arm64\" ]; then \\\n    wget -qO- \"https://yihui.org/tinytex/install-unx.sh\" | sh -s - --admin --no-path; \\\n  else \\\n    quarto install tinytex; \\\n  fi\n\n# Set TinyTeX path\nENV PATH=\"/root/.TinyTeX/bin/aarch64-linux:/root/.TinyTeX/bin/x86_64-linux:${PATH}\"\n\n# Set CTAN mirror for tlmgr\nENV TEXLIVE_REPOSITORY=\"https://ctan.math.illinois.edu/systems/texlive/tlnet\"\n\n# Set repo in tlmgr\nRUN tlmgr option repository \"$TEXLIVE_REPOSITORY\"; \\\n  tlmgr update --self; \\\n  tlmgr update --all\n# -------------------------------------------------------\n\nNote that if you are only making amd64 image, you don’t need to set the tinytex path. I am doing this because in aarch64 image, tinytex is installed manually and path is not set by Quarto command."
-  },
-  {
-    "objectID": "posts/dockerfile-trial/index.html#tinytex-ctan-mirror-error",
-    "href": "posts/dockerfile-trial/index.html#tinytex-ctan-mirror-error",
-    "title": "My trial and error with Dockerfile",
-    "section": "tinytex CTAN mirror error",
-    "text": "tinytex CTAN mirror error\nThis was the most annoying issue I encountered. When tinytex encounter tex package that is not installed in the local system, it uses CTAN mirror in install the necessary tex packages. The problem is that the mirror they refer to is very random… So if you don’t set the mirror, it might occasionally connect to stale one and not be able to install the necessary tex packages. To solve this, you just need to manually set the mirror that seems to be “working.” This is done in the previous code block.\nIf you want to look at the full Dockerfile, you can find it here."
-  },
-  {
-    "objectID": "posts/dockerfile-trial/index.html#footnotes",
-    "href": "posts/dockerfile-trial/index.html#footnotes",
-    "title": "My trial and error with Dockerfile",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nLet’s hope the newer version gets released soon…↩︎"
-  },
-  {
-    "objectID": "posts/asahi-linux/index.html",
-    "href": "posts/asahi-linux/index.html",
-    "title": "Asahi-linux on Macbook Pro",
-    "section": "",
-    "text": "If you have been following up my blog posts, you might have guessed that I am slowly transitioning to using Linux. It took a long 3-stage process to get me there. Windows, macOS, and Linux. It was mostly great, even though there were some small annoyances and hastles along the way (dependencies for installing some R packages, setting up Dropbox, etc). But there was another experiment I wanted to try out: setting up Linux on my Macbook Pro (MBP). While I feel that MBP is just getting too overpriced (one of the reasons I started to transition to Linux in the first place), I still love the design and the build quality of the machine. So I decided to give it a try. But as you all know, setting up Linux on Mac is a painful and hardcore process. That’s when I found out about Asahi-linux."
-  },
-  {
-    "objectID": "posts/asahi-linux/index.html#background",
-    "href": "posts/asahi-linux/index.html#background",
-    "title": "Asahi-linux on Macbook Pro",
-    "section": "",
-    "text": "If you have been following up my blog posts, you might have guessed that I am slowly transitioning to using Linux. It took a long 3-stage process to get me there. Windows, macOS, and Linux. It was mostly great, even though there were some small annoyances and hastles along the way (dependencies for installing some R packages, setting up Dropbox, etc). But there was another experiment I wanted to try out: setting up Linux on my Macbook Pro (MBP). While I feel that MBP is just getting too overpriced (one of the reasons I started to transition to Linux in the first place), I still love the design and the build quality of the machine. So I decided to give it a try. But as you all know, setting up Linux on Mac is a painful and hardcore process. That’s when I found out about Asahi-linux."
-  },
-  {
-    "objectID": "posts/asahi-linux/index.html#asahi-linux",
-    "href": "posts/asahi-linux/index.html#asahi-linux",
-    "title": "Asahi-linux on Macbook Pro",
-    "section": "Asahi-linux",
-    "text": "Asahi-linux\nAsahi-linux is a Linux distribution that is designed to run on Apple Silicon Macs. It is based on Fedora Linux.It is a community-driven project and is not officially supported by Apple.\nAnother good thing about Asahi-linux is that it is completely legal to use. It is not a hack or a jailbreak. Thus, you don’t have to worry about getting your machine banned or your warranty voided. In fact, it is pretty easy to uninstall it so it shouldn’t be much of an issue.\nIt is sort of similar to the good ol’ bootcamp we used to have for Intel Macs for Linux. Basically we are setting up some partition on the disk to run Linux."
-  },
-  {
-    "objectID": "posts/asahi-linux/index.html#caveats",
-    "href": "posts/asahi-linux/index.html#caveats",
-    "title": "Asahi-linux on Macbook Pro",
-    "section": "Caveats",
-    "text": "Caveats\nWhile Asahi-linux is amazing, it is not without its caveats. Most of it is due to the fact that it is built upon macOS.Let me write down some of them as a warning to others.\n\nIt is not officially supported by Apple. So you might not get the best support from Apple.\nReverse engineering is not yet fully accomplished. Some features are not yet available (USB-C display, touchid, etc).\nIt is not yet as stable as macOS. So you might encounter some issues.\nCurrently, only M1 and M2 chips are supported. If you have an older machine or newer chips, it will not work.\nDue to ARM architecture, you cannot run x86_64 applications. So some softwares may not work in Asahi-linux."
-  },
-  {
-    "objectID": "posts/asahi-linux/index.html#setting-up-asahi-linux",
-    "href": "posts/asahi-linux/index.html#setting-up-asahi-linux",
-    "title": "Asahi-linux on Macbook Pro",
-    "section": "Setting up Asahi-linux",
-    "text": "Setting up Asahi-linux\n\nFirst, make sure your machine is compatible with Asahi-linux. You can check the Asahi-linux website for the list of compatible machines.\nAlso make sure you have enough disk space. Asahi-linux is a bit larger than macOS. You need to have at least 100GB of free space.\nUse the following command in terminal:\n\n\ncurl https://alx.sh | sh\n\n\nFollow the instructions in the terminal. It will guide you through the process of setting up Asahi-linux.1\n\n\nYour machine will reboot and you will see the option to boot into Asahi-linux.\nIf you need to boot into macOS, turn the power off and hold the power button until “loading startup options…” appears. Then select “macOS” and press enter.\nYou are all set!"
-  },
-  {
-    "objectID": "posts/asahi-linux/index.html#current-experience",
-    "href": "posts/asahi-linux/index.html#current-experience",
-    "title": "Asahi-linux on Macbook Pro",
-    "section": "Current experience",
-    "text": "Current experience\nFor now, I am early in the game and trying out the power of Asahi-linux. I will probably use it as my additional machine along with my ThinkPad Ubuntu machine. I will update this section as I go along.\n\nUnlike Ubuntu, it is hard to install Dropbox. But fear not, there is a workaround. Try out maestral instead. For some reason, Docker image installation option did not work for me but python version worked fine."
-  },
-  {
-    "objectID": "posts/asahi-linux/index.html#footnotes",
-    "href": "posts/asahi-linux/index.html#footnotes",
-    "title": "Asahi-linux on Macbook Pro",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nIt is very important to exactly follow the instructions in the terminal. If you don’t, you might end up with a broken system. e.g. I struggled a bit on my first try because I did not hold the power button until “loading startup options…” appeared.↩︎"
-  },
-  {
-    "objectID": "posts/reproducible-coding-lecture/index.html",
-    "href": "posts/reproducible-coding-lecture/index.html",
-    "title": "Reproducible coding crash course",
-    "section": "",
-    "text": "I recently did a crash course on “reproducible coding” at my alma mater. Here is my material for the course. It mostly deals with Bash, Project environment (Renv, Poetry), Automation (Make), Docker."
-  },
-  {
-    "objectID": "research-idea/index.html",
-    "href": "research-idea/index.html",
-    "title": "Research idea checklist",
-    "section": "",
-    "text": "High-level (at least two for JMP, one for decent paper)\n\nNew? (literature frontier).\nInteresting? (Real-world relevance, policy implementation).\nData? (New data).\n\n\n\nRQ specification\n\nFind concrete real-life example or policy.\nCheck data.\nSpecify trade-off.\nSpecify the setting (agents, outcomes, etc).\nSpecify potential research design (identification).\nSpecify simple economic model.\n\n\n\nFinal checklist\n\nTalk to other PhDs.\nTalk to faculties (2+).\nPresent preliminary ideas."
-  },
-  {
-    "objectID": "misc/index.html",
-    "href": "misc/index.html",
-    "title": "Misc.",
-    "section": "",
-    "text": "Replication template with nix (rix): I updated the past replication template to use nix (rix) for package management. This is a more modern and flexible way to manage packages for your research workflow.\nReplication template (legacy): This is the replication template I use for my empirical papers. This template follows DCAS, the Data and Code Availability Standard v1.0 and also follows the Data and Code Availability Policy of the American Economic Association.\n\n\n\n\n\nQuarto working paper template for Economics: [github link] [Blog post]\n\n\n\n\n\nDockerfile for empirical analysis (R, Python, Julia with dependency management setup): [link]"
-  },
-  {
-    "objectID": "misc/index.html#software",
-    "href": "misc/index.html#software",
-    "title": "Misc.",
-    "section": "",
-    "text": "Replication template with nix (rix): I updated the past replication template to use nix (rix) for package management. This is a more modern and flexible way to manage packages for your research workflow.\nReplication template (legacy): This is the replication template I use for my empirical papers. This template follows DCAS, the Data and Code Availability Standard v1.0 and also follows the Data and Code Availability Policy of the American Economic Association.\n\n\n\n\n\nQuarto working paper template for Economics: [github link] [Blog post]\n\n\n\n\n\nDockerfile for empirical analysis (R, Python, Julia with dependency management setup): [link]"
-  },
-  {
-    "objectID": "misc/index.html#personal-tips",
-    "href": "misc/index.html#personal-tips",
-    "title": "Misc.",
-    "section": "Personal tips",
-    "text": "Personal tips\n\n\nList of tips\n\n\nTravel tips and recommendations (@Seoul, South Korea)"
-  },
-  {
-    "objectID": "misc/index.html#pictures",
-    "href": "misc/index.html#pictures",
-    "title": "Misc.",
-    "section": "Pictures",
-    "text": "Pictures\n\nPast profile pictures\nMemorable moments"
-  },
-  {
-    "objectID": "misc/personal/econ7300.html",
-    "href": "misc/personal/econ7300.html",
-    "title": "ECON-7300",
-    "section": "",
-    "text": "This is an informal note to record what I thought about or what I thought was important in the Metrics I class.\n\nGMM\nIf I can only choose one thing to remember in Metrics I, I would definitely choose GMM. This is mostly because many of the methods we learn in Metrics (at least in the first semester) are in the end some specific form of GMM. For example, IV is just a particular type of GMM. Also, I feel lot of the metrics portion of the applied economics papers are just about finding some moment conditions and estimating the model.\n\n\nData cannot speak for itself\nAs long as we are concerned about some endogeneity problem (which is a common problem in economics), we always needs some assumption to move forward. Just having more data will not solve your problem. In order to identify the parameter of interest, we need economic theory to guide us."
-  },
-  {
-    "objectID": "misc/personal/econ7100.html",
-    "href": "misc/personal/econ7100.html",
-    "title": "ECON-7100",
-    "section": "",
-    "text": "This is an informal note to record what I thought about or what I thought was important in the Microeconomics I class.\n\ntba"
-  },
-  {
-    "objectID": "misc/personal/working-environment.html",
-    "href": "misc/personal/working-environment.html",
-    "title": "Setting up working environment",
-    "section": "",
-    "text": "Preface\nThis is just a note for myself to re-setup my working environment on Linux (I am using Ubuntu) so that I don’t forget what I need to do.\n\n\nTerminal\n\nInstall fastfetch\n\nsudo add-apt-repository ppa:fastfetch/stable\nsudo apt install fastfetch \n\n# add `fastfetch` in `.bashrc` file.\n\n\n\n\nVim\n\nInstall Vim and set it as default text editor\n\nsudo apt update\nsudo apt install vim\n\nsudo update-alternatives --config editor\n\n\n\nInstall Vim-plugin\nFollow this link: LINK\nSome plugins I use (Example of .vimrc file)\n\ncall plug#begin()\n\n\" List your plugins here\nPlug 'sirver/ultisnips'\nPlug 'lervag/vimtex'\nPlug 'KeitaNakamura/tex-conceal.vim'\nPlug 'arcticicestudio/nord-vim'\nPlug 'preservim/nerdtree'\n\ncall plug#end()\n\nlet g:UltiSnipsExpandTrigger = '&lt;tab&gt;'\nlet g:UltiSnipsJumpForwardTrigger = '&lt;tab&gt;'\nlet g:UltiSnipsJumpBackwardTrigger = '&lt;s-tab&gt;'\nlet g:vimtex_view_method = 'zathura'\nlet g:vimtex_quickfix_mode = 0\nlet g:lightline = {'colorscheme' : 'nord'}\n\nsetlocal spell\nset spelllang=en_us\ninoremap &lt;C-l&gt; &lt;c-g&gt;u&lt;Esc&gt;[s1z=`]a&lt;c-g&gt;u\n\ncolorscheme nord\n\n\n\nSetup Vimtex with zathura\nFollow this: https://github.com/lervag/vimtex. Also remember that you need to install separate tex compiler to use tex.\n\n\n\nInstall R\nJust follow this site: https://pmassicotte.github.io/linux-mint-dev-environment/installr.html.\nI will just post my current .Rprofile file for reference:\n\nif (interactive() && Sys.getenv(\"RSTUDIO\") == \"\") {\n  Sys.setenv(TERM_PROGRAM = \"vscode\")\n  if (\"httpgd\" %in% .packages(all.available = TRUE)) {\n    options(vsc.plot = FALSE)\n    options(device = function(...) {\n      httpgd::hgd(silent = TRUE)\n      .vsc.browser(httpgd::hgd_url(history = FALSE), viewer = \"Beside\")\n    })\n  }\n  source(file.path(Sys.getenv(if (.Platform$OS.type == \"windows\") \"USERPROFILE\" else \"HOME\"), \".vscode-R\", \"init.R\"))\n}\n\n# Connect to public package manager\noptions(repos = c(CRAN = \"https://packagemanager.posit.co/cran/__linux__/rhel9/latest\"))\n\n# This is important if you are using RSPM on Linux outside RStudio\noptions(HTTPUserAgent = sprintf(\"R/%s R (%s)\", getRversion(), paste(getRversion(), R.version[\"platform\"], R.version[\"arch\"], R.version[\"os\"])))"
-  },
-  {
-    "objectID": "misc/personal/seoul.html",
-    "href": "misc/personal/seoul.html",
-    "title": "Travel tips and recommendations",
-    "section": "",
-    "text": "IMPORTANT: Summer in Korea is very hot and humid! When planning outdoor activities make sure you check out the weather beforehand. Fortunately, most buildings in Korea have ACs so try to stay indoor a lot during the summer.\nIn general, “information friction” seems to be quite low in South Korea. That being said, be aware that popular places that you search for on the internet will be quite crowded. Do expect some queue lines and make sure you consider the tradeoff of visiting a nice place and spending lot of time in the queue (But also take into account that most good places will have large volume of people on average. So you will need to wait in most places you want to visit).\nMaps: Like many other East Asia countries, lot of systems in Korea are country-specific (unfortunately). If you tend to travel in Korea, I strongly recommend you download either “Naver map” or “Kakao map” on your phone. They are the google map equivalent app in Seoul. Note that google map will not work very well in Korea.\nTransportation card: Unfortunately, you cannot use your regular credit cards to pay for the public transportation. You will have to buy some pre-paid card. For short-term trips, you can buy them at the station. I recommend you try out Climate card which is a relatively new pre-paid pass card that came out in Seoul. Also, remember to TAP IN and TAP OUT on both buses and subways!\nOrdering in restaurant: In Korea, there is no tip culture. That being said, no servers are assigned to your table (like in US). So do not passively wait for them to come get your order. In Korea, you can just call the server by raising your hand and calling out “excuse me”. This is not considered impolite and you will see that many people do that. Otherwise, they are not going to periodically check on you. Also, unlike other countries, you don’t pay the bill in your table. When you are done eating, just go to the counter and pay for the meal.\nPublic safety: I would say Seoul is one of the most safe cities in the world(in terms of traveling). You don’t need to worry too much about where you are going (within Seoul, it will be very unlikely that you stumble into some dangerous regions) and you can walk around at night. Many people will just walk around Seoul at 2, 3am and it would be fine.\nDrinking: One nice thing about Korea’s drinking culture is that you can drink your bottle outside. I would suggest you take some night-time picnic to Hangang river with some drinks. There are lot of parks near the river where you will see people drinking and enjoying the view.\nBicycle: Seoul also has public bicycle system. I didn’t try it often but I heard it’s pretty good. But warning: Unlike US or European countries, there are not many lanes strictly designated to bicycle in Korea. Also, it is bit rare for bicycle to go on the same road with the cars. In fact, it will be more common to just ride the bicycle in the pedestrian way. So when traveling in bicycle, just use the pedestrian way and be careful of the people. You should also keep an eye on the street for bicycle as you walk."
-  },
-  {
-    "objectID": "misc/personal/seoul.html#general-tips",
-    "href": "misc/personal/seoul.html#general-tips",
-    "title": "Travel tips and recommendations",
-    "section": "",
-    "text": "IMPORTANT: Summer in Korea is very hot and humid! When planning outdoor activities make sure you check out the weather beforehand. Fortunately, most buildings in Korea have ACs so try to stay indoor a lot during the summer.\nIn general, “information friction” seems to be quite low in South Korea. That being said, be aware that popular places that you search for on the internet will be quite crowded. Do expect some queue lines and make sure you consider the tradeoff of visiting a nice place and spending lot of time in the queue (But also take into account that most good places will have large volume of people on average. So you will need to wait in most places you want to visit).\nMaps: Like many other East Asia countries, lot of systems in Korea are country-specific (unfortunately). If you tend to travel in Korea, I strongly recommend you download either “Naver map” or “Kakao map” on your phone. They are the google map equivalent app in Seoul. Note that google map will not work very well in Korea.\nTransportation card: Unfortunately, you cannot use your regular credit cards to pay for the public transportation. You will have to buy some pre-paid card. For short-term trips, you can buy them at the station. I recommend you try out Climate card which is a relatively new pre-paid pass card that came out in Seoul. Also, remember to TAP IN and TAP OUT on both buses and subways!\nOrdering in restaurant: In Korea, there is no tip culture. That being said, no servers are assigned to your table (like in US). So do not passively wait for them to come get your order. In Korea, you can just call the server by raising your hand and calling out “excuse me”. This is not considered impolite and you will see that many people do that. Otherwise, they are not going to periodically check on you. Also, unlike other countries, you don’t pay the bill in your table. When you are done eating, just go to the counter and pay for the meal.\nPublic safety: I would say Seoul is one of the most safe cities in the world(in terms of traveling). You don’t need to worry too much about where you are going (within Seoul, it will be very unlikely that you stumble into some dangerous regions) and you can walk around at night. Many people will just walk around Seoul at 2, 3am and it would be fine.\nDrinking: One nice thing about Korea’s drinking culture is that you can drink your bottle outside. I would suggest you take some night-time picnic to Hangang river with some drinks. There are lot of parks near the river where you will see people drinking and enjoying the view.\nBicycle: Seoul also has public bicycle system. I didn’t try it often but I heard it’s pretty good. But warning: Unlike US or European countries, there are not many lanes strictly designated to bicycle in Korea. Also, it is bit rare for bicycle to go on the same road with the cars. In fact, it will be more common to just ride the bicycle in the pedestrian way. So when traveling in bicycle, just use the pedestrian way and be careful of the people. You should also keep an eye on the street for bicycle as you walk."
-  },
-  {
-    "objectID": "misc/personal/seoul.html#transportation-tips",
-    "href": "misc/personal/seoul.html#transportation-tips",
-    "title": "Travel tips and recommendations",
-    "section": "Transportation tips",
-    "text": "Transportation tips\n\nAirport to Seoul (bus): There are few ways to go from Incheon international airport to Seoul. Easiest way (but little bit more expensive) is airport bus (a.k.a. limousine bus). You can buy the ticket in the airport and they cover most major places in Seoul. You can also use the subway although I have never tried it.\nTransportation within Seoul (bus and subway): If you stay in Seoul, you will be able to access most (to be honest, all) locations in the city using public transportation. Main transportation is “bus” and “subway.” Another advantage of Seoul is that bus and subway system are very well interconnected. You only pay by the distance (even the rate of increment for distance is pretty generous within Seoul) and transferring to other bus or subway do not have extra cost (except very few subway or system run by different region). Arrival rates are also pretty good so make sure you use it a lot.\nTransportation at night (taxi): That being said, you won’t need to use other transportation within Seoul unless you are moving very late at night. Lot of subways and buses stop working around 11pm~12am-ish. If you tend to stay far away from your home at night, you will have to use taxi. You can get a taxi either by catching them on the go or by app (sth like kakao taxi). Just be warned that it is bit harder to catch taxi at night as there are less supply."
-  },
-  {
-    "objectID": "misc/personal/seoul.html#general-travel-places-recommendation",
-    "href": "misc/personal/seoul.html#general-travel-places-recommendation",
-    "title": "Travel tips and recommendations",
-    "section": "General travel places recommendation",
-    "text": "General travel places recommendation\n\nOfficial visitor guide: LINK\nFor full lists of places you can go, try out this LINK"
-  },
-  {
-    "objectID": "misc/personal/seoul.html#brief-personal-recommendations",
-    "href": "misc/personal/seoul.html#brief-personal-recommendations",
-    "title": "Travel tips and recommendations",
-    "section": "Brief personal recommendations",
-    "text": "Brief personal recommendations\n\nPlaces around “seoul forest” are quite nice. The park is very nice with small pond and place near the park (Seongsu-dong) has sort of New York Brooklyn vibe(shameless comparison, I know…). Just be aware that there tends to be lot of people around.\nTry out places around the old city. These places are generally called “within four doors.” This is because in the past, the Seoul walled city had four main doors for entry. Unlike other places in Seoul which are now pretty modern, old city area still has lot of traditional places. Try out some traditional Korean house villages (like Bukchon Hanok Village and Seochon). I personally like area around Seochon. They are also close to the palaces so you will be able to visit them as well. Overall, area around the palaces (Seochon or Bukchon are all places surrounding the old palaces) are generally nice place to walk around.\nWalking along the river is nice. Especially try out Cheong-gye-cheon stream at night. Having a night picnic near Han-gang river is also a nice experience.\nIf you like theme parks, be sure to try out Lotte World Adventure. It used to be the biggest In-door Theme park until 2010. It is also known for having many dark rides. It is also close to shopping mall (Lotte mall is right next to it) and Lotte World Tower which is currenlty the tallest building in Korea.1\n\n\nTry out some traditional markets: Places like Gwang-jang market or Tong-in market are very interesting places to go and eat some snack foods.\nIf you have time, you could go to Sinchon which has university (Yonsei University) I am from. Although it is not as fancy as universities in Europe or US, it is overall clean and nice. Even though place is bit dying now, Sinchon is also known as one of the popular places for university students. You will be able to feel some freshman(?) vibe.2\n\n\nAlthough not my favorite, I guess you will probably be visiting Gangnam at least once when you are in Seoul. It is sort of like SOHO in UK. I do think it is a bit tourist-trap place but it does have some nice restaurants and places.\nIf you are a “park person”, try out Olympic park. It is also pretty close to Seok-chon lake which is also a famous place for a walk. But note that the place might be packed with people depending on when you go.\nKorea also has some nice coffee shops so try them. Good thing about cafes in Korea is that it is very convenient to work (e.g. using laptop). Lot of coffee shops in Korea have large tables and power outlets around."
-  },
-  {
-    "objectID": "misc/personal/seoul.html#personal-food-recommendations",
-    "href": "misc/personal/seoul.html#personal-food-recommendations",
-    "title": "Travel tips and recommendations",
-    "section": "Personal food recommendations",
-    "text": "Personal food recommendations\n\nKorean BBQ: I think Korean BBQ is now quite popular even outside of Korea. Big advantage of eating Korean BBQ in Korea is that it is relatively cheaper. If you have time, try places like “ha-nam pig house”, “Go-ban sik-dang”, “byeok-je kalbi”, etc.\nKorean fried chicken: Korean fried chicken is very tasty. There are many places (e.g. BBQ chicken, BHC chicken, etc) you can get it from and they all have their own specialties. I recommend you get a take-out and eat it near Han-gang river with some beer.\nCold noodles (e.g. Pyeong-yang Neng-myeon): Korea also has nice cold noodles. Peyong-yang Neng-myeon is my favorite but opinions are divided (some people don’t like it because it tastes quite bland). Try places like “ure-ok”, “bong-phee-yang”, “ul-ji-myeon-ok”, “ul-mil-dae”. Other than Pyeong-yang Neng-myeon, bean noodle is also a nice choice. It is basically noodle served in a soup made from grinding beans.\nTraditional Korean food: Unlike course style cuisine in other countries, interesting aspect about korean cuisine is that it is usually served all at once. So when you order some food, it will be served with other side dishes (usually called “ban-chan”). Also good thing about this side dishes is that you can ask a refill for these side dishes for free. Be sure you go to some traditional Korean food restaurant to check out these dishes."
-  },
-  {
-    "objectID": "misc/personal/seoul.html#footnotes",
-    "href": "misc/personal/seoul.html#footnotes",
-    "title": "Travel tips and recommendations",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nIt also holds few other records: (1) 8th tallest building in the world, (2) Tallest building out of all OECD countries.↩︎\nJust be careful not to confuse Sinchon with Sincheon. The one I am referring to is located in the north of the river. On the other hand, Sincheon is located in the south.↩︎"
-  },
-  {
-    "objectID": "research/index.html",
-    "href": "research/index.html",
-    "title": "Research",
-    "section": "",
-    "text": "“The China shock and internal migration: Evidence from bilateral migration flows” with Jaerim Choi and Seung Hoon Lee. Feb. 2026. [Working paper] [Replication package]. Revise and Resubmit, Canadian Journal of Economics.\n\n\nAbstract\n\nUsing Korean administrative data spanning nearly two decades and covering the universe of bilateral migration flows across local labor markets, we examine how the China trade shock shapes internal migration. While prior studies rely on net population changes to measure labor adjustment, we exploit bilateral migration flows that separately capture in- and out-migration. We find that trade exposure primarily increases out-migration from adversely affected regions, with limited effects on in-migration, revealing asymmetric spatial adjustment. Decomposing the shock, export expansion reduces out-migration, whereas import competition increases it. Migration responses are strongest among prime working-age individuals and substantially weaker among younger and older cohorts. Single-person households are more responsive than multi-person households. Overall, bilateral data reveal substantial migration responses that conventional net population measures fail to detect, offering new insight into the “missing migration puzzle.”"
-  },
-  {
-    "objectID": "research/index.html#working-papers",
-    "href": "research/index.html#working-papers",
-    "title": "Research",
-    "section": "",
-    "text": "“The China shock and internal migration: Evidence from bilateral migration flows” with Jaerim Choi and Seung Hoon Lee. Feb. 2026. [Working paper] [Replication package]. Revise and Resubmit, Canadian Journal of Economics.\n\n\nAbstract\n\nUsing Korean administrative data spanning nearly two decades and covering the universe of bilateral migration flows across local labor markets, we examine how the China trade shock shapes internal migration. While prior studies rely on net population changes to measure labor adjustment, we exploit bilateral migration flows that separately capture in- and out-migration. We find that trade exposure primarily increases out-migration from adversely affected regions, with limited effects on in-migration, revealing asymmetric spatial adjustment. Decomposing the shock, export expansion reduces out-migration, whereas import competition increases it. Migration responses are strongest among prime working-age individuals and substantially weaker among younger and older cohorts. Single-person households are more responsive than multi-person households. Overall, bilateral data reveal substantial migration responses that conventional net population measures fail to detect, offering new insight into the “missing migration puzzle.”"
-  },
-  {
-    "objectID": "research/index.html#publications",
-    "href": "research/index.html#publications",
-    "title": "Research",
-    "section": "Publications",
-    "text": "Publications\n[2] “Does political conflict hurt immigration? Evidence from the South Korea – China THAAD Dispute” with Jongkwan Lee. Aug. 2024. Published in Southern Economic Journal [Paper].\n[1] “The well-being of cities: Estimating migration attractiveness from internal migration across Korean cities” with Seung Hoon Lee and Ji Sub Park. Feb. 2024. Published in Global Economic Review [Paper]."
-  },
-  {
-    "objectID": "research/index.html#work-in-progress",
-    "href": "research/index.html#work-in-progress",
-    "title": "Research",
-    "section": "Work in progress",
-    "text": "Work in progress\n\n“Investment and deforestation under uncertain market access: Evidence from the Mexican avocado boom” with Prakash Mishra, Sebastian Sardon and James E. Sayre"
-  },
-  {
-    "objectID": "research/index.html#other-works",
-    "href": "research/index.html#other-works",
-    "title": "Research",
-    "section": "Other works",
-    "text": "Other works\n[2] A comment on “Malaria suitability, urbanization and persistence: Evidence from China over more than 2000 years” with Marc Joëts, Stefania Lovo and Niklas Murken. Nov. 2025. UKRN replication game. Institute for Replication. [Paper]\n[1] “The effect of remote working on household waste: evidence from South Korea” with Hee-Seung Yang. Mar. 2025. [Working paper].\n\n\nAbstract\n\nRemote working, or Work-From-Home (WFH), is now one of the prevalent work arrangement around the world. However, its impact on the social welfare—such as waste generation—is largely unexplored. This paper examines the causal impact of remote working on household waste generation in South Korea using COVID-19 as a natural experiment. The findings reveal mixed results. While overall household waste in district remain unaffected, districts with higher WFH levels experience increased plastic and textile waste but decreased food waste. These results suggest that remote working may influence current consumption patterns and lifestyle. Understanding these environmental implications is crucial for promoting sustainable work models and responsible waste management in a digital and remote world."
-  },
-  {
-    "objectID": "misc/personal/econ6110.html",
-    "href": "misc/personal/econ6110.html",
-    "title": "ECON-6110",
-    "section": "",
-    "text": "This is an informal note to record what I thought about or what I thought was important in the Game theory class."
-  },
-  {
-    "objectID": "misc/personal/econ6110.html#hemi-continuity-and-fixed-point-theorem",
-    "href": "misc/personal/econ6110.html#hemi-continuity-and-fixed-point-theorem",
-    "title": "ECON-6110",
-    "section": "Hemi-continuity and fixed point theorem",
-    "text": "Hemi-continuity and fixed point theorem\nWhen I was first learned about hemi-continuity in math camp, I was not sure why we need to know this concept. The only intuition I had was that it is sort of a generalization of the continuity definition to correspondence. But after taking the game theory course, I finally realized that we need this condition to apply Kakutani fixed point theorem. FYI, we need kakutani fixed point theorem to prove that Nash eqm exists.\n\nEx-ante, interim, ex-post\nWhen talking about (expected) payoff of agents, it is important to know whether the agents are maximizing ex-ante, interim, or ex-post. For example, revenue equivalence theorem in auction is about equivalence of autioneer’s expected payoff ex-ante, not ex-post. Fortunately, chatgpt did a good job in summarizing the definition in a table.\n\n\n\nNormal form and extensive form\nIt is important to note that the main difference between normal form game and extensive form game is not the timing. That is, fundamental difference between normal form and extensive form game is not whether the agents make decisions at the same time or not. For example, think of a game where agents makes decisions at different timing but they cannot observe others’ actions. In this setting, the game is still a normal form. The game becomes “extensive” when some agents can observe other agents’ actions before making their own decisions. Thus, the main factor that differentiates normal form and extensive form is whether agents make their actions after observing other’s actions.\n\n\nAdverse selection\nI thought it was interesting to learn that the key takeaway from adverse selection isn’t just the presence of information asymmetry between agents, but that this asymmetry impacts other agents’ payoffs. In fact, this is the main factor leading to the presence of adverse selection. In the famous lemon market example, adverse selection will not occur if there were separate and independent dimensions of utility for the seller and buyer.\n\n\nRevenue equivalence theorem\nAlthough I learned this concept in undergraduate micro class, it was still very cool to know that ex-ante expected revenue becomes equivalent for all standard auction games."
-  },
-  {
-    "objectID": "misc/personal/profile_pictures.html",
-    "href": "misc/personal/profile_pictures.html",
-    "title": "Past profile pictures",
-    "section": "",
-    "text": "This is a collection of my past profile pictures."
-  },
-  {
-    "objectID": "misc/personal/profile_pictures.html#section",
-    "href": "misc/personal/profile_pictures.html#section",
-    "title": "Past profile pictures",
-    "section": "2025",
-    "text": "2025\n\n\n\n\n\n\n@Locust Walk, Wharton Penn"
-  },
-  {
-    "objectID": "misc/personal/profile_pictures.html#section-1",
-    "href": "misc/personal/profile_pictures.html#section-1",
-    "title": "Past profile pictures",
-    "section": "2024",
-    "text": "2024\n\n\n\n2024 Connections@Wharton event"
-  },
-  {
-    "objectID": "misc/personal/profile_pictures.html#section-2",
-    "href": "misc/personal/profile_pictures.html#section-2",
-    "title": "Past profile pictures",
-    "section": "2023",
-    "text": "2023\n\n\n\nSinchon, Seoul (near Yonsei University)"
-  },
-  {
-    "objectID": "misc/personal/econ7200.html",
-    "href": "misc/personal/econ7200.html",
-    "title": "ECON-7200",
-    "section": "",
-    "text": "This is an informal note to record what I thought about or what I thought was important in the Macroeconomics I class.\n\nCompetitive eqm, efficiency, and GE\nI don’t know why, but I always feel that macro course does a better job of explaining the concep of GE, competitive eqm, and the welfare theorem than the second portion of micro course. It was nice to see how we start with simple Arrow-Debreu setup and derive the competitive equilibrium. Then we use welfare theorem to connect the competitive eqm to pareto efficiency.\n\n\nDynamics"
-  },
-  {
-    "objectID": "misc/personal/memorable_moments.html",
-    "href": "misc/personal/memorable_moments.html",
-    "title": "Memorable moments",
-    "section": "",
-    "text": "This is a collection of my memorable moments."
-  },
-  {
-    "objectID": "misc/personal/memorable_moments.html#section",
-    "href": "misc/personal/memorable_moments.html#section",
-    "title": "Memorable moments",
-    "section": "2025-2026",
-    "text": "2025-2026\n\nThanksgiving\n\n\n\nHalloween\n\n\n\n\n\n\n\n\n\n\n\n\nPhilly trade group seminar"
-  },
-  {
-    "objectID": "misc/personal/memorable_moments.html#section-1",
-    "href": "misc/personal/memorable_moments.html#section-1",
-    "title": "Memorable moments",
-    "section": "2024-2025",
-    "text": "2024-2025\n\nStanford University\n\n\nSan Francisco\n\n\nBirthday\n\n\nSpring break (Florida keys)\n\n\nChiang Mai, Thailand"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Hyoungchul Kim",
-    "section": "",
-    "text": "I am a Ph.D. student in Applied Economics at The Wharton School, University of Pennsylvania.\nYou can either call me Hyoungchul (H-Young-Cheol, rhymes with “Null”) or Kent (my english name).\nI am currently interested in urban and environmental topics using tools from international trade and industrial organization.\nFor inquiries about software, email me or use the issue tracker at GitHub."
-  },
-  {
-    "objectID": "posts/bandit/index.html",
-    "href": "posts/bandit/index.html",
-    "title": "OverTheWire wargames",
-    "section": "",
-    "text": "In this post, I write down my solutions for the OverTheWire wargames."
-  },
-  {
-    "objectID": "posts/bandit/index.html#bandit",
-    "href": "posts/bandit/index.html#bandit",
-    "title": "OverTheWire wargames",
-    "section": "Bandit",
-    "text": "Bandit\n\n0\nJust get used to the concept of ssh. ssh is secure shell which allows secured access to the remote machine from the local computer.\n\nssh bandit0@bandit.labs.overthewire.org -p 2220\n\n# You will be asked to type in the password.\n\n\n\n0 to 1\n\n# print out the file\ncat readme\n\nexit\n \nssh bandit1@bandit.labs.overthewire.org -p 2220\n\n# You will be asked to type in the password.\n\n\n\n1 to 2\n\n# Special character - . Need to specify the full location of the file. \ncat ./-\n\n\n\n2 to 3\n\n# enclose the filenames using double quote, or use \\ before white space.\n\n\n\n3 to 4\n\n# list all files using -a argument\nls inhere/ -a\n\n\n\n4 to 5\n\n# find ASCII text files\n# -exec file {} + executes the file command to get info on the content\nfind inhere -type f -exec file {} + | grep ASCII\n\n\n\n5 to 6\n\nfind inhere -type f -size 1033c ! -executable -exec file {} + | grep ASCII\n\n\n\n6 to 7\n\n# since we don't know where the file is, we will search from the root directory\nfind / -user bandit7 -group bandit6 -size 33c -type f 2&gt;/dev/null -exec cat {} \\;\n\n\n\n7 to 8\n\ngrep -w \"millionth\" data.txt\n\n\n\n8 to 9\n\nsort data.txt | uniq -u data.txt\n\n\n\n9 to 10\n\nstrings data.txt | grep \"==\"\n\n\n\n10 to 11\n\ncat data.txt | base64 -d\n\n\n\n11 to 12\n\ncat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'\n\n\n\n12 to 13\n\nls\nhead data.txt\nmkdir /tmp/random_dir\ncd /tmp/random_dir\ncp ~/data.txt .\nmv data.txt data\nxxd -r data &gt; binary\nfile binary\nmv binary binary.gz\ngunzip binary.gz\nbunzip2 binary\nmv binary.out binary.gz\ngunzip binary.gz\ntar -xf binary\n\n# do similar procedure multiple times\nFO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn\n\n\n\n13 to 14\n\nssh -i sshkey.private -p 2220 bandit14@localhost # This will log you in as user bandit14 and allow you to see the password.\n\n\n\n14 to 15\n\nnetcat localhost 30000\n# Then submit the password of the current level.\n\n\n\n15 to 16\n\nopenssl s_client -connect localhost:30001\n# Then submit the password of the current level.\n\n\n\n16 to 17\n\n# I feel this part is bit too complicated and not useful for me. So I just provide the link to someone else's solution\n# https://medium.com/@rushi.padhiyar098/overthewire-bandit-level-16-and-level-17-walkthrough-by-cyph3r-ryx-95c1ccdbb76b\n\n\n\n17 to 18\n\ndiff passwords.new passwords.old\n\n\n\n18 to 19\n\n# check shell other than bash\ncat /etc/shells\n\n# use it to login\nssh bandit18@bandit.labs.overthewire.org -p 2220 -t \"/bin/sh\"\n\ncGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8\n\n\n\n19 to 20\n\n./bandit20-do\n\n./bandit20-do ls /etc/bandit_pass\n\n./bandit20-do cat /etc/bandit_pass/bandit20\n\n\n\n20 to 21\n\n# I feel this part is not useful for me. So I just provide the link to someone else's solution\nEeoULMCra2q0dSkYj561DX7s1CpBuOBt"
-  },
-  {
-    "objectID": "posts/hello-quarto/index.html",
-    "href": "posts/hello-quarto/index.html",
-    "title": "Hello, Quarto",
-    "section": "",
-    "text": "Recently, I successfully migrated my website over to Quarto. My past website using Hugo1 was not that bad but it was bit too glitchy for me. Luckily, I was able to learn that it was possible to make a website using Quarto. After some trial and error, I was able to set it up.\nFor me, migrating was not that painful as I did not have much information on my website. In fact, this was partially due to the fragility of my past website. For some reason, my website would sometimes go full 404 when I commit new info on my website. In order to solve this, I had to make some meaningless changes to re-commit my git repository. This problem does not seem to occur in Quarto. Finally, I will be able to actively use my Blog section.\nFYI, I will write down some words about the problems I faced when migrating. I was bit stuck when I had to type quarto publish gh-pages. According to Quarto documentation, this code “will confirm that you want to publish, render your content, copy the output to a special gh-pages branch, push that branch to GitHub, and then open a browser to view your site once it is deployed.” The problem was that my command will not go through in the deployment process. The deployment will go on forever. I googled it and one of the solutions seems to be that I need to delete my gh-pages branch and old deployment point to re-initiate it. But I solved it by typing quarto publish gh-pages --no-browser. This is bit weird because Quarto documentation says you should use this option when you are publishing to a private website. While I don’t think my website is a private one, this somehow made my command go through.\nAlso, I had to specify gh-pages branch manually in the repo settings in the github repository."
-  },
-  {
-    "objectID": "posts/hello-quarto/index.html#footnotes",
-    "href": "posts/hello-quarto/index.html#footnotes",
-    "title": "Hello, Quarto",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nIn case you want to check out my past hugo website, click here↩︎"
-  },
-  {
-    "objectID": "posts/first-year/index.html",
-    "href": "posts/first-year/index.html",
-    "title": "First-year Ph.D. in retrospect",
-    "section": "",
-    "text": "We have nothing to declare except our ignorances.1\n\nRecently, my first-year PhD ended.2 Overall, it was an unique and a bizarre experience in a sense that I was in this whirlpool of the research frontier and the utmost ignorance. During my first-year, I had chances to experience the works of so many great minds. There were seminars everywhere. Periodically there would be some invited speakers whose papers I have read in my undergraduate or masters. Not only that, the school was constantly filled with people with interesting ideas and thoughts. Just talking to some upper years about their research projects made me excited. As someone once said, it was lucky to be alive to be in this time.\nBut this was not the only experience I had. First-year PhD was also the time when I was constantly reminded of my ignorance. Mingling with so many great people also made me realize how empty I am. Sometimes I was bit scared that I did not have much to say if someone asked me what my interests are. Although I was very interested in the field of economics, it was quite hard to exactly specify which part of economics I am interested and want to learn about.\nIn the end, I think first-year was a nice new start for me. It just made me realize that I am surrounded by so many great minds and that there is still so much things I have to do. So Back to mono it is."
-  },
-  {
-    "objectID": "posts/first-year/index.html#back-to-mono-or-the-rabbit-hole",
-    "href": "posts/first-year/index.html#back-to-mono-or-the-rabbit-hole",
-    "title": "First-year Ph.D. in retrospect",
-    "section": "",
-    "text": "We have nothing to declare except our ignorances.1\n\nRecently, my first-year PhD ended.2 Overall, it was an unique and a bizarre experience in a sense that I was in this whirlpool of the research frontier and the utmost ignorance. During my first-year, I had chances to experience the works of so many great minds. There were seminars everywhere. Periodically there would be some invited speakers whose papers I have read in my undergraduate or masters. Not only that, the school was constantly filled with people with interesting ideas and thoughts. Just talking to some upper years about their research projects made me excited. As someone once said, it was lucky to be alive to be in this time.\nBut this was not the only experience I had. First-year PhD was also the time when I was constantly reminded of my ignorance. Mingling with so many great people also made me realize how empty I am. Sometimes I was bit scared that I did not have much to say if someone asked me what my interests are. Although I was very interested in the field of economics, it was quite hard to exactly specify which part of economics I am interested and want to learn about.\nIn the end, I think first-year was a nice new start for me. It just made me realize that I am surrounded by so many great minds and that there is still so much things I have to do. So Back to mono it is."
-  },
-  {
-    "objectID": "posts/first-year/index.html#somethings-i-tried-to-do-in-my-first-year",
-    "href": "posts/first-year/index.html#somethings-i-tried-to-do-in-my-first-year",
-    "title": "First-year Ph.D. in retrospect",
-    "section": "Somethings I tried to do in my first-year",
-    "text": "Somethings I tried to do in my first-year\n\nSo, did I find my production function?: I think I did although it is kind of hard to formalize it in words.\nWhat is my work-life balance?: Personally, I think I am okay with working a lot as long as I can study or work in nice places time to time (cafes, beach, etc).\nWhat did I study?: Mostly core classes or course! I also personally studied about demand estimation in IO which I think was very helpful. At least now I think I kind of understand the process of BLP (in theory).\nRelationships: I have such a great time in Philly. I believe my cohorts and people around me are just awesome."
-  },
-  {
-    "objectID": "posts/first-year/index.html#goal-for-the-second-year",
-    "href": "posts/first-year/index.html#goal-for-the-second-year",
-    "title": "First-year Ph.D. in retrospect",
-    "section": "Goal for the second-year",
-    "text": "Goal for the second-year\n\nStart doing more research: This is what I am paid to do anyway!\nFinding the research frontier: I still feel I am not quite sure of the literature frontier that I am on right now. Hopefully taking field courses and personal times will help me get a better sense of what that is."
-  },
-  {
-    "objectID": "posts/first-year/index.html#footnotes",
-    "href": "posts/first-year/index.html#footnotes",
-    "title": "First-year Ph.D. in retrospect",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nPersonal twist of the quotes by good ol’ Oscar Wilde.↩︎\nIn case you don’t know already, I am currently doing PhD in Applied Economics at The Wharton School, UPenn.↩︎"
-  },
-  {
-    "objectID": "posts/admission-econ/index.html",
-    "href": "posts/admission-econ/index.html",
-    "title": "Admission tips for Econ. Ph.D. (by Ph.D. student)",
-    "section": "",
-    "text": "I had a chance to talk about some admission tips for master students in my university after my application process (It happened later year). I decided to share this slide on my website. You can find it here.\n\nDisclaimer\nThis slides only consist of my personal experience. That being said, lot of it can have some misinformation. Also, some of the contents are tailored to the students in my alma mater."
+    "text": "Lagrangian, Shadow Price, and KKT: Intuition and Proofs\n\n\n\nstudy\n\n\n\nMy personal notes on constrained optimization for economics\n\n\n\n\n\nMar 27, 2026\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nBuilding demand system from scratch\n\n\n\nstudy\n\n\n\nMy personal notes on demand system in IO\n\n\n\n\n\nMar 27, 2026\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nNotes on IO\n\n\n\nstudy\n\n\n\nMy notes on IO\n\n\n\n\n\nMar 16, 2026\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nMy first trial and error with installing Arch Linux\n\n\n\nsoftware\n\n\n\nInstalling Arch Linux on Tuxedo Computers InfinityBook Pro 15\n\n\n\n\n\nJan 25, 2026\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nMy trial and error with Dockerfile\n\n\n\nsoftware\n\n\n\nThis is a post on my trial and error on building Docker image with Dockerfile\n\n\n\n\n\nSep 13, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nHands-on reproducible research workflow\n\n\n\nsoftware\n\n\n\nThis is a detailed post on how to use my replication template (or template for reproducible research workflow) in GitHub\n\n\n\n\n\nAug 30, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nOverTheWire wargames\n\n\n\nstudy\n\n\n\nPersonal solutions for overthewire wargames\n\n\n\n\n\nAug 2, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nAsahi-linux on Macbook Pro\n\n\n\nsoftware\n\n\n\nMy first experience with asahi-linux on Macbook Pro\n\n\n\n\n\nAug 2, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nFirst-year Ph.D. in retrospect\n\n\n\npersonal\n\n\n\nSummarizing my first-year Ph.D. in Economics experience\n\n\n\n\n\nJun 6, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nParallel programming\n\n\n\nstudy\n\n\n\nLearning basic parallel programming in R\n\n\n\n\n\nMay 26, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nMakefile: build automation software\n\n\n\nsoftware\n\n\n\nMaking automation workflow with Makefile\n\n\n\n\n\nApr 22, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nBeware of Bash\n\n\n\nsoftware\n\n\n\nSome warnings when using Bash\n\n\n\n\n\nMar 21, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nPersonal Dockerfile for data science\n\n\n\nsoftware\n\n\n\nPersonal Dockerfile template for my research workflow\n\n\n\n\n\nMar 15, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto format Econ. working paper template\n\n\n\nsoftware\n\n\n\nI just dropped a new quarto format working paper template in github\n\n\n\n\n\nMar 9, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nFirst academic citation\n\n\n\nresearch\n\n\n\nI am celebrating my first citation\n\n\n\n\n\nMar 1, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nReproducible coding crash course\n\n\n\nlecture\n\n\n\nMy slide and resources on reproducible coding\n\n\n\n\n\nJan 20, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nAdmission tips for Econ. Ph.D. (by Ph.D. student)\n\n\n\nlecture\n\n\n\nAdmission tips slide I wrote for master students at Alma Mater\n\n\n\n\n\nJan 20, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nSummary of my understanding of terms in empirical economics\n\n\n\nlecture\n\n\n\nSummary of some terms and jargons in the field of empirical economics\n\n\n\n\n\nJan 20, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nHello, Quarto\n\n\n\nannouncement\n\n\n\nMigrating from hugo github page\n\n\n\n\n\nJan 19, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\n\n\n\n\n\n\n\nSQL materials\n\n\n\nstudy\n\n\n\nResources for learning SQL\n\n\n\n\n\nJan 17, 2025\n\n\nHyoungchul Kim\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/parallel/index.html",
@@ -537,6 +145,447 @@
     "title": "Parallel programming",
     "section": "Setting how many cores to use",
     "text": "Setting how many cores to use\nplan(multisession) or plan(multicore) automatically default to using all your cores. You can change that by running, say, plan(multisession(workers = detectCores()-1))."
+  },
+  {
+    "objectID": "posts/admission-econ/index.html",
+    "href": "posts/admission-econ/index.html",
+    "title": "Admission tips for Econ. Ph.D. (by Ph.D. student)",
+    "section": "",
+    "text": "I had a chance to talk about some admission tips for master students in my university after my application process (It happened later year). I decided to share this slide on my website. You can find it here.\n\nDisclaimer\nThis slides only consist of my personal experience. That being said, lot of it can have some misinformation. Also, some of the contents are tailored to the students in my alma mater."
+  },
+  {
+    "objectID": "posts/first-year/index.html",
+    "href": "posts/first-year/index.html",
+    "title": "First-year Ph.D. in retrospect",
+    "section": "",
+    "text": "We have nothing to declare except our ignorances.1\n\nRecently, my first-year PhD ended.2 Overall, it was an unique and a bizarre experience in a sense that I was in this whirlpool of the research frontier and the utmost ignorance. During my first-year, I had chances to experience the works of so many great minds. There were seminars everywhere. Periodically there would be some invited speakers whose papers I have read in my undergraduate or masters. Not only that, the school was constantly filled with people with interesting ideas and thoughts. Just talking to some upper years about their research projects made me excited. As someone once said, it was lucky to be alive to be in this time.\nBut this was not the only experience I had. First-year PhD was also the time when I was constantly reminded of my ignorance. Mingling with so many great people also made me realize how empty I am. Sometimes I was bit scared that I did not have much to say if someone asked me what my interests are. Although I was very interested in the field of economics, it was quite hard to exactly specify which part of economics I am interested and want to learn about.\nIn the end, I think first-year was a nice new start for me. It just made me realize that I am surrounded by so many great minds and that there is still so much things I have to do. So Back to mono it is."
+  },
+  {
+    "objectID": "posts/first-year/index.html#back-to-mono-or-the-rabbit-hole",
+    "href": "posts/first-year/index.html#back-to-mono-or-the-rabbit-hole",
+    "title": "First-year Ph.D. in retrospect",
+    "section": "",
+    "text": "We have nothing to declare except our ignorances.1\n\nRecently, my first-year PhD ended.2 Overall, it was an unique and a bizarre experience in a sense that I was in this whirlpool of the research frontier and the utmost ignorance. During my first-year, I had chances to experience the works of so many great minds. There were seminars everywhere. Periodically there would be some invited speakers whose papers I have read in my undergraduate or masters. Not only that, the school was constantly filled with people with interesting ideas and thoughts. Just talking to some upper years about their research projects made me excited. As someone once said, it was lucky to be alive to be in this time.\nBut this was not the only experience I had. First-year PhD was also the time when I was constantly reminded of my ignorance. Mingling with so many great people also made me realize how empty I am. Sometimes I was bit scared that I did not have much to say if someone asked me what my interests are. Although I was very interested in the field of economics, it was quite hard to exactly specify which part of economics I am interested and want to learn about.\nIn the end, I think first-year was a nice new start for me. It just made me realize that I am surrounded by so many great minds and that there is still so much things I have to do. So Back to mono it is."
+  },
+  {
+    "objectID": "posts/first-year/index.html#somethings-i-tried-to-do-in-my-first-year",
+    "href": "posts/first-year/index.html#somethings-i-tried-to-do-in-my-first-year",
+    "title": "First-year Ph.D. in retrospect",
+    "section": "Somethings I tried to do in my first-year",
+    "text": "Somethings I tried to do in my first-year\n\nSo, did I find my production function?: I think I did although it is kind of hard to formalize it in words.\nWhat is my work-life balance?: Personally, I think I am okay with working a lot as long as I can study or work in nice places time to time (cafes, beach, etc).\nWhat did I study?: Mostly core classes or course! I also personally studied about demand estimation in IO which I think was very helpful. At least now I think I kind of understand the process of BLP (in theory).\nRelationships: I have such a great time in Philly. I believe my cohorts and people around me are just awesome."
+  },
+  {
+    "objectID": "posts/first-year/index.html#goal-for-the-second-year",
+    "href": "posts/first-year/index.html#goal-for-the-second-year",
+    "title": "First-year Ph.D. in retrospect",
+    "section": "Goal for the second-year",
+    "text": "Goal for the second-year\n\nStart doing more research: This is what I am paid to do anyway!\nFinding the research frontier: I still feel I am not quite sure of the literature frontier that I am on right now. Hopefully taking field courses and personal times will help me get a better sense of what that is."
+  },
+  {
+    "objectID": "posts/first-year/index.html#footnotes",
+    "href": "posts/first-year/index.html#footnotes",
+    "title": "First-year Ph.D. in retrospect",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nPersonal twist of the quotes by good ol’ Oscar Wilde.↩︎\nIn case you don’t know already, I am currently doing PhD in Applied Economics at The Wharton School, UPenn.↩︎"
+  },
+  {
+    "objectID": "posts/hello-quarto/index.html",
+    "href": "posts/hello-quarto/index.html",
+    "title": "Hello, Quarto",
+    "section": "",
+    "text": "Recently, I successfully migrated my website over to Quarto. My past website using Hugo1 was not that bad but it was bit too glitchy for me. Luckily, I was able to learn that it was possible to make a website using Quarto. After some trial and error, I was able to set it up.\nFor me, migrating was not that painful as I did not have much information on my website. In fact, this was partially due to the fragility of my past website. For some reason, my website would sometimes go full 404 when I commit new info on my website. In order to solve this, I had to make some meaningless changes to re-commit my git repository. This problem does not seem to occur in Quarto. Finally, I will be able to actively use my Blog section.\nFYI, I will write down some words about the problems I faced when migrating. I was bit stuck when I had to type quarto publish gh-pages. According to Quarto documentation, this code “will confirm that you want to publish, render your content, copy the output to a special gh-pages branch, push that branch to GitHub, and then open a browser to view your site once it is deployed.” The problem was that my command will not go through in the deployment process. The deployment will go on forever. I googled it and one of the solutions seems to be that I need to delete my gh-pages branch and old deployment point to re-initiate it. But I solved it by typing quarto publish gh-pages --no-browser. This is bit weird because Quarto documentation says you should use this option when you are publishing to a private website. While I don’t think my website is a private one, this somehow made my command go through.\nAlso, I had to specify gh-pages branch manually in the repo settings in the github repository."
+  },
+  {
+    "objectID": "posts/hello-quarto/index.html#footnotes",
+    "href": "posts/hello-quarto/index.html#footnotes",
+    "title": "Hello, Quarto",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nIn case you want to check out my past hugo website, click here↩︎"
+  },
+  {
+    "objectID": "posts/bandit/index.html",
+    "href": "posts/bandit/index.html",
+    "title": "OverTheWire wargames",
+    "section": "",
+    "text": "In this post, I write down my solutions for the OverTheWire wargames."
+  },
+  {
+    "objectID": "posts/bandit/index.html#bandit",
+    "href": "posts/bandit/index.html#bandit",
+    "title": "OverTheWire wargames",
+    "section": "Bandit",
+    "text": "Bandit\n\n0\nJust get used to the concept of ssh. ssh is secure shell which allows secured access to the remote machine from the local computer.\n\nssh bandit0@bandit.labs.overthewire.org -p 2220\n\n# You will be asked to type in the password.\n\n\n\n0 to 1\n\n# print out the file\ncat readme\n\nexit\n \nssh bandit1@bandit.labs.overthewire.org -p 2220\n\n# You will be asked to type in the password.\n\n\n\n1 to 2\n\n# Special character - . Need to specify the full location of the file. \ncat ./-\n\n\n\n2 to 3\n\n# enclose the filenames using double quote, or use \\ before white space.\n\n\n\n3 to 4\n\n# list all files using -a argument\nls inhere/ -a\n\n\n\n4 to 5\n\n# find ASCII text files\n# -exec file {} + executes the file command to get info on the content\nfind inhere -type f -exec file {} + | grep ASCII\n\n\n\n5 to 6\n\nfind inhere -type f -size 1033c ! -executable -exec file {} + | grep ASCII\n\n\n\n6 to 7\n\n# since we don't know where the file is, we will search from the root directory\nfind / -user bandit7 -group bandit6 -size 33c -type f 2&gt;/dev/null -exec cat {} \\;\n\n\n\n7 to 8\n\ngrep -w \"millionth\" data.txt\n\n\n\n8 to 9\n\nsort data.txt | uniq -u data.txt\n\n\n\n9 to 10\n\nstrings data.txt | grep \"==\"\n\n\n\n10 to 11\n\ncat data.txt | base64 -d\n\n\n\n11 to 12\n\ncat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'\n\n\n\n12 to 13\n\nls\nhead data.txt\nmkdir /tmp/random_dir\ncd /tmp/random_dir\ncp ~/data.txt .\nmv data.txt data\nxxd -r data &gt; binary\nfile binary\nmv binary binary.gz\ngunzip binary.gz\nbunzip2 binary\nmv binary.out binary.gz\ngunzip binary.gz\ntar -xf binary\n\n# do similar procedure multiple times\nFO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn\n\n\n\n13 to 14\n\nssh -i sshkey.private -p 2220 bandit14@localhost # This will log you in as user bandit14 and allow you to see the password.\n\n\n\n14 to 15\n\nnetcat localhost 30000\n# Then submit the password of the current level.\n\n\n\n15 to 16\n\nopenssl s_client -connect localhost:30001\n# Then submit the password of the current level.\n\n\n\n16 to 17\n\n# I feel this part is bit too complicated and not useful for me. So I just provide the link to someone else's solution\n# https://medium.com/@rushi.padhiyar098/overthewire-bandit-level-16-and-level-17-walkthrough-by-cyph3r-ryx-95c1ccdbb76b\n\n\n\n17 to 18\n\ndiff passwords.new passwords.old\n\n\n\n18 to 19\n\n# check shell other than bash\ncat /etc/shells\n\n# use it to login\nssh bandit18@bandit.labs.overthewire.org -p 2220 -t \"/bin/sh\"\n\ncGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8\n\n\n\n19 to 20\n\n./bandit20-do\n\n./bandit20-do ls /etc/bandit_pass\n\n./bandit20-do cat /etc/bandit_pass/bandit20\n\n\n\n20 to 21\n\n# I feel this part is not useful for me. So I just provide the link to someone else's solution\nEeoULMCra2q0dSkYj561DX7s1CpBuOBt"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Hyoungchul Kim",
+    "section": "",
+    "text": "I am a Ph.D. student in Applied Economics at The Wharton School, University of Pennsylvania.\nYou can either call me Hyoungchul (H-Young-Cheol, rhymes with “Null”) or Kent (my english name).\nI am currently interested in urban and environmental topics using tools from international trade and industrial organization.\nFor inquiries about software, email me or use the issue tracker at GitHub."
+  },
+  {
+    "objectID": "misc/personal/memorable_moments.html",
+    "href": "misc/personal/memorable_moments.html",
+    "title": "Memorable moments",
+    "section": "",
+    "text": "This is a collection of my memorable moments."
+  },
+  {
+    "objectID": "misc/personal/memorable_moments.html#section",
+    "href": "misc/personal/memorable_moments.html#section",
+    "title": "Memorable moments",
+    "section": "2025-2026",
+    "text": "2025-2026\n\nThanksgiving\n\n\n\nHalloween\n\n\n\n\n\n\n\n\n\n\n\n\nPhilly trade group seminar"
+  },
+  {
+    "objectID": "misc/personal/memorable_moments.html#section-1",
+    "href": "misc/personal/memorable_moments.html#section-1",
+    "title": "Memorable moments",
+    "section": "2024-2025",
+    "text": "2024-2025\n\nStanford University\n\n\nSan Francisco\n\n\nBirthday\n\n\nSpring break (Florida keys)\n\n\nChiang Mai, Thailand"
+  },
+  {
+    "objectID": "misc/personal/econ7200.html",
+    "href": "misc/personal/econ7200.html",
+    "title": "ECON-7200",
+    "section": "",
+    "text": "This is an informal note to record what I thought about or what I thought was important in the Macroeconomics I class.\n\nCompetitive eqm, efficiency, and GE\nI don’t know why, but I always feel that macro course does a better job of explaining the concep of GE, competitive eqm, and the welfare theorem than the second portion of micro course. It was nice to see how we start with simple Arrow-Debreu setup and derive the competitive equilibrium. Then we use welfare theorem to connect the competitive eqm to pareto efficiency.\n\n\nDynamics"
+  },
+  {
+    "objectID": "misc/personal/profile_pictures.html",
+    "href": "misc/personal/profile_pictures.html",
+    "title": "Past profile pictures",
+    "section": "",
+    "text": "This is a collection of my past profile pictures."
+  },
+  {
+    "objectID": "misc/personal/profile_pictures.html#section",
+    "href": "misc/personal/profile_pictures.html#section",
+    "title": "Past profile pictures",
+    "section": "2025",
+    "text": "2025\n\n\n\n\n\n\n@Locust Walk, Wharton Penn"
+  },
+  {
+    "objectID": "misc/personal/profile_pictures.html#section-1",
+    "href": "misc/personal/profile_pictures.html#section-1",
+    "title": "Past profile pictures",
+    "section": "2024",
+    "text": "2024\n\n\n\n2024 Connections@Wharton event"
+  },
+  {
+    "objectID": "misc/personal/profile_pictures.html#section-2",
+    "href": "misc/personal/profile_pictures.html#section-2",
+    "title": "Past profile pictures",
+    "section": "2023",
+    "text": "2023\n\n\n\nSinchon, Seoul (near Yonsei University)"
+  },
+  {
+    "objectID": "misc/personal/econ6110.html",
+    "href": "misc/personal/econ6110.html",
+    "title": "ECON-6110",
+    "section": "",
+    "text": "This is an informal note to record what I thought about or what I thought was important in the Game theory class."
+  },
+  {
+    "objectID": "misc/personal/econ6110.html#hemi-continuity-and-fixed-point-theorem",
+    "href": "misc/personal/econ6110.html#hemi-continuity-and-fixed-point-theorem",
+    "title": "ECON-6110",
+    "section": "Hemi-continuity and fixed point theorem",
+    "text": "Hemi-continuity and fixed point theorem\nWhen I was first learned about hemi-continuity in math camp, I was not sure why we need to know this concept. The only intuition I had was that it is sort of a generalization of the continuity definition to correspondence. But after taking the game theory course, I finally realized that we need this condition to apply Kakutani fixed point theorem. FYI, we need kakutani fixed point theorem to prove that Nash eqm exists.\n\nEx-ante, interim, ex-post\nWhen talking about (expected) payoff of agents, it is important to know whether the agents are maximizing ex-ante, interim, or ex-post. For example, revenue equivalence theorem in auction is about equivalence of autioneer’s expected payoff ex-ante, not ex-post. Fortunately, chatgpt did a good job in summarizing the definition in a table.\n\n\n\nNormal form and extensive form\nIt is important to note that the main difference between normal form game and extensive form game is not the timing. That is, fundamental difference between normal form and extensive form game is not whether the agents make decisions at the same time or not. For example, think of a game where agents makes decisions at different timing but they cannot observe others’ actions. In this setting, the game is still a normal form. The game becomes “extensive” when some agents can observe other agents’ actions before making their own decisions. Thus, the main factor that differentiates normal form and extensive form is whether agents make their actions after observing other’s actions.\n\n\nAdverse selection\nI thought it was interesting to learn that the key takeaway from adverse selection isn’t just the presence of information asymmetry between agents, but that this asymmetry impacts other agents’ payoffs. In fact, this is the main factor leading to the presence of adverse selection. In the famous lemon market example, adverse selection will not occur if there were separate and independent dimensions of utility for the seller and buyer.\n\n\nRevenue equivalence theorem\nAlthough I learned this concept in undergraduate micro class, it was still very cool to know that ex-ante expected revenue becomes equivalent for all standard auction games."
+  },
+  {
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "Research",
+    "section": "",
+    "text": "“The China shock and internal migration: Evidence from bilateral migration flows” with Jaerim Choi and Seung Hoon Lee. Feb. 2026. [Working paper] [Replication package]. Revise and Resubmit, Canadian Journal of Economics.\n\n\nAbstract\n\nUsing Korean administrative data spanning nearly two decades and covering the universe of bilateral migration flows across local labor markets, we examine how the China trade shock shapes internal migration. While prior studies rely on net population changes to measure labor adjustment, we exploit bilateral migration flows that separately capture in- and out-migration. We find that trade exposure primarily increases out-migration from adversely affected regions, with limited effects on in-migration, revealing asymmetric spatial adjustment. Decomposing the shock, export expansion reduces out-migration, whereas import competition increases it. Migration responses are strongest among prime working-age individuals and substantially weaker among younger and older cohorts. Single-person households are more responsive than multi-person households. Overall, bilateral data reveal substantial migration responses that conventional net population measures fail to detect, offering new insight into the “missing migration puzzle.”"
+  },
+  {
+    "objectID": "research/index.html#working-papers",
+    "href": "research/index.html#working-papers",
+    "title": "Research",
+    "section": "",
+    "text": "“The China shock and internal migration: Evidence from bilateral migration flows” with Jaerim Choi and Seung Hoon Lee. Feb. 2026. [Working paper] [Replication package]. Revise and Resubmit, Canadian Journal of Economics.\n\n\nAbstract\n\nUsing Korean administrative data spanning nearly two decades and covering the universe of bilateral migration flows across local labor markets, we examine how the China trade shock shapes internal migration. While prior studies rely on net population changes to measure labor adjustment, we exploit bilateral migration flows that separately capture in- and out-migration. We find that trade exposure primarily increases out-migration from adversely affected regions, with limited effects on in-migration, revealing asymmetric spatial adjustment. Decomposing the shock, export expansion reduces out-migration, whereas import competition increases it. Migration responses are strongest among prime working-age individuals and substantially weaker among younger and older cohorts. Single-person households are more responsive than multi-person households. Overall, bilateral data reveal substantial migration responses that conventional net population measures fail to detect, offering new insight into the “missing migration puzzle.”"
+  },
+  {
+    "objectID": "research/index.html#publications",
+    "href": "research/index.html#publications",
+    "title": "Research",
+    "section": "Publications",
+    "text": "Publications\n[2] “Does political conflict hurt immigration? Evidence from the South Korea – China THAAD Dispute” with Jongkwan Lee. Aug. 2024. Published in Southern Economic Journal [Paper].\n[1] “The well-being of cities: Estimating migration attractiveness from internal migration across Korean cities” with Seung Hoon Lee and Ji Sub Park. Feb. 2024. Published in Global Economic Review [Paper]."
+  },
+  {
+    "objectID": "research/index.html#work-in-progress",
+    "href": "research/index.html#work-in-progress",
+    "title": "Research",
+    "section": "Work in progress",
+    "text": "Work in progress\n\n“Investment and deforestation under uncertain market access: Evidence from the Mexican avocado boom” with Prakash Mishra, Sebastian Sardon and James E. Sayre"
+  },
+  {
+    "objectID": "research/index.html#other-works",
+    "href": "research/index.html#other-works",
+    "title": "Research",
+    "section": "Other works",
+    "text": "Other works\n[2] A comment on “Malaria suitability, urbanization and persistence: Evidence from China over more than 2000 years” with Marc Joëts, Stefania Lovo and Niklas Murken. Nov. 2025. UKRN replication game. Institute for Replication. [Paper]\n[1] “The effect of remote working on household waste: evidence from South Korea” with Hee-Seung Yang. Mar. 2025. [Working paper].\n\n\nAbstract\n\nRemote working, or Work-From-Home (WFH), is now one of the prevalent work arrangement around the world. However, its impact on the social welfare—such as waste generation—is largely unexplored. This paper examines the causal impact of remote working on household waste generation in South Korea using COVID-19 as a natural experiment. The findings reveal mixed results. While overall household waste in district remain unaffected, districts with higher WFH levels experience increased plastic and textile waste but decreased food waste. These results suggest that remote working may influence current consumption patterns and lifestyle. Understanding these environmental implications is crucial for promoting sustainable work models and responsible waste management in a digital and remote world."
+  },
+  {
+    "objectID": "misc/personal/seoul.html",
+    "href": "misc/personal/seoul.html",
+    "title": "Travel tips and recommendations",
+    "section": "",
+    "text": "IMPORTANT: Summer in Korea is very hot and humid! When planning outdoor activities make sure you check out the weather beforehand. Fortunately, most buildings in Korea have ACs so try to stay indoor a lot during the summer.\nIn general, “information friction” seems to be quite low in South Korea. That being said, be aware that popular places that you search for on the internet will be quite crowded. Do expect some queue lines and make sure you consider the tradeoff of visiting a nice place and spending lot of time in the queue (But also take into account that most good places will have large volume of people on average. So you will need to wait in most places you want to visit).\nMaps: Like many other East Asia countries, lot of systems in Korea are country-specific (unfortunately). If you tend to travel in Korea, I strongly recommend you download either “Naver map” or “Kakao map” on your phone. They are the google map equivalent app in Seoul. Note that google map will not work very well in Korea.\nTransportation card: Unfortunately, you cannot use your regular credit cards to pay for the public transportation. You will have to buy some pre-paid card. For short-term trips, you can buy them at the station. I recommend you try out Climate card which is a relatively new pre-paid pass card that came out in Seoul. Also, remember to TAP IN and TAP OUT on both buses and subways!\nOrdering in restaurant: In Korea, there is no tip culture. That being said, no servers are assigned to your table (like in US). So do not passively wait for them to come get your order. In Korea, you can just call the server by raising your hand and calling out “excuse me”. This is not considered impolite and you will see that many people do that. Otherwise, they are not going to periodically check on you. Also, unlike other countries, you don’t pay the bill in your table. When you are done eating, just go to the counter and pay for the meal.\nPublic safety: I would say Seoul is one of the most safe cities in the world(in terms of traveling). You don’t need to worry too much about where you are going (within Seoul, it will be very unlikely that you stumble into some dangerous regions) and you can walk around at night. Many people will just walk around Seoul at 2, 3am and it would be fine.\nDrinking: One nice thing about Korea’s drinking culture is that you can drink your bottle outside. I would suggest you take some night-time picnic to Hangang river with some drinks. There are lot of parks near the river where you will see people drinking and enjoying the view.\nBicycle: Seoul also has public bicycle system. I didn’t try it often but I heard it’s pretty good. But warning: Unlike US or European countries, there are not many lanes strictly designated to bicycle in Korea. Also, it is bit rare for bicycle to go on the same road with the cars. In fact, it will be more common to just ride the bicycle in the pedestrian way. So when traveling in bicycle, just use the pedestrian way and be careful of the people. You should also keep an eye on the street for bicycle as you walk."
+  },
+  {
+    "objectID": "misc/personal/seoul.html#general-tips",
+    "href": "misc/personal/seoul.html#general-tips",
+    "title": "Travel tips and recommendations",
+    "section": "",
+    "text": "IMPORTANT: Summer in Korea is very hot and humid! When planning outdoor activities make sure you check out the weather beforehand. Fortunately, most buildings in Korea have ACs so try to stay indoor a lot during the summer.\nIn general, “information friction” seems to be quite low in South Korea. That being said, be aware that popular places that you search for on the internet will be quite crowded. Do expect some queue lines and make sure you consider the tradeoff of visiting a nice place and spending lot of time in the queue (But also take into account that most good places will have large volume of people on average. So you will need to wait in most places you want to visit).\nMaps: Like many other East Asia countries, lot of systems in Korea are country-specific (unfortunately). If you tend to travel in Korea, I strongly recommend you download either “Naver map” or “Kakao map” on your phone. They are the google map equivalent app in Seoul. Note that google map will not work very well in Korea.\nTransportation card: Unfortunately, you cannot use your regular credit cards to pay for the public transportation. You will have to buy some pre-paid card. For short-term trips, you can buy them at the station. I recommend you try out Climate card which is a relatively new pre-paid pass card that came out in Seoul. Also, remember to TAP IN and TAP OUT on both buses and subways!\nOrdering in restaurant: In Korea, there is no tip culture. That being said, no servers are assigned to your table (like in US). So do not passively wait for them to come get your order. In Korea, you can just call the server by raising your hand and calling out “excuse me”. This is not considered impolite and you will see that many people do that. Otherwise, they are not going to periodically check on you. Also, unlike other countries, you don’t pay the bill in your table. When you are done eating, just go to the counter and pay for the meal.\nPublic safety: I would say Seoul is one of the most safe cities in the world(in terms of traveling). You don’t need to worry too much about where you are going (within Seoul, it will be very unlikely that you stumble into some dangerous regions) and you can walk around at night. Many people will just walk around Seoul at 2, 3am and it would be fine.\nDrinking: One nice thing about Korea’s drinking culture is that you can drink your bottle outside. I would suggest you take some night-time picnic to Hangang river with some drinks. There are lot of parks near the river where you will see people drinking and enjoying the view.\nBicycle: Seoul also has public bicycle system. I didn’t try it often but I heard it’s pretty good. But warning: Unlike US or European countries, there are not many lanes strictly designated to bicycle in Korea. Also, it is bit rare for bicycle to go on the same road with the cars. In fact, it will be more common to just ride the bicycle in the pedestrian way. So when traveling in bicycle, just use the pedestrian way and be careful of the people. You should also keep an eye on the street for bicycle as you walk."
+  },
+  {
+    "objectID": "misc/personal/seoul.html#transportation-tips",
+    "href": "misc/personal/seoul.html#transportation-tips",
+    "title": "Travel tips and recommendations",
+    "section": "Transportation tips",
+    "text": "Transportation tips\n\nAirport to Seoul (bus): There are few ways to go from Incheon international airport to Seoul. Easiest way (but little bit more expensive) is airport bus (a.k.a. limousine bus). You can buy the ticket in the airport and they cover most major places in Seoul. You can also use the subway although I have never tried it.\nTransportation within Seoul (bus and subway): If you stay in Seoul, you will be able to access most (to be honest, all) locations in the city using public transportation. Main transportation is “bus” and “subway.” Another advantage of Seoul is that bus and subway system are very well interconnected. You only pay by the distance (even the rate of increment for distance is pretty generous within Seoul) and transferring to other bus or subway do not have extra cost (except very few subway or system run by different region). Arrival rates are also pretty good so make sure you use it a lot.\nTransportation at night (taxi): That being said, you won’t need to use other transportation within Seoul unless you are moving very late at night. Lot of subways and buses stop working around 11pm~12am-ish. If you tend to stay far away from your home at night, you will have to use taxi. You can get a taxi either by catching them on the go or by app (sth like kakao taxi). Just be warned that it is bit harder to catch taxi at night as there are less supply."
+  },
+  {
+    "objectID": "misc/personal/seoul.html#general-travel-places-recommendation",
+    "href": "misc/personal/seoul.html#general-travel-places-recommendation",
+    "title": "Travel tips and recommendations",
+    "section": "General travel places recommendation",
+    "text": "General travel places recommendation\n\nOfficial visitor guide: LINK\nFor full lists of places you can go, try out this LINK"
+  },
+  {
+    "objectID": "misc/personal/seoul.html#brief-personal-recommendations",
+    "href": "misc/personal/seoul.html#brief-personal-recommendations",
+    "title": "Travel tips and recommendations",
+    "section": "Brief personal recommendations",
+    "text": "Brief personal recommendations\n\nPlaces around “seoul forest” are quite nice. The park is very nice with small pond and place near the park (Seongsu-dong) has sort of New York Brooklyn vibe(shameless comparison, I know…). Just be aware that there tends to be lot of people around.\nTry out places around the old city. These places are generally called “within four doors.” This is because in the past, the Seoul walled city had four main doors for entry. Unlike other places in Seoul which are now pretty modern, old city area still has lot of traditional places. Try out some traditional Korean house villages (like Bukchon Hanok Village and Seochon). I personally like area around Seochon. They are also close to the palaces so you will be able to visit them as well. Overall, area around the palaces (Seochon or Bukchon are all places surrounding the old palaces) are generally nice place to walk around.\nWalking along the river is nice. Especially try out Cheong-gye-cheon stream at night. Having a night picnic near Han-gang river is also a nice experience.\nIf you like theme parks, be sure to try out Lotte World Adventure. It used to be the biggest In-door Theme park until 2010. It is also known for having many dark rides. It is also close to shopping mall (Lotte mall is right next to it) and Lotte World Tower which is currenlty the tallest building in Korea.1\n\n\nTry out some traditional markets: Places like Gwang-jang market or Tong-in market are very interesting places to go and eat some snack foods.\nIf you have time, you could go to Sinchon which has university (Yonsei University) I am from. Although it is not as fancy as universities in Europe or US, it is overall clean and nice. Even though place is bit dying now, Sinchon is also known as one of the popular places for university students. You will be able to feel some freshman(?) vibe.2\n\n\nAlthough not my favorite, I guess you will probably be visiting Gangnam at least once when you are in Seoul. It is sort of like SOHO in UK. I do think it is a bit tourist-trap place but it does have some nice restaurants and places.\nIf you are a “park person”, try out Olympic park. It is also pretty close to Seok-chon lake which is also a famous place for a walk. But note that the place might be packed with people depending on when you go.\nKorea also has some nice coffee shops so try them. Good thing about cafes in Korea is that it is very convenient to work (e.g. using laptop). Lot of coffee shops in Korea have large tables and power outlets around."
+  },
+  {
+    "objectID": "misc/personal/seoul.html#personal-food-recommendations",
+    "href": "misc/personal/seoul.html#personal-food-recommendations",
+    "title": "Travel tips and recommendations",
+    "section": "Personal food recommendations",
+    "text": "Personal food recommendations\n\nKorean BBQ: I think Korean BBQ is now quite popular even outside of Korea. Big advantage of eating Korean BBQ in Korea is that it is relatively cheaper. If you have time, try places like “ha-nam pig house”, “Go-ban sik-dang”, “byeok-je kalbi”, etc.\nKorean fried chicken: Korean fried chicken is very tasty. There are many places (e.g. BBQ chicken, BHC chicken, etc) you can get it from and they all have their own specialties. I recommend you get a take-out and eat it near Han-gang river with some beer.\nCold noodles (e.g. Pyeong-yang Neng-myeon): Korea also has nice cold noodles. Peyong-yang Neng-myeon is my favorite but opinions are divided (some people don’t like it because it tastes quite bland). Try places like “ure-ok”, “bong-phee-yang”, “ul-ji-myeon-ok”, “ul-mil-dae”. Other than Pyeong-yang Neng-myeon, bean noodle is also a nice choice. It is basically noodle served in a soup made from grinding beans.\nTraditional Korean food: Unlike course style cuisine in other countries, interesting aspect about korean cuisine is that it is usually served all at once. So when you order some food, it will be served with other side dishes (usually called “ban-chan”). Also good thing about this side dishes is that you can ask a refill for these side dishes for free. Be sure you go to some traditional Korean food restaurant to check out these dishes."
+  },
+  {
+    "objectID": "misc/personal/seoul.html#footnotes",
+    "href": "misc/personal/seoul.html#footnotes",
+    "title": "Travel tips and recommendations",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nIt also holds few other records: (1) 8th tallest building in the world, (2) Tallest building out of all OECD countries.↩︎\nJust be careful not to confuse Sinchon with Sincheon. The one I am referring to is located in the north of the river. On the other hand, Sincheon is located in the south.↩︎"
+  },
+  {
+    "objectID": "misc/personal/working-environment.html",
+    "href": "misc/personal/working-environment.html",
+    "title": "Setting up working environment",
+    "section": "",
+    "text": "Preface\nThis is just a note for myself to re-setup my working environment on Linux (I am using Ubuntu) so that I don’t forget what I need to do.\n\n\nTerminal\n\nInstall fastfetch\n\nsudo add-apt-repository ppa:fastfetch/stable\nsudo apt install fastfetch \n\n# add `fastfetch` in `.bashrc` file.\n\n\n\n\nVim\n\nInstall Vim and set it as default text editor\n\nsudo apt update\nsudo apt install vim\n\nsudo update-alternatives --config editor\n\n\n\nInstall Vim-plugin\nFollow this link: LINK\nSome plugins I use (Example of .vimrc file)\n\ncall plug#begin()\n\n\" List your plugins here\nPlug 'sirver/ultisnips'\nPlug 'lervag/vimtex'\nPlug 'KeitaNakamura/tex-conceal.vim'\nPlug 'arcticicestudio/nord-vim'\nPlug 'preservim/nerdtree'\n\ncall plug#end()\n\nlet g:UltiSnipsExpandTrigger = '&lt;tab&gt;'\nlet g:UltiSnipsJumpForwardTrigger = '&lt;tab&gt;'\nlet g:UltiSnipsJumpBackwardTrigger = '&lt;s-tab&gt;'\nlet g:vimtex_view_method = 'zathura'\nlet g:vimtex_quickfix_mode = 0\nlet g:lightline = {'colorscheme' : 'nord'}\n\nsetlocal spell\nset spelllang=en_us\ninoremap &lt;C-l&gt; &lt;c-g&gt;u&lt;Esc&gt;[s1z=`]a&lt;c-g&gt;u\n\ncolorscheme nord\n\n\n\nSetup Vimtex with zathura\nFollow this: https://github.com/lervag/vimtex. Also remember that you need to install separate tex compiler to use tex.\n\n\n\nInstall R\nJust follow this site: https://pmassicotte.github.io/linux-mint-dev-environment/installr.html.\nI will just post my current .Rprofile file for reference:\n\nif (interactive() && Sys.getenv(\"RSTUDIO\") == \"\") {\n  Sys.setenv(TERM_PROGRAM = \"vscode\")\n  if (\"httpgd\" %in% .packages(all.available = TRUE)) {\n    options(vsc.plot = FALSE)\n    options(device = function(...) {\n      httpgd::hgd(silent = TRUE)\n      .vsc.browser(httpgd::hgd_url(history = FALSE), viewer = \"Beside\")\n    })\n  }\n  source(file.path(Sys.getenv(if (.Platform$OS.type == \"windows\") \"USERPROFILE\" else \"HOME\"), \".vscode-R\", \"init.R\"))\n}\n\n# Connect to public package manager\noptions(repos = c(CRAN = \"https://packagemanager.posit.co/cran/__linux__/rhel9/latest\"))\n\n# This is important if you are using RSPM on Linux outside RStudio\noptions(HTTPUserAgent = sprintf(\"R/%s R (%s)\", getRversion(), paste(getRversion(), R.version[\"platform\"], R.version[\"arch\"], R.version[\"os\"])))"
+  },
+  {
+    "objectID": "misc/personal/econ7100.html",
+    "href": "misc/personal/econ7100.html",
+    "title": "ECON-7100",
+    "section": "",
+    "text": "This is an informal note to record what I thought about or what I thought was important in the Microeconomics I class.\n\ntba"
+  },
+  {
+    "objectID": "misc/personal/econ7300.html",
+    "href": "misc/personal/econ7300.html",
+    "title": "ECON-7300",
+    "section": "",
+    "text": "This is an informal note to record what I thought about or what I thought was important in the Metrics I class.\n\nGMM\nIf I can only choose one thing to remember in Metrics I, I would definitely choose GMM. This is mostly because many of the methods we learn in Metrics (at least in the first semester) are in the end some specific form of GMM. For example, IV is just a particular type of GMM. Also, I feel lot of the metrics portion of the applied economics papers are just about finding some moment conditions and estimating the model.\n\n\nData cannot speak for itself\nAs long as we are concerned about some endogeneity problem (which is a common problem in economics), we always needs some assumption to move forward. Just having more data will not solve your problem. In order to identify the parameter of interest, we need economic theory to guide us."
+  },
+  {
+    "objectID": "misc/index.html",
+    "href": "misc/index.html",
+    "title": "Misc.",
+    "section": "",
+    "text": "Replication template with nix (rix): I updated the past replication template to use nix (rix) for package management. This is a more modern and flexible way to manage packages for your research workflow.\nReplication template (legacy): This is the replication template I use for my empirical papers. This template follows DCAS, the Data and Code Availability Standard v1.0 and also follows the Data and Code Availability Policy of the American Economic Association.\n\n\n\n\n\nQuarto working paper template for Economics: [github link] [Blog post]\n\n\n\n\n\nDockerfile for empirical analysis (R, Python, Julia with dependency management setup): [link]"
+  },
+  {
+    "objectID": "misc/index.html#software",
+    "href": "misc/index.html#software",
+    "title": "Misc.",
+    "section": "",
+    "text": "Replication template with nix (rix): I updated the past replication template to use nix (rix) for package management. This is a more modern and flexible way to manage packages for your research workflow.\nReplication template (legacy): This is the replication template I use for my empirical papers. This template follows DCAS, the Data and Code Availability Standard v1.0 and also follows the Data and Code Availability Policy of the American Economic Association.\n\n\n\n\n\nQuarto working paper template for Economics: [github link] [Blog post]\n\n\n\n\n\nDockerfile for empirical analysis (R, Python, Julia with dependency management setup): [link]"
+  },
+  {
+    "objectID": "misc/index.html#personal-tips",
+    "href": "misc/index.html#personal-tips",
+    "title": "Misc.",
+    "section": "Personal tips",
+    "text": "Personal tips\n\n\nList of tips\n\n\nTravel tips and recommendations (@Seoul, South Korea)"
+  },
+  {
+    "objectID": "misc/index.html#pictures",
+    "href": "misc/index.html#pictures",
+    "title": "Misc.",
+    "section": "Pictures",
+    "text": "Pictures\n\nPast profile pictures\nMemorable moments"
+  },
+  {
+    "objectID": "research-idea/index.html",
+    "href": "research-idea/index.html",
+    "title": "Research idea checklist",
+    "section": "",
+    "text": "High-level (at least two for JMP, one for decent paper)\n\nNew? (literature frontier).\nInteresting? (Real-world relevance, policy implementation).\nData? (New data).\n\n\n\nRQ specification\n\nFind concrete real-life example or policy.\nCheck data.\nSpecify trade-off.\nSpecify the setting (agents, outcomes, etc).\nSpecify potential research design (identification).\nSpecify simple economic model.\n\n\n\nFinal checklist\n\nTalk to other PhDs.\nTalk to faculties (2+).\nPresent preliminary ideas."
+  },
+  {
+    "objectID": "posts/reproducible-coding-lecture/index.html",
+    "href": "posts/reproducible-coding-lecture/index.html",
+    "title": "Reproducible coding crash course",
+    "section": "",
+    "text": "I recently did a crash course on “reproducible coding” at my alma mater. Here is my material for the course. It mostly deals with Bash, Project environment (Renv, Poetry), Automation (Make), Docker."
+  },
+  {
+    "objectID": "posts/asahi-linux/index.html",
+    "href": "posts/asahi-linux/index.html",
+    "title": "Asahi-linux on Macbook Pro",
+    "section": "",
+    "text": "If you have been following up my blog posts, you might have guessed that I am slowly transitioning to using Linux. It took a long 3-stage process to get me there. Windows, macOS, and Linux. It was mostly great, even though there were some small annoyances and hastles along the way (dependencies for installing some R packages, setting up Dropbox, etc). But there was another experiment I wanted to try out: setting up Linux on my Macbook Pro (MBP). While I feel that MBP is just getting too overpriced (one of the reasons I started to transition to Linux in the first place), I still love the design and the build quality of the machine. So I decided to give it a try. But as you all know, setting up Linux on Mac is a painful and hardcore process. That’s when I found out about Asahi-linux."
+  },
+  {
+    "objectID": "posts/asahi-linux/index.html#background",
+    "href": "posts/asahi-linux/index.html#background",
+    "title": "Asahi-linux on Macbook Pro",
+    "section": "",
+    "text": "If you have been following up my blog posts, you might have guessed that I am slowly transitioning to using Linux. It took a long 3-stage process to get me there. Windows, macOS, and Linux. It was mostly great, even though there were some small annoyances and hastles along the way (dependencies for installing some R packages, setting up Dropbox, etc). But there was another experiment I wanted to try out: setting up Linux on my Macbook Pro (MBP). While I feel that MBP is just getting too overpriced (one of the reasons I started to transition to Linux in the first place), I still love the design and the build quality of the machine. So I decided to give it a try. But as you all know, setting up Linux on Mac is a painful and hardcore process. That’s when I found out about Asahi-linux."
+  },
+  {
+    "objectID": "posts/asahi-linux/index.html#asahi-linux",
+    "href": "posts/asahi-linux/index.html#asahi-linux",
+    "title": "Asahi-linux on Macbook Pro",
+    "section": "Asahi-linux",
+    "text": "Asahi-linux\nAsahi-linux is a Linux distribution that is designed to run on Apple Silicon Macs. It is based on Fedora Linux.It is a community-driven project and is not officially supported by Apple.\nAnother good thing about Asahi-linux is that it is completely legal to use. It is not a hack or a jailbreak. Thus, you don’t have to worry about getting your machine banned or your warranty voided. In fact, it is pretty easy to uninstall it so it shouldn’t be much of an issue.\nIt is sort of similar to the good ol’ bootcamp we used to have for Intel Macs for Linux. Basically we are setting up some partition on the disk to run Linux."
+  },
+  {
+    "objectID": "posts/asahi-linux/index.html#caveats",
+    "href": "posts/asahi-linux/index.html#caveats",
+    "title": "Asahi-linux on Macbook Pro",
+    "section": "Caveats",
+    "text": "Caveats\nWhile Asahi-linux is amazing, it is not without its caveats. Most of it is due to the fact that it is built upon macOS.Let me write down some of them as a warning to others.\n\nIt is not officially supported by Apple. So you might not get the best support from Apple.\nReverse engineering is not yet fully accomplished. Some features are not yet available (USB-C display, touchid, etc).\nIt is not yet as stable as macOS. So you might encounter some issues.\nCurrently, only M1 and M2 chips are supported. If you have an older machine or newer chips, it will not work.\nDue to ARM architecture, you cannot run x86_64 applications. So some softwares may not work in Asahi-linux."
+  },
+  {
+    "objectID": "posts/asahi-linux/index.html#setting-up-asahi-linux",
+    "href": "posts/asahi-linux/index.html#setting-up-asahi-linux",
+    "title": "Asahi-linux on Macbook Pro",
+    "section": "Setting up Asahi-linux",
+    "text": "Setting up Asahi-linux\n\nFirst, make sure your machine is compatible with Asahi-linux. You can check the Asahi-linux website for the list of compatible machines.\nAlso make sure you have enough disk space. Asahi-linux is a bit larger than macOS. You need to have at least 100GB of free space.\nUse the following command in terminal:\n\n\ncurl https://alx.sh | sh\n\n\nFollow the instructions in the terminal. It will guide you through the process of setting up Asahi-linux.1\n\n\nYour machine will reboot and you will see the option to boot into Asahi-linux.\nIf you need to boot into macOS, turn the power off and hold the power button until “loading startup options…” appears. Then select “macOS” and press enter.\nYou are all set!"
+  },
+  {
+    "objectID": "posts/asahi-linux/index.html#current-experience",
+    "href": "posts/asahi-linux/index.html#current-experience",
+    "title": "Asahi-linux on Macbook Pro",
+    "section": "Current experience",
+    "text": "Current experience\nFor now, I am early in the game and trying out the power of Asahi-linux. I will probably use it as my additional machine along with my ThinkPad Ubuntu machine. I will update this section as I go along.\n\nUnlike Ubuntu, it is hard to install Dropbox. But fear not, there is a workaround. Try out maestral instead. For some reason, Docker image installation option did not work for me but python version worked fine."
+  },
+  {
+    "objectID": "posts/asahi-linux/index.html#footnotes",
+    "href": "posts/asahi-linux/index.html#footnotes",
+    "title": "Asahi-linux on Macbook Pro",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nIt is very important to exactly follow the instructions in the terminal. If you don’t, you might end up with a broken system. e.g. I struggled a bit on my first try because I did not hold the power button until “loading startup options…” appeared.↩︎"
+  },
+  {
+    "objectID": "posts/dockerfile-trial/index.html",
+    "href": "posts/dockerfile-trial/index.html",
+    "title": "My trial and error with Dockerfile",
+    "section": "",
+    "text": "I had a chance to create a replication package for my coding assignment this fall. While doing the assignment, I decided to use this opportunity to actually implement a Dockerfile that will work for most of the platforms (e.g. macOC, Linux, ARM/AMD architecture). This is a post on my trial and error on building Docker image with Dockerfile."
+  },
+  {
+    "objectID": "posts/dockerfile-trial/index.html#r-specific-incompatible-binary-issue-with-certain-packages",
+    "href": "posts/dockerfile-trial/index.html#r-specific-incompatible-binary-issue-with-certain-packages",
+    "title": "My trial and error with Dockerfile",
+    "section": "(R specific) Incompatible binary issue with certain packages",
+    "text": "(R specific) Incompatible binary issue with certain packages\nIf you have used linux, you would be very familiar with some of the installtion issues with R packages. It just take awful long time to install most of the packages in linux. The reasn is simple: unlike Windows or MacOS, lot of the packages do not have pre-compiled binary for linux. This is sort of due to the fact that there are so many different linux distributions. As Windows or MacOS is a popular OS (Ugh…), it is easier to maintain standard binary for them. However, this is not the case of linux. Due to this reason, linux users need to compile the source code of the package and literally create the binary for the package. Since most of the powerful packages require compilation (they use C/C++/Fortran for creating efficient package), it is not a surprise that it takes a long time to install the package. Even worse, sometimes compilation does not work because you do not have the necessary compilers or necessary system libraries. This means you need to pre-install all the necessary dependencies before compiling the package.\nFortunately, this issue was recently solved through the help of Rstudio (Posit) Public Package Manager. This is a service that provides fall installtion of binary R packages for linux. Nowadays, most of the packages have their binary counterpart for linux. Thus, you can significantly reduce the time to install the package.\nThe problem however, is that the package manager is not perfect. I am not exactly sure why, but it seems binary might not work for some newer version of linux distribution if they were built from some different version of system libraries. This seems to be case for packages like sf and stringi.\nSo how can we solve this? Well if you are using renv R package as your package dependency manager, you can simply use the following command in your Dockerfile to override the repository written in the renv.lock file:\n\nENV RENV_CONFIG_REPOS_OVERRIDE=https://packagemanager.posit.co/cran/__linux__/noble/latest\n\nThis command will override the repository and install the packages from repository based on certain linux distribution you are using. In this case, I set it to noble which is the Ubuntu 24.04 LTS. This goes nicely with R Rocker project and GitHub Actions because their newest images are based on Ubuntu 24.04 LTS.\nBut there is a caveat: current version (1.1.5) of renv package does not support this feature. This is a known issue (#2127). Fortunately, this was resolved but the newer version is not yet released. For now, you need to use the development version of renv package.1 You can install it by running the following command:\n\nRUN R -e \"install.packages('renv', repos = 'https://posit.r-universe.dev')\""
+  },
+  {
+    "objectID": "posts/dockerfile-trial/index.html#multi-platform-issue",
+    "href": "posts/dockerfile-trial/index.html#multi-platform-issue",
+    "title": "My trial and error with Dockerfile",
+    "section": "Multi-platform issue",
+    "text": "Multi-platform issue\nGoing deep into reproducibility is that you need to realize that there are two main CPU architecture: amd64 (x86_64) and aarch64 (arm64). The problem is that base Docker images built on certain CPU platform will not work for the other platform. Also, there are cases where different architecture will require different binary to install certain software. That is, some binary built for amd64 will not work for aarch64 and vice versa.\nWhy should we care about this? Well, the reason is simple: both of the architecture are widely used in the world. amd64 is very common architecture for many types of computers. aarch64 is also a very common architecture. In fact, you are using aarch64 architecture if you are using an Apple Silicon Mac. So the big problem is that if you are using a base Docker image built on amd64, it may not work for people using MacOS.\nFortunately, solution is simple: build both amd64 and aarch64 images. You can do this locally using docker buildx command or you can use this GitHub Actions yaml file:\n\nname: build_docker\n\non:\n  push:\n    branches: [ master, main ]\n\njobs:\n  docker:\n    runs-on: ubuntu-latest\n    env:\n      IMAGE_NAME: r_4.5.1   # repo name on Docker Hub: DOCKERHUB_USERNAME/r_4.5.1\n    steps:\n      - name: Checkout\n        uses: actions/checkout@v4\n\n      # Enable QEMU so we can cross-build arm64 on amd64 runners\n      - name: Set up QEMU\n        uses: docker/setup-qemu-action@v3\n\n      # Set up Buildx builder\n      - name: Set up Docker Buildx\n        uses: docker/setup-buildx-action@v3\n\n      - name: Login to Docker Hub\n        uses: docker/login-action@v3\n        with:\n          username: ${{ secrets.DOCKERHUB_USERNAME }}\n          password: ${{ secrets.DOCKERHUB_TOKEN }}\n\n      - name: Build and push (multi-arch) base Dockerfile\n        uses: docker/build-push-action@v6\n        with:\n          context: .\n          file: ./Dockerfile\n          platforms: linux/amd64,linux/arm64   # &lt;-- key line\n          push: true\n          # tag strategy: latest + branch + short sha\n          tags: |\n            ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest\n            ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.ref_name }}\n            ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.ref_name }}-${{ github.sha }}\n          cache-from: type=gha\n          cache-to: type=gha,mode=max\n          pull: true"
+  },
+  {
+    "objectID": "posts/dockerfile-trial/index.html#another-multi-platform-issue-tinytex",
+    "href": "posts/dockerfile-trial/index.html#another-multi-platform-issue-tinytex",
+    "title": "My trial and error with Dockerfile",
+    "section": "Another multi-platform issue: tinytex",
+    "text": "Another multi-platform issue: tinytex\nI was also trying to install Quarto because I used it to render my assignment pdf. However, I encountered a problem when I was trying to install tinytex package. Quarto needs tex compiler to render the pdf. One that is used a lot is tinytex because it is a portable and light tex distribution. When I was installing tinytex in amd64 image, it was fine because all I need to do is:\n\nRUN quarto install tinytex\n\nwhich is provided by Quarto command. The issue, however, was when I was trying to same thing for aarch64 image. Apparently, it seems the previous command runs a binary that is based on amd64 architecture. Thus this command cannot install tinytex for aarch64 image. In order to solve this, I created this if statement in the Dockerfile to install tinytex for aarch64 image.\n\n# Quarto\nENV QUARTO_VERSION=1.7.32\nRUN /rocker_scripts/install_quarto.sh\n\n# --- TinyTeX install (arm64 manual, amd64 via Quarto) ---\nRUN set -eux; \\\n  if [ \"$ARCH_TYPE\" = \"arm64\" ]; then \\\n    wget -qO- \"https://yihui.org/tinytex/install-unx.sh\" | sh -s - --admin --no-path; \\\n  else \\\n    quarto install tinytex; \\\n  fi\n\n# Set TinyTeX path\nENV PATH=\"/root/.TinyTeX/bin/aarch64-linux:/root/.TinyTeX/bin/x86_64-linux:${PATH}\"\n\n# Set CTAN mirror for tlmgr\nENV TEXLIVE_REPOSITORY=\"https://ctan.math.illinois.edu/systems/texlive/tlnet\"\n\n# Set repo in tlmgr\nRUN tlmgr option repository \"$TEXLIVE_REPOSITORY\"; \\\n  tlmgr update --self; \\\n  tlmgr update --all\n# -------------------------------------------------------\n\nNote that if you are only making amd64 image, you don’t need to set the tinytex path. I am doing this because in aarch64 image, tinytex is installed manually and path is not set by Quarto command."
+  },
+  {
+    "objectID": "posts/dockerfile-trial/index.html#tinytex-ctan-mirror-error",
+    "href": "posts/dockerfile-trial/index.html#tinytex-ctan-mirror-error",
+    "title": "My trial and error with Dockerfile",
+    "section": "tinytex CTAN mirror error",
+    "text": "tinytex CTAN mirror error\nThis was the most annoying issue I encountered. When tinytex encounter tex package that is not installed in the local system, it uses CTAN mirror in install the necessary tex packages. The problem is that the mirror they refer to is very random… So if you don’t set the mirror, it might occasionally connect to stale one and not be able to install the necessary tex packages. To solve this, you just need to manually set the mirror that seems to be “working.” This is done in the previous code block.\nIf you want to look at the full Dockerfile, you can find it here."
+  },
+  {
+    "objectID": "posts/dockerfile-trial/index.html#footnotes",
+    "href": "posts/dockerfile-trial/index.html#footnotes",
+    "title": "My trial and error with Dockerfile",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nLet’s hope the newer version gets released soon…↩︎"
+  },
+  {
+    "objectID": "posts/dockerfile-template/index.html",
+    "href": "posts/dockerfile-template/index.html",
+    "title": "Personal Dockerfile for data science",
+    "section": "",
+    "text": "Update: Recently I updated my Dockerfile for my research workflow. You can check it out here.\nDuring spring break, I had some time to finalize the Dockerfile template for my research workflow. If you don’t know what a Docker is, check it out here. TL;DR, it is a light virtual machine that contains all the necessary resources for your empirical analysis. It is as if you are shipping your computer to other people that wants to try out your analysis.\nIf you want the exact replication project folder, click here.\nThis is the final Dockerfile (for now):\n\n# Use Rocker image as the base for R\nFROM rocker/r-ver:4.4.0\n\nLABEL maintainer=\"Hyoungchul Kim &lt;hchul.kim96@gmail.com&gt;\"\n\n## Update and install system dependencies\nRUN apt-get update && apt-get install -y \\\n    libcurl4-openssl-dev \\\n    libssl-dev \\\n    libfontconfig1-dev \\\n    libharfbuzz-dev \\\n    libfribidi-dev \\\n    libfreetype6-dev \\\n    libpng-dev \\\n    libtiff5-dev \\\n    libjpeg-dev \\\n    libglpk-dev \\\n    libxml2-dev \\\n    libcairo2-dev \\\n    libgit2-dev \\\n    libpq-dev \\\n    libsasl2-dev \\\n    libsqlite3-dev \\\n    libssh2-1-dev \\\n    libxt-dev \\\n    libgdal-dev \\\n    wget \\\n    curl \\\n    vim \\\n    git \n\n## Install Pandoc and Quarto (Required for RMarkdown, Quarto, etc.)\n# RUN /rocker_scripts/install_pandoc.sh\n# RUN /rocker_scripts/install_quarto.sh\n\n## Install Python & Poetry\nRUN /rocker_scripts/install_python.sh && \\\n    pip3 install --upgrade pip && \\\n    pip3 install poetry\n\n# Ensure Poetry installs dependencies in the system environment\nRUN poetry config virtualenvs.create false\n\n# Copy Poetry files and install dependencies\nCOPY pyproject.toml poetry.lock .\nRUN poetry install --no-interaction --no-root\n\n## Install Julia 1.11.3 (to match Manifest.toml)\nENV JULIA_VERSION=1.11.3\nRUN /rocker_scripts/install_julia.sh\n\n## Set working directory\nWORKDIR /project\n\n## Copy renv.lock file into the folder\nCOPY renv.lock .\n\n# Set environment variables for renv\nENV RENV_VERSION=1.0.7\nENV RENV_PATHS_CACHE=/renv/cache\nENV RENV_CONFIG_REPOS_OVERRIDE=https://cloud.r-project.org\nENV RENV_CONFIG_AUTOLOADER_ENABLED=FALSE\nENV RENV_WATCHDOG_ENABLED=FALSE\nRUN echo \"options(renv.consent = TRUE)\" &gt;&gt; .Rprofile\nRUN echo \"options(RETICULATE_MINICONDA_ENABLED = FALSE)\" &gt;&gt; .Rprofile\n\n# Install renv from CRAN (avoiding bootstrapping by specifying version)\nRUN R -e \"install.packages('renv', repos = c(CRAN = 'https://cloud.r-project.org'))\"\nRUN R -e \"renv::consent(provided = TRUE)\"\n\n# Run renv restore to restore the environment\nRUN R -e \"renv::restore(confirm = FALSE)\"\n\n# Install Julia packages and manage dependencies\nCOPY Manifest.toml Project.toml .\nENV JULIA_PROJECT=/project\nRUN julia -e \"import Pkg; Pkg.activate(\\\".\\\"); Pkg.instantiate()\"\n\n# Copy over the rest of the project files\nCOPY . .\n\n# Default command\nCMD [\"bash\"]\n\nAlthough most of the commands are self-explanatory from the comments, here is some additional info on what my Dockerfile does:\n\nIn my personal Dockerfile, I have added three major programming languages that I use: R, Python, and Julia.\nI have also added some necessary dependencies and useful programs (e.g. git, vim) for my analysis.\nI have also added dependency management software for all of the languages. renv for R, poetry for Python, and Pkg environment for Julia. This allows you to use the exact versions of the packages that you installed in your analysis.\nFor this code to fully work, you would need to setup some files (e.g. Project.toml, Manifest.toml, etc).\nSave the above code as Dockerfile (no extensions) right inside your project directory.\n\n\nQuick terminology\n\nDockerfile: “The sheet music.” The list of layers and instructions for building a Docker image.\nImage: “The MP3 file.” This is the tarball.\nContainer: “Song playing on my phone.” A container is a running instance of an image.\n\n\n\nDocker workflow\n\nCreate Dockerfile.\nBuild Docker image using Dockerfile.\n\n\n# IMPORTANT: If this does not go through, maybe try sudo command\ndocker build --network=host --tag &lt;PROJECT_NAME&gt;:VERSION . \n\n# Above command might not work well in computers such as Macbook with Apple Silicon (Ofc...). This is mainly because it has a different cpu architecture (arm64 instead of amd64) so the base image is different. I am not sure if this is the best solution but try this code below.\n# docker build --platform=linux/amd64 --tag &lt;PROJECT_NAME&gt;:VERSION .\n\n\nRun Docker image.\n\n\ndocker run -it --rm &lt;PROJECT_NAME&gt;:VERSION\n\n\n\nSome useful Docker-related commands\n\n# check cached docker images\ndocker images\n\n# check docker containers that are running\ndocker ps\n\n# remove the docker image\ndocker rmi &lt;IMAGE_NAME&gt;\n\n# remove all dangling images and caches (do it periodically to save space)\ndocker system prune"
+  },
+  {
+    "objectID": "posts/lagrangian/index.html",
+    "href": "posts/lagrangian/index.html",
+    "title": "Lagrangian, Shadow Price, and KKT: Intuition and Proofs",
+    "section": "",
+    "text": "These are my personal notes on constrained optimization — specifically the Lagrangian method, the shadow price interpretation of multipliers, and how KKT conditions generalize the whole framework. Note that this is a living document and will be updated as I learn more things. This was created using Claude after having back-and-forth self-education chat with it.\n\n\nThis section is not a formal proof of the Lagrange multiplier theorem. It is more about building the right intuition for why the Lagrangian works and what each piece means economically. This matters because constrained optimization is the backbone of almost everything in micro theory, IO, and metrics.\n\nEconomics is fundamentally about constrained optimization — agents maximize objectives subject to scarcity. The Lagrangian is the mathematical technology that converts a constrained problem into something that looks like an unconstrained one.\nThe penalty term \\(-\\lambda[g(x) - c]\\) builds the constraint directly into the objective. At the optimum the constraint holds, so the penalty vanishes and \\(\\mathcal{L} = f\\). But by optimizing over \\((x, \\lambda)\\) jointly we recover the constrained solution via unconstrained calculus.\nThe multiplier \\(\\lambda^*\\) is not just a mathematical artifact. It is a shadow price: the rate at which the optimized objective improves per marginal unit of constraint relaxation. For a consumer it is the marginal utility of income; for a cost-minimizing firm it is marginal cost.\n\n\n\n\n\n\nConsider:\n\\[\n\\max_{x} \\; f(x) \\quad \\text{s.t.} \\quad g(x) = c\n\\]\nwhere \\(x \\in \\mathbb{R}^n\\). The Lagrangian is:\n\\[\n\\mathcal{L}(x, \\lambda) = f(x) - \\lambda[g(x) - c]\n\\]\nThe first-order conditions (FOCs) are:\n\\[\n\\frac{\\partial \\mathcal{L}}{\\partial x_i} = \\frac{\\partial f}{\\partial x_i} - \\lambda \\frac{\\partial g}{\\partial x_i} = 0 \\quad \\forall\\, i\n\\]\n\\[\n\\frac{\\partial \\mathcal{L}}{\\partial \\lambda} = -(g(x) - c) = 0\n\\]\nThe first set says \\(\\nabla f = \\lambda \\nabla g\\). The second just enforces the constraint.\n\n\n\nAt a constrained optimum, the level curve of \\(f\\) is tangent to the constraint surface \\(g(x) = c\\). If it weren’t tangent, you could slide along the constraint and still improve \\(f\\).\nTangency means the gradients are parallel:\n\\[\n\\nabla f(x^*) = \\lambda^* \\nabla g(x^*)\n\\]\nThe scalar \\(\\lambda^*\\) is the ratio of the two gradients — it tells you how “aligned” the objective and the constraint are at the optimum.\n\n\n\nYou can solve the constraint for one variable and substitute into \\(f\\). But economists prefer the Lagrangian for three reasons:\n\nIt preserves the shadow price. Substitution eliminates \\(\\lambda\\) and you lose the economic interpretation.\nIt scales. With \\(m\\) constraints, substitution becomes intractable. The Lagrangian just adds one multiplier per constraint.\nIt gives symmetric FOCs. Dividing FOCs pairwise gives clean tangency conditions (e.g., MRS = price ratio in consumer theory) without ever solving for levels.\n\n\n\n\n\nWrite \\(\\mathcal{L} = f(x) - \\sum_j \\lambda_j [g_j(x) - c_j]\\).\nTake FOCs: \\(\\partial \\mathcal{L}/\\partial x_i = 0\\) for all \\(i\\), and \\(\\partial \\mathcal{L}/\\partial \\lambda_j = 0\\) for all \\(j\\).\nDivide FOCs pairwise to get tangency conditions (eliminates \\(\\lambda\\)).\nPlug tangency conditions into the constraint equations to solve for levels.\nBack out \\(\\lambda^*\\) and interpret it as the shadow price.\n\n\n\n\nMaximize \\(U(x_1, x_2) = x_1^\\alpha x_2^{1-\\alpha}\\) subject to \\(p_1 x_1 + p_2 x_2 = M\\).\n\\[\n\\mathcal{L} = x_1^\\alpha x_2^{1-\\alpha} - \\lambda(p_1 x_1 + p_2 x_2 - M)\n\\]\nFOCs:\n\\[\n\\alpha x_1^{\\alpha-1} x_2^{1-\\alpha} = \\lambda p_1, \\qquad (1-\\alpha) x_1^\\alpha x_2^{-\\alpha} = \\lambda p_2\n\\]\nDividing:\n\\[\n\\frac{\\alpha x_2}{(1-\\alpha) x_1} = \\frac{p_1}{p_2} \\quad \\Longrightarrow \\quad x_1^* = \\frac{\\alpha M}{p_1}, \\quad x_2^* = \\frac{(1-\\alpha)M}{p_2}\n\\]\nThe multiplier \\(\\lambda^* = \\alpha^\\alpha (1-\\alpha)^{1-\\alpha} M^{-1} \\cdot (p_1/\\alpha)^{-\\alpha}(p_2/(1-\\alpha))^{-(1-\\alpha)}\\) is the marginal utility of income.\n\n\n\n\n\n\nDefine the value function:\n\\[\nV(c) = \\max_{x}\\; f(x) \\quad \\text{s.t.} \\quad g(x) = c\n\\]\nTheorem (Envelope / Shadow Value): Under standard regularity,\n\\[\n\\boxed{\\frac{dV}{dc} = \\lambda^*}\n\\]\nThe multiplier is the derivative of the optimized objective with respect to the constraint level.\n\n\n\nThe Lagrangian is \\(\\mathcal{L}(x, \\lambda, c) = f(x) - \\lambda[g(x) - c]\\). At the optimum, \\(g(x^*) = c\\) so \\(V(c) = \\mathcal{L}(x^*(c), \\lambda^*(c), c)\\).\nBy the envelope theorem, when differentiating a maximized function with respect to a parameter, indirect effects through \\(x^*\\) vanish at the optimum. So:\n\\[\n\\frac{dV}{dc} = \\frac{\\partial \\mathcal{L}}{\\partial c}\\bigg|_{x^*, \\lambda^*} = \\frac{\\partial}{\\partial c}\\big[f(x) - \\lambda(g(x) - c)\\big]\\bigg|_{x^*, \\lambda^*} = \\lambda^*\n\\]\nMore explicitly, by the chain rule:\n\\[\n\\frac{dV}{dc} = \\sum_{i} \\frac{\\partial f}{\\partial x_i}\\frac{dx_i^*}{dc} = \\sum_{i} \\lambda^* \\frac{\\partial g}{\\partial x_i}\\frac{dx_i^*}{dc} = \\lambda^* \\cdot \\frac{d}{dc}[g(x^*(c))] = \\lambda^* \\cdot 1\n\\]\nwhere we used the FOC \\(\\partial f/\\partial x_i = \\lambda^* \\partial g/\\partial x_i\\) and the fact that \\(g(x^*(c)) = c\\) for all \\(c\\). \\(\\square\\)\n\n\n\nIt is called a shadow price because:\n\nIt is not observed in any market. You don’t see it posted on a price tag.\nIt exists “in the shadow” of the optimization — it is an implicit value that falls out of the math.\nIt is the price the optimizer would be willing to pay for a marginal unit of the constrained resource.\n\n\n\n\n\n\n\n\n\nProblem\nConstraint \\(c\\)\n\\(\\lambda^*\\) means…\n\n\n\n\n\\(\\max U(x_1,x_2)\\) s.t. budget \\(= M\\)\nIncome \\(M\\)\nMarginal utility of income\n\n\n\\(\\min C(L,K)\\) s.t. output \\(= q\\)\nOutput \\(q\\)\nMarginal cost of production\n\n\n\\(\\max\\) welfare s.t. resource \\(\\leq R\\)\nResource \\(R\\)\nSocial value of one more unit\n\n\n\\(\\max\\) return s.t. variance \\(\\leq \\sigma^2\\)\nRisk budget \\(\\sigma^2\\)\nReturn per unit of extra risk\n\n\n\nSize of \\(\\lambda^*\\) matters:\n\n\\(\\lambda^*\\) large \\(\\Rightarrow\\) constraint is very binding — relaxing it even slightly yields big gains.\n\\(\\lambda^*\\) small \\(\\Rightarrow\\) constraint barely matters at the margin.\n\\(\\lambda^* = 0\\) \\(\\Rightarrow\\) constraint is non-binding — you wouldn’t use an extra unit if given one.\n\nImportant caveat: This is a local, marginal statement. It tells you the value of an infinitesimal relaxation. For a discrete change (e.g., doubling the budget), you need to re-solve the entire problem.\n\n\n\n\nWith \\(m\\) equality constraints \\(g_j(x) = c_j\\), the Lagrangian is:\n\\[\n\\mathcal{L} = f(x) - \\sum_{j=1}^m \\lambda_j [g_j(x) - c_j]\n\\]\nEach \\(\\lambda_j^*\\) is the shadow price of constraint \\(j\\): it tells you how much the optimum improves per marginal unit of resource \\(j\\).\nExample — Firm cost minimization with two constraints: A firm minimizes cost \\(wL + rK\\) subject to both an output target \\(F(L,K) = q\\) and a regulatory constraint \\(P(L,K) \\leq \\bar{P}\\):\n\\[\n\\mathcal{L} = wL + rK - \\lambda_1[F(L,K) - q] - \\lambda_2[P(L,K) - \\bar{P}]\n\\]\nHere \\(\\lambda_1^*\\) = marginal cost of output and \\(\\lambda_2^*\\) = marginal cost of the pollution regulation.\nRegularity condition (constraint qualification): The gradients \\(\\nabla g_1, \\ldots, \\nabla g_m\\) must be linearly independent at the optimum. If they fail to be, the Lagrangian FOCs may not hold.\n\n\n\n\n\nIn economics, most real constraints are inequalities: you can spend at most \\(M\\), pollution must be at most \\(\\bar{P}\\).\n\\[\n\\max_{x} f(x) \\quad \\text{s.t.} \\quad g(x) \\leq c\n\\]\nWith equality constraints, we know the constraint always binds. With inequalities, it might or might not — and this creates a new layer of logic.\n\n\n\nThere are exactly two cases:\nCase 1: The constraint binds, \\(g(x^*) = c\\). The optimizer would like to go further but can’t. This is exactly the equality problem — Lagrange applies and \\(\\lambda^* &gt; 0\\).\nCase 2: The constraint is slack, \\(g(x^*) &lt; c\\). The constraint is irrelevant at the margin. The optimizer is at an interior unconstrained optimum, so \\(\\lambda^* = 0\\).\n\n\n\nFor the problem \\(\\max_x f(x)\\) subject to \\(g_j(x) \\leq c_j\\) for \\(j = 1, \\ldots, m\\) and \\(h_k(x) = d_k\\) for \\(k = 1, \\ldots, p\\), define:\n\\[\n\\mathcal{L} = f(x) - \\sum_j \\mu_j[g_j(x) - c_j] - \\sum_k \\lambda_k[h_k(x) - d_k]\n\\]\nThe KKT conditions are:\n1. Stationarity: \\[\\frac{\\partial \\mathcal{L}}{\\partial x_i} = 0 \\quad \\forall\\, i\\]\n2. Primal feasibility: \\[g_j(x^*) \\leq c_j \\quad \\forall\\, j, \\qquad h_k(x^*) = d_k \\quad \\forall\\, k\\]\n3. Dual feasibility (sign restriction): \\[\\mu_j \\geq 0 \\quad \\forall\\, j\\]\n4. Complementary slackness: \\[\\mu_j[g_j(x^*) - c_j] = 0 \\quad \\forall\\, j\\]\nCondition (4) is the key addition over Lagrange. It encodes the two-case logic: either the constraint binds (\\(g_j = c_j\\), \\(\\mu_j \\geq 0\\)) or it’s slack (\\(g_j &lt; c_j\\), \\(\\mu_j = 0\\)). You never have \\(\\mu_j &gt; 0\\) with a slack constraint.\n\n\n\nIntuitively: if relaxing the constraint (raising \\(c_j\\)) helps the optimizer, then the constraint is costly, so \\(\\mu_j = dV/dc_j &gt; 0\\). If tightening the constraint would help (which can’t happen since the optimizer chose optimally), \\(\\mu_j\\) would be negative — but that’s impossible for a binding inequality constraint in a maximization problem.\nMore formally, this follows from the geometry: for \\(g(x) \\leq c\\), the feasible set grows as \\(c\\) increases, so \\(V(c)\\) is non-decreasing in \\(c\\), hence \\(\\lambda^* = dV/dc \\geq 0\\).\n\n\n\nThe KKT conditions are necessary for any interior optimum (under constraint qualification). They are sufficient when:\n\n\\(f\\) is concave and all \\(g_j\\) are convex (for maximization), or\n\\(f\\) is convex and all \\(g_j\\) are convex (for minimization).\n\nMost well-posed economics problems (concave utility, convex costs, linear constraints) satisfy these conditions.\n\n\n\n\n\n\n\n\n\n\n\n\nLagrange\nKKT\n\n\n\n\nConstraint type\nEquality: \\(g(x) = c\\)\nEquality + inequality\n\n\nNumber of cases\n1 (always binds)\nUp to \\(2^m\\)\n\n\nSign restriction on \\(\\mu\\)\nNone\n\\(\\mu_j \\geq 0\\) for \\(\\leq\\) constraints\n\n\nComplementary slackness\nN/A (vacuous)\n\\(\\mu_j[g_j(x) - c_j] = 0\\)\n\n\nShadow price\n\\(\\lambda^* = dV/dc\\)\n\\(\\mu_j^* = \\partial V/\\partial c_j\\)\n\n\nSufficient when\nConcave \\(f\\), linear \\(g\\)\nConcave \\(f\\), convex \\(g_j\\)\n\n\n\nThe key insight: Lagrange is literally KKT with all constraints being equalities. The sign restriction and complementary slackness become vacuous (the constraint always binds, so slackness is zero automatically; and there’s no meaningful sign restriction for equality multipliers).\n\n\n\n\n\n\nSolving the consumer’s Lagrangian gives Marshallian demands \\(x^*(p, M)\\). Solving the firm’s cost minimization gives factor demands \\(L^*(w, r, q)\\) and \\(K^*(w, r, q)\\), and thus the cost function \\(C(w, r, q) = wL^* + rK^*\\).\n\n\n\nDifferentiate the FOCs with respect to a parameter (e.g., income \\(M\\) or a price \\(p_i\\)). By the implicit function theorem, this gives how optimal choices respond to that parameter — without re-solving the whole system.\n\n\n\nThe shadow price from one problem gives you the solution to the dual problem. This is the deep structure underlying:\n\nShephard’s Lemma: \\(\\partial C(w,r,q)/\\partial w = L^*\\) — the derivative of the cost function with respect to an input price equals the optimal input demand.\nRoy’s Identity: \\(x_i^*(p,M) = -(\\partial V/\\partial p_i)/(\\partial V/\\partial M)\\) — Marshallian demands can be recovered from the indirect utility function.\nSlutsky Equation: Decomposes the price effect into substitution and income effects using the duality between utility maximization and expenditure minimization.\n\n\n\n\nThe shadow price of a pollution constraint equals the socially optimal Pigouvian tax. This is a direct policy application: you don’t need to observe the externality cost directly — the shadow price from the social planner’s constrained optimization tells you exactly what the corrective tax should be."
+  },
+  {
+    "objectID": "posts/lagrangian/index.html#what-are-we-doing-when-we-write-a-lagrangian",
+    "href": "posts/lagrangian/index.html#what-are-we-doing-when-we-write-a-lagrangian",
+    "title": "Lagrangian, Shadow Price, and KKT: Intuition and Proofs",
+    "section": "",
+    "text": "This section is not a formal proof of the Lagrange multiplier theorem. It is more about building the right intuition for why the Lagrangian works and what each piece means economically. This matters because constrained optimization is the backbone of almost everything in micro theory, IO, and metrics.\n\nEconomics is fundamentally about constrained optimization — agents maximize objectives subject to scarcity. The Lagrangian is the mathematical technology that converts a constrained problem into something that looks like an unconstrained one.\nThe penalty term \\(-\\lambda[g(x) - c]\\) builds the constraint directly into the objective. At the optimum the constraint holds, so the penalty vanishes and \\(\\mathcal{L} = f\\). But by optimizing over \\((x, \\lambda)\\) jointly we recover the constrained solution via unconstrained calculus.\nThe multiplier \\(\\lambda^*\\) is not just a mathematical artifact. It is a shadow price: the rate at which the optimized objective improves per marginal unit of constraint relaxation. For a consumer it is the marginal utility of income; for a cost-minimizing firm it is marginal cost."
+  },
+  {
+    "objectID": "posts/lagrangian/index.html#the-lagrangian-setup-and-geometry",
+    "href": "posts/lagrangian/index.html#the-lagrangian-setup-and-geometry",
+    "title": "Lagrangian, Shadow Price, and KKT: Intuition and Proofs",
+    "section": "",
+    "text": "Consider:\n\\[\n\\max_{x} \\; f(x) \\quad \\text{s.t.} \\quad g(x) = c\n\\]\nwhere \\(x \\in \\mathbb{R}^n\\). The Lagrangian is:\n\\[\n\\mathcal{L}(x, \\lambda) = f(x) - \\lambda[g(x) - c]\n\\]\nThe first-order conditions (FOCs) are:\n\\[\n\\frac{\\partial \\mathcal{L}}{\\partial x_i} = \\frac{\\partial f}{\\partial x_i} - \\lambda \\frac{\\partial g}{\\partial x_i} = 0 \\quad \\forall\\, i\n\\]\n\\[\n\\frac{\\partial \\mathcal{L}}{\\partial \\lambda} = -(g(x) - c) = 0\n\\]\nThe first set says \\(\\nabla f = \\lambda \\nabla g\\). The second just enforces the constraint.\n\n\n\nAt a constrained optimum, the level curve of \\(f\\) is tangent to the constraint surface \\(g(x) = c\\). If it weren’t tangent, you could slide along the constraint and still improve \\(f\\).\nTangency means the gradients are parallel:\n\\[\n\\nabla f(x^*) = \\lambda^* \\nabla g(x^*)\n\\]\nThe scalar \\(\\lambda^*\\) is the ratio of the two gradients — it tells you how “aligned” the objective and the constraint are at the optimum.\n\n\n\nYou can solve the constraint for one variable and substitute into \\(f\\). But economists prefer the Lagrangian for three reasons:\n\nIt preserves the shadow price. Substitution eliminates \\(\\lambda\\) and you lose the economic interpretation.\nIt scales. With \\(m\\) constraints, substitution becomes intractable. The Lagrangian just adds one multiplier per constraint.\nIt gives symmetric FOCs. Dividing FOCs pairwise gives clean tangency conditions (e.g., MRS = price ratio in consumer theory) without ever solving for levels.\n\n\n\n\n\nWrite \\(\\mathcal{L} = f(x) - \\sum_j \\lambda_j [g_j(x) - c_j]\\).\nTake FOCs: \\(\\partial \\mathcal{L}/\\partial x_i = 0\\) for all \\(i\\), and \\(\\partial \\mathcal{L}/\\partial \\lambda_j = 0\\) for all \\(j\\).\nDivide FOCs pairwise to get tangency conditions (eliminates \\(\\lambda\\)).\nPlug tangency conditions into the constraint equations to solve for levels.\nBack out \\(\\lambda^*\\) and interpret it as the shadow price.\n\n\n\n\nMaximize \\(U(x_1, x_2) = x_1^\\alpha x_2^{1-\\alpha}\\) subject to \\(p_1 x_1 + p_2 x_2 = M\\).\n\\[\n\\mathcal{L} = x_1^\\alpha x_2^{1-\\alpha} - \\lambda(p_1 x_1 + p_2 x_2 - M)\n\\]\nFOCs:\n\\[\n\\alpha x_1^{\\alpha-1} x_2^{1-\\alpha} = \\lambda p_1, \\qquad (1-\\alpha) x_1^\\alpha x_2^{-\\alpha} = \\lambda p_2\n\\]\nDividing:\n\\[\n\\frac{\\alpha x_2}{(1-\\alpha) x_1} = \\frac{p_1}{p_2} \\quad \\Longrightarrow \\quad x_1^* = \\frac{\\alpha M}{p_1}, \\quad x_2^* = \\frac{(1-\\alpha)M}{p_2}\n\\]\nThe multiplier \\(\\lambda^* = \\alpha^\\alpha (1-\\alpha)^{1-\\alpha} M^{-1} \\cdot (p_1/\\alpha)^{-\\alpha}(p_2/(1-\\alpha))^{-(1-\\alpha)}\\) is the marginal utility of income."
+  },
+  {
+    "objectID": "posts/lagrangian/index.html#the-shadow-value-full-intuition-and-proof",
+    "href": "posts/lagrangian/index.html#the-shadow-value-full-intuition-and-proof",
+    "title": "Lagrangian, Shadow Price, and KKT: Intuition and Proofs",
+    "section": "",
+    "text": "Define the value function:\n\\[\nV(c) = \\max_{x}\\; f(x) \\quad \\text{s.t.} \\quad g(x) = c\n\\]\nTheorem (Envelope / Shadow Value): Under standard regularity,\n\\[\n\\boxed{\\frac{dV}{dc} = \\lambda^*}\n\\]\nThe multiplier is the derivative of the optimized objective with respect to the constraint level.\n\n\n\nThe Lagrangian is \\(\\mathcal{L}(x, \\lambda, c) = f(x) - \\lambda[g(x) - c]\\). At the optimum, \\(g(x^*) = c\\) so \\(V(c) = \\mathcal{L}(x^*(c), \\lambda^*(c), c)\\).\nBy the envelope theorem, when differentiating a maximized function with respect to a parameter, indirect effects through \\(x^*\\) vanish at the optimum. So:\n\\[\n\\frac{dV}{dc} = \\frac{\\partial \\mathcal{L}}{\\partial c}\\bigg|_{x^*, \\lambda^*} = \\frac{\\partial}{\\partial c}\\big[f(x) - \\lambda(g(x) - c)\\big]\\bigg|_{x^*, \\lambda^*} = \\lambda^*\n\\]\nMore explicitly, by the chain rule:\n\\[\n\\frac{dV}{dc} = \\sum_{i} \\frac{\\partial f}{\\partial x_i}\\frac{dx_i^*}{dc} = \\sum_{i} \\lambda^* \\frac{\\partial g}{\\partial x_i}\\frac{dx_i^*}{dc} = \\lambda^* \\cdot \\frac{d}{dc}[g(x^*(c))] = \\lambda^* \\cdot 1\n\\]\nwhere we used the FOC \\(\\partial f/\\partial x_i = \\lambda^* \\partial g/\\partial x_i\\) and the fact that \\(g(x^*(c)) = c\\) for all \\(c\\). \\(\\square\\)\n\n\n\nIt is called a shadow price because:\n\nIt is not observed in any market. You don’t see it posted on a price tag.\nIt exists “in the shadow” of the optimization — it is an implicit value that falls out of the math.\nIt is the price the optimizer would be willing to pay for a marginal unit of the constrained resource.\n\n\n\n\n\n\n\n\n\nProblem\nConstraint \\(c\\)\n\\(\\lambda^*\\) means…\n\n\n\n\n\\(\\max U(x_1,x_2)\\) s.t. budget \\(= M\\)\nIncome \\(M\\)\nMarginal utility of income\n\n\n\\(\\min C(L,K)\\) s.t. output \\(= q\\)\nOutput \\(q\\)\nMarginal cost of production\n\n\n\\(\\max\\) welfare s.t. resource \\(\\leq R\\)\nResource \\(R\\)\nSocial value of one more unit\n\n\n\\(\\max\\) return s.t. variance \\(\\leq \\sigma^2\\)\nRisk budget \\(\\sigma^2\\)\nReturn per unit of extra risk\n\n\n\nSize of \\(\\lambda^*\\) matters:\n\n\\(\\lambda^*\\) large \\(\\Rightarrow\\) constraint is very binding — relaxing it even slightly yields big gains.\n\\(\\lambda^*\\) small \\(\\Rightarrow\\) constraint barely matters at the margin.\n\\(\\lambda^* = 0\\) \\(\\Rightarrow\\) constraint is non-binding — you wouldn’t use an extra unit if given one.\n\nImportant caveat: This is a local, marginal statement. It tells you the value of an infinitesimal relaxation. For a discrete change (e.g., doubling the budget), you need to re-solve the entire problem."
+  },
+  {
+    "objectID": "posts/lagrangian/index.html#multiple-constraints",
+    "href": "posts/lagrangian/index.html#multiple-constraints",
+    "title": "Lagrangian, Shadow Price, and KKT: Intuition and Proofs",
+    "section": "",
+    "text": "With \\(m\\) equality constraints \\(g_j(x) = c_j\\), the Lagrangian is:\n\\[\n\\mathcal{L} = f(x) - \\sum_{j=1}^m \\lambda_j [g_j(x) - c_j]\n\\]\nEach \\(\\lambda_j^*\\) is the shadow price of constraint \\(j\\): it tells you how much the optimum improves per marginal unit of resource \\(j\\).\nExample — Firm cost minimization with two constraints: A firm minimizes cost \\(wL + rK\\) subject to both an output target \\(F(L,K) = q\\) and a regulatory constraint \\(P(L,K) \\leq \\bar{P}\\):\n\\[\n\\mathcal{L} = wL + rK - \\lambda_1[F(L,K) - q] - \\lambda_2[P(L,K) - \\bar{P}]\n\\]\nHere \\(\\lambda_1^*\\) = marginal cost of output and \\(\\lambda_2^*\\) = marginal cost of the pollution regulation.\nRegularity condition (constraint qualification): The gradients \\(\\nabla g_1, \\ldots, \\nabla g_m\\) must be linearly independent at the optimum. If they fail to be, the Lagrangian FOCs may not hold."
+  },
+  {
+    "objectID": "posts/lagrangian/index.html#from-lagrange-to-kkt-the-complete-picture",
+    "href": "posts/lagrangian/index.html#from-lagrange-to-kkt-the-complete-picture",
+    "title": "Lagrangian, Shadow Price, and KKT: Intuition and Proofs",
+    "section": "",
+    "text": "In economics, most real constraints are inequalities: you can spend at most \\(M\\), pollution must be at most \\(\\bar{P}\\).\n\\[\n\\max_{x} f(x) \\quad \\text{s.t.} \\quad g(x) \\leq c\n\\]\nWith equality constraints, we know the constraint always binds. With inequalities, it might or might not — and this creates a new layer of logic.\n\n\n\nThere are exactly two cases:\nCase 1: The constraint binds, \\(g(x^*) = c\\). The optimizer would like to go further but can’t. This is exactly the equality problem — Lagrange applies and \\(\\lambda^* &gt; 0\\).\nCase 2: The constraint is slack, \\(g(x^*) &lt; c\\). The constraint is irrelevant at the margin. The optimizer is at an interior unconstrained optimum, so \\(\\lambda^* = 0\\).\n\n\n\nFor the problem \\(\\max_x f(x)\\) subject to \\(g_j(x) \\leq c_j\\) for \\(j = 1, \\ldots, m\\) and \\(h_k(x) = d_k\\) for \\(k = 1, \\ldots, p\\), define:\n\\[\n\\mathcal{L} = f(x) - \\sum_j \\mu_j[g_j(x) - c_j] - \\sum_k \\lambda_k[h_k(x) - d_k]\n\\]\nThe KKT conditions are:\n1. Stationarity: \\[\\frac{\\partial \\mathcal{L}}{\\partial x_i} = 0 \\quad \\forall\\, i\\]\n2. Primal feasibility: \\[g_j(x^*) \\leq c_j \\quad \\forall\\, j, \\qquad h_k(x^*) = d_k \\quad \\forall\\, k\\]\n3. Dual feasibility (sign restriction): \\[\\mu_j \\geq 0 \\quad \\forall\\, j\\]\n4. Complementary slackness: \\[\\mu_j[g_j(x^*) - c_j] = 0 \\quad \\forall\\, j\\]\nCondition (4) is the key addition over Lagrange. It encodes the two-case logic: either the constraint binds (\\(g_j = c_j\\), \\(\\mu_j \\geq 0\\)) or it’s slack (\\(g_j &lt; c_j\\), \\(\\mu_j = 0\\)). You never have \\(\\mu_j &gt; 0\\) with a slack constraint.\n\n\n\nIntuitively: if relaxing the constraint (raising \\(c_j\\)) helps the optimizer, then the constraint is costly, so \\(\\mu_j = dV/dc_j &gt; 0\\). If tightening the constraint would help (which can’t happen since the optimizer chose optimally), \\(\\mu_j\\) would be negative — but that’s impossible for a binding inequality constraint in a maximization problem.\nMore formally, this follows from the geometry: for \\(g(x) \\leq c\\), the feasible set grows as \\(c\\) increases, so \\(V(c)\\) is non-decreasing in \\(c\\), hence \\(\\lambda^* = dV/dc \\geq 0\\).\n\n\n\nThe KKT conditions are necessary for any interior optimum (under constraint qualification). They are sufficient when:\n\n\\(f\\) is concave and all \\(g_j\\) are convex (for maximization), or\n\\(f\\) is convex and all \\(g_j\\) are convex (for minimization).\n\nMost well-posed economics problems (concave utility, convex costs, linear constraints) satisfy these conditions.\n\n\n\n\n\n\n\n\n\n\n\n\nLagrange\nKKT\n\n\n\n\nConstraint type\nEquality: \\(g(x) = c\\)\nEquality + inequality\n\n\nNumber of cases\n1 (always binds)\nUp to \\(2^m\\)\n\n\nSign restriction on \\(\\mu\\)\nNone\n\\(\\mu_j \\geq 0\\) for \\(\\leq\\) constraints\n\n\nComplementary slackness\nN/A (vacuous)\n\\(\\mu_j[g_j(x) - c_j] = 0\\)\n\n\nShadow price\n\\(\\lambda^* = dV/dc\\)\n\\(\\mu_j^* = \\partial V/\\partial c_j\\)\n\n\nSufficient when\nConcave \\(f\\), linear \\(g\\)\nConcave \\(f\\), convex \\(g_j\\)\n\n\n\nThe key insight: Lagrange is literally KKT with all constraints being equalities. The sign restriction and complementary slackness become vacuous (the constraint always binds, so slackness is zero automatically; and there’s no meaningful sign restriction for equality multipliers)."
+  },
+  {
+    "objectID": "posts/lagrangian/index.html#what-economists-do-with-this",
+    "href": "posts/lagrangian/index.html#what-economists-do-with-this",
+    "title": "Lagrangian, Shadow Price, and KKT: Intuition and Proofs",
+    "section": "",
+    "text": "Solving the consumer’s Lagrangian gives Marshallian demands \\(x^*(p, M)\\). Solving the firm’s cost minimization gives factor demands \\(L^*(w, r, q)\\) and \\(K^*(w, r, q)\\), and thus the cost function \\(C(w, r, q) = wL^* + rK^*\\).\n\n\n\nDifferentiate the FOCs with respect to a parameter (e.g., income \\(M\\) or a price \\(p_i\\)). By the implicit function theorem, this gives how optimal choices respond to that parameter — without re-solving the whole system.\n\n\n\nThe shadow price from one problem gives you the solution to the dual problem. This is the deep structure underlying:\n\nShephard’s Lemma: \\(\\partial C(w,r,q)/\\partial w = L^*\\) — the derivative of the cost function with respect to an input price equals the optimal input demand.\nRoy’s Identity: \\(x_i^*(p,M) = -(\\partial V/\\partial p_i)/(\\partial V/\\partial M)\\) — Marshallian demands can be recovered from the indirect utility function.\nSlutsky Equation: Decomposes the price effect into substitution and income effects using the duality between utility maximization and expenditure minimization.\n\n\n\n\nThe shadow price of a pollution constraint equals the socially optimal Pigouvian tax. This is a direct policy application: you don’t need to observe the externality cost directly — the shadow price from the social planner’s constrained optimization tells you exactly what the corrective tax should be."
   },
   {
     "objectID": "posts/arch-install/index.html",
