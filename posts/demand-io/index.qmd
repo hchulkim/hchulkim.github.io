@@ -14,7 +14,7 @@ These are my personal notes on my understanding of demand system and its estimat
 
 ## What is a structural model?
 
-This section is not for rigorously defining the meaning of structural model. It is more about listing factors that I think are useful to think about in the back of your head when dealing with structural model. This is important because lot of what we do in modeling demand system in IO is about specifying a *structural model*.
+This section is not for rigorously defining the meaning of structural model. It is more about listing factors that I think are useful to think about in the back of your head when dealing with structural model. This is important because lot of what we do in modeling demand system in IO (at least that's what I think) is about specifying a *structural model*.
 
 - At the end of the day, the goal of the structural model is to specify a system of economic environment with features that the researcher believe is important for understanding certain human behavior or outcome. 
 - For example, why does some people choose insurance A while others choose insurance B (which is an outcome observed in the data). Depending on the empirical context, it could be about unobserved product quality or it could be about some search friction. 
@@ -46,7 +46,41 @@ So where does estimating demand fit in this context? Surprisingly, estimating de
 
 ### Differentiated product Bertrand
 
+While differentiated product bertrand (competition by price) is not the only setting IO economist work on, I feel it's the most intuitive setting to understand why people care about demand.[^1]
+
+[^1]: Notation I use here is mostly from Chris Conlon's Grad IO lecture slides.
+
+In multi-product Bertrand problem, firm will solve
+\begin{align}
+  \pi_f (\mathbf{p}) = \sum_{j \in J_f}(p_j - c_j) \cdot q_j(\mathbf{p})
+\end{align}
+where $f$ if firm, $j$ if product, and $\mathbf{p}$ is price vector.
+
+If you apply FOC, you get:
+\begin{align}
+  0 = q_j(\mathbf{p}) + \sum_{k \in J_f} (p_k - c_k) \frac{\partial q_k (\mathbf{p})}{\partial p_j}
+\end{align}
+
+If you rearrange this with respect to price, you will get some nice equation with markups and lerner index. But for now, we will not go there. For easier manipulation, I can just write this FOC in matrix form:
+\begin{align}
+  q(\mathbf{p}) = \Delta(\mathbf{p}) \cdot (\mathbf{p} - \mathbf{mc})
+\end{align}
+where $\Delta(\mathbf{p})$ is $-\frac{\partial q_j (\mathbf{p})}{\partial p_k}$ for $(j, k) \in J_f$ and 0 otherwise.
+
+Then we can recover marginal cost by inverting the matrix of price derivatives. And how can we get price derivative? Demand estimation!
+
+However, there are challenges in estimating demand:
+
+1. Endogeneity of price
+2. So many substitution patterns to estimate ($J$ products mean $J^2$ parameters to estimate!) 
+
+## Product space (mostly about AIDS model)
+
 ## Statistical model of product differentiation: discrete choice model
+
+Now we will move on to characteristic space. This assumes that consumers choose products by their characteristics. While it might sound less intuitive than product space, this setup is useful because it solve the dimensionality issue. As long as set of characteristics are sensible, increase in products do not lead to more parameters to estimate. Also, characteristics space is useful for understanding cases such as new product since new product will be just some bundle of characteristics already defined in the model.
+
+But before we move onto the structural model, we will first focus on the statistical model that is used a lot in this setup: discrete choice model.
 
 ### btw, Why do we start with indirect utility in Discrete choice model?
 
