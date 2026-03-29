@@ -224,7 +224,7 @@ window.Quarto = {
 <p>These are my personal notes on my understanding of demand system and its estimation (especially focusing on logit-like model) in IO. Note that this is a living document and will be updated as I learn more things.</p>
 <section id="what-is-a-structural-model" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-a-structural-model">What is a structural model?</h2>
-<p>This section is not for rigorously defining the meaning of structural model. It is more about listing factors that I think are useful to think about in the back of your head when dealing with structural model. This is important because lot of what we do in modeling demand system in IO is about specifying a <em>structural model</em>.</p>
+<p>This section is not for rigorously defining the meaning of structural model. It is more about listing factors that I think are useful to think about in the back of your head when dealing with structural model. This is important because lot of what we do in modeling demand system in IO (at least that’s what I think) is about specifying a <em>structural model</em>.</p>
 <ul>
 <li>At the end of the day, the goal of the structural model is to specify a system of economic environment with features that the researcher believe is important for understanding certain human behavior or outcome.</li>
 <li>For example, why does some people choose insurance A while others choose insurance B (which is an outcome observed in the data). Depending on the empirical context, it could be about unobserved product quality or it could be about some search friction.</li>
@@ -252,10 +252,31 @@ window.Quarto = {
 <p>So where does estimating demand fit in this context? Surprisingly, estimating demand can help us recover marginal cost and thus markup.</p>
 <section id="differentiated-product-bertrand" class="level3">
 <h3 class="anchored" data-anchor-id="differentiated-product-bertrand">Differentiated product Bertrand</h3>
+<p>While differentiated product bertrand (competition by price) is not the only setting IO economist work on, I feel it’s the most intuitive setting to understand why people care about demand.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>In multi-product Bertrand problem, firm will solve <span class="math display">\[\begin{align}
+  \pi_f (\mathbf{p}) = \sum_{j \in J_f}(p_j - c_j) \cdot q_j(\mathbf{p})
+\end{align}\]</span> where <span class="math inline">\(f\)</span> if firm, <span class="math inline">\(j\)</span> if product, and <span class="math inline">\(\mathbf{p}\)</span> is price vector.</p>
+<p>If you apply FOC, you get: <span class="math display">\[\begin{align}
+  0 = q_j(\mathbf{p}) + \sum_{k \in J_f} (p_k - c_k) \frac{\partial q_k (\mathbf{p})}{\partial p_j}
+\end{align}\]</span></p>
+<p>If you rearrange this with respect to price, you will get some nice equation with markups and lerner index. But for now, we will not go there. For easier manipulation, I can just write this FOC in matrix form: <span class="math display">\[\begin{align}
+  q(\mathbf{p}) = \Delta(\mathbf{p}) \cdot (\mathbf{p} - \mathbf{mc})
+\end{align}\]</span> where <span class="math inline">\(\Delta(\mathbf{p})\)</span> is <span class="math inline">\(-\frac{\partial q_j (\mathbf{p})}{\partial p_k}\)</span> for <span class="math inline">\((j, k) \in J_f\)</span> and 0 otherwise.</p>
+<p>Then we can recover marginal cost by inverting the matrix of price derivatives. And how can we get price derivative? Demand estimation!</p>
+<p>However, there are challenges in estimating demand:</p>
+<ol type="1">
+<li>Endogeneity of price</li>
+<li>So many substitution patterns to estimate (<span class="math inline">\(J\)</span> products mean <span class="math inline">\(J^2\)</span> parameters to estimate!)</li>
+</ol>
 </section>
+</section>
+<section id="product-space-mostly-about-aids-model" class="level2">
+<h2 class="anchored" data-anchor-id="product-space-mostly-about-aids-model">Product space (mostly about AIDS model)</h2>
 </section>
 <section id="statistical-model-of-product-differentiation-discrete-choice-model" class="level2">
 <h2 class="anchored" data-anchor-id="statistical-model-of-product-differentiation-discrete-choice-model">Statistical model of product differentiation: discrete choice model</h2>
+<p>Now we will move on to characteristic space. This assumes that consumers choose products by their characteristics. While it might sound less intuitive than product space, this setup is useful because it solve the dimensionality issue. As long as set of characteristics are sensible, increase in products do not lead to more parameters to estimate. Also, characteristics space is useful for understanding cases such as new product since new product will be just some bundle of characteristics already defined in the model.</p>
+<p>But before we move onto the structural model, we will first focus on the statistical model that is used a lot in this setup: discrete choice model.</p>
 <section id="btw-why-do-we-start-with-indirect-utility-in-discrete-choice-model" class="level3">
 <h3 class="anchored" data-anchor-id="btw-why-do-we-start-with-indirect-utility-in-discrete-choice-model">btw, Why do we start with indirect utility in Discrete choice model?</h3>
 <p>Actually, this can be derived from the usual utility function. Suppose consumer maximizes:</p>
@@ -304,7 +325,13 @@ window.Quarto = {
 </section>
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Notation I use here is mostly from Chris Conlon’s Grad IO lecture slides.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
