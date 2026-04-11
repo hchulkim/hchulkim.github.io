@@ -265,6 +265,64 @@ The honest limitation is that if there exists some important dimension of simila
  
 In practice, however, mixed logit is remarkably flexible. Even rough proxies for the true sources of similarity tend to work reasonably well. And compared to nested logit, where the analyst must manually specify which alternatives belong in which group, mixed logit lets the substitution patterns emerge from the data — a significant advantage when the structure of similarity across alternatives is not obvious in advance.
 
+#### What Adding Observed Characteristics Does (and Does Not) Do in Standard Logit
+ 
+If adding observed characteristics does not fix IIA, one might wonder what the point of including them is in the first place. The answer is that they serve a different and still essential purpose: they improve the accuracy of the predicted choice probabilities by getting $V_{ij}$ right.
+ 
+Consider a transportation mode choice model where you initially include only travel cost. The model predicts choice probabilities based on cost differences alone. Now suppose you add travel time. The model can now distinguish between a cheap-but-slow bus and a cheap-and-fast subway. The predicted $V$ for each alternative becomes more accurate, and the overall fit of the model improves. People who face long bus travel times will have lower predicted $V_{\text{bus}}$, and the model will correctly predict a lower choice probability for them.
+ 
+What does not change is the substitution pattern. Suppose the initial choice probabilities are 50% car, 30% red bus, 20% blue bus. Under IIA, if blue bus becomes unavailable, its 20% is redistributed proportionally: car goes to 62.5% and red bus goes to 37.5%. Adding more covariates changes the levels (maybe with travel time included, the probabilities become 40% car, 35% red bus, 25% blue bus), but the proportional substitution rule still applies. If blue bus is removed, car and red bus still gain in proportion to their original shares.
+ 
+To illustrate with numbers, consider two scenarios in a standard logit:
+ 
+*Sparse model (cost only):* $V_{\text{car}} = -5$, $V_{\text{red bus}} = -3$, $V_{\text{blue bus}} = -3$. The predicted shares are approximately 5% car, 47.5% red bus, 47.5% blue bus. Remove blue bus, and the model predicts car rises to 10% and red bus to 90%. The ratio $s_{\text{car}} / s_{\text{red bus}}$ stays fixed at the original ratio.
+ 
+*Rich model (cost + time + comfort):* $V_{\text{car}} = -2$, $V_{\text{red bus}} = -3$, $V_{\text{blue bus}} = -3.1$. The shares change — maybe 42% car, 30% red bus, 28% blue bus — but the substitution pattern is still proportional. Remove blue bus, and car and red bus gain in proportion to 42:30.
+ 
+In the rich model, the levels are more accurate, but the cross-elasticities are still constrained by IIA. The model still cannot capture that blue bus's share should flow mostly to red bus. So adding observed variables improves **what the model predicts** but not **how it reallocates when the choice set changes**.
+ 
+This is precisely why random coefficients are needed. They take those same observed variables and use them to generate the correlation that governs substitution. The observed variables serve double duty in a mixed logit: they improve the mean utility $V$ (just as in standard logit) and they induce realistic substitution patterns through preference heterogeneity.
+ 
+#### Random Coefficients as Preference Heterogeneity
+ 
+The motivation for random coefficients is often presented in terms of fixing IIA, but the more fundamental interpretation is that they capture **preference heterogeneity** — the fact that different people value the same characteristic differently.
+ 
+In a fixed coefficient model, everyone has the same $\beta$ for travel time. This implies that a one-minute reduction in travel time is worth the same to a busy executive as to a retired person with no schedule constraints. This is clearly unrealistic. In a random coefficient model, $\beta_i$ varies across individuals, reflecting the reality that some people care intensely about time savings while others barely notice.
+ 
+Consider a concrete example with two observed characteristics, travel time and cost:
+ 
+$$U_{ij} = \beta_i^{\text{time}} \cdot \text{time}_j + \beta_i^{\text{cost}} \cdot \text{cost}_j + \varepsilon_{ij}$$
+ 
+Suppose $\beta_i^{\text{time}} \sim N(-2, 1.5^2)$ and $\beta_i^{\text{cost}} \sim N(-3, 0.5^2)$.
+ 
+The large standard deviation on time (1.5) relative to its mean (−2) tells us that people vary a lot in how much they care about travel time. Some people have $\beta_i^{\text{time}}$ near zero (they don't mind long trips) while others have $\beta_i^{\text{time}}$ near $-5$ (they strongly avoid slow options). This heterogeneity is substantively important: it tells you who benefits from time-saving investments, how the market segments, and how different groups would respond to policy changes.
+ 
+The smaller standard deviation on cost (0.5) relative to its mean (−3) tells us that people are more uniform in how they respond to cost — nearly everyone dislikes paying more, and they dislike it by roughly similar amounts.
+ 
+This preference heterogeneity is valuable in its own right, completely apart from IIA. It tells the analyst about the population, enables welfare calculations for different subgroups, and improves predictions about how people respond to changes. The IIA fix is a beneficial consequence of modeling this heterogeneity, not the sole motivation for it.
+ 
+#### When Preference Heterogeneity Is Absent: Homogeneous Coefficients
+ 
+A natural follow-up question is: what happens if preferences for some characteristic are actually homogeneous? If everyone truly values cost at $\beta^{\text{cost}} = -3$ with no variation, does making that coefficient random matter?
+ 
+The answer is no — and the data will tell you. If you estimate a mixed logit and allow $\beta_i^{\text{cost}}$ to be random, the estimated standard deviation will come back near zero. The model is saying: "I tried to find heterogeneity on this dimension and there isn't any."
+ 
+When the standard deviation is zero, the random coefficient collapses to a fixed coefficient:
+ 
+$$(\beta_i^{\text{cost}} - \bar{\beta}^{\text{cost}}) \cdot \text{cost}_j \approx 0$$
+ 
+This component contributes no variation across people and therefore no correlation across alternatives. Cost, in this scenario, does not help break IIA — but it still contributes to getting the mean utility $V_{ij}$ right, just as it would in standard logit.
+ 
+The variables that matter for breaking IIA are specifically those with meaningful preference heterogeneity. Consider a model with three random coefficients:
+ 
+- $\beta_i^{\text{time}} \sim N(-2, 1.5^2)$ — large heterogeneity
+- $\beta_i^{\text{comfort}} \sim N(1, 1.2^2)$ — large heterogeneity
+- $\beta_i^{\text{cost}} \sim N(-3, 0.1^2)$ — near-homogeneous
+ 
+In this model, time and comfort drive the substitution patterns because people vary substantially in how they value these characteristics. Cost contributes almost nothing to the correlation structure because everyone values it similarly. If two alternatives have similar travel times and comfort levels, they will have highly correlated effective errors — regardless of whether their costs are similar or different — because the heterogeneity is concentrated on time and comfort.
+ 
+In practice, this means the analyst should think carefully about which coefficients to allow to be random. Making everything random adds computational burden. The coefficients that matter most are those where there are strong prior reasons to expect heterogeneity — characteristics where different types of people plausibly have very different valuations. For characteristics where preferences are likely uniform (everyone prefers lower cost, everyone prefers less pollution), a fixed coefficient may be sufficient, and the data will confirm this through a small estimated standard deviation.
+
 ### Nested logit
 
 ### Mixed logit
