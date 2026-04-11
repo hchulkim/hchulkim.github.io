@@ -308,8 +308,101 @@ window.Quarto = {
 \]</span></p>
 <p>This is the discrete choice model we usually see. We then usually add some random shocks to accomodate the changes in the people’s choice in the real-world data.</p>
 </section>
-<section id="multinomial-logit" class="level3">
-<h3 class="anchored" data-anchor-id="multinomial-logit">Multinomial logit</h3>
+<section id="multinomial-logit2" class="level3">
+<h3 class="anchored" data-anchor-id="multinomial-logit2">Multinomial logit<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></h3>
+<ul>
+<li>in period <span class="math inline">\(t\)</span></li>
+<li>with <span class="math inline">\(J_t\)</span> alternatives.</li>
+<li>subscript individual agents by <span class="math inline">\(i\)</span>.</li>
+<li>agents choose certain choice <span class="math inline">\(j \in J_t\)</span> with probability <span class="math inline">\(s_{ijt}\)</span>.</li>
+<li>agent <span class="math inline">\(i\)</span> receives utility <span class="math inline">\(U_{ijt}\)</span> for choosing <span class="math inline">\(j\)</span>.</li>
+<li>choice is exhaustive and mutually exclusive.</li>
+</ul>
+<p>We might wonder why we don’t have some parametric form. Actually, (at least for a start), we don’t need to start discrete choice model with certain parametric form. We can be fully nonparametric.</p>
+<p>The we can write probability <span class="math inline">\(s_{ij}\)</span> as:</p>
+<p><span class="math display">\[\begin{align}
+s_{ij} &amp;= Pr (U_{ij} &gt; U_{ik}, \quad \forall k \neq j)\\
+       &amp;= Pr(V_{ij} + \varepsilon_{ij} &gt; V_{ik} + \varepsilon_{ik}, \quad \forall k \neq j)\\
+       &amp;= Pr(\varepsilon_{ij} - \varepsilon_{ik} &gt; V_{ik} - V_{ij}, \quad \forall k \neq j)\\
+       &amp;= \int I(\varepsilon_{ij} - \varepsilon_{ik} &gt; V_{ik} - V_{ij}) f(\varepsilon_i) \partial \varepsilon_i
+\end{align}\]</span></p>
+<p>where <span class="math inline">\(f(\varepsilon_i)\)</span> is <span class="math inline">\(J\)</span> vetor of individual <span class="math inline">\(i\)</span>’s unobserved utility. You can already see that implementing <span class="math inline">\(J\)</span> dimensional integration would be painful. To alleviate this, we usually assume some good distribution for unobserved utility (T1EV, etc).</p>
+<p>In these multinomial logit, what is important is differences in utility and not levels. Thus only differences in utility matter and adding constants is irrelevant. Thus individual specific factors will not be identified.</p>
+<p>One thing to note is that <span class="math inline">\(U_ij = V_{ij} + \varepsilon_{ij}\)</span> and <span class="math inline">\(U_ij = \lambda V_{ij} + \lambda \varepsilon_{ij}\)</span> doesn’t change any result. So we normalize this by fixing the variance of the error term. This means we are normalizing the scale of the utility. This also implies that only ratio of the coefficient is identified.</p>
+<p>Reason people use T1EV is becuse it gives closed form choice probabilities:</p>
+<p><span class="math display">\[
+  s_{ij} = \frac{e^{V_{ij}}}{\sum_k e^{V_{ik}}}.
+\]</span></p>
+<p>We can also get nice closed form for expected maximum:</p>
+<p><span class="math display">\[
+  E[\max_j U_{ij}] = \log \left( \sum_j \exp [V_{ij} ] \right) + C
+\]</span></p>
+<p>This is nice as ex-ante expected utility of best option (without knowing error term) does not depend on the error term. It also allows simple computation of <span class="math inline">\(\Delta CS\)</span> for consumer welfare (but not CS) itself.</p>
+<p>btw, we also need to normalize one of the choice to provide a utility of zero (since adding constant does not change the result). We usually set outside option to have 0 determinant utility.</p>
+<p>One interesting property of multinomial logit is that the ratio of choice probabilities for <span class="math inline">\(j\)</span> and <span class="math inline">\(k\)</span> depends only on <span class="math inline">\(j\)</span> and <span class="math inline">\(k\)</span> and not on any alternative <span class="math inline">\(l\)</span>. This is known as <strong>independence of irrelevant alternatives (IIA)</strong>.</p>
+<p>IIA happens as unobserved error terms are assumed to be uncorrelated.</p>
+<section id="the-iia-problem-in-standard-logit-in-detail3" class="level4">
+<h4 class="anchored" data-anchor-id="the-iia-problem-in-standard-logit-in-detail3">The IIA Problem in Standard Logit in detail<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></h4>
+<p>In a random utility model, individual <span class="math inline">\(i\)</span>’s utility for alternative <span class="math inline">\(j\)</span> is decomposed into an observed component <span class="math inline">\(V_{ij}\)</span> and an unobserved component <span class="math inline">\(\varepsilon_{ij}\)</span>:</p>
+<p><span class="math display">\[U_{ij} = V_{ij} + \varepsilon_{ij}\]</span></p>
+<p>The standard logit model assumes that all <span class="math inline">\(\varepsilon_{ij}\)</span> are drawn i.i.d. from a Type I extreme value distribution. This yields the familiar closed-form choice probability:</p>
+<p><span class="math display">\[s_{ij} = \frac{e^{V_{ij}}}{\sum_k e^{V_{ik}}}\]</span></p>
+<p>A direct consequence of this structure is the Independence of Irrelevant Alternatives (IIA) property: the ratio of choice probabilities between any two alternatives depends only on those two alternatives:</p>
+<p><span class="math display">\[\frac{s_j}{s_k} = \frac{e^{V_j}}{e^{V_k}}\]</span></p>
+<p>This ratio is unaffected by the presence or characteristics of any other alternative in the choice set. In the classic red bus/blue bus example, adding blue bus (which is essentially identical to red bus) causes the model to steal market share proportionally from all existing alternatives, including car. In reality, blue bus should steal almost entirely from red bus, since they are near-perfect substitutes.</p>
+</section>
+<section id="why-better-observed-characteristics-dont-fix-iia" class="level4">
+<h4 class="anchored" data-anchor-id="why-better-observed-characteristics-dont-fix-iia">Why Better Observed Characteristics Don’t Fix IIA</h4>
+<p>A natural intuition is that if we include enough observed characteristics in <span class="math inline">\(V\)</span> — say a “bus” dummy, travel time, cost, comfort — the model should be able to recognize that red bus and blue bus are similar and handle substitution correctly. This intuition is wrong, and the reason is fundamental.</p>
+<p>No matter how richly you specify <span class="math inline">\(V\)</span>, the logit model always appends an independent error:</p>
+<p><span class="math display">\[U_{\text{red bus}} = V_{\text{bus}} + \varepsilon_{\text{red}}\]</span> <span class="math display">\[U_{\text{blue bus}} = V_{\text{bus}} + \varepsilon_{\text{blue}}\]</span></p>
+<p>Even if <span class="math inline">\(V\)</span> is identical for both bus options, <span class="math inline">\(\varepsilon_{\text{red}}\)</span> and <span class="math inline">\(\varepsilon_{\text{blue}}\)</span> are independent by assumption. The model treats the unobserved idiosyncratic shock to red bus as having nothing to do with the shock to blue bus — just as if you were comparing bus to bicycle.</p>
+<p>In reality, whatever unobserved reason makes someone prefer red bus (maybe they live near the bus stop, or they like the route) almost certainly applies to blue bus too. The unobserved errors should be highly correlated. But the logit model cannot represent this correlation — it is not a matter of adding more covariates to <span class="math inline">\(V\)</span>. You are only enriching the observed part while the unobserved part always remains, always has a fixed variance (normalized to <span class="math inline">\(\pi^2/6\)</span>), and is always independent across alternatives.</p>
+<p>In principle, if the unobserved component were genuinely tiny relative to <span class="math inline">\(V\)</span>, the IIA distortion would be small. But the logit model does not reward you for having great observables — the error variance is fixed by normalization — and in practice the unobserved component tends to be large enough that IIA creates real problems.</p>
+</section>
+<section id="how-random-coefficients-solve-the-problem" class="level4">
+<h4 class="anchored" data-anchor-id="how-random-coefficients-solve-the-problem">How Random Coefficients Solve the Problem</h4>
+<p>The mixed logit (random coefficients) model solves the IIA problem not by directly specifying how errors are correlated, but by inducing correlation through the observed characteristics.</p>
+<p>Suppose people have heterogeneous valuations of travel time, so the coefficient <span class="math inline">\(\beta_i\)</span> is random:</p>
+<p><span class="math display">\[U_{ij} = \beta_i \cdot \text{time}_j + \varepsilon_{ij}\]</span></p>
+<p>From the perspective of someone who only observes the population mean <span class="math inline">\(\bar{\beta}\)</span>, the effective unobserved component for alternative <span class="math inline">\(j\)</span> is:</p>
+<p><span class="math display">\[(\beta_i - \bar{\beta}) \cdot \text{time}_j + \varepsilon_{ij}\]</span></p>
+<p>The first term, <span class="math inline">\((\beta_i - \bar{\beta}) \cdot \text{time}_j\)</span>, is the key. It is correlated across alternatives in proportion to how similar their values of <span class="math inline">\(\text{time}_j\)</span> are. Since red bus and blue bus have nearly identical travel times, this component is nearly identical for both — creating exactly the correlation structure that standard logit lacks. Car has a very different travel time, so its effective error is only weakly correlated with the bus options.</p>
+<p>The i.i.d. <span class="math inline">\(\varepsilon_{ij}\)</span> terms are still present, but they are now dominated by the correlated component flowing through the random coefficient. The model no longer treats red bus and blue bus as independent in the unobserved dimension.</p>
+</section>
+<section id="a-concrete-numerical-example" class="level4">
+<h4 class="anchored" data-anchor-id="a-concrete-numerical-example">A Concrete Numerical Example</h4>
+<p>Consider three alternatives with the following travel times:</p>
+<ul>
+<li>Red bus: 30 minutes</li>
+<li>Blue bus: 32 minutes</li>
+<li>Car: 10 minutes</li>
+</ul>
+<p>Suppose the population mean coefficient is <span class="math inline">\(\bar{\beta} = -2\)</span>. Consider two individuals with different draws of <span class="math inline">\(\beta_i\)</span>.</p>
+<p><strong>Person A</strong> draws <span class="math inline">\(\beta_i = -4\)</span> (hates travel time more than average), so <span class="math inline">\(\beta_i - \bar{\beta} = -2\)</span>. The unobserved component <span class="math inline">\((\beta_i - \bar{\beta}) \cdot \text{time}_j\)</span> for each alternative is:</p>
+<ul>
+<li>Red bus: <span class="math inline">\((-2) \times 30 = -60\)</span></li>
+<li>Blue bus: <span class="math inline">\((-2) \times 32 = -64\)</span></li>
+<li>Car: <span class="math inline">\((-2) \times 10 = -20\)</span></li>
+</ul>
+<p>Red bus and blue bus are hit by nearly the same penalty (<span class="math inline">\(-60\)</span> vs <span class="math inline">\(-64\)</span>) because their travel times are close. Car receives a much smaller penalty (<span class="math inline">\(-20\)</span>) because its travel time is very different.</p>
+<p><strong>Person B</strong> draws <span class="math inline">\(\beta_i = -1\)</span> (dislikes travel time less than average), so <span class="math inline">\(\beta_i - \bar{\beta} = +1\)</span>. The unobserved component becomes:</p>
+<ul>
+<li>Red bus: <span class="math inline">\((+1) \times 30 = +30\)</span></li>
+<li>Blue bus: <span class="math inline">\((+1) \times 32 = +32\)</span></li>
+<li>Car: <span class="math inline">\((+1) \times 10 = +10\)</span></li>
+</ul>
+<p>Again, red bus and blue bus move nearly in lockstep — both receive a large boost — while car moves in the same direction but by a different magnitude.</p>
+<p>Across the population, as <span class="math inline">\(\beta_i\)</span> varies, the utilities of red bus and blue bus go up and down together because they share similar travel times. This means the people who switch to blue bus are predominantly the same people who already liked red bus. The model correctly understands that blue bus steals mostly from red bus, not proportionally from car. IIA is broken.</p>
+</section>
+<section id="the-role-of-observed-characteristics" class="level4">
+<h4 class="anchored" data-anchor-id="the-role-of-observed-characteristics">The Role of Observed Characteristics</h4>
+<p>For this mechanism to work well, you need enough observed variables to span the main dimensions along which alternatives are similar. The random coefficients can only generate correlation through the variables you include.</p>
+<p>If you only have one observed variable (say travel time), the model captures correlation along that single dimension. Alternatives similar in travel time will have correlated utilities, but alternatives similar in some unmeasured way will not.</p>
+<p>If you add more variables — cost, comfort, frequency, reliability — and allow their coefficients to be random, the model can capture correlation along all of those dimensions. Two alternatives that are similar on multiple observed characteristics will end up with highly correlated effective errors, producing realistic substitution patterns.</p>
+<p>The honest limitation is that if there exists some important dimension of similarity that no observed variable captures — even approximately — random coefficients cannot help with that. The correlation must flow through something in the model.</p>
+<p>In practice, however, mixed logit is remarkably flexible. Even rough proxies for the true sources of similarity tend to work reasonably well. And compared to nested logit, where the analyst must manually specify which alternatives belong in which group, mixed logit lets the substitution patterns emerge from the data — a significant advantage when the structure of similarity across alternatives is not obvious in advance.</p>
+</section>
 </section>
 <section id="nested-logit" class="level3">
 <h3 class="anchored" data-anchor-id="nested-logit">Nested logit</h3>
@@ -330,6 +423,8 @@ window.Quarto = {
 
 <ol>
 <li id="fn1"><p>Notation I use here is mostly from Chris Conlon’s Grad IO lecture slides.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>This part follows mostly from Conlon’s notes and train’s book. We will now consider multinomial discrete choice setup:<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>This was created after doing back-and-forth self-education with claude code.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
