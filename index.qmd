@@ -3,6 +3,7 @@ title: "Hyoungchul Kim"
 image: bio-picture.jpeg
 about:
   template: solana #jolla trestles
+  image-shape: round
   links:
     - icon: file-text-fill 
       text: CV
