@@ -1,0 +1,16 @@
+---
+title: "Building production function from scratch"
+description: "My personal notes on production function estimation in IO"
+date: "2026-04-21"
+toc: false
+categories:
+  - study
+---
+
+# Notes
+
+These are my personal notes on my understanding of production function and its estimation in IO. Note that this is a living document and will be updated as I learn more things.
+
+## Why production function?
+
+Simple. Most papers in trade and other important papers are "production function" papers.
