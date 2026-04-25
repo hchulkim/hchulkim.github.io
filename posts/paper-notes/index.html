@@ -8,9 +8,9 @@
 
 <meta name="author" content="Hyoungchul Kim">
 <meta name="dcterms.date" content="2026-04-21">
-<meta name="description" content="My personal notes on production function estimation in IO">
+<meta name="description" content="My personal notes on papers that I read">
 
-<title>Building production function from scratch – Hyoungchul Kim</title>
+<title>Short notes on papers – Hyoungchul Kim</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -75,14 +75,43 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Building production function from scratch – Hyoungchul Kim">
-<meta property="og:description" content="My personal notes on production function estimation in IO">
+<meta property="og:title" content="Short notes on papers – Hyoungchul Kim">
+<meta property="og:description" content="My personal notes on papers that I read">
 <meta property="og:site_name" content="Hyoungchul Kim">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -146,10 +175,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Building production function from scratch</h1>
+      <h1 class="title">Short notes on papers</h1>
                   <div>
         <div class="description">
-          My personal notes on production function estimation in IO
+          My personal notes on papers that I read
         </div>
       </div>
                           <div class="quarto-categories">
@@ -182,7 +211,26 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#notes" id="toc-notes" class="nav-link active" data-scroll-target="#notes">Notes</a>
+  <ul class="collapse">
+  <li><a href="#research-general" id="toc-research-general" class="nav-link" data-scroll-target="#research-general">Research general</a></li>
+  <li><a href="#method-demand-estimation" id="toc-method-demand-estimation" class="nav-link" data-scroll-target="#method-demand-estimation">Method: demand estimation</a></li>
+  <li><a href="#method-production-function-estimation" id="toc-method-production-function-estimation" class="nav-link" data-scroll-target="#method-production-function-estimation">Method: Production function estimation</a>
+  <ul class="collapse">
+  <li><a href="#olley-and-pakes-1996-the-dynamics-of-productivity-in-the-telecommunications-equipment-industry" id="toc-olley-and-pakes-1996-the-dynamics-of-productivity-in-the-telecommunications-equipment-industry" class="nav-link" data-scroll-target="#olley-and-pakes-1996-the-dynamics-of-productivity-in-the-telecommunications-equipment-industry">Olley and Pakes (1996): “The dynamics of productivity in the telecommunications equipment industry”</a></li>
+  <li><a href="#levinsohn-and-petrin-2003-estimating-production-functions-using-inputs-to-control-for-unobservables" id="toc-levinsohn-and-petrin-2003-estimating-production-functions-using-inputs-to-control-for-unobservables" class="nav-link" data-scroll-target="#levinsohn-and-petrin-2003-estimating-production-functions-using-inputs-to-control-for-unobservables">Levinsohn and Petrin (2003): “Estimating production functions using inputs to control for unobservables”</a></li>
+  <li><a href="#ackerberg-caves-and-frazer-2015-identification-properties-of-recent-production-function-estimators" id="toc-ackerberg-caves-and-frazer-2015-identification-properties-of-recent-production-function-estimators" class="nav-link" data-scroll-target="#ackerberg-caves-and-frazer-2015-identification-properties-of-recent-production-function-estimators">Ackerberg, Caves, and Frazer (2015): “Identification properties of recent production function estimators”</a></li>
+  <li><a href="#gandhi-navarro-and-rivers-2020-on-the-identification-of-gross-output-production-functions" id="toc-gandhi-navarro-and-rivers-2020-on-the-identification-of-gross-output-production-functions" class="nav-link" data-scroll-target="#gandhi-navarro-and-rivers-2020-on-the-identification-of-gross-output-production-functions">Gandhi, Navarro, and Rivers (2020): “On the identification of gross output production functions”</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -192,12 +240,60 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="notes" class="level1">
 <h1>Notes</h1>
-<p>These are my personal notes on my understanding of production function and its estimation in IO. Note that this is a living document and will be updated as I learn more things.</p>
-<section id="why-production-function" class="level2">
-<h2 class="anchored" data-anchor-id="why-production-function">Why production function?</h2>
-<p>Simple. Most papers in trade and other important papers are “production function” papers.</p>
+<p>These are my personal notes on set of papers that I read for reference.</p>
+<section id="research-general" class="level2">
+<h2 class="anchored" data-anchor-id="research-general">Research general</h2>
+<ul>
+<li>Mahoney (2022): Principles for Combining Descriptive and Model-Based Analysis in Applied Microeconomics Research.
+<ul>
+<li>From descriptive to model-based analysis: Motivate readers from descriptive (showing the variation you are leveraging); Let the descriptive guide your model.</li>
+</ul></li>
+<li>Berk, Harvey, and Hirshleifer (2017): How to write an effective referee report and improve the scientific review process.</li>
+</ul>
+</section>
+<section id="method-demand-estimation" class="level2">
+<h2 class="anchored" data-anchor-id="method-demand-estimation">Method: demand estimation</h2>
+<ul>
+<li>This is on a separate <a href="https://hchulkim.github.io/posts/demand-io/index.html">blog post</a>.</li>
+</ul>
+</section>
+<section id="method-production-function-estimation" class="level2">
+<h2 class="anchored" data-anchor-id="method-production-function-estimation">Method: Production function estimation</h2>
+<section id="olley-and-pakes-1996-the-dynamics-of-productivity-in-the-telecommunications-equipment-industry" class="level3">
+<h3 class="anchored" data-anchor-id="olley-and-pakes-1996-the-dynamics-of-productivity-in-the-telecommunications-equipment-industry">Olley and Pakes (1996): “The dynamics of productivity in the telecommunications equipment industry”</h3>
+<ul>
+<li>Proably the first paper that formalizes the proxy variable estimation method.</li>
+<li>Idea is using investment as a proxy for unobserved productivity. Under certain assumptions, we can invert this to apply control function to partial out the unobserved productivity shock from the estimation process.</li>
+</ul>
+</section>
+<section id="levinsohn-and-petrin-2003-estimating-production-functions-using-inputs-to-control-for-unobservables" class="level3">
+<h3 class="anchored" data-anchor-id="levinsohn-and-petrin-2003-estimating-production-functions-using-inputs-to-control-for-unobservables">Levinsohn and Petrin (2003): “Estimating production functions using inputs to control for unobservables”</h3>
+<ul>
+<li>This paper is more about solving a practical issue that comes up when employing OP method in data.</li>
+<li>Either due to data limitation or reality, there are many cases where investment is 0 for most firms. This means either the strict monotonicity assumption cannot be kept or we need to throw out these observations which seem arbitrary.</li>
+<li>LP propose one solution: use intermediate input (which are usually used consistently by firms) and apply similar assumptions.</li>
+</ul>
+</section>
+<section id="ackerberg-caves-and-frazer-2015-identification-properties-of-recent-production-function-estimators" class="level3">
+<h3 class="anchored" data-anchor-id="ackerberg-caves-and-frazer-2015-identification-properties-of-recent-production-function-estimators">Ackerberg, Caves, and Frazer (2015): “Identification properties of recent production function estimators”</h3>
+<ul>
+<li>ACF argues that (at least in principle) OP and LP’s identification strategy suffers from functional dependence problem.</li>
+<li>In OP and LP’s case, as labor and material is both flexible input, there is not additional variation left in labor that can be used to identify the coefficient on labor input in the first-stage of the estimation.</li>
+<li>Their proposed solution is to adjust the timing assumption of the labor input (from <span class="math inline">\(t\)</span> to <span class="math inline">\(t-b\)</span> period) and moving the identification of all the coefficients to second-stage of the estimation.</li>
+</ul>
+</section>
+<section id="gandhi-navarro-and-rivers-2020-on-the-identification-of-gross-output-production-functions" class="level3">
+<h3 class="anchored" data-anchor-id="gandhi-navarro-and-rivers-2020-on-the-identification-of-gross-output-production-functions">Gandhi, Navarro, and Rivers (2020): “On the identification of gross output production functions”</h3>
+<ul>
+<li>Focus on nonparametric identification of gross output production function estimation in the presence of both flexible and nonflexible inputs under the model structure of the proxy variable approach.</li>
+<li>The paper shows that at least for gross output production (where material input is in RHS of the equation), previous ACF still suffers from identification issue.</li>
+<li>Unless we have additional sources of exogenous variation (e.g.&nbsp;price), proxy variable structure does not suffice to identify the gross output production function.</li>
+<li>One solution posed by GNR is linking the FOC condition for the flexible input to the production function.</li>
+<li>However, note that this can be “somewhat” alleviate if we consider value-added function (material is not in the equation) or if we assume Leontieff production function (aka structural valude added). <span class="math inline">\(Q = \min (\gamma M, F(L, K))\)</span> and cost minimization gives <span class="math inline">\(Q = \gamma M = F(L,K)\)</span>.</li>
+</ul>
 
 
+</section>
 </section>
 </section>
 
