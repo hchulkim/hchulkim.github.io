@@ -17,6 +17,24 @@ These are my personal notes on set of papers that I read for reference.
   - From descriptive to model-based analysis: Motivate readers from descriptive (showing the variation you are leveraging); Let the descriptive guide your model.
 - Berk, Harvey, and Hirshleifer (2017): How to write an effective referee report and improve the scientific review process.
 
+## Topics: Trade
+
+### Eaton and Kortum (2002, 2012): "Technology, geography, and trade", "Putting Ricardo to work"
+
+- **Contribution and empirical limitation of the traditional Ricardian model:** It provides a foundational rationale for why trade occurs and characterizes the gains from trade regarding comparative advantage and productivity differences. However, this approach faces computational challenges: 1) it leads to discrete equilibrium types that are tedious to compute, and 2) tracking comparative advantage across multiple countries over multiple goods becomes empirically intractable.
+- **Contribution and limitation of Dornbusch, Fischer, and Samuelson (1977):** This moves to a multiple-goods setting by employing a continuum of goods, which eliminates the discrete wedges in the equilibrium problem found in the traditional Ricardian model. It also introduces trade costs to rationalize the fact that countries tend to consume more domestically produced goods. However, this framework remains limited to a two-country setting.
+- **Contribution of Eaton and Kortum (2002):** They incorporate productivity as realizations of random variables drawn from a Fr\'echet distribution. Since this distribution is smooth, it solves the discrete wedge issues in the equilibrium. Furthermore, the model is highly tractable because we only need to track the distribution parameters and the statistics derived from them.
+- Role of $A_i$: Governs absolute advantage (a higher value implies that the labor requirement is likely to be lower for any given good).
+- Role of $\theta$: Governs comparative advantage (a higher value implies that the variability of the labor requirement is small).
+
+### Antras, Fort, and Tintelnot (2017): "The margins of global sourcing: Theory and evidence from US firms"
+
+- Understanding the tension between intensive margin (sourcing potential through lower marginal cost) and extensive margin (heterogeneous country-specific fixed cost).
+
+### Hsiao (2026): "Coordination and commitment in international climate action: Evidence from palm oil"
+
+- This paper develops a dynamic empirical framework to quantify the impact of trade policy as a substitute for weak domestic environmental regulations. While such import tariffs can do an equivalent job of targeting emitters, the effect is dampened if coordination and commitment fall short.
+
 ## Method: demand estimation
 
 - This is on a separate [blog post](https://hchulkim.github.io/posts/demand-io/index.html).
