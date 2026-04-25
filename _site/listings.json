@@ -2,15 +2,15 @@
   {
     "listing": "/posts/index.html",
     "items": [
-      "/posts/prod-ftn/index.html",
-      "/posts/lagrangian/index.html",
+      "/posts/paper-notes/index.html",
       "/posts/demand-io/index.html",
+      "/posts/lagrangian/index.html",
       "/posts/notes-io/index.html",
       "/posts/arch-install/index.html",
       "/posts/dockerfile-trial/index.html",
       "/posts/reproducible-template/index.html",
-      "/posts/bandit/index.html",
       "/posts/asahi-linux/index.html",
+      "/posts/bandit/index.html",
       "/posts/first-year/index.html",
       "/posts/parallel/index.html",
       "/posts/make-file/index.html",
@@ -19,8 +19,8 @@
       "/posts/quarto-paper-template/index.html",
       "/posts/first-cite/index.html",
       "/posts/empirical-econ/index.html",
-      "/posts/reproducible-coding-lecture/index.html",
       "/posts/admission-econ/index.html",
+      "/posts/reproducible-coding-lecture/index.html",
       "/posts/hello-quarto/index.html",
       "/posts/sql-info/index.html"
     ]

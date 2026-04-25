@@ -1,0 +1,49 @@
+---
+title: "Short notes on papers"
+description: "My personal notes on papers that I read"
+date: "2026-04-21"
+toc: true
+categories:
+  - study
+---
+
+# Notes
+
+These are my personal notes on set of papers that I read for reference. 
+
+## Research general
+
+- Mahoney (2022): Principles for Combining Descriptive and Model-Based Analysis in Applied Microeconomics Research.
+  - From descriptive to model-based analysis: Motivate readers from descriptive (showing the variation you are leveraging); Let the descriptive guide your model.
+- Berk, Harvey, and Hirshleifer (2017): How to write an effective referee report and improve the scientific review process.
+
+## Method: demand estimation
+
+- This is on a separate [blog post](https://hchulkim.github.io/posts/demand-io/index.html).
+
+## Method: Production function estimation
+
+### Olley and Pakes (1996): "The dynamics of productivity in the telecommunications equipment industry"
+
+- Proably the first paper that formalizes the proxy variable estimation method.
+- Idea is using investment as a proxy for unobserved productivity. Under certain assumptions, we can invert this to apply control function to partial out the unobserved productivity shock from the estimation process.
+
+### Levinsohn and Petrin (2003): "Estimating production functions using inputs to control for unobservables"
+
+- This paper is more about solving a practical issue that comes up when employing OP method in data.
+- Either due to data limitation or reality, there are many cases where investment is 0 for most firms. This means either the strict monotonicity assumption cannot be kept or we need to throw out these observations which seem arbitrary.
+- LP propose one solution: use intermediate input (which are usually used consistently by firms) and apply similar assumptions.
+
+### Ackerberg, Caves, and Frazer (2015): "Identification properties of recent production function estimators"
+
+- ACF argues that (at least in principle) OP and LP's identification strategy suffers from functional dependence problem.
+- In OP and LP's case, as labor and material is both flexible input, there is not additional variation left in labor that can be used to identify the coefficient on labor input in the first-stage of the estimation.
+- Their proposed solution is to adjust the timing assumption of the labor input (from $t$ to $t-b$ period) and moving the identification of all the coefficients to second-stage of the estimation.
+
+### Gandhi, Navarro, and Rivers (2020): "On the identification of gross output production functions"
+
+- Focus on nonparametric identification of gross output production function estimation in the presence of both flexible and nonflexible inputs under the model structure of the proxy variable approach.
+- The paper shows that at least for gross output production (where material input is in RHS of the equation), previous ACF still suffers from identification issue.
+- Unless we have additional sources of exogenous variation (e.g. price), proxy variable structure does not suffice to identify the gross output production function.
+- One solution posed by GNR is linking the FOC condition for the flexible input to the production function.
+- However, note that this can be "somewhat" alleviate if we consider value-added function (material is not in the equation) or if we assume Leontieff production function (aka structural valude added). $Q = \min (\gamma M, F(L, K))$ and cost minimization gives $Q = \gamma M = F(L,K)$.
