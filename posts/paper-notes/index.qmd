@@ -35,6 +35,13 @@ These are my personal notes on set of papers that I read for reference.
 
 - This paper develops a dynamic empirical framework to quantify the impact of trade policy as a substitute for weak domestic environmental regulations. While such import tariffs can do an equivalent job of targeting emitters, the effect is dampened if coordination and commitment fall short.
 
+### Caliendo and Parro (2022): "Trade policy" (Handbook of International Economics, Volume 5)
+
+- Kovak (2013) finds that regions exposed to the largest tariff declines experienced smaller wage growth relative to regions that experienced smaller tariff cuts.
+- Important methodological contribution of Kovak (2013) is that it develops economic theory that justifies the use of shift-share design.
+- One challenge is that shift-share is about "differential effect" and not about "aggregate effect"; Another issue is that there was not a straightforward economic model that justify the use of shift-share specification.
+- We can use simple economic model to justify shift-share regression with assumption that each region is imperfectly mobile and is small open economy (each region is price taker).
+
 ## Method: demand estimation
 
 - This is on a separate [blog post](https://hchulkim.github.io/posts/demand-io/index.html).
@@ -64,4 +71,4 @@ These are my personal notes on set of papers that I read for reference.
 - The paper shows that at least for gross output production (where material input is in RHS of the equation), previous ACF still suffers from identification issue.
 - Unless we have additional sources of exogenous variation (e.g. price), proxy variable structure does not suffice to identify the gross output production function.
 - One solution posed by GNR is linking the FOC condition for the flexible input to the production function.
-- However, note that this can be "somewhat" alleviate if we consider value-added function (material is not in the equation) or if we assume Leontieff production function (aka structural valude added). $Q = \min (\gamma M, F(L, K))$ and cost minimization gives $Q = \gamma M = F(L,K)$.
+- However, note that this can be "somewhat" alleviated if we consider value-added function (material is not in the equation) or if we assume Leontieff production function (aka structural valude added). $Q = \min (\gamma M, F(L, K))$ and cost minimization gives $Q = \gamma M = F(L,K)$.
