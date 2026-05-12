@@ -10,6 +10,10 @@ This is a collection of my memorable moments.
 
 ## 2025-2026
 
+### Spring break (Austin & San Antonio, Texas)
+
+### San Diego, California
+
 ### Thanksgiving
 
 ![](pic/thnks.jpeg)
@@ -36,11 +40,44 @@ This is a collection of my memorable moments.
 
 ### Stanford University
 
+::: {layout-ncol=2}
+![](pic/stan1.jpg)
+
+![](pic/stan2.jpg)
+
+![](pic/stan3.JPEG)
+:::
+
 ### San Francisco
+
+::: {layout-ncol=2}
+![](pic/sf1.jpg)
+
+![](pic/sf2.jpg)
+
+![](pic/sf3.jpg)
+
+![](pic/sf4.jpg)
+:::
 
 ### Birthday
 
+::: {layout-ncol=2}
+![](pic/birthday.JPG)
+:::
+
 ### Spring break (Florida keys)
+
+::: {layout-ncol=2}
+![](pic/keys1.jpg)
+
+![](pic/keys2.jpg)
+
+![](pic/keys3.jpg)
+
+![](pic/keys4.jpg)
+:::
+
 
 ### Chiang Mai, Thailand
 
