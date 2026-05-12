@@ -9,7 +9,7 @@ categories:
 
 # Notes
 
-These are my personal notes on set of papers that I read for reference. 
+These are my personal notes on set of papers that I read for reference. Note that they are an overall summary of the papers. Rather, it is just a list of points that I want to remember about the paper.  
 
 ## Research general
 
@@ -23,7 +23,7 @@ These are my personal notes on set of papers that I read for reference.
 
 - **Contribution and empirical limitation of the traditional Ricardian model:** It provides a foundational rationale for why trade occurs and characterizes the gains from trade regarding comparative advantage and productivity differences. However, this approach faces computational challenges: 1) it leads to discrete equilibrium types that are tedious to compute, and 2) tracking comparative advantage across multiple countries over multiple goods becomes empirically intractable.
 - **Contribution and limitation of Dornbusch, Fischer, and Samuelson (1977):** This moves to a multiple-goods setting by employing a continuum of goods, which eliminates the discrete wedges in the equilibrium problem found in the traditional Ricardian model. It also introduces trade costs to rationalize the fact that countries tend to consume more domestically produced goods. However, this framework remains limited to a two-country setting.
-- **Contribution of Eaton and Kortum (2002):** They incorporate productivity as realizations of random variables drawn from a Fr\'echet distribution. Since this distribution is smooth, it solves the discrete wedge issues in the equilibrium. Furthermore, the model is highly tractable because we only need to track the distribution parameters and the statistics derived from them.
+- **Contribution of Eaton and Kortum (2002):** They incorporate productivity as realizations of random variables drawn from a Frechet distribution. Since this distribution is smooth, it solves the discrete wedge issues in the equilibrium. Furthermore, the model is highly tractable because we only need to track the distribution parameters and the statistics derived from them.
 - Role of $A_i$: Governs absolute advantage (a higher value implies that the labor requirement is likely to be lower for any given good).
 - Role of $\theta$: Governs comparative advantage (a higher value implies that the variability of the labor requirement is small).
 
@@ -72,3 +72,16 @@ These are my personal notes on set of papers that I read for reference.
 - Unless we have additional sources of exogenous variation (e.g. price), proxy variable structure does not suffice to identify the gross output production function.
 - One solution posed by GNR is linking the FOC condition for the flexible input to the production function.
 - However, note that this can be "somewhat" alleviated if we consider value-added function (material is not in the equation) or if we assume Leontieff production function (aka structural valude added). $Q = \min (\gamma M, F(L, K))$ and cost minimization gives $Q = \gamma M = F(L,K)$.
+
+## Method: CDCP
+
+### Solution 1: Moment inequality
+
+### Solution 2: Squeezing algorithm
+
+#### Panle Jia (2008): "What happens when Wal-Mart comes to town: An empirical analysis of the discount retailing industry"
+
+- Estimating impact of large chain entry (e.g. Wal-Mart, Kmart) on small local retail stores.
+- Key economic forces: competition effect and chain effect.
+- Empirical setting is very similar to Holmes (2010) --- but unlike Holmes, Panle has static model. Panle also employs squeezing algorithm which allows her to fully solve the model unlike Holmes (moment inequality does not fully solve the model).
+- Another limitation is that her algorithm only works for two agents making combinatorial decisions. We also need to assume that chain effect for each firm is complimentary.
