@@ -234,6 +234,11 @@ window.Quarto = {
   <li><a href="#ackerberg-caves-and-frazer-2015-identification-properties-of-recent-production-function-estimators" id="toc-ackerberg-caves-and-frazer-2015-identification-properties-of-recent-production-function-estimators" class="nav-link" data-scroll-target="#ackerberg-caves-and-frazer-2015-identification-properties-of-recent-production-function-estimators">Ackerberg, Caves, and Frazer (2015): “Identification properties of recent production function estimators”</a></li>
   <li><a href="#gandhi-navarro-and-rivers-2020-on-the-identification-of-gross-output-production-functions" id="toc-gandhi-navarro-and-rivers-2020-on-the-identification-of-gross-output-production-functions" class="nav-link" data-scroll-target="#gandhi-navarro-and-rivers-2020-on-the-identification-of-gross-output-production-functions">Gandhi, Navarro, and Rivers (2020): “On the identification of gross output production functions”</a></li>
   </ul></li>
+  <li><a href="#method-cdcp" id="toc-method-cdcp" class="nav-link" data-scroll-target="#method-cdcp">Method: CDCP</a>
+  <ul class="collapse">
+  <li><a href="#solution-1-moment-inequality" id="toc-solution-1-moment-inequality" class="nav-link" data-scroll-target="#solution-1-moment-inequality">Solution 1: Moment inequality</a></li>
+  <li><a href="#solution-2-squeezing-algorithm" id="toc-solution-2-squeezing-algorithm" class="nav-link" data-scroll-target="#solution-2-squeezing-algorithm">Solution 2: Squeezing algorithm</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -247,7 +252,7 @@ window.Quarto = {
 
 <section id="notes" class="level1">
 <h1>Notes</h1>
-<p>These are my personal notes on set of papers that I read for reference.</p>
+<p>These are my personal notes on set of papers that I read for reference. Note that they are an overall summary of the papers. Rather, it is just a list of points that I want to remember about the paper.</p>
 <section id="research-general" class="level2">
 <h2 class="anchored" data-anchor-id="research-general">Research general</h2>
 <ul>
@@ -265,7 +270,7 @@ window.Quarto = {
 <ul>
 <li><strong>Contribution and empirical limitation of the traditional Ricardian model:</strong> It provides a foundational rationale for why trade occurs and characterizes the gains from trade regarding comparative advantage and productivity differences. However, this approach faces computational challenges: 1) it leads to discrete equilibrium types that are tedious to compute, and 2) tracking comparative advantage across multiple countries over multiple goods becomes empirically intractable.</li>
 <li><strong>Contribution and limitation of Dornbusch, Fischer, and Samuelson (1977):</strong> This moves to a multiple-goods setting by employing a continuum of goods, which eliminates the discrete wedges in the equilibrium problem found in the traditional Ricardian model. It also introduces trade costs to rationalize the fact that countries tend to consume more domestically produced goods. However, this framework remains limited to a two-country setting.</li>
-<li><strong>Contribution of Eaton and Kortum (2002):</strong> They incorporate productivity as realizations of random variables drawn from a Fr'echet distribution. Since this distribution is smooth, it solves the discrete wedge issues in the equilibrium. Furthermore, the model is highly tractable because we only need to track the distribution parameters and the statistics derived from them.</li>
+<li><strong>Contribution of Eaton and Kortum (2002):</strong> They incorporate productivity as realizations of random variables drawn from a Frechet distribution. Since this distribution is smooth, it solves the discrete wedge issues in the equilibrium. Furthermore, the model is highly tractable because we only need to track the distribution parameters and the statistics derived from them.</li>
 <li>Role of <span class="math inline">\(A_i\)</span>: Governs absolute advantage (a higher value implies that the labor requirement is likely to be lower for any given good).</li>
 <li>Role of <span class="math inline">\(\theta\)</span>: Governs comparative advantage (a higher value implies that the variability of the labor requirement is small).</li>
 </ul>
@@ -332,8 +337,26 @@ window.Quarto = {
 <li>One solution posed by GNR is linking the FOC condition for the flexible input to the production function.</li>
 <li>However, note that this can be “somewhat” alleviated if we consider value-added function (material is not in the equation) or if we assume Leontieff production function (aka structural valude added). <span class="math inline">\(Q = \min (\gamma M, F(L, K))\)</span> and cost minimization gives <span class="math inline">\(Q = \gamma M = F(L,K)\)</span>.</li>
 </ul>
+</section>
+</section>
+<section id="method-cdcp" class="level2">
+<h2 class="anchored" data-anchor-id="method-cdcp">Method: CDCP</h2>
+<section id="solution-1-moment-inequality" class="level3">
+<h3 class="anchored" data-anchor-id="solution-1-moment-inequality">Solution 1: Moment inequality</h3>
+</section>
+<section id="solution-2-squeezing-algorithm" class="level3">
+<h3 class="anchored" data-anchor-id="solution-2-squeezing-algorithm">Solution 2: Squeezing algorithm</h3>
+<section id="panle-jia-2008-what-happens-when-wal-mart-comes-to-town-an-empirical-analysis-of-the-discount-retailing-industry" class="level4">
+<h4 class="anchored" data-anchor-id="panle-jia-2008-what-happens-when-wal-mart-comes-to-town-an-empirical-analysis-of-the-discount-retailing-industry">Panle Jia (2008): “What happens when Wal-Mart comes to town: An empirical analysis of the discount retailing industry”</h4>
+<ul>
+<li>Estimating impact of large chain entry (e.g.&nbsp;Wal-Mart, Kmart) on small local retail stores.</li>
+<li>Key economic forces: competition effect and chain effect.</li>
+<li>Empirical setting is very similar to Holmes (2010) — but unlike Holmes, Panle has static model. Panle also employs squeezing algorithm which allows her to fully solve the model unlike Holmes (moment inequality does not fully solve the model).</li>
+<li>Another limitation is that her algorithm only works for two agents making combinatorial decisions. We also need to assume that chain effect for each firm is complimentary.</li>
+</ul>
 
 
+</section>
 </section>
 </section>
 </section>
