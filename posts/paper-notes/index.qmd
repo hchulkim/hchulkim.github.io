@@ -77,11 +77,16 @@ These are my personal notes on set of papers that I read for reference. Note tha
 
 ### Solution 1: Moment inequality
 
+#### Holmes (2010): "The diffusion of Wal-Mart and economics of density"
+
+#### Dickstein and Morales (2018): "What do exporters know?"
+
 ### Solution 2: Squeezing algorithm
 
 #### Panle Jia (2008): "What happens when Wal-Mart comes to town: An empirical analysis of the discount retailing industry"
 
 - Estimating impact of large chain entry (e.g. Wal-Mart, Kmart) on small local retail stores.
-- Key economic forces: competition effect and chain effect.
-- Empirical setting is very similar to Holmes (2010) --- but unlike Holmes, Panle has static model. Panle also employs squeezing algorithm which allows her to fully solve the model unlike Holmes (moment inequality does not fully solve the model).
-- Another limitation is that her algorithm only works for two agents making combinatorial decisions. We also need to assume that chain effect for each firm is complimentary.
+- Key economic forces: competition effect and chain effect. The advantage of her model is that she can model relatively flexible competition patterns between retailers (between chains, chains and small stores) and also incorporates interdependence in chain's decision on market entry (store's profit depends on entry decisions in other markets).
+- The benefit of her empirical model is that supermodularity structure of the game allows her to bound set of potential Nash equilibria. This is where the term "squeezing" comes from --- you can exploit the game's supermodularity to squeeze set of solutions.
+- Empirical setting is very similar to Holmes (2010) --- but unlike Holmes, Panle has static model. Panle also employs squeezing algorithm which allows her to fully solve the model unlike Holmes (moment inequality does not fully solve the model). Holmes's model is dynamic single-agent setup --- he estimates economies of density and business stealing effect using Wal-Mart's dynamic expansion decisions. In Panle's paper, chain effect is similar to economies of density and is recovered using geographical concentration of Wal-Mart and Kmart stores. But she does not have business stealing effect because she needs to have supermodularity in the profit function to solve the model.
+- Another limitation is that her algorithm only works for two agents making combinatorial decisions.
