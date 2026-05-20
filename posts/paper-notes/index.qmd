@@ -35,6 +35,14 @@ These are my personal notes on set of papers that I read for reference. Note tha
 
 - This paper develops a dynamic empirical framework to quantify the impact of trade policy as a substitute for weak domestic environmental regulations. While such import tariffs can do an equivalent job of targeting emitters, the effect is dampened if coordination and commitment fall short.
 
+### Anderson and van Wincoop (2003): "Gravity with gravitas: A solution to the border puzzle"
+
+- Formalize the empirical gravity equation into structural gravity model.
+- Mainly the structural gravity equation adds "multilateral resistance" term into the former empirical equation. This can be thought of as average trade barriers the region face with all of its trading partners.
+- Thus, key implication of theoretical gravity equation is that trade between regions are determined by *relative* trade barriers. To be more specific, trade between two regions depend on the bilateral trade barrier between them relative to the average trade barriers each region faces with all of their trading partners.
+- This leads to very interesting implications that seem to explain some of the puzzles that were found in previous trade literature. e.g. increased trade barrier affects multilateral resistance (price index) less for large economy as barrier is not imposed on within trade. Also, increased trade barrier will lead to more trade between small countries as relative trade barrier between them becomes lower due to higher increase in multilateral resistance.
+- In some sense, multilateral resistance can be thought of as a "GE effect."
+
 ### Caliendo and Parro (2022): "Trade policy" (Handbook of International Economics, Volume 5)
 
 - Kovak (2013) finds that regions exposed to the largest tariff declines experienced smaller wage growth relative to regions that experienced smaller tariff cuts.
