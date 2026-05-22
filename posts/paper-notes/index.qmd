@@ -27,6 +27,12 @@ These are my personal notes on set of papers that I read for reference. Note tha
 - Role of $A_i$: Governs absolute advantage (a higher value implies that the labor requirement is likely to be lower for any given good).
 - Role of $\theta$: Governs comparative advantage (a higher value implies that the variability of the labor requirement is small).
 
+### Dekle, Eaton, and Kortum (2007): "Unbalanced trade" 
+
+- **Hat algebra**: Technique used in international trade for computing counterfactual change.
+- Instead of solving a trade model for the full level of every variable (which requires knowing many hard-to-measure parameters), you can rewrite the model in relative changes. When you do this, lot of unobservable structural parameters cancel out. Thus, you're left with equations that relate the proportional changes you care about to things you can actually observe, like trade shares.
+- The paper uses this method to compute counterfactual outcomes where trade in manufacture is fully balanced.
+
 ### Antras, Fort, and Tintelnot (2017): "The margins of global sourcing: Theory and evidence from US firms"
 
 - Understanding the tension between intensive margin (sourcing potential through lower marginal cost) and extensive margin (heterogeneous country-specific fixed cost).
