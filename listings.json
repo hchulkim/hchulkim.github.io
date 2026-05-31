@@ -3,8 +3,8 @@
     "listing": "/posts/index.html",
     "items": [
       "/posts/paper-notes/index.html",
-      "/posts/lagrangian/index.html",
       "/posts/demand-io/index.html",
+      "/posts/lagrangian/index.html",
       "/posts/notes-io/index.html",
       "/posts/arch-install/index.html",
       "/posts/dockerfile-trial/index.html",
@@ -18,9 +18,9 @@
       "/posts/dockerfile-template/index.html",
       "/posts/quarto-paper-template/index.html",
       "/posts/first-cite/index.html",
+      "/posts/reproducible-coding-lecture/index.html",
       "/posts/empirical-econ/index.html",
       "/posts/admission-econ/index.html",
-      "/posts/reproducible-coding-lecture/index.html",
       "/posts/hello-quarto/index.html",
       "/posts/sql-info/index.html"
     ]
