@@ -1,0 +1,338 @@
+---
+title: "Useful functions in `data.table` R package"
+description: "Useful functions used in `data.table`"
+date: "2026-06-02"
+engine: knitr
+toc: false
+execute:
+  eval: false
+categories:
+  - study
+---
+
+# Notes
+
+This section was created after doing self-education with Claude.
+
+# Fast Functions Reference — `data.table` & `collapse`
+
+A practical cheat sheet of high-performance functions useful for the avocado price
+build/analysis pipeline. Two packages dominate here, both using an `f` prefix to mean
+**"fast"** — but they are **different packages**:
+
+| Prefix pattern | Package      | Example                         |
+|----------------|--------------|---------------------------------|
+| `froll*`       | `data.table` | `frollmean`, `frollsum`         |
+| `fif*`, `fcase`, `fcoalesce` | `data.table` | `fifelse`, `fcase` |
+| `f<stat>`      | `collapse`   | `fsum`, `fmean`, `fcumsum`      |
+
+> Rule of thumb: rolling windows + conditional logic → `data.table`.
+> Grouped statistics, transforms, time-series ops → `collapse`.
+
+---
+
+## 1. `data.table` — Rolling Window Functions (`froll*`)
+
+Compute a statistic over a sliding window. Always operate on an **ordered** vector,
+so `setorder()` first.
+
+### `frollmean()` — rolling mean
+
+```r
+library(data.table)
+
+dt <- data.table(
+  series = rep(c("A", "B"), each = 12),
+  date   = rep(1:12, 2),
+  price  = c(1:12, 12:1)
+)
+setorder(dt, series, date)
+
+# 12-month trailing average, computed within each series
+dt[, ma12 := frollmean(price, n = 12, align = "right", na.rm = TRUE), by = series]
+```
+
+Key arguments:
+- `n` — window length (integer, or vector for multiple windows at once).
+- `align` — `"right"` (trailing, default), `"center"`, `"left"`.
+- `na.rm` — drop NAs inside the window.
+- `fill` — value for incomplete leading windows (default `NA`).
+- `hasNA` / `adaptive` — performance + variable-window options.
+
+Multiple windows in one call (returns a list of vectors):
+
+```r
+dt[, c("ma3", "ma6", "ma12") := frollmean(price, n = c(3, 6, 12)), by = series]
+```
+
+### `frollsum()` — rolling sum
+
+```r
+dt[, roll_sum_3 := frollsum(price, n = 3, align = "right"), by = series]
+```
+
+### `frollmax()` / `frollmin()` — rolling extremes
+
+```r
+dt[, roll_max_6 := frollmax(price, n = 6), by = series]
+dt[, roll_min_6 := frollmin(price, n = 6), by = series]
+```
+
+### `frollapply()` — rolling arbitrary function
+
+Slower (calls an R function per window) but flexible — use for median, sd, custom.
+
+```r
+dt[, roll_med_6 := frollapply(price, n = 6, FUN = median), by = series]
+dt[, roll_sd_12 := frollapply(price, n = 12, FUN = sd),    by = series]
+```
+
+---
+
+## 2. `data.table` — Conditional Logic (vectorized, type-safe)
+
+These beat base `ifelse()` (faster, and they **preserve type and attributes** like
+Dates and factors, which base `ifelse` mangles).
+
+### `fifelse()` — fast vectorized if/else
+
+```r
+dt[, regime := fifelse(price > 6, "high", "low")]
+# keeps Date class, unlike base ifelse:
+dt[, d := fifelse(price > 6, as.IDate("2020-01-01"), as.IDate("2019-01-01"))]
+```
+
+### `fcase()` — vectorized multi-way switch (like SQL CASE WHEN)
+
+Cleaner than nested `fifelse`. Pairs of `(condition, value)`; optional `default=`.
+
+```r
+dt[, bucket := fcase(
+  price <  4, "cheap",
+  price < 8, "mid",
+  price >= 8, "expensive",
+  default = NA_character_
+)]
+```
+
+### `fcoalesce()` — first non-NA value
+
+Replace NAs from a fallback column (or constant).
+
+```r
+dt[, price_filled := fcoalesce(price, 0)]           # NA -> 0
+dt[, price_filled := fcoalesce(price, backup_price)] # column fallback
+```
+
+---
+
+## 3. `data.table` — Lags, Leads, Gap-Filling
+
+### `shift()` — lag / lead
+
+```r
+dt[, price_lag1  := shift(price, n = 1, type = "lag"),  by = series]
+dt[, price_lead1 := shift(price, n = 1, type = "lead"), by = series]
+
+# month-over-month growth
+dt[, mom_growth := price / shift(price, 1) - 1, by = series]
+
+# multiple lags at once
+dt[, c("lag1", "lag2", "lag3") := shift(price, 1:3), by = series]
+```
+
+### `nafill()` / `setnafill()` — fill missing values
+
+```r
+dt[, price_locf := nafill(price, type = "locf"), by = series]  # carry forward
+dt[, price_nocb := nafill(price, type = "nocb"), by = series]  # carry backward
+dt[, price_zero := nafill(price, type = "const", fill = 0)]
+
+# setnafill() fills in place (no copy) — fast for many columns
+setnafill(dt, type = "locf", cols = c("price"))
+```
+
+### `rleid()` — run-length group IDs
+
+Useful for tagging consecutive runs (e.g. spells of consecutive months).
+
+```r
+dt[, spell := rleid(regime), by = series]
+```
+
+---
+
+## 4. `data.table` — Special Symbols (inside `[ ]`)
+
+These make grouped operations concise. Not functions per se, but essential.
+
+| Symbol | Meaning                                   | Example                                  |
+|--------|-------------------------------------------|------------------------------------------|
+| `.N`   | number of rows (in group)                 | `dt[, .N, by = series]`                  |
+| `.SD`  | Subset of Data (the group's columns)      | `dt[, lapply(.SD, mean), by = series]`   |
+| `.SDcols` | which cols `.SD` includes              | `dt[, lapply(.SD, mean), by=series, .SDcols=c("price")]` |
+| `.I`   | row indices                               | `dt[, .I[which.max(price)], by = series]`|
+| `.GRP` | group counter (1,2,3,…)                   | `dt[, grp_id := .GRP, by = series]`      |
+| `.BY`  | list of current group's by-values        | used inside `j`                          |
+
+Common patterns:
+
+```r
+# mean of several columns by group
+dt[, lapply(.SD, mean, na.rm = TRUE), by = series, .SDcols = c("price", "ma12")]
+
+# row of max price within each series
+dt[dt[, .I[which.max(price)], by = series]$V1]
+
+# count obs per group
+dt[, .(n = .N), by = .(series)]
+```
+
+---
+
+## 5. `data.table` — In-Place / Reference Operations (no copy = fast)
+
+```r
+set(dt, i = NULL, j = "newcol", value = 0)        # set values by reference
+setnames(dt, old = "price", new = "price_usd")    # rename in place
+setcolorder(dt, c("series", "date", "price_usd")) # reorder cols in place
+setkey(dt, series, date)                          # sort + index for fast joins
+setorder(dt, series, -date)                       # sort in place (- = desc)
+```
+
+`fread()` / `fwrite()` — the fastest CSV reader/writer in R:
+
+```r
+dt <- fread("file.csv")
+fwrite(dt, "out.csv")
+```
+
+---
+
+## 6. `collapse` Package — Fast (Grouped) Statistics
+
+`collapse` is a separate package focused on **grouped statistical transforms** and
+**time-series operations**, written in C/C++. Functions are heavily optimized and
+support grouping via `g=` without needing `by=`.
+
+> `fcumsum` lives **here**, not in data.table.
+
+### Aggregating statistics: `fsum`, `fmean`, `fmedian`, `fsd`, `fmin`, `fmax`, `fnobs`
+
+```r
+library(collapse)
+
+fmean(dt$price)                      # scalar mean
+fmean(dt$price, g = dt$series)       # mean by group (named vector)
+fsum(dt$price,  g = dt$series)       # grouped sum
+fnobs(dt$price, g = dt$series)       # non-missing count per group
+fsd(dt$price,   g = dt$series)       # grouped sd
+```
+
+### Transformations that return same length as input
+
+```r
+# group-demeaned price (within transformation), one line:
+dt[, price_demeaned := fwithin(price, g = series)]
+
+# replace each value with its group mean (broadcast):
+dt[, price_grpmean := fmean(price, g = series, TRA = "replace")]
+
+# scale within group:
+dt[, price_z := fscale(price, g = series)]
+```
+
+The `TRA=` argument ("transform") turns an aggregate into a same-length transform.
+Options include `"replace"`, `"-"` (demean), `"/"`, `"%"`, etc.
+
+### Time-series operators: `flag`, `fdiff`, `fgrowth`, `fcumsum`
+
+These accept `g=` (group) and `t=` (time index) so they respect panel structure.
+
+```r
+# panel lag (by series, ordered by date)
+dt[, price_lag := flag(price, n = 1, g = series, t = date)]
+
+# panel first difference
+dt[, price_diff := fdiff(price, n = 1, g = series, t = date)]
+
+# growth rate (%) period over period
+dt[, price_growth := fgrowth(price, n = 1, g = series, t = date)]
+
+# cumulative sum within group, in time order
+dt[, price_cumsum := fcumsum(price, g = series, t = date)]
+```
+
+### `collap()` — fast multi-column aggregation
+
+```r
+# mean of numeric cols, by series — picks aggregator by column type
+collap(dt, price + ma12 ~ series, FUN = fmean)
+```
+
+### Other handy `collapse` helpers
+
+| Function    | Purpose                                        |
+|-------------|------------------------------------------------|
+| `fndistinct`| fast count of distinct values (per group)      |
+| `fmode`     | statistical mode (per group)                   |
+| `ffirst` / `flast` | first / last value (per group)          |
+| `fnth`      | nth element / quantile (per group)             |
+| `funique`   | fast unique rows                               |
+| `roworder`  | fast row ordering (like setorder)              |
+| `fsubset`   | fast row subset                                |
+| `fselect`   | fast column select                             |
+| `qDT` / `qDF` | fast convert to data.table / data.frame      |
+
+---
+
+## 7. Base R Cumulative Functions (no package needed)
+
+If you only need a simple cumulative within a group, base R + `data.table` grouping
+is enough — no `collapse` required:
+
+```r
+dt[, cum_price  := cumsum(price),  by = series]   # running total
+dt[, cum_prod   := cumprod(1 + r), by = series]   # compound growth
+dt[, run_max    := cummax(price),  by = series]   # running maximum
+dt[, run_min    := cummin(price),  by = series]   # running minimum
+```
+
+`collapse::fcumsum` adds: native grouping argument, NA handling options, and a time
+index `t=` to guard against unordered panels — worth it for large panels.
+
+---
+
+## 8. Quick Decision Guide
+
+| Need…                                   | Use                                  |
+|-----------------------------------------|--------------------------------------|
+| Moving average / rolling window         | `data.table::frollmean` / `frollsum` |
+| Custom rolling stat (median, sd)        | `data.table::frollapply`             |
+| Vectorized if/else (type-safe)          | `data.table::fifelse`                |
+| Multi-way conditional                   | `data.table::fcase`                  |
+| Replace NAs with fallback               | `data.table::fcoalesce` / `nafill`   |
+| Lag / lead                              | `data.table::shift` or `collapse::flag` |
+| Cumulative sum (simple)                 | base `cumsum` + `by=`                |
+| Cumulative sum (panel, NA-safe)         | `collapse::fcumsum`                  |
+| Grouped mean/sum returning scalars      | `collapse::fmean` / `fsum`           |
+| Group-demean / within transform         | `collapse::fwithin` / `fscale`       |
+| Growth rate / first difference (panel)  | `collapse::fgrowth` / `fdiff`        |
+
+---
+
+## 9. Where to Learn More
+
+- **In-R help** (fastest): `?frollmean`, `?fcase`, `?shift`, `?fcumsum`. Each page has
+  runnable examples.
+- **data.table site**: <https://rdatatable.gitlab.io/data.table/> — reference + vignettes.
+  Run `vignette(package = "data.table")` to list local vignettes.
+- **data.table GitHub**: <https://github.com/Rdatatable/data.table> (wiki + NEWS).
+- **collapse site**: <https://sebkrantz.github.io/collapse/> — excellent vignettes,
+  start with "Introduction to collapse".
+- **Posit cheatsheets**: <https://posit.co/resources/cheatsheets/> (data.table sheet).
+
+---
+
+*Reference doc for the avocado price pipeline. data.table syntax is the house style
+(see `CLAUDE.md`). Add functions here as the team adopts them.*
