@@ -2,6 +2,7 @@
   {
     "listing": "/posts/index.html",
     "items": [
+      "/posts/datatable/index.html",
       "/posts/paper-notes/index.html",
       "/posts/demand-io/index.html",
       "/posts/lagrangian/index.html",
