@@ -56,6 +56,13 @@ These are my personal notes on set of papers that I read for reference. Note tha
 - One challenge is that shift-share is about "differential effect" and not about "aggregate effect"; Another issue is that there was not a straightforward economic model that justify the use of shift-share specification.
 - We can use simple economic model to justify shift-share regression with assumption that each region is imperfectly mobile and is small open economy (each region is price taker).
 
+## Transportation (trade)
+
+### Donaldson (2018): "Railroads of the Raj: Estimating the impact of transportation infrastructure"
+
+- While economic theory (trade) predicts that improvements in transportation infrastructure leads to increase in welfare, rigorous empirical understanding of such improvement's impact on lowering trade cost and its impact on welfare has not been fully studied.
+- Using rich dataset on construction of colonial India's railroad network, the paper 1) estimates railroad's impact on trading environment through lowering trade cost between regions; 2) estimates railroad's effect on economic welfare; 3) specifies the general equilibrium trade model to relating the observed railroad-driven reduction in trade costs to the observed railroad-driven increase in welfare using sufficient statistic approach (This provides one economic mechanism behind such gains from railroads estimated from reduced-form result).
+
 ## Method: demand estimation
 
 - This is on a separate [blog post](https://hchulkim.github.io/posts/demand-io/index.html).
