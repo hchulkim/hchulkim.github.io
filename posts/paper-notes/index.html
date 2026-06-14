@@ -245,6 +245,10 @@ window.Quarto = {
   <li><a href="#solution-1-moment-inequality" id="toc-solution-1-moment-inequality" class="nav-link" data-scroll-target="#solution-1-moment-inequality">Solution 1: Moment inequality</a></li>
   <li><a href="#solution-2-squeezing-algorithm" id="toc-solution-2-squeezing-algorithm" class="nav-link" data-scroll-target="#solution-2-squeezing-algorithm">Solution 2: Squeezing algorithm</a></li>
   </ul></li>
+  <li><a href="#method-metrics" id="toc-method-metrics" class="nav-link" data-scroll-target="#method-metrics">Method: Metrics</a>
+  <ul class="collapse">
+  <li><a href="#borusyak-and-hull-2023-nonrandom-exposure-to-exogenous-shocks" id="toc-borusyak-and-hull-2023-nonrandom-exposure-to-exogenous-shocks" class="nav-link" data-scroll-target="#borusyak-and-hull-2023-nonrandom-exposure-to-exogenous-shocks">Borusyak and Hull (2023): “Nonrandom exposure to exogenous shocks”</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -395,9 +399,22 @@ window.Quarto = {
 <li>Empirical setting is very similar to Holmes (2010) — but unlike Holmes, Panle has static model. Panle also employs squeezing algorithm which allows her to fully solve the model unlike Holmes (moment inequality does not fully solve the model). Holmes’s model is dynamic single-agent setup — he estimates economies of density and business stealing effect using Wal-Mart’s dynamic expansion decisions. In Panle’s paper, chain effect is similar to economies of density and is recovered using geographical concentration of Wal-Mart and Kmart stores. But she does not have business stealing effect because she needs to have supermodularity in the profit function to solve the model.</li>
 <li>Another limitation is that her algorithm only works for two agents making combinatorial decisions.</li>
 </ul>
-
-
 </section>
+</section>
+</section>
+<section id="method-metrics" class="level2">
+<h2 class="anchored" data-anchor-id="method-metrics">Method: Metrics</h2>
+<section id="borusyak-and-hull-2023-nonrandom-exposure-to-exogenous-shocks" class="level3">
+<h3 class="anchored" data-anchor-id="borusyak-and-hull-2023-nonrandom-exposure-to-exogenous-shocks">Borusyak and Hull (2023): “Nonrandom exposure to exogenous shocks”</h3>
+<ul>
+<li>The paper summarizes OVB that can arise when estimating causal effect of treatments/instruments that combine multiple sources of variation and develops method to alleviate it.</li>
+<li>The main reason OVB occurs is that such treatments/instruments combine variations, not all of which are exogenous. Treatment can have nonrandom (endogenous) exposure to exogenous shock which can bias the estimation.</li>
+<li>Example using transportation infrastructure improvement: Railroad construction itself can be plausibly exogenous to unobserved local characteristics. But urban regions will systematically receive higher growth in market access as they tend to be closer to the potential planned railroads. Then this correlates market growth induced from railroad construction to unobserved characteristics of urban regions that are also correlated with error terms.</li>
+<li>Solution is “recentered-IV” which basically purges OVB by netting out “expected shock” which can be constructed from specifying the shock assignment process.</li>
+<li>e.g.&nbsp;for railroads, you could permute the timing of railroads construction to create counterfactual railroads construction to net out the expected market growth from the actual realized market growth.</li>
+</ul>
+
+
 </section>
 </section>
 </section>
