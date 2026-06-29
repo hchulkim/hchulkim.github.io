@@ -112,6 +112,26 @@ These are my personal notes on set of papers that I read for reference. Note tha
 - Empirical setting is very similar to Holmes (2010) --- but unlike Holmes, Panle has static model. Panle also employs squeezing algorithm which allows her to fully solve the model unlike Holmes (moment inequality does not fully solve the model). Holmes's model is dynamic single-agent setup --- he estimates economies of density and business stealing effect using Wal-Mart's dynamic expansion decisions. In Panle's paper, chain effect is similar to economies of density and is recovered using geographical concentration of Wal-Mart and Kmart stores. But she does not have business stealing effect because she needs to have supermodularity in the profit function to solve the model.
 - Another limitation is that her algorithm only works for two agents making combinatorial decisions.
 
+## Method: DDC
+
+### Dynamic discrete choice problem using NFXP method
+
+#### Rust (1987): "Optimal Replacement of GMC Bus Engines: An Empirical Model of Harold Zurcher"
+
+- Reviewed Takamasa Otake's note which is based on Shum's notes.
+- Also reviewed Conlon's lecture videos and notes.
+- Key assumption seems to be **conditional independence**:
+\begin{align}
+p(x', \varepsilon' \mid x, \varepsilon, i) &= p(\varepsilon' \mid x', x, \varepsilon, i) \cdot p(x' \mid x, \varepsilon, i) \\
+&= p(\varepsilon' \mid x') \cdot p(x' \mid x, i).
+\end{align}
+First factor indicates that $x'$ is sufficient statistics for $\varepsilon'$. Second factor indicates that once you condition on $x, i$, $\varepsilon$ does not hold any additional information about $x'$.
+- Using expected value function for iteration instead of actual value function is also a nice trick. This is because value function is function of $\varepsilon$, making computation difficult. Using expected value function resolves this issue as it is indexed only by observed state and action.
+
+### Dynamic discrete choice problem using CCP method
+
+#### Hotz and Miller (1993); HMSS (1994); Aguirregabiria and Mira (2002)
+
 ## Method: Metrics
 
 ### Borusyak and Hull (2023): "Nonrandom exposure to exogenous shocks"
