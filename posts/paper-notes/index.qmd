@@ -49,6 +49,14 @@ These are my personal notes on set of papers that I read for reference. Note tha
 - This leads to very interesting implications that seem to explain some of the puzzles that were found in previous trade literature. e.g. increased trade barrier affects multilateral resistance (price index) less for large economy as barrier is not imposed on within trade. Also, increased trade barrier will lead to more trade between small countries as relative trade barrier between them becomes lower due to higher increase in multilateral resistance.
 - In some sense, multilateral resistance can be thought of as a "GE effect."
 
+### Juanma Castro-Vincenzi (2026): "Climate hazards and resilience in the global car industry" 
+
+- This paper investigates how climate change affects the spatial organization of multinational production (firms).
+- Firms partially offset the output decline by ramping up production at other plants within their network. This is shown using a model that is developed to represent how firms determine their plant locations and capacities, conditional on weather-related disruption risk.
+- Key challenge in the estimation is that the optimization problem is combinatorial. This is alleviated as the problem is convex with linear constraints. This allows the researcher to efficiently solve the problem in polynomial time. 
+- In the counterfactual analysis, the paper shows that firms build additional smaller plants. These plants also maintain a larger spare capacity to buffer against weather-induced disruptions. 
+- But firm's adaptation hurts consumer surplus as plant reconfiguration increases average prices due to productivity and capacity losses.
+
 ### Caliendo and Parro (2022): "Trade policy" (Handbook of International Economics, Volume 5)
 
 - Kovak (2013) finds that regions exposed to the largest tariff declines experienced smaller wage growth relative to regions that experienced smaller tariff cuts.
