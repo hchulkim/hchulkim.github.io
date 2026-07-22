@@ -44,6 +44,16 @@ html { font-size: 17.5px; }
 .paper + .paper { margin-top: 0.9rem; }
 .paper .btn { border-radius: 50rem; }            /* rounded tag buttons */
 
+/* A little breathing room before each bio section (Research) and its
+   subsections (Working papers / Publications / Work in progress).
+   Use the id selector so it beats Quarto's #quarto-document-content rules. */
+#quarto-document-content h3 { margin-top: 3rem; }
+#quarto-document-content h4 { margin-top: 2.2rem; }
+/* but tighten the first ones (Quarto wraps each heading in its own <section>,
+   so target by section id): bio -> Recent updates, Research -> Working papers */
+#recent-updates > h3 { margin-top: 1.2rem; }
+#working-papers > h4 { margin-top: 0.8rem; }
+
 /* page-layout: full spans the whole viewport — cap + center so the bio
    uses more width without stretching edge to edge on big screens */
 main.content { max-width: 1150px; margin-inline: auto; }
