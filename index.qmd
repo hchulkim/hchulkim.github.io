@@ -22,6 +22,7 @@ about:
       text: Email
       aria-label: email
       href: "mailto:hchulkim@wharton.upenn.edu"
+page-layout: full
 
 ---
 
@@ -37,3 +38,45 @@ For inquiries about software, email me or use the issue tracker at GitHub.
 ### <span style="color:#011F5B;">Recent updates</span>
 
 - **TBD**.
+
+### <span style="color:#011F5B;">Research</span>
+
+See the full [research](research/index.qmd) page.
+
+#### <span style="color:#011F5B;">**Working papers**</span>
+
+::: {.paper}
+**"The China shock and internal migration: Evidence from bilateral migration flows"** [Submitted]{.badge .bg-warning .text-dark}<br>
+with [Jaerim Choi](https://sites.google.com/view/jaerimchoi) and [Seung Hoon Lee](https://sites.google.com/view/seunghoon/home). Jun. 2026.
+
+<details>
+  <summary>Abstract</summary>
+  Using Korean administrative data spanning nearly two decades and covering the universe of bilateral migration flows across local labor markets, we examine how the China trade shock shapes internal migration. While prior studies rely on net population changes to measure labor adjustment, we exploit bilateral migration flows that separately capture in- and out-migration. We find that trade exposure primarily increases out-migration from adversely affected regions, with limited effects on in-migration, revealing asymmetric spatial adjustment. Decomposing the shock, export expansion reduces out-migration, whereas import competition increases it. Migration responses are strongest among prime working-age individuals and substantially weaker among younger and older cohorts. Single-person households are more responsive than multi-person households. Overall, bilateral data reveal substantial migration responses that conventional net population measures fail to detect, offering new insight into the "missing migration puzzle."
+</details>
+
+[{{< iconify bi:file-earmark-pdf >}} Paper](research/working-paper/migration_china_shock.pdf){.btn .btn-sm .btn-outline-primary role="button"}
+[{{< iconify bi:github >}} Replication](https://github.com/hchulkim/research_china-shock-migration){.btn .btn-sm .btn-outline-secondary role="button"}
+:::
+
+#### <span style="color:#011F5B;">**Publications**</span>
+
+::: {.paper}
+**"Does political conflict hurt immigration? Evidence from the South Korea -- China THAAD Dispute"**<br>
+with [Jongkwan Lee](https://sites.google.com/site/kwanlee84/home?authuser=0). Aug. 2024. *Southern Economic Journal.*
+
+[{{< iconify bi:box-arrow-up-right >}} Paper](https://onlinelibrary.wiley.com/doi/10.1002/soej.12723){.btn .btn-sm .btn-outline-primary role="button"}
+:::
+
+::: {.paper}
+**"The well-being of cities: Estimating migration attractiveness from internal migration across Korean cities"**<br>
+with [Seung Hoon Lee](https://sites.google.com/view/seunghoon/home) and Ji Sub Park. Feb. 2024. *Global Economic Review.*
+
+[{{< iconify bi:box-arrow-up-right >}} Paper](https://www.tandfonline.com/doi/full/10.1080/1226508X.2023.2282622?scroll=top&needAccess=true){.btn .btn-sm .btn-outline-primary role="button"}
+:::
+
+#### <span style="color:#011F5B;">**Work in progress**</span>
+
+::: {.paper}
+**"Investment and deforestation under uncertain market access: Evidence from the Mexican avocado boom"**<br>
+with [Prakash Mishra](https://sites.google.com/mishra.org/prakashmishra), [Sebastian Sardon](https://sites.northwestern.edu/ssardon/) and [James E. Sayre](http://jaysayre.com)
+:::
