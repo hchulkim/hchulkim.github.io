@@ -39,14 +39,12 @@ For inquiries about software, email me or use the issue tracker at GitHub.
 
 - **TBD**.
 
-### <span style="color:#011F5B;">Research</span>
-
-See the full [research](research/index.qmd) page.
+### <span style="color:#011F5B;">Research (selected)</span>
 
 #### <span style="color:#011F5B;">**Working papers**</span>
 
 ::: {.paper}
-**"The China shock and internal migration: Evidence from bilateral migration flows"** [Submitted]{.badge .bg-warning .text-dark}<br>
+**"The China shock and internal migration: Evidence from bilateral migration flows"** [Submitted]{.badge .status-submitted}<br>
 with [Jaerim Choi](https://sites.google.com/view/jaerimchoi) and [Seung Hoon Lee](https://sites.google.com/view/seunghoon/home). Jun. 2026.
 
 <details>

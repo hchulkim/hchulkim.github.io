@@ -5,29 +5,66 @@ toc: true
 
 ## Working papers
 
+::: {.paper}
+**"The China shock and internal migration: Evidence from bilateral migration flows"** [Submitted]{.badge .status-submitted}<br>
+with [Jaerim Choi](https://sites.google.com/view/jaerimchoi) and [Seung Hoon Lee](https://sites.google.com/view/seunghoon/home). Jun. 2026.
 
-"The China shock and internal migration: Evidence from bilateral migration flows" with [Jaerim Choi](https://sites.google.com/view/jaerimchoi) and [Seung Hoon Lee](https://sites.google.com/view/seunghoon/home). Jun. 2026. \[[Working paper](working-paper/migration_china_shock.pdf)\] \[[Replication package](https://github.com/hchulkim/research_china-shock-migration)\]. *Submitted.* 
 <details>
   <summary>Abstract</summary>
   Using Korean administrative data spanning nearly two decades and covering the universe of bilateral migration flows across local labor markets, we examine how the China trade shock shapes internal migration. While prior studies rely on net population changes to measure labor adjustment, we exploit bilateral migration flows that separately capture in- and out-migration. We find that trade exposure primarily increases out-migration from adversely affected regions, with limited effects on in-migration, revealing asymmetric spatial adjustment. Decomposing the shock, export expansion reduces out-migration, whereas import competition increases it. Migration responses are strongest among prime working-age individuals and substantially weaker among younger and older cohorts. Single-person households are more responsive than multi-person households. Overall, bilateral data reveal substantial migration responses that conventional net population measures fail to detect, offering new insight into the "missing migration puzzle."
 </details>
 
+[{{< iconify bi:file-earmark-pdf >}} Paper](working-paper/migration_china_shock.pdf){.btn .btn-sm .btn-outline-primary role="button"}
+[{{< iconify bi:github >}} Replication](https://github.com/hchulkim/research_china-shock-migration){.btn .btn-sm .btn-outline-secondary role="button"}
+:::
+
 ## Publications
 
-[2] "Does political conflict hurt immigration? Evidence from the South Korea -- China THAAD Dispute" with [Jongkwan Lee](https://sites.google.com/site/kwanlee84/home?authuser=0). Aug. 2024. Published in **_Southern Economic Journal_** \[[Paper](https://onlinelibrary.wiley.com/doi/10.1002/soej.12723)\].
+::: {.paper}
+**[2] "Does political conflict hurt immigration? Evidence from the South Korea -- China THAAD Dispute"** [Published]{.badge .status-published}<br>
+with [Jongkwan Lee](https://sites.google.com/site/kwanlee84/home?authuser=0). Aug. 2024. *Southern Economic Journal.*
 
-[1] "The well-being of cities: Estimating migration attractiveness from internal migration across Korean cities" with [Seung Hoon Lee](https://sites.google.com/view/seunghoon/home) and Ji Sub Park. Feb. 2024. Published in **_Global Economic Review_** \[[Paper](https://www.tandfonline.com/doi/full/10.1080/1226508X.2023.2282622?scroll=top&needAccess=true)\].
+[{{< iconify bi:box-arrow-up-right >}} Paper](https://onlinelibrary.wiley.com/doi/10.1002/soej.12723){.btn .btn-sm .btn-outline-primary role="button"}
+:::
+
+::: {.paper}
+**[1] "The well-being of cities: Estimating migration attractiveness from internal migration across Korean cities"** [Published]{.badge .status-published}<br>
+with [Seung Hoon Lee](https://sites.google.com/view/seunghoon/home) and Ji Sub Park. Feb. 2024. *Global Economic Review.*
+
+[{{< iconify bi:box-arrow-up-right >}} Paper](https://www.tandfonline.com/doi/full/10.1080/1226508X.2023.2282622?scroll=top&needAccess=true){.btn .btn-sm .btn-outline-primary role="button"}
+:::
 
 ## Work in progress
 
-- "Investment and deforestation under uncertain market access: Evidence from the Mexican avocado boom" with [Prakash Mishra](https://sites.google.com/mishra.org/prakashmishra), [Sebastian Sardon](https://sites.northwestern.edu/ssardon/) and [James E. Sayre](http://jaysayre.com)
+::: {.paper}
+**"Investment and deforestation under uncertain market access: Evidence from the Mexican avocado boom"** [Work in progress]{.badge .status-wip}<br>
+with [Prakash Mishra](https://sites.google.com/mishra.org/prakashmishra), [Sebastian Sardon](https://sites.northwestern.edu/ssardon/) and [James E. Sayre](http://jaysayre.com)
+:::
 
 ## Other works
 
-[4] "Pest outbreak, agricultural production, and trade." **_Second-year candidacy paper_**. _Draft available upone request_.  
+::: {.paper}
+**[4] "Pest outbreak, agricultural production, and trade."** [Work in progress]{.badge .status-wip}<br>
+*Second-year candidacy paper.* Draft available upon request.
+:::
 
-[3] A comment on “Malaria suitability, urbanization and persistence: Evidence from China over more than 2000 years” with [Marc Joëts](https://www.marcjoets.com/), [Stefania Lovo](https://sites.google.com/site/stefanialovo/) and [Niklas Murken](https://www.rwi-essen.de/rwi/team/person/niklas-murken). Nov. 2025. _UKRN replication game_. **_Institute for Replication_**. \[[Paper](working-paper/malaria_urban_china_EER.pdf)\]
+::: {.paper}
+**[3] A comment on "Malaria suitability, urbanization and persistence: Evidence from China over more than 2000 years"** [Published]{.badge .status-published}<br>
+with [Marc Joëts](https://www.marcjoets.com/), [Stefania Lovo](https://sites.google.com/site/stefanialovo/) and [Niklas Murken](https://www.rwi-essen.de/rwi/team/person/niklas-murken). Nov. 2025. *UKRN replication game*, **Institute for Replication**.
 
-[2] "The effect of remote working on household waste: Evidence from South Korea" with [Hee-Seung Yang](https://sites.google.com/site/heeseungyang/home). Mar. 2025. [\[Working paper\]](working-paper/wfh-waste.pdf).
+[{{< iconify bi:file-earmark-pdf >}} Paper](working-paper/malaria_urban_china_EER.pdf){.btn .btn-sm .btn-outline-primary role="button"}
+:::
 
-[1] "High-speed rails and regional effects: Evidence from Ulsan (in Korean)" with [Seung Hoon Lee](https://sites.google.com/view/seunghoon/home), Moon Jung Choi and [Jaerim Choi](https://sites.google.com/view/jaerimchoi). Apr. 2024. Published in ***Journal of Korean Economic Analysis*** \[[Paper](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003074695)\].
+::: {.paper}
+**[2] "The effect of remote working on household waste: Evidence from South Korea"** [Work in progress]{.badge .status-wip}<br>
+with [Hee-Seung Yang](https://sites.google.com/site/heeseungyang/home). Mar. 2025.
+
+[{{< iconify bi:file-earmark-pdf >}} Paper](working-paper/wfh-waste.pdf){.btn .btn-sm .btn-outline-primary role="button"}
+:::
+
+::: {.paper}
+**[1] "High-speed rails and regional effects: Evidence from Ulsan (in Korean)"** [Published]{.badge .status-published}<br>
+with [Seung Hoon Lee](https://sites.google.com/view/seunghoon/home), Moon Jung Choi and [Jaerim Choi](https://sites.google.com/view/jaerimchoi). Apr. 2024. *Journal of Korean Economic Analysis.*
+
+[{{< iconify bi:box-arrow-up-right >}} Paper](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003074695){.btn .btn-sm .btn-outline-primary role="button"}
+:::
