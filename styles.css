@@ -1,5 +1,9 @@
 /* css styles */
 
+/* Scale whole site up proportionally (Bootstrap sizes are rem-based,
+   so hierarchy is preserved). Default root is 16px. */
+html { font-size: 17.5px; }
+
 #quarto-document-content {
   text-align: left;
 }
@@ -13,3 +17,14 @@
   border-radius: 50%;
   margin-top: 2rem;
 }
+
+/* Research badges: nudge status flags to Penn blue for "published",
+   keep the built-in Bootstrap semantic colors for the rest. */
+.badge.bg-penn { background-color: #011F5B !important; color: #fff; }
+
+/* Tighter spacing between stacked paper entries on the bio page */
+.paper + .paper { margin-top: 0.9rem; }
+
+/* page-layout: full spans the whole viewport — cap + center so the bio
+   uses more width without stretching edge to edge on big screens */
+main.content { max-width: 1150px; margin-inline: auto; }
