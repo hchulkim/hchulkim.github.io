@@ -18,6 +18,16 @@ html { font-size: 17.5px; }
   margin-top: 2rem;
 }
 
+/* Left-align the bio: picture on top-left, body paragraphs share the same
+   left edge (solana defaults to image-on-the-right at laptop widths). */
+.quarto-about-solana .about-entity {
+  flex-direction: column-reverse;   /* image (last in DOM) sits on top */
+  align-items: flex-start;          /* pinned to the left, not centered */
+  text-align: left;
+}
+.quarto-about-solana .about-entity .about-links { justify-content: flex-start; }
+.quarto-about-solana .about-contents { text-align: left; }
+
 /* Research badges: nudge status flags to Penn blue for "published",
    keep the built-in Bootstrap semantic colors for the rest. */
 .badge.bg-penn { background-color: #011F5B !important; color: #fff; }

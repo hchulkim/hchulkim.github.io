@@ -35,7 +35,7 @@ You can either call me <span style="color:#011F5B;">**Hyoungchul (H-Young-Cheol,
 
 For inquiries about software, email me or use the issue tracker at GitHub.
 
-### <span style="color:#011F5B;">Recent updates</span>
+### <span style="color:#A90533;">Recent updates</span>
 
 - **TBD**.
 
