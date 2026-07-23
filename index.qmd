@@ -59,14 +59,14 @@ with [Jaerim Choi](https://sites.google.com/view/jaerimchoi) and [Seung Hoon Lee
 #### <span style="color:#011F5B;">**Publications**</span>
 
 ::: {.paper}
-**"Does political conflict hurt immigration? Evidence from the South Korea -- China THAAD Dispute"**<br>
+**[2] "Does political conflict hurt immigration? Evidence from the South Korea -- China THAAD Dispute"**<br>
 with [Jongkwan Lee](https://sites.google.com/site/kwanlee84/home?authuser=0). Aug. 2024. *Southern Economic Journal.*
 
 [{{< iconify bi:box-arrow-up-right >}} Paper](https://onlinelibrary.wiley.com/doi/10.1002/soej.12723){.btn .btn-sm .btn-outline-primary role="button"}
 :::
 
 ::: {.paper}
-**"The well-being of cities: Estimating migration attractiveness from internal migration across Korean cities"**<br>
+**[1] "The well-being of cities: Estimating migration attractiveness from internal migration across Korean cities"**<br>
 with [Seung Hoon Lee](https://sites.google.com/view/seunghoon/home) and Ji Sub Park. Feb. 2024. *Global Economic Review.*
 
 [{{< iconify bi:box-arrow-up-right >}} Paper](https://www.tandfonline.com/doi/full/10.1080/1226508X.2023.2282622?scroll=top&needAccess=true){.btn .btn-sm .btn-outline-primary role="button"}

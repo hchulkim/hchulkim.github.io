@@ -56,7 +56,7 @@ with [Marc Joëts](https://www.marcjoets.com/), [Stefania Lovo](https://sites.go
 :::
 
 ::: {.paper}
-**[2] "The effect of remote working on household waste: Evidence from South Korea"** [Work in progress]{.badge .status-wip}<br>
+**[2] "The effect of remote working on household waste: Evidence from South Korea"** [Dormant paper]{.badge .status-wip}<br>
 with [Hee-Seung Yang](https://sites.google.com/site/heeseungyang/home). Mar. 2025.
 
 [{{< iconify bi:file-earmark-pdf >}} Paper](working-paper/wfh-waste.pdf){.btn .btn-sm .btn-outline-primary role="button"}
