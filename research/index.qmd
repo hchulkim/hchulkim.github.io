@@ -21,14 +21,14 @@ with [Jaerim Choi](https://sites.google.com/view/jaerimchoi) and [Seung Hoon Lee
 ## Publications
 
 ::: {.paper}
-**[2] "Does political conflict hurt immigration? Evidence from the South Korea -- China THAAD Dispute"** [Published]{.badge .status-published}<br>
+**[2] "Does political conflict hurt immigration? Evidence from the South Korea -- China THAAD Dispute"**<br>
 with [Jongkwan Lee](https://sites.google.com/site/kwanlee84/home?authuser=0). Aug. 2024. *Southern Economic Journal.*
 
 [{{< iconify bi:box-arrow-up-right >}} Paper](https://onlinelibrary.wiley.com/doi/10.1002/soej.12723){.btn .btn-sm .btn-outline-primary role="button"}
 :::
 
 ::: {.paper}
-**[1] "The well-being of cities: Estimating migration attractiveness from internal migration across Korean cities"** [Published]{.badge .status-published}<br>
+**[1] "The well-being of cities: Estimating migration attractiveness from internal migration across Korean cities"**<br>
 with [Seung Hoon Lee](https://sites.google.com/view/seunghoon/home) and Ji Sub Park. Feb. 2024. *Global Economic Review.*
 
 [{{< iconify bi:box-arrow-up-right >}} Paper](https://www.tandfonline.com/doi/full/10.1080/1226508X.2023.2282622?scroll=top&needAccess=true){.btn .btn-sm .btn-outline-primary role="button"}
@@ -37,7 +37,7 @@ with [Seung Hoon Lee](https://sites.google.com/view/seunghoon/home) and Ji Sub P
 ## Work in progress
 
 ::: {.paper}
-**"Investment and deforestation under uncertain market access: Evidence from the Mexican avocado boom"** [Work in progress]{.badge .status-wip}<br>
+**"Investment and deforestation under uncertain market access: Evidence from the Mexican avocado boom"**<br>
 with [Prakash Mishra](https://sites.google.com/mishra.org/prakashmishra), [Sebastian Sardon](https://sites.northwestern.edu/ssardon/) and [James E. Sayre](http://jaysayre.com)
 :::
 
@@ -56,7 +56,7 @@ with [Marc Joëts](https://www.marcjoets.com/), [Stefania Lovo](https://sites.go
 :::
 
 ::: {.paper}
-**[2] "The effect of remote working on household waste: Evidence from South Korea"** [Dormant paper]{.badge .status-wip}<br>
+**[2] "The effect of remote working on household waste: Evidence from South Korea"** [Dormant paper]{.badge .status-dor}<br>
 with [Hee-Seung Yang](https://sites.google.com/site/heeseungyang/home). Mar. 2025.
 
 [{{< iconify bi:file-earmark-pdf >}} Paper](working-paper/wfh-waste.pdf){.btn .btn-sm .btn-outline-primary role="button"}

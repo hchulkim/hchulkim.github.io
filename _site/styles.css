@@ -36,6 +36,7 @@ html { font-size: 17.5px; }
 .badge.status-review    { background-color: #0e7490 !important; color: #fff; }  /* teal   */
 .badge.status-submitted { background-color: #b45309 !important; color: #fff; }  /* amber  */
 .badge.status-wip       { background-color: #6c757d !important; color: #fff; }  /* grey   */
+.badge.status-dor       { background-color: #e8e8e8 !important; color: #fff; }  /* grey   */
 
 /* keep older alias working */
 .badge.bg-penn { background-color: #011F5B !important; color: #fff; }
