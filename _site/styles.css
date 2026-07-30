@@ -50,10 +50,29 @@ html { font-size: 17.5px; }
    Use the id selector so it beats Quarto's #quarto-document-content rules. */
 #quarto-document-content h3 { margin-top: 3rem; }
 #quarto-document-content h4 { margin-top: 2.2rem; }
+
+/* Thin grey rule under each section heading (Recent updates, Research, ...) */
+#quarto-document-content h3 {
+  border-bottom: 1px solid #ececec;
+  padding-bottom: 0.35rem;
+  margin-bottom: 1.1rem;
+}
 /* but tighten the first ones (Quarto wraps each heading in its own <section>,
    so target by section id): bio -> Recent updates, Research -> Working papers */
 #recent-updates > h3 { margin-top: 1.2rem; }
 #working-papers > h4 { margin-top: 0.8rem; }
+
+/* Divider between Research subsections: a short rule ABOVE the heading, so it
+   reads differently from the full-width underline used on h3 sections.
+   Skipped on Working papers, which follows the Research heading directly. */
+#publications > h4::before,
+#work-in-progress > h4::before {
+  content: "";
+  display: block;
+  width: 5rem;
+  border-top: 1px solid #e6e6e6;
+  margin-bottom: 1.4rem;
+}
 
 /* page-layout: full spans the whole viewport — cap + center so the bio
    uses more width without stretching edge to edge on big screens */
