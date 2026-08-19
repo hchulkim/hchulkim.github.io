@@ -1,5 +1,9 @@
 project:
   type: website
+  # Superseded pages live in outdated/ for reference; never publish them.
+  render:
+    - "**/*.qmd"
+    - "!outdated/"
 
 website:
   site-url: "https://hchulkim.github.io"
