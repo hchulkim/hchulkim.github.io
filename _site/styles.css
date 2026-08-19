@@ -6,8 +6,8 @@
 /* ---- Content pages (Research, Teaching, Misc, Blog posts) ---------------- */
 /* Section headings get the same thin rule as the front page sections. */
 #quarto-document-content h2:not(.section-title) {
-  font-size: 14px; text-transform: uppercase; letter-spacing: 0.12em;
-  color: var(--site-accent); font-weight: 700;
+  font-size: 20px; font-weight: 700; letter-spacing: -0.01em;
+  color: var(--site-accent);
   border-bottom: 1px solid var(--site-border);
   padding-bottom: 0.5rem; margin-top: 2.6rem; margin-bottom: 1.2rem;
 }
