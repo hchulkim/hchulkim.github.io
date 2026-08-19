@@ -54,6 +54,7 @@ body-classes: front-page
   </div>
 </header>
 
+<!-- Research interests: hidden for now, restore by uncommenting.
 <section class="block" id="interests">
   <h2 class="section-title">Research interests</h2>
   <div class="tags">
@@ -62,6 +63,7 @@ body-classes: front-page
     <span class="tag">International Trade</span>
   </div>
 </section>
+-->
 
 <section class="block" id="updates">
   <h2 class="section-title red">Recent updates</h2>
