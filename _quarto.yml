@@ -28,8 +28,12 @@ website:
 format:
   html:
     theme:
-      - cosmo
-      - theme.scss
+      light:
+        - cosmo
+        - theme.scss
+      dark:
+        - cosmo
+        - theme-dark.scss
     css: styles.css
     toc-location: right
 execute:

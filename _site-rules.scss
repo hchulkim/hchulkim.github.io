@@ -1,0 +1,166 @@
+// ---------------------------------------------------------------------------
+// Shared layout/component rules for both palettes. Every colour here comes
+// from a --site-* / --badge-* custom property, which theme.scss (light) and
+// theme-dark.scss (dark) each define. Nothing colour-literal belongs in here.
+// ---------------------------------------------------------------------------
+html { scroll-behavior: smooth; }
+body {
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------- Nav: sticky, translucent, thin bottom rule ------------------- */
+.navbar {
+  position: sticky; top: 0; z-index: 1000;
+  background: color-mix(in srgb, var(--site-bg) 88%, transparent) !important;
+  backdrop-filter: saturate(160%) blur(10px);
+  -webkit-backdrop-filter: saturate(160%) blur(10px);
+  border-bottom: 1px solid var(--site-border);
+  padding-top: 6px; padding-bottom: 6px;
+}
+.navbar .navbar-brand,
+.navbar .navbar-title { font-weight: 700; letter-spacing: -0.01em; color: var(--site-text) !important; }
+.navbar .navbar-nav .nav-link {
+  color: var(--site-muted) !important;
+  font-size: 15px;
+  padding-left: 10px; padding-right: 10px;
+}
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active { color: var(--site-accent) !important; }
+.navbar-container { max-width: var(--site-maxw); }
+
+/* ---------- Page shell --------------------------------------------------- */
+main.content, #quarto-content > main { max-width: var(--site-maxw); margin-inline: auto; }
+#quarto-document-content { text-align: left; }
+
+/* ---------- Section titles: small caps + trailing rule ------------------- */
+.section-title {
+  font-size: 14px; text-transform: uppercase; letter-spacing: 0.12em;
+  color: var(--site-accent); font-weight: 700; margin: 0 0 18px;
+  display: flex; align-items: center; gap: 10px;
+}
+.section-title::after { content: ""; flex: 1; height: 1px; background: var(--site-border); }
+.section-title.red { color: var(--site-red); }
+section.block { padding-top: 40px; }
+
+/* ---------- Hero --------------------------------------------------------- */
+header.hero { padding-top: 40px; }
+.hero-grid { display: flex; gap: 30px; align-items: flex-start; flex-wrap: wrap; }
+.hero-photo {
+  width: 150px; height: 190px; object-fit: cover; object-position: center 35%;
+  border-radius: var(--site-radius); border: 1px solid var(--site-border);
+  flex-shrink: 0; box-shadow: 0 8px 28px var(--site-shadow);
+}
+.hero-text { flex: 1; min-width: 260px; }
+.hero-name { font-size: 34px; font-weight: 700; line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.02em; }
+.role  { font-size: 18px; font-weight: 600; margin: 0 0 2px; color: var(--site-text); }
+.affil { color: var(--site-muted); margin: 0 0 16px; }
+.bio   { margin: 0 0 14px; }
+.bio strong { font-weight: 600; color: var(--site-accent); }
+
+.contact { display: flex; flex-wrap: wrap; gap: 8px; }
+.contact a, .contact span {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 6px 13px; font-size: 14.5px;
+  background: var(--site-surface); border: 1px solid var(--site-border);
+  border-radius: 999px; color: var(--site-text);
+}
+.contact a:hover { border-color: var(--site-accent); color: var(--site-accent); text-decoration: none; }
+.contact svg { width: 15px; height: 15px; fill: currentColor; opacity: .8; }
+
+/* ---------- Interest tags ------------------------------------------------ */
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag {
+  font-size: 14px; padding: 5px 12px; border-radius: 999px;
+  background: var(--site-accent-soft); color: var(--site-accent); font-weight: 500;
+}
+
+/* ---------- Updates list ------------------------------------------------- */
+.updates { list-style: none; margin: 0; padding: 0; }
+.updates li { padding: 6px 0; color: var(--site-text); }
+.updates .when { color: var(--site-red); font-weight: 600; margin-right: 8px; }
+
+/* ---------- Papers ------------------------------------------------------- */
+.paper { padding: 20px 0; border-top: 1px solid var(--site-border); }
+.paper:first-of-type { border-top: none; }
+.section-title + .paper { border-top: none; }
+.paper-title {
+  font-size: 18px; font-weight: 650; margin: 0 0 5px;
+  letter-spacing: -0.01em; line-height: 1.35;
+}
+.paper-title a { color: var(--site-text); font-weight: inherit; }
+.paper-title a:hover { color: var(--site-accent); }
+.authors { color: var(--site-muted); font-size: 15.5px; margin: 0 0 8px; }
+.authors .me { color: var(--site-text); font-weight: 600; }
+.authors a { color: var(--site-muted); border-bottom: 1px dotted var(--site-faint); }
+.authors a:hover { color: var(--site-accent); border-bottom-color: var(--site-accent); text-decoration: none; }
+.venue { font-size: 15px; }
+.venue em { color: var(--site-muted); }
+
+/* Status badges: one colour per publication stage */
+.badges { display: inline-flex; gap: 7px; margin-left: 6px; vertical-align: middle; }
+.badge {
+  font-size: 12px; font-weight: 600; letter-spacing: .02em;
+  padding: 2px 9px; border-radius: 6px; text-transform: uppercase;
+}
+.badge.status-published { background: var(--badge-published) !important; color: var(--badge-fg); }
+.badge.status-accepted  { background: var(--badge-accepted)  !important; color: var(--badge-fg); }
+.badge.status-rr        { background: var(--badge-rr)        !important; color: var(--badge-fg); }
+.badge.status-review    { background: var(--badge-review)    !important; color: var(--badge-fg); }
+.badge.status-submitted { background: var(--badge-submitted) !important; color: var(--badge-fg); }
+.badge.status-wip       { background: var(--site-surface-2) !important; color: var(--site-muted); border: 1px solid var(--site-border); }
+.badge.status-year      { background: var(--site-surface-2) !important; color: var(--site-muted); border: 1px solid var(--site-border); }
+
+/* Abstract disclosure */
+details.abstract { margin: 10px 0 0; }
+details.abstract > summary {
+  cursor: pointer; color: var(--site-accent); font-size: 14px; font-weight: 600;
+  list-style: none; display: inline-flex; align-items: center; gap: 6px; user-select: none;
+}
+details.abstract > summary::-webkit-details-marker { display: none; }
+details.abstract > summary::before { content: "\25B8"; font-size: 11px; transition: transform .15s ease; }
+details.abstract[open] > summary::before { transform: rotate(90deg); }
+.abstract-body {
+  margin-top: 10px; padding: 14px 16px; background: var(--site-surface);
+  border: 1px solid var(--site-border); border-radius: 10px;
+  font-size: 15px; line-height: 1.6;
+}
+
+/* Link buttons under each paper */
+.links { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px; }
+.links a {
+  font-size: 13.5px; font-weight: 600; padding: 5px 12px;
+  border: 1px solid var(--site-border); border-radius: 7px;
+  color: var(--site-muted); background: var(--site-bg);
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.links a:hover {
+  border-color: var(--site-accent); color: var(--site-accent);
+  background: var(--site-accent-soft); text-decoration: none;
+}
+
+/* ---------- Footer ------------------------------------------------------- */
+.nav-footer {
+  max-width: var(--site-maxw); margin: 0 auto;
+  border-top: 1px solid var(--site-border);
+  color: var(--site-faint); font-size: 13.5px;
+}
+
+@media (max-width: 560px) {
+  .hero-name { font-size: 28px; }
+  .hero-photo { width: 120px; height: 152px; }
+}
+
+/* Front page carries its own hero, so hide Quarto's title block there. */
+body.front-page #title-block-header { display: none; }
+
+/* Page titles on interior pages (Research / Teaching / Blog / Misc). */
+#title-block-header h1.title,
+.quarto-title-banner h1.title {
+  font-size: 30px; font-weight: 700; letter-spacing: -0.02em;
+  color: var(--site-text); margin-bottom: 6px;
+}
+.quarto-title-banner { background: var(--site-surface) !important; }

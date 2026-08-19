@@ -1,0 +1,61 @@
+/*-- scss:defaults --*/
+// ---------------------------------------------------------------------------
+// Dark palette. Penn blue and Wharton red are too dark to read on a dark
+// ground, so the accents are the same hues lifted in lightness (Penn blue ->
+// #7ea6f0, Wharton red -> #f0728f); the badge colours are lifted the same way
+// and paired with a dark foreground.
+// ---------------------------------------------------------------------------
+$penn-blue-lt:   #7ea6f0;
+$wharton-red-lt: #f0728f;
+
+$body-bg:    #15151a;
+$body-color: #eceae6;
+$link-color: $penn-blue-lt;
+$primary:    $penn-blue-lt;
+
+$font-size-root: 17px;
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+
+$navbar-bg: #15151a;
+$navbar-fg: #a6a39d;
+$footer-bg: #15151a;
+$footer-fg: #78756f;
+
+$body-secondary:      #a6a39d;
+$card-bg:             #1d1d23;
+$table-border-color:  #2e2e37;
+$code-color:          #f0a97e;
+$code-bg:             #1d1d23;
+$input-bg:            #1d1d23;
+
+$h1-font-size: 34px;
+$headings-font-weight: 700;
+
+/*-- scss:rules --*/
+:root {
+  --site-bg:          #15151a;
+  --site-surface:     #1d1d23;
+  --site-surface-2:   #24242c;
+  --site-text:        #eceae6;
+  --site-muted:       #a6a39d;
+  --site-faint:       #78756f;
+  --site-border:      #2e2e37;
+  --site-accent:      #{$penn-blue-lt};
+  --site-accent-soft: #1e2740;
+  --site-red:         #{$wharton-red-lt};
+  --site-shadow:      rgba(0, 0, 0, .45);
+  --site-maxw:        820px;
+  --site-radius:      12px;
+
+  --badge-fg:         #14141a;
+  --badge-published:  #{$penn-blue-lt};
+  --badge-accepted:   #4cbe8a;
+  --badge-rr:         #b394f5;
+  --badge-review:     #4fb8cf;
+  --badge-submitted:  #{$wharton-red-lt};
+}
+
+@import "site-rules";
+
+/* Photo needs a touch of separation from the dark ground. */
+.hero-photo { filter: brightness(.95); }
