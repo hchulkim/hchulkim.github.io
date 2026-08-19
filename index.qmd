@@ -132,7 +132,7 @@ body-classes: front-page
 
 <section class="block" id="contact">
   <h2 class="section-title">Contact</h2>
-  <p style="margin:0 0 6px;"><strong>Email.</strong> <a href="mailto:hchulkim@wharton.upenn.edu">hchulkim@wharton.upenn.edu</a></p>
+  <p style="margin:0 0 6px;"><strong>Email.</strong> <a href="mailto:hchulkim@wharton.upenn.edu">hchulkim [at] wharton.upenn.edu</a></p>
   <p style="margin:0 0 6px; color:var(--site-muted);">
     Department of Business Economics and Public Policy, The Wharton School &middot; Philadelphia, PA
   </p>
