@@ -50,7 +50,7 @@ section.block { padding-top: 40px; }
 header.hero { padding-top: 40px; }
 .hero-grid { display: flex; gap: 30px; align-items: flex-start; flex-wrap: wrap; }
 .hero-photo {
-  width: 150px; height: 190px; object-fit: cover; object-position: center 35%;
+  width: 185px; height: 234px; object-fit: cover; object-position: center 35%;
   border-radius: var(--site-radius); border: 1px solid var(--site-border);
   flex-shrink: 0; box-shadow: 0 8px 28px var(--site-shadow);
 }
@@ -151,7 +151,7 @@ details.abstract[open] > summary::before { transform: rotate(90deg); }
 
 @media (max-width: 560px) {
   .hero-name { font-size: 28px; }
-  .hero-photo { width: 120px; height: 152px; }
+  .hero-photo { width: 140px; height: 178px; }
 }
 
 /* Front page carries its own hero, so hide Quarto's title block there. */
