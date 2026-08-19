@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Hyoungchul Kim — Ph.D.&nbsp;student in Applied Economics at The Wharton School, University of Pennsylvania. Energy and environment, industrial organization, international trade.">
 
 <title>Hyoungchul Kim</title>
 <style>
@@ -42,11 +43,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6ac2aec46ad7f46b16024ee4409aa65c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-74265cff3c84c3824490182722637524.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-dba53b3d72f79ce93ff7d5b31182014c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-74265cff3c84c3824490182722637524.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -81,9 +85,172 @@ ul.task-list li input[type="checkbox"] {
 <meta property="og:description" content="">
 <meta property="og:image" content="https://hchulkim.github.io/bio-picture.jpeg">
 <meta property="og:site_name" content="Hyoungchul Kim">
+<meta property="og:image:alt" content="Portrait of Hyoungchul Kim">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed front-page quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -139,6 +306,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -149,92 +317,167 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-solana column-page">
-  <div class="about-entity">
-    <div class="entity-contents">
-      <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Hyoungchul Kim</h1>
-</div>
-<div class="quarto-title-meta column-page">
-  </div>
-</header> <div class="about-links">
-  <a href="/vita/cv-kim.pdf" class="about-link" rel="" target="">
-    <i class="bi bi-file-text-fill"></i>
-     <span class="about-link-text">CV</span>
-  </a>
-  <a href="https://github.com/hchulkim" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">GitHub</span>
-  </a>
-  <a href="https://kr.linkedin.com/in/hyoungchul-kim-267104306" class="about-link" rel="" target="">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">LinkedIn</span>
-  </a>
-  <a href="https://scholar.google.com/citations?user=GaRgVqoAAAAJ&amp;hl=ko" class="about-link" rel="" target="">
-     <span class="about-link-text"><iconify-icon role="img" inline="" icon="academicons:google-scholar" aria-label="Icon google-scholar from academicons Iconify.design set." title="Icon google-scholar from academicons Iconify.design set."></iconify-icon> Scholar</span>
-  </a>
-  <a href="mailto:hchulkim@wharton.upenn.edu" class="about-link" rel="" target="">
-    <i class="bi bi-envelope"></i>
-     <span class="about-link-text">Email</span>
-  </a>
-</div>
-      <div class="about-contents"><main class="content column-page" id="quarto-document-content">
-<p>I am a Ph.D.&nbsp;student in <span style="color:#011F5B;"><strong>Applied Economics</strong></span> at <span style="color:#011F5B;"><strong>The Wharton School</strong></span>, <span style="color:#011F5B;"><strong>University of Pennsylvania</strong></span>.</p>
-<p>You can either call me <span style="color:#011F5B;"><strong>Hyoungchul (H-Young-Cheol, rhymes with “Null”)</strong></span> or <span style="color:#011F5B;"><strong>Kent (my english name)</strong></span>.</p>
-<!-- I am currently interested in urban and environmental topics using tools from international trade and industrial organization. -->
-<p><span style="color:#011F5B;"><strong>Research interests:</strong></span> <span style="color:#232023;">Energy and Environment, Industrial Organization, International Trade.</span></p>
-<p>For inquiries about software, email me or use the issue tracker at GitHub.</p>
-<section id="recent-updates" class="level3">
-<h3 data-anchor-id="recent-updates"><span style="color:#A90533;">Recent updates</span></h3>
-<ul>
-<li><strong>TBD</strong>.</li>
-</ul>
-</section>
-<section id="research-selected" class="level3">
-<h3 data-anchor-id="research-selected"><span style="color:#011F5B;">Research (selected)</span></h3>
-<section id="working-papers" class="level4">
-<h4 data-anchor-id="working-papers"><span style="color:#011F5B;"><strong>Working papers</strong></span></h4>
-<div class="paper">
-<p><strong>“The China shock and internal migration: Evidence from bilateral migration flows”</strong> <span class="badge status-submitted">Submitted</span><br> with <a href="https://sites.google.com/view/jaerimchoi">Jaerim Choi</a> and <a href="https://sites.google.com/view/seunghoon/home">Seung Hoon Lee</a>. Jun.&nbsp;2026.</p>
-<details>
-<summary>
-Abstract
-</summary>
-Using Korean administrative data spanning nearly two decades and covering the universe of bilateral migration flows across local labor markets, we examine how the China trade shock shapes internal migration. While prior studies rely on net population changes to measure labor adjustment, we exploit bilateral migration flows that separately capture in- and out-migration. We find that trade exposure primarily increases out-migration from adversely affected regions, with limited effects on in-migration, revealing asymmetric spatial adjustment. Decomposing the shock, export expansion reduces out-migration, whereas import competition increases it. Migration responses are strongest among prime working-age individuals and substantially weaker among younger and older cohorts. Single-person households are more responsive than multi-person households. Overall, bilateral data reveal substantial migration responses that conventional net population measures fail to detect, offering new insight into the “missing migration puzzle.”
-</details>
-<p><a href="research/working-paper/migration_china_shock.pdf" class="btn btn-sm btn-outline-primary" role="button"><iconify-icon role="img" inline="" icon="bi:file-earmark-pdf" aria-label="Icon file-earmark-pdf from bi Iconify.design set." title="Icon file-earmark-pdf from bi Iconify.design set."></iconify-icon> Paper</a> <a href="https://github.com/hchulkim/research_china-shock-migration" class="btn btn-sm btn-outline-secondary" role="button"><iconify-icon role="img" inline="" icon="bi:github" aria-label="Icon github from bi Iconify.design set." title="Icon github from bi Iconify.design set."></iconify-icon> Replication</a></p>
-</div>
-</section>
-<section id="publications" class="level4">
-<h4 data-anchor-id="publications"><span style="color:#011F5B;"><strong>Publications</strong></span></h4>
-<div class="paper">
-<p><strong>[2] “Does political conflict hurt immigration? Evidence from the South Korea – China THAAD Dispute”</strong><br> with <a href="https://sites.google.com/site/kwanlee84/home?authuser=0">Jongkwan Lee</a>. Aug.&nbsp;2024. <em>Southern Economic Journal.</em></p>
-<p><a href="https://onlinelibrary.wiley.com/doi/10.1002/soej.12723" class="btn btn-sm btn-outline-primary" role="button"><iconify-icon role="img" inline="" icon="bi:box-arrow-up-right" aria-label="Icon box-arrow-up-right from bi Iconify.design set." title="Icon box-arrow-up-right from bi Iconify.design set."></iconify-icon> Paper</a></p>
-</div>
-<div class="paper">
-<p><strong>[1] “The well-being of cities: Estimating migration attractiveness from internal migration across Korean cities”</strong><br> with <a href="https://sites.google.com/view/seunghoon/home">Seung Hoon Lee</a> and Ji Sub Park. Feb.&nbsp;2024. <em>Global Economic Review.</em></p>
-<p><a href="https://www.tandfonline.com/doi/full/10.1080/1226508X.2023.2282622?scroll=top&amp;needAccess=true" class="btn btn-sm btn-outline-primary" role="button"><iconify-icon role="img" inline="" icon="bi:box-arrow-up-right" aria-label="Icon box-arrow-up-right from bi Iconify.design set." title="Icon box-arrow-up-right from bi Iconify.design set."></iconify-icon> Paper</a></p>
-</div>
-</section>
-<section id="work-in-progress" class="level4">
-<h4 data-anchor-id="work-in-progress"><span style="color:#011F5B;"><strong>Work in progress</strong></span></h4>
-<div class="paper">
-<p><strong>“Investment and deforestation under uncertain market access: Evidence from the Mexican avocado boom”</strong><br> with <a href="https://sites.google.com/mishra.org/prakashmishra">Prakash Mishra</a>, <a href="https://sites.northwestern.edu/ssardon/">Sebastian Sardon</a> and <a href="http://jaysayre.com">James E. Sayre</a></p>
-</div>
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
-</section>
-</section>
-</main></div>
+
+
+
+<header class="hero" id="about">
+  <div class="hero-grid">
+    <img class="hero-photo" src="bio-picture.jpeg" alt="Portrait of Hyoungchul Kim">
+    <div class="hero-text">
+      <div class="hero-name">Hyoungchul&nbsp;Kim</div>
+      <p class="role">Ph.D. Student in Applied Economics</p>
+      <p class="affil">The Wharton School, University of Pennsylvania</p>
+      <p class="bio">
+        You can call me <strong>Hyoungchul</strong> (H-Young-Cheol, rhymes with “Null”)
+        or <strong>Kent</strong>, my English name.
+      </p>
+      <p class="bio">
+        I work on <strong>energy and environmental economics</strong>, using tools from
+        industrial organization and international trade.
+      </p>
+      <div class="contact">
+        <a href="mailto:hchulkim@wharton.upenn.edu">
+          <svg viewbox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z"></path></svg>
+          Email
+        </a>
+        <a href="vita/cv-kim.pdf">
+          <svg viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm2 16H8v-2h8zm0-4H8v-2h8zM13 9V3.5L18.5 9z"></path></svg>
+          Curriculum Vitae
+        </a>
+        <a href="https://scholar.google.com/citations?user=GaRgVqoAAAAJ&amp;hl=ko">
+          <svg viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9zM5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg>
+          Google Scholar
+        </a>
+        <a href="https://github.com/hchulkim">
+          <svg viewbox="0 0 24 24"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.2c-3.34.73-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.39 1.24-3.23-.13-.3-.54-1.53.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.23 0 4.63-2.8 5.65-5.48 5.95.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5z"></path></svg>
+          GitHub
+        </a>
+        <a href="https://kr.linkedin.com/in/hyoungchul-kim-267104306">
+          <svg viewbox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM8.34 18.34V9.99H5.67v8.35zM7 8.82a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1zM18.34 18.34v-4.58c0-2.45-1.31-3.59-3.06-3.59a2.64 2.64 0 0 0-2.39 1.31v-1.13H10.2v8.35h2.67v-4.41c0-1.16.22-2.29 1.66-2.29 1.42 0 1.44 1.33 1.44 2.36v4.34z"></path></svg>
+          LinkedIn
+        </a>
+        <span>
+          <svg viewbox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"></path></svg>
+          Philadelphia, PA
+        </span>
+      </div>
     </div>
-    <img src="bio-picture.jpeg" class="about-image
-  round " style="height: 15em; width: 15em;">
   </div>
-</div>
- <!-- /main -->
+</header>
+
+<!-- Research interests: hidden for now, restore by uncommenting.
+<section class="block" id="interests">
+  <h2 class="section-title">Research interests</h2>
+  <div class="tags">
+    <span class="tag">Energy &amp; Environment</span>
+    <span class="tag">Industrial Organization</span>
+    <span class="tag">International Trade</span>
+  </div>
+</section>
+-->
+
+<section class="block" id="updates">
+  <h2 class="section-title red">Recent updates</h2>
+  <ul class="updates">
+    <li><span class="when">TBD</span>—</li>
+  </ul>
+</section>
+
+<section class="block" id="research">
+  <h2 class="section-title">Working papers</h2>
+
+  <article class="paper">
+    <h3 class="paper-title">The China Shock and Internal Migration: Evidence from Bilateral Migration Flows<span class="badges"><span class="badge status-submitted">Submitted</span></span></h3>
+    <p class="authors"><span class="me">Hyoungchul Kim</span>, <a href="https://sites.google.com/view/jaerimchoi">Jaerim Choi</a>, and <a href="https://sites.google.com/view/seunghoon/home">Seung Hoon Lee</a></p>
+    <p class="venue">June 2026.</p>
+    <details class="abstract">
+      <summary>Abstract</summary>
+      <div class="abstract-body">
+        Using Korean administrative data spanning nearly two decades and covering the universe of
+        bilateral migration flows across local labor markets, we examine how the China trade shock
+        shapes internal migration. While prior studies rely on net population changes to measure
+        labor adjustment, we exploit bilateral migration flows that separately capture in- and
+        out-migration. We find that trade exposure primarily increases out-migration from adversely
+        affected regions, with limited effects on in-migration, revealing asymmetric spatial
+        adjustment. Decomposing the shock, export expansion reduces out-migration, whereas import
+        competition increases it. Migration responses are strongest among prime working-age
+        individuals and substantially weaker among younger and older cohorts. Single-person
+        households are more responsive than multi-person households. Overall, bilateral data reveal
+        substantial migration responses that conventional net population measures fail to detect,
+        offering new insight into the “missing migration puzzle.”
+      </div>
+    </details>
+    <div class="links">
+      <a href="research/working-paper/migration_china_shock.pdf">Paper (PDF)</a>
+      <a href="https://github.com/hchulkim/research_china-shock-migration">Replication</a>
+    </div>
+  </article>
+
+  <h2 class="section-title" style="margin-top:44px;">Publications</h2>
+
+  <article class="paper">
+    <h3 class="paper-title"><a href="https://onlinelibrary.wiley.com/doi/10.1002/soej.12723">Does Political Conflict Hurt Immigration? Evidence from the South Korea–China THAAD Dispute</a></h3>
+    <p class="authors"><span class="me">Hyoungchul Kim</span> and <a href="https://sites.google.com/site/kwanlee84/home?authuser=0">Jongkwan Lee</a></p>
+    <p class="venue"><em>Southern Economic Journal</em>, 2024.</p>
+    <div class="links">
+      <a href="https://onlinelibrary.wiley.com/doi/10.1002/soej.12723">Published version</a>
+    </div>
+  </article>
+
+  <article class="paper">
+    <h3 class="paper-title"><a href="https://www.tandfonline.com/doi/full/10.1080/1226508X.2023.2282622">The Well-Being of Cities: Estimating Migration Attractiveness from Internal Migration across Korean Cities</a></h3>
+    <p class="authors"><span class="me">Hyoungchul Kim</span>, <a href="https://sites.google.com/view/seunghoon/home">Seung Hoon Lee</a>, and Ji Sub Park</p>
+    <p class="venue"><em>Global Economic Review</em>, 2024.</p>
+    <div class="links">
+      <a href="https://www.tandfonline.com/doi/full/10.1080/1226508X.2023.2282622">Published version</a>
+    </div>
+  </article>
+
+  <h2 class="section-title" style="margin-top:44px;">Work in progress</h2>
+
+  <article class="paper">
+    <h3 class="paper-title">Investment and Deforestation under Uncertain Market Access: Evidence from the Mexican Avocado Boom</h3>
+    <p class="authors"><span class="me">Hyoungchul Kim</span>, <a href="https://sites.google.com/mishra.org/prakashmishra">Prakash Mishra</a>, <a href="https://sites.northwestern.edu/ssardon/">Sebastian Sardon</a>, and <a href="http://jaysayre.com">James E. Sayre</a></p>
+  </article>
+</section>
+
+<section class="block" id="contact">
+  <h2 class="section-title">Contact</h2>
+  <p style="margin:0 0 6px;"><strong>Email.</strong> <a href="mailto:hchulkim@wharton.upenn.edu">hchulkim@wharton.upenn.edu</a></p>
+  <p style="margin:0 0 6px; color:var(--site-muted);">
+    Department of Business Economics and Public Policy, The Wharton School · Philadelphia, PA
+  </p>
+  <p style="margin:0;">
+    <a href="vita/cv-kim.pdf">Curriculum Vitae (PDF)</a> ·
+    <a href="https://github.com/hchulkim">GitHub</a> ·
+    <a href="https://x.com/hckim_econ">X (Twitter)</a>
+  </p>
+  <p style="margin:10px 0 0; color:var(--site-muted);">
+    For inquiries about software, email me or use the issue tracker on GitHub.
+  </p>
+</section>
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
@@ -633,7 +876,7 @@ Using Korean administrative data spanning nearly two decades and covering the un
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>Copyright Hyoungchul Kim, 2024</p>
+<p>© 2026 Hyoungchul Kim · Built with Quarto · Hosted on GitHub Pages</p>
 </div>
     <div class="nav-footer-right">
       &nbsp;
