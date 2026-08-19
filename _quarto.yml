@@ -4,7 +4,7 @@ project:
 website:
   site-url: "https://hchulkim.github.io"
   title: "Hyoungchul Kim"
-  page-footer: "Copyright Hyoungchul Kim, 2024"
+  page-footer: "© 2026 Hyoungchul Kim · Built with Quarto · Hosted on GitHub Pages"
   navbar:
     left:
       - text: Home

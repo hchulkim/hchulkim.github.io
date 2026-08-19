@@ -25,75 +25,27 @@
     <lastmod>2026-06-04T14:22:54.408Z</lastmod>
   </url>
   <url>
-    <loc>https://hchulkim.github.io/posts/first-cite/index.html</loc>
-    <lastmod>2026-04-16T03:38:11.265Z</lastmod>
+    <loc>https://hchulkim.github.io/outdated/index_solana.html</loc>
+    <lastmod>2026-08-19T19:40:31.645Z</lastmod>
   </url>
   <url>
-    <loc>https://hchulkim.github.io/posts/asahi-linux/index.html</loc>
-    <lastmod>2026-04-16T03:38:11.264Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hchulkim.github.io/posts/demand-io/index.html</loc>
-    <lastmod>2026-04-16T03:38:11.264Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hchulkim.github.io/posts/arch-install/index.html</loc>
-    <lastmod>2026-04-16T03:38:11.264Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hchulkim.github.io/posts/lagrangian/index.html</loc>
-    <lastmod>2026-04-16T03:38:11.265Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hchulkim.github.io/posts/reproducible-template/index.html</loc>
-    <lastmod>2026-04-16T03:38:11.267Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hchulkim.github.io/posts/quarto-paper-template/index.html</loc>
+    <loc>https://hchulkim.github.io/posts/parallel/index.html</loc>
     <lastmod>2026-04-16T03:38:11.266Z</lastmod>
   </url>
   <url>
-    <loc>https://hchulkim.github.io/posts/notes-io/index.html</loc>
-    <lastmod>2026-04-16T03:38:11.266Z</lastmod>
+    <loc>https://hchulkim.github.io/posts/paper-notes/index.html</loc>
+    <lastmod>2026-07-17T12:41:26.346Z</lastmod>
   </url>
   <url>
-    <loc>https://hchulkim.github.io/posts/make-file/index.html</loc>
+    <loc>https://hchulkim.github.io/posts/first-year/index.html</loc>
     <lastmod>2026-04-16T03:38:11.265Z</lastmod>
   </url>
   <url>
-    <loc>https://hchulkim.github.io/posts/bash-caveats/1 2 3 4 5/index.html</loc>
-    <lastmod>2026-04-16T03:38:11.264Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hchulkim.github.io/posts/dockerfile-trial/index.html</loc>
-    <lastmod>2026-04-16T03:38:11.264Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hchulkim.github.io/posts/datatable/index.html</loc>
-    <lastmod>2026-06-04T14:22:54.409Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hchulkim.github.io/research-idea/index.html</loc>
-    <lastmod>2026-04-16T03:38:11.267Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hchulkim.github.io/posts/empirical-econ/index.html</loc>
-    <lastmod>2026-04-16T03:38:11.264Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hchulkim.github.io/posts/reproducible-coding-lecture/index.html</loc>
-    <lastmod>2026-04-16T03:38:11.267Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hchulkim.github.io/posts/admission-econ/index.html</loc>
-    <lastmod>2026-04-16T03:38:11.264Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hchulkim.github.io/posts/hello-quarto/index.html</loc>
+    <loc>https://hchulkim.github.io/posts/index.html</loc>
     <lastmod>2026-04-16T03:38:11.265Z</lastmod>
   </url>
   <url>
-    <loc>https://hchulkim.github.io/posts/dockerfile-template/index.html</loc>
+    <loc>https://hchulkim.github.io/posts/bandit/index.html</loc>
     <lastmod>2026-04-16T03:38:11.264Z</lastmod>
   </url>
   <url>
@@ -101,24 +53,76 @@
     <lastmod>2026-04-16T03:38:11.267Z</lastmod>
   </url>
   <url>
-    <loc>https://hchulkim.github.io/posts/bandit/index.html</loc>
+    <loc>https://hchulkim.github.io/posts/dockerfile-template/index.html</loc>
     <lastmod>2026-04-16T03:38:11.264Z</lastmod>
   </url>
   <url>
-    <loc>https://hchulkim.github.io/posts/index.html</loc>
+    <loc>https://hchulkim.github.io/posts/hello-quarto/index.html</loc>
     <lastmod>2026-04-16T03:38:11.265Z</lastmod>
   </url>
   <url>
-    <loc>https://hchulkim.github.io/posts/first-year/index.html</loc>
+    <loc>https://hchulkim.github.io/posts/admission-econ/index.html</loc>
+    <lastmod>2026-04-16T03:38:11.264Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hchulkim.github.io/posts/reproducible-coding-lecture/index.html</loc>
+    <lastmod>2026-04-16T03:38:11.267Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hchulkim.github.io/posts/empirical-econ/index.html</loc>
+    <lastmod>2026-04-16T03:38:11.264Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hchulkim.github.io/research-idea/index.html</loc>
+    <lastmod>2026-04-16T03:38:11.267Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hchulkim.github.io/posts/datatable/index.html</loc>
+    <lastmod>2026-06-04T14:22:54.409Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hchulkim.github.io/posts/dockerfile-trial/index.html</loc>
+    <lastmod>2026-04-16T03:38:11.264Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hchulkim.github.io/posts/bash-caveats/1 2 3 4 5/index.html</loc>
+    <lastmod>2026-04-16T03:38:11.264Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hchulkim.github.io/posts/make-file/index.html</loc>
     <lastmod>2026-04-16T03:38:11.265Z</lastmod>
   </url>
   <url>
-    <loc>https://hchulkim.github.io/posts/paper-notes/index.html</loc>
-    <lastmod>2026-07-17T12:41:26.346Z</lastmod>
-  </url>
-  <url>
-    <loc>https://hchulkim.github.io/posts/parallel/index.html</loc>
+    <loc>https://hchulkim.github.io/posts/notes-io/index.html</loc>
     <lastmod>2026-04-16T03:38:11.266Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hchulkim.github.io/posts/quarto-paper-template/index.html</loc>
+    <lastmod>2026-04-16T03:38:11.266Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hchulkim.github.io/posts/reproducible-template/index.html</loc>
+    <lastmod>2026-04-16T03:38:11.267Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hchulkim.github.io/posts/lagrangian/index.html</loc>
+    <lastmod>2026-04-16T03:38:11.265Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hchulkim.github.io/posts/arch-install/index.html</loc>
+    <lastmod>2026-04-16T03:38:11.264Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hchulkim.github.io/posts/demand-io/index.html</loc>
+    <lastmod>2026-04-16T03:38:11.264Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hchulkim.github.io/posts/asahi-linux/index.html</loc>
+    <lastmod>2026-04-16T03:38:11.264Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hchulkim.github.io/posts/first-cite/index.html</loc>
+    <lastmod>2026-04-16T03:38:11.265Z</lastmod>
   </url>
   <url>
     <loc>https://hchulkim.github.io/misc/index.html</loc>

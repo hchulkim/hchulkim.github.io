@@ -195,3 +195,11 @@ details.abstract[open] > summary::before { transform: rotate(90deg); }
 
 /* Front page carries its own hero, so hide Quarto's title block there. */
 body.front-page #title-block-header { display: none; }
+
+/* Page titles on interior pages (Research / Teaching / Blog / Misc). */
+#title-block-header h1.title,
+.quarto-title-banner h1.title {
+  font-size: 30px; font-weight: 700; letter-spacing: -0.02em;
+  color: var(--site-text); margin-bottom: 6px;
+}
+.quarto-title-banner { background: var(--site-surface) !important; }
