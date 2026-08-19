@@ -1,0 +1,79 @@
+/* css styles */
+
+/* Scale whole site up proportionally (Bootstrap sizes are rem-based,
+   so hierarchy is preserved). Default root is 16px. */
+html { font-size: 17.5px; }
+
+#quarto-document-content {
+  text-align: left;
+}
+
+.about-entity .about-image {
+  aspect-ratio: 1 / 1;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  object-position: center 40%;
+  border-radius: 50%;
+  margin-top: 2rem;
+}
+
+/* Left-align the bio: picture on top-left, body paragraphs share the same
+   left edge (solana defaults to image-on-the-right at laptop widths). */
+.quarto-about-solana .about-entity {
+  flex-direction: column-reverse;   /* image (last in DOM) sits on top */
+  align-items: flex-start;          /* pinned to the left, not centered */
+  text-align: left;
+}
+.quarto-about-solana .about-entity .about-links { justify-content: flex-start; }
+.quarto-about-solana .about-contents { text-align: left; }
+
+/* ---- Status badges: one distinct color per publication stage -------------- */
+.badge { border-radius: 50rem; }                 /* pill-shaped tags */
+.badge.status-published { background-color: #011F5B !important; color: #fff; }  /* Penn blue */
+.badge.status-accepted  { background-color: #1f7a4d !important; color: #fff; }  /* green  */
+.badge.status-rr        { background-color: #6d28d9 !important; color: #fff; }  /* purple */
+.badge.status-review    { background-color: #0e7490 !important; color: #fff; }  /* teal   */
+.badge.status-submitted { background-color: #b45309 !important; color: #fff; }  /* amber  */
+.badge.status-wip       { background-color: #6c757d !important; color: #fff; }  /* grey   */
+.badge.status-dor       { background-color: #F0D5D1 !important; color: #fff; }  /* grey   */
+
+/* keep older alias working */
+.badge.bg-penn { background-color: #011F5B !important; color: #fff; }
+
+/* ---- Paper entries + rounded link buttons --------------------------------- */
+.paper + .paper { margin-top: 0.9rem; }
+.paper .btn { border-radius: 50rem; }            /* rounded tag buttons */
+
+/* A little breathing room before each bio section (Research) and its
+   subsections (Working papers / Publications / Work in progress).
+   Use the id selector so it beats Quarto's #quarto-document-content rules. */
+#quarto-document-content h3 { margin-top: 3rem; }
+#quarto-document-content h4 { margin-top: 2.2rem; }
+
+/* Thin grey rule under each section heading (Recent updates, Research, ...) */
+#quarto-document-content h3 {
+  border-bottom: 1px solid #ececec;
+  padding-bottom: 0.35rem;
+  margin-bottom: 1.1rem;
+}
+/* but tighten the first ones (Quarto wraps each heading in its own <section>,
+   so target by section id): bio -> Recent updates, Research -> Working papers */
+#recent-updates > h3 { margin-top: 1.2rem; }
+#working-papers > h4 { margin-top: 0.8rem; }
+
+/* Divider between Research subsections: a short rule ABOVE the heading, so it
+   reads differently from the full-width underline used on h3 sections.
+   Skipped on Working papers, which follows the Research heading directly. */
+#publications > h4::before,
+#work-in-progress > h4::before {
+  content: "";
+  display: block;
+  width: 5rem;
+  border-top: 1px solid #e6e6e6;
+  margin-bottom: 1.4rem;
+}
+
+/* page-layout: full spans the whole viewport — cap + center so the bio
+   uses more width without stretching edge to edge on big screens */
+main.content { max-width: 1150px; margin-inline: auto; }

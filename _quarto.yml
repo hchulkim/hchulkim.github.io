@@ -29,6 +29,8 @@ format:
   html:
     theme:
       - cosmo
+      - theme.scss
     css: styles.css
+    toc-location: right
 execute:
   freeze: auto
