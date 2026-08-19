@@ -1,6 +1,8 @@
 ---
 title: Research
 toc: true
+title-block-banner: true
+page-layout: full
 ---
 
 ## Working papers

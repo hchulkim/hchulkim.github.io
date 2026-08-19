@@ -1,6 +1,8 @@
 ---
 title: Misc.
 toc: true
+title-block-banner: true
+page-layout: full
 ---
 
 ## Software
