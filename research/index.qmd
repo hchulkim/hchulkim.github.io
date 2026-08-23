@@ -16,7 +16,7 @@ with [Jaerim Choi](https://sites.google.com/view/jaerimchoi) and [Seung Hoon Lee
   Using Korean administrative data spanning nearly two decades and covering the universe of bilateral migration flows across local labor markets, we examine how the China trade shock shapes internal migration. While prior studies rely on net population changes to measure labor adjustment, we exploit bilateral migration flows that separately capture in- and out-migration. We find that trade exposure primarily increases out-migration from adversely affected regions, with limited effects on in-migration, revealing asymmetric spatial adjustment. Decomposing the shock, export expansion reduces out-migration, whereas import competition increases it. Migration responses are strongest among prime working-age individuals and substantially weaker among younger and older cohorts. Single-person households are more responsive than multi-person households. Overall, bilateral data reveal substantial migration responses that conventional net population measures fail to detect, offering new insight into the "missing migration puzzle."
 </details>
 
-[{{< iconify bi:file-earmark-pdf >}} Paper](working-paper/migration_china_shock.pdf){.btn .btn-sm .btn-outline-primary role="button"}
+[{{< iconify bi:file-earmark-pdf >}} Mimeo](working-paper/migration_china_shock.pdf){.btn .btn-sm .btn-outline-primary role="button"}
 [{{< iconify bi:github >}} Replication](https://github.com/hchulkim/research_china-shock-migration){.btn .btn-sm .btn-outline-secondary role="button"}
 :::
 
@@ -54,14 +54,14 @@ with [Prakash Mishra](https://sites.google.com/mishra.org/prakashmishra), [Sebas
 **[3] A comment on "Malaria suitability, urbanization and persistence: Evidence from China over more than 2000 years"** [Published]{.badge .status-published}<br>
 with [Marc Joëts](https://www.marcjoets.com/), [Stefania Lovo](https://sites.google.com/site/stefanialovo/) and [Niklas Murken](https://www.rwi-essen.de/rwi/team/person/niklas-murken). Nov. 2025. *UKRN replication game*, **Institute for Replication**.
 
-[{{< iconify bi:file-earmark-pdf >}} Paper](working-paper/malaria_urban_china_EER.pdf){.btn .btn-sm .btn-outline-primary role="button"}
+[{{< iconify bi:file-earmark-pdf >}} Mimeo](working-paper/malaria_urban_china_EER.pdf){.btn .btn-sm .btn-outline-primary role="button"}
 :::
 
 ::: {.paper}
-**[2] "The effect of remote working on household waste: Evidence from South Korea"** [Dormant paper]{.badge .status-dor}<br>
+**[2] "The effect of remote working on household waste: Evidence from South Korea"** [Dormant paper]{.badge .status-wip}<br>
 with [Hee-Seung Yang](https://sites.google.com/site/heeseungyang/home). Mar. 2025.
 
-[{{< iconify bi:file-earmark-pdf >}} Paper](working-paper/wfh-waste.pdf){.btn .btn-sm .btn-outline-primary role="button"}
+[{{< iconify bi:file-earmark-pdf >}} Mimeo](working-paper/wfh-waste.pdf){.btn .btn-sm .btn-outline-primary role="button"}
 :::
 
 ::: {.paper}
