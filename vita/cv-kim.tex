@@ -1,0 +1,150 @@
+% Hyoungchul Kim - academic CV
+% Layout inspired by Allan Hsiao's compact academic CV.
+% Compile with: latexmk -pdf hyoungchul_kim_cv.tex
+% (XeLaTeX or LuaLaTeX also work and use an installed Garamond font.)
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.92in,top=0.76in,bottom=0.68in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[lining]{ebgaramond}
+
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+
+\hypersetup{
+  pdftitle={Hyoungchul Kim - Curriculum Vitae},
+  pdfauthor={Hyoungchul Kim},
+  pdfsubject={Curriculum Vitae}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\emergencystretch}{1.5em}
+\linespread{0.97}
+\raggedbottom
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\small\thepage}
+\setlength{\footskip}{24pt}
+
+% ---- Reusable layout commands --------------------------------------------
+\newcommand{\cvsection}[1]{%
+  \par\addvspace{0.78em}%
+  {\bfseries #1}\par
+  \vspace{0.30em}%
+}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}p{1.02in}}
+\newcolumntype{C}{>{\raggedright\arraybackslash}X}
+
+\newcommand{\cvrow}[2]{%
+  \noindent\begin{tabularx}{\textwidth}{Y@{\hspace{0.12in}}C}
+    #1 & #2
+  \end{tabularx}\par
+}
+
+\newenvironment{cvlist}{%
+  \begin{enumerate}[
+    labelindent=0pt,
+    labelwidth=1.25em,
+    leftmargin=1.81em,
+    labelsep=0.56em,
+    itemsep=0.12em,
+    topsep=0pt,
+    parsep=0pt,
+    partopsep=0pt,
+    align=left
+  ]
+}{\end{enumerate}}
+
+\newcommand{\papertitle}[1]{#1}
+\newcommand{\withauthors}[1]{\textit{with #1}}
+\newcommand{\venue}[1]{\textit{#1}}
+
+\begin{document}
+
+\begin{center}
+  {\fontsize{25}{29}\selectfont Hyoungchul Kim}\par
+  \vspace{0.62em}
+  \href{mailto:hchulkim@wharton.upenn.edu}{hchulkim@wharton.upenn.edu}
+  \;|\;
+  \href{https://hchulkim.github.io}{hchulkim.github.io}
+  \;|\;
+  +1 (267) 876-1480
+\end{center}
+
+\vspace{0.45em}
+
+\cvsection{Education}
+\cvrow{2024--}{Ph.D. Student in Applied Economics, The Wharton School, University of Pennsylvania}
+\cvrow{2024}{M.A. in Economics, Yonsei University, South Korea}
+\cvrow{2022}{B.A. in Economics, Applied Statistics \& Communications, Yonsei University}
+
+\cvsection{Working papers}
+\begin{cvlist}
+  \item \papertitle{The China Shock and Internal Migration: Evidence from Bilateral Migration Flows}.\\[-0.1em]
+        \withauthors{Jaerim Choi and Seung Hoon Lee}. March 2026.
+\end{cvlist}
+
+\cvsection{Publications}
+\begin{cvlist}
+  \item \papertitle{Does Political Conflict Hurt Immigration? Evidence from the South Korea--China THAAD Dispute}.\\[-0.1em]
+        \withauthors{Jongkwan Lee}. \venue{Southern Economic Journal}, 91(2), 2024, 560--589.
+
+  \item \papertitle{The Well-being of Cities: Estimating Migration Attractiveness from Internal Migration across Korean Cities}.\\[-0.1em]
+        \withauthors{Seung Hoon Lee and Ji Sub Park}. \venue{Global Economic Review}, 52(4), 2023, 313--325.
+\end{cvlist}
+
+\cvsection{Work in progress}
+\begin{cvlist}
+  \item \papertitle{Investment and Deforestation under Uncertain Market Access: Evidence from the Mexican Avocado Boom}.\\[-0.1em]
+        \withauthors{Prakash Mishra, Sebastian Sardon, and James E. Sayre}.
+
+  \item \papertitle{Pest Outbreak, Agricultural Production, and Trade}. Second-year candidacy paper.
+\end{cvlist}
+
+\cvsection{Other works}
+\begin{cvlist}
+  \item \papertitle{A Comment on ``Malaria Suitability, Urbanization and Persistence: Evidence from China over More Than 2000 Years.''}\\[-0.1em]
+        \withauthors{Marc Joets, Stefania Lovo, and Niklas Murken}. UKRN Replication Game, Institution for Replication, November 2025.
+\end{cvlist}
+
+\cvsection{Presentations}
+\cvrow{2026}{Environment Coffee Chat; BEPP 9000 Internal Seminar}
+\cvrow{Pre-doctoral}{Fall Midwest International Trade Conference; The Korean Economic Review International Conference; Korean International Economic Association Conference}
+
+\cvsection{Honors and awards}
+\cvrow{2025}{Amy Morse Prize}
+\cvrow{July 2025}{Selected participant in Econometric Society Summer Schools (Dynamic Structural Econometrics)}
+\cvrow{2024--2029}{Wharton Applied Economics Ph.D. Fellowship}
+\cvrow{2021--2023}{Yonsei Integrated Graduate-Undergraduate Scholarship}
+
+\cvsection{Research experience}
+\cvrow{2025--2026}{Research Assistant to Arthur van Benthem, The Wharton School, University of Pennsylvania}
+\cvrow{2022--2024}{Research Assistant to Jay Pil Choi, Michigan State University}
+\cvrow{2022--2024}{Research Assistant to Seung Hoon Lee, Yonsei University}
+
+\cvsection{Teaching}
+\cvrow{Fall 2026--}{Teaching Assistant, BEPP 2640: Climate and Financial Markets, University of Pennsylvania}
+\cvrow{2022--2024}{Instructor and Teaching Assistant, Yonsei University}
+\cvrow{}{\textit{Instructor:} Winter and Summer Math Camp (2023)}
+\cvrow{}{\textit{Teaching Assistant:} Urban Economics; Impact Evaluation for Policy Analysis; Industrial Organization; Contracts and Organization Theory}
+
+\cvsection{Other}
+\cvrow{Computer skills}{R, Julia, Python, SQL, C++}
+\cvrow{Languages}{Korean (native), English (fluent)}
+\cvrow{Citizenship}{South Korea}
+
+\vspace{1em}
+\hfill {\small Updated: June 12, 2026}
+
+\end{document}
