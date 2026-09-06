@@ -20,9 +20,12 @@ body-classes: front-page
         You can call me <strong>Hyoungchul</strong> (H-Young-Cheol, rhymes with &ldquo;Null&rdquo;)
         or <strong>Kent</strong>, my English name.
       </p>
+      <!-- <p class="bio"> -->
+      <!--   I work on <strong>energy and environmental economics</strong>, using tools from -->
+      <!--   industrial organization and international trade. -->
+      <!-- </p> -->
       <p class="bio">
-        I work on <strong>energy and environmental economics</strong>, using tools from
-        industrial organization and international trade.
+      <strong>Research interests:</strong> Energy and environment, industrial organization, international trade.
       </p>
       <div class="contact">
         <a href="mailto:hchulkim@wharton.upenn.edu">
