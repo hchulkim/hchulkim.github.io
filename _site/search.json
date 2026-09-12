@@ -385,18 +385,46 @@
     "text": "2023\n\n\n\nSinchon, Seoul (near Yonsei University)"
   },
   {
-    "objectID": "misc/personal/econ7300.html",
-    "href": "misc/personal/econ7300.html",
-    "title": "ECON-7300",
+    "objectID": "misc/personal/information.html",
+    "href": "misc/personal/information.html",
+    "title": "Useful links",
     "section": "",
-    "text": "This is an informal note to record what I thought about or what I thought was important in the Metrics I class.\n\nGMM\nIf I can only choose one thing to remember in Metrics I, I would definitely choose GMM. This is mostly because many of the methods we learn in Metrics (at least in the first semester) are in the end some specific form of GMM. For example, IV is just a particular type of GMM. Also, I feel lot of the metrics portion of the applied economics papers are just about finding some moment conditions and estimating the model.\n\n\nData cannot speak for itself\nAs long as we are concerned about some endogeneity problem (which is a common problem in economics), we always needs some assumption to move forward. Just having more data will not solve your problem. In order to identify the parameter of interest, we need economic theory to guide us."
+    "text": "Joan Llull’s website"
   },
   {
-    "objectID": "misc/personal/econ7100.html",
-    "href": "misc/personal/econ7100.html",
-    "title": "ECON-7100",
+    "objectID": "misc/personal/information.html#structural-econometrics",
+    "href": "misc/personal/information.html#structural-econometrics",
+    "title": "Useful links",
     "section": "",
-    "text": "This is an informal note to record what I thought about or what I thought was important in the Microeconomics I class.\n\ntba"
+    "text": "Joan Llull’s website"
+  },
+  {
+    "objectID": "misc/personal/econ7200.html",
+    "href": "misc/personal/econ7200.html",
+    "title": "ECON-7200",
+    "section": "",
+    "text": "This is an informal note to record what I thought about or what I thought was important in the Macroeconomics I class.\n\nCompetitive eqm, efficiency, and GE\nI don’t know why, but I always feel that macro course does a better job of explaining the concep of GE, competitive eqm, and the welfare theorem than the second portion of micro course. It was nice to see how we start with simple Arrow-Debreu setup and derive the competitive equilibrium. Then we use welfare theorem to connect the competitive eqm to pareto efficiency.\n\n\nDynamics"
+  },
+  {
+    "objectID": "misc/personal/econ6110.html",
+    "href": "misc/personal/econ6110.html",
+    "title": "ECON-6110",
+    "section": "",
+    "text": "This is an informal note to record what I thought about or what I thought was important in the Game theory class."
+  },
+  {
+    "objectID": "misc/personal/econ6110.html#hemi-continuity-and-fixed-point-theorem",
+    "href": "misc/personal/econ6110.html#hemi-continuity-and-fixed-point-theorem",
+    "title": "ECON-6110",
+    "section": "Hemi-continuity and fixed point theorem",
+    "text": "Hemi-continuity and fixed point theorem\nWhen I was first learned about hemi-continuity in math camp, I was not sure why we need to know this concept. The only intuition I had was that it is sort of a generalization of the continuity definition to correspondence. But after taking the game theory course, I finally realized that we need this condition to apply Kakutani fixed point theorem. FYI, we need kakutani fixed point theorem to prove that Nash eqm exists.\n\nEx-ante, interim, ex-post\nWhen talking about (expected) payoff of agents, it is important to know whether the agents are maximizing ex-ante, interim, or ex-post. For example, revenue equivalence theorem in auction is about equivalence of autioneer’s expected payoff ex-ante, not ex-post. Fortunately, chatgpt did a good job in summarizing the definition in a table.\n\n\n\nNormal form and extensive form\nIt is important to note that the main difference between normal form game and extensive form game is not the timing. That is, fundamental difference between normal form and extensive form game is not whether the agents make decisions at the same time or not. For example, think of a game where agents makes decisions at different timing but they cannot observe others’ actions. In this setting, the game is still a normal form. The game becomes “extensive” when some agents can observe other agents’ actions before making their own decisions. Thus, the main factor that differentiates normal form and extensive form is whether agents make their actions after observing other’s actions.\n\n\nAdverse selection\nI thought it was interesting to learn that the key takeaway from adverse selection isn’t just the presence of information asymmetry between agents, but that this asymmetry impacts other agents’ payoffs. In fact, this is the main factor leading to the presence of adverse selection. In the famous lemon market example, adverse selection will not occur if there were separate and independent dimensions of utility for the seller and buyer.\n\n\nRevenue equivalence theorem\nAlthough I learned this concept in undergraduate micro class, it was still very cool to know that ex-ante expected revenue becomes equivalent for all standard auction games."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Hyoungchul Kim",
+    "section": "",
+    "text": "Hyoungchul Kim\n      Ph.D. Student in Applied Economics\n      The Wharton School, University of Pennsylvania\n      \n        You can call me Hyoungchul (H-Young-Cheol, rhymes with “Null”)\n        or Kent, my English name.\n      \n      \n      \n      \n      \n      \n      Research interests: Energy and environment, industrial organization, international trade.\n      \n      \n        \n          \n          Email\n        \n        \n          \n          Curriculum Vitae\n        \n        \n          \n          Google Scholar\n        \n        \n          \n          GitHub\n        \n        \n          \n          LinkedIn\n        \n        \n          \n          Philadelphia, PA\n        \n      \n    \n  \n\n\n\n\n\n  Recent updates\n  \n    TBD\n  \n\n\n\n  Working papers\n\n  \n    The China Shock and Internal Migration: Evidence from Bilateral Migration FlowsSubmitted\n    Jaerim Choi, Hyoungchul Kim  and Seung Hoon Lee\n    June 2026.\n    \n      Abstract\n      \n        Using Korean administrative data spanning nearly two decades and covering the universe of\n        bilateral migration flows across local labor markets, we examine how the China trade shock\n        shapes internal migration. While prior studies rely on net population changes to measure\n        labor adjustment, we exploit bilateral migration flows that separately capture in- and\n        out-migration. We find that trade exposure primarily increases out-migration from adversely\n        affected regions, with limited effects on in-migration, revealing asymmetric spatial\n        adjustment. Decomposing the shock, export expansion reduces out-migration, whereas import\n        competition increases it. Migration responses are strongest among prime working-age\n        individuals and substantially weaker among younger and older cohorts. Single-person\n        households are more responsive than multi-person households. Overall, bilateral data reveal\n        substantial migration responses that conventional net population measures fail to detect,\n        offering new insight into the “missing migration puzzle.”\n      \n    \n    \n      Mimeo\n      Replication\n    \n  \n\n  Publications\n\n  \n    Does Political Conflict Hurt Immigration? Evidence from the South Korea–China THAAD Dispute\n    Hyoungchul Kim and Jongkwan Lee\n    Southern Economic Journal, 2024.\n    \n      Paper\n    \n  \n\n  \n    The Well-Being of Cities: Estimating Migration Attractiveness from Internal Migration across Korean Cities\n    Hyoungchul Kim, Seung Hoon Lee, and Ji Sub Park\n    Global Economic Review, 2024.\n    \n      Paper\n    \n  \n\n  Work in progress\n\n  \n    Investment and Deforestation under Uncertain Market Access: Evidence from the Mexican Avocado Boom\n    Hyoungchul Kim, Prakash Mishra, Sebastian Sardon, and James E. Sayre\n  \n\n\n\n  Contact\n  Email. hchulkim [at] wharton.upenn.edu\n  \n    Department of Business Economics and Public Policy, The Wharton School · Philadelphia, PA\n  \n  \n    Curriculum Vitae (PDF) ·\n    GitHub ·\n    X (Twitter)\n  \n  \n    For inquiries about software, email me or use the issue tracker on GitHub."
   },
   {
     "objectID": "misc/index.html",
@@ -417,7 +445,7 @@
     "href": "misc/index.html#personal-tips",
     "title": "Misc.",
     "section": "Personal tips",
-    "text": "Personal tips\n\n\nList of tips\n\n\nTravel tips and recommendations (@Seoul, South Korea)"
+    "text": "Personal tips\n\n\nList of tips\n\n\nTravel tips and recommendations (@Seoul, South Korea)\nUseful sites"
   },
   {
     "objectID": "misc/index.html#pictures",
@@ -427,32 +455,18 @@
     "text": "Pictures\n\nPast profile pictures\nMemorable moments"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Hyoungchul Kim",
+    "objectID": "misc/personal/econ7100.html",
+    "href": "misc/personal/econ7100.html",
+    "title": "ECON-7100",
     "section": "",
-    "text": "Hyoungchul Kim\n      Ph.D. Student in Applied Economics\n      The Wharton School, University of Pennsylvania\n      \n        You can call me Hyoungchul (H-Young-Cheol, rhymes with “Null”)\n        or Kent, my English name.\n      \n      \n      \n      \n      \n      \n      Research interests: Energy and environment, industrial organization, international trade.\n      \n      \n        \n          \n          Email\n        \n        \n          \n          Curriculum Vitae\n        \n        \n          \n          Google Scholar\n        \n        \n          \n          GitHub\n        \n        \n          \n          LinkedIn\n        \n        \n          \n          Philadelphia, PA\n        \n      \n    \n  \n\n\n\n\n\n  Recent updates\n  \n    TBD\n  \n\n\n\n  Working papers\n\n  \n    The China Shock and Internal Migration: Evidence from Bilateral Migration FlowsSubmitted\n    Jaerim Choi, Hyoungchul Kim  and Seung Hoon Lee\n    June 2026.\n    \n      Abstract\n      \n        Using Korean administrative data spanning nearly two decades and covering the universe of\n        bilateral migration flows across local labor markets, we examine how the China trade shock\n        shapes internal migration. While prior studies rely on net population changes to measure\n        labor adjustment, we exploit bilateral migration flows that separately capture in- and\n        out-migration. We find that trade exposure primarily increases out-migration from adversely\n        affected regions, with limited effects on in-migration, revealing asymmetric spatial\n        adjustment. Decomposing the shock, export expansion reduces out-migration, whereas import\n        competition increases it. Migration responses are strongest among prime working-age\n        individuals and substantially weaker among younger and older cohorts. Single-person\n        households are more responsive than multi-person households. Overall, bilateral data reveal\n        substantial migration responses that conventional net population measures fail to detect,\n        offering new insight into the “missing migration puzzle.”\n      \n    \n    \n      Mimeo\n      Replication\n    \n  \n\n  Publications\n\n  \n    Does Political Conflict Hurt Immigration? Evidence from the South Korea–China THAAD Dispute\n    Hyoungchul Kim and Jongkwan Lee\n    Southern Economic Journal, 2024.\n    \n      Paper\n    \n  \n\n  \n    The Well-Being of Cities: Estimating Migration Attractiveness from Internal Migration across Korean Cities\n    Hyoungchul Kim, Seung Hoon Lee, and Ji Sub Park\n    Global Economic Review, 2024.\n    \n      Paper\n    \n  \n\n  Work in progress\n\n  \n    Investment and Deforestation under Uncertain Market Access: Evidence from the Mexican Avocado Boom\n    Hyoungchul Kim, Prakash Mishra, Sebastian Sardon, and James E. Sayre\n  \n\n\n\n  Contact\n  Email. hchulkim [at] wharton.upenn.edu\n  \n    Department of Business Economics and Public Policy, The Wharton School · Philadelphia, PA\n  \n  \n    Curriculum Vitae (PDF) ·\n    GitHub ·\n    X (Twitter)\n  \n  \n    For inquiries about software, email me or use the issue tracker on GitHub."
+    "text": "This is an informal note to record what I thought about or what I thought was important in the Microeconomics I class.\n\ntba"
   },
   {
-    "objectID": "misc/personal/econ6110.html",
-    "href": "misc/personal/econ6110.html",
-    "title": "ECON-6110",
+    "objectID": "misc/personal/econ7300.html",
+    "href": "misc/personal/econ7300.html",
+    "title": "ECON-7300",
     "section": "",
-    "text": "This is an informal note to record what I thought about or what I thought was important in the Game theory class."
-  },
-  {
-    "objectID": "misc/personal/econ6110.html#hemi-continuity-and-fixed-point-theorem",
-    "href": "misc/personal/econ6110.html#hemi-continuity-and-fixed-point-theorem",
-    "title": "ECON-6110",
-    "section": "Hemi-continuity and fixed point theorem",
-    "text": "Hemi-continuity and fixed point theorem\nWhen I was first learned about hemi-continuity in math camp, I was not sure why we need to know this concept. The only intuition I had was that it is sort of a generalization of the continuity definition to correspondence. But after taking the game theory course, I finally realized that we need this condition to apply Kakutani fixed point theorem. FYI, we need kakutani fixed point theorem to prove that Nash eqm exists.\n\nEx-ante, interim, ex-post\nWhen talking about (expected) payoff of agents, it is important to know whether the agents are maximizing ex-ante, interim, or ex-post. For example, revenue equivalence theorem in auction is about equivalence of autioneer’s expected payoff ex-ante, not ex-post. Fortunately, chatgpt did a good job in summarizing the definition in a table.\n\n\n\nNormal form and extensive form\nIt is important to note that the main difference between normal form game and extensive form game is not the timing. That is, fundamental difference between normal form and extensive form game is not whether the agents make decisions at the same time or not. For example, think of a game where agents makes decisions at different timing but they cannot observe others’ actions. In this setting, the game is still a normal form. The game becomes “extensive” when some agents can observe other agents’ actions before making their own decisions. Thus, the main factor that differentiates normal form and extensive form is whether agents make their actions after observing other’s actions.\n\n\nAdverse selection\nI thought it was interesting to learn that the key takeaway from adverse selection isn’t just the presence of information asymmetry between agents, but that this asymmetry impacts other agents’ payoffs. In fact, this is the main factor leading to the presence of adverse selection. In the famous lemon market example, adverse selection will not occur if there were separate and independent dimensions of utility for the seller and buyer.\n\n\nRevenue equivalence theorem\nAlthough I learned this concept in undergraduate micro class, it was still very cool to know that ex-ante expected revenue becomes equivalent for all standard auction games."
-  },
-  {
-    "objectID": "misc/personal/econ7200.html",
-    "href": "misc/personal/econ7200.html",
-    "title": "ECON-7200",
-    "section": "",
-    "text": "This is an informal note to record what I thought about or what I thought was important in the Macroeconomics I class.\n\nCompetitive eqm, efficiency, and GE\nI don’t know why, but I always feel that macro course does a better job of explaining the concep of GE, competitive eqm, and the welfare theorem than the second portion of micro course. It was nice to see how we start with simple Arrow-Debreu setup and derive the competitive equilibrium. Then we use welfare theorem to connect the competitive eqm to pareto efficiency.\n\n\nDynamics"
+    "text": "This is an informal note to record what I thought about or what I thought was important in the Metrics I class.\n\nGMM\nIf I can only choose one thing to remember in Metrics I, I would definitely choose GMM. This is mostly because many of the methods we learn in Metrics (at least in the first semester) are in the end some specific form of GMM. For example, IV is just a particular type of GMM. Also, I feel lot of the metrics portion of the applied economics papers are just about finding some moment conditions and estimating the model.\n\n\nData cannot speak for itself\nAs long as we are concerned about some endogeneity problem (which is a common problem in economics), we always needs some assumption to move forward. Just having more data will not solve your problem. In order to identify the parameter of interest, we need economic theory to guide us."
   },
   {
     "objectID": "misc/personal/memorable_moments.html",

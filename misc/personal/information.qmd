@@ -1,0 +1,11 @@
+---
+title: "Useful links"
+date: "2026-09-12"
+toc: false
+---
+
+## Structural econometrics
+
+- [Joan Llull's website](https://joanllull.github.io/teaching.htm)
+
+
