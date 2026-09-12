@@ -4,6 +4,8 @@ date: "2026-09-12"
 toc: false
 ---
 
+This is a record of useful links that helped me. I am recording them so that I can get back to them and also share them with others. It is mostly foucused on topics in economics, statistics, etc.
+
 ## Structural econometrics
 
 - [Joan Llull's website](https://joanllull.github.io/teaching.htm)

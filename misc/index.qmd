@@ -42,7 +42,7 @@ These are some info on the courses that I took or self-studied.
 <summary><strong>List of tips</strong></summary>
 
 - [Travel tips and recommendations (@Seoul, South Korea)](personal/seoul.qmd)
-- [Useful sites](personal/information.qmd)
+- [Useful links](personal/information.qmd)
 
 </details>
 
