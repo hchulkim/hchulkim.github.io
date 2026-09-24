@@ -45,28 +45,28 @@ with [Prakash Mishra](https://sites.google.com/mishra.org/prakashmishra), [Sebas
 
 ## Other works
 
-::: {.paper}
-**[4] "Pest outbreak, agricultural production, and trade."** [Work in progress]{.badge .status-wip}<br>
-*Second-year candidacy paper.* Draft available upon request.
-:::
+<!-- ::: {.paper} -->
+<!-- **[4] "Pest outbreak, agricultural production, and trade."** [Work in progress]{.badge .status-wip}<br> -->
+<!-- *Second-year candidacy paper.* Draft available upon request. -->
+<!-- ::: -->
 
 ::: {.paper}
-**[3] A comment on "Malaria suitability, urbanization and persistence: Evidence from China over more than 2000 years"** [Published]{.badge .status-published}<br>
+**[1] A comment on "Malaria suitability, urbanization and persistence: Evidence from China over more than 2000 years"** [Published]{.badge .status-published}<br>
 with [Marc Joëts](https://www.marcjoets.com/), [Stefania Lovo](https://sites.google.com/site/stefanialovo/) and [Niklas Murken](https://www.rwi-essen.de/rwi/team/person/niklas-murken). Nov. 2025. *UKRN replication game*, **Institute for Replication**.
 
 [{{< iconify bi:file-earmark-pdf >}} Mimeo](working-paper/malaria_urban_china_EER.pdf){.btn .btn-sm .btn-outline-primary role="button"}
 :::
 
-::: {.paper}
-**[2] "The effect of remote working on household waste: Evidence from South Korea"** [Dormant paper]{.badge .status-wip}<br>
-with [Hee-Seung Yang](https://sites.google.com/site/heeseungyang/home). Mar. 2025.
-
-[{{< iconify bi:file-earmark-pdf >}} Mimeo](working-paper/wfh-waste.pdf){.btn .btn-sm .btn-outline-primary role="button"}
-:::
-
-::: {.paper}
-**[1] "High-speed rails and regional effects: Evidence from Ulsan (in Korean)"** [Published]{.badge .status-published}<br>
-with [Seung Hoon Lee](https://sites.google.com/view/seunghoon/home), Moon Jung Choi and [Jaerim Choi](https://sites.google.com/view/jaerimchoi). Apr. 2024. *Journal of Korean Economic Analysis.*
-
-[{{< iconify bi:box-arrow-up-right >}} Paper](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003074695){.btn .btn-sm .btn-outline-primary role="button"}
-:::
+<!-- ::: {.paper} -->
+<!-- **[2] (Pre-doctoral) "The effect of remote working on household waste: Evidence from South Korea"** [Dormant paper]{.badge .status-wip}<br> -->
+<!-- with [Hee-Seung Yang](https://sites.google.com/site/heeseungyang/home). Mar. 2025. -->
+<!---->
+<!-- [{{< iconify bi:file-earmark-pdf >}} Mimeo](working-paper/wfh-waste.pdf){.btn .btn-sm .btn-outline-primary role="button"} -->
+<!-- ::: -->
+<!---->
+<!-- ::: {.paper} -->
+<!-- **[1] (Pre-doctoral) "High-speed rails and regional effects: Evidence from Ulsan (in Korean)"** [Published]{.badge .status-published}<br> -->
+<!-- with [Seung Hoon Lee](https://sites.google.com/view/seunghoon/home), Moon Jung Choi and [Jaerim Choi](https://sites.google.com/view/jaerimchoi). Apr. 2024. *Journal of Korean Economic Analysis.* -->
+<!---->
+<!-- [{{< iconify bi:box-arrow-up-right >}} Paper](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003074695){.btn .btn-sm .btn-outline-primary role="button"} -->
+<!-- ::: -->
