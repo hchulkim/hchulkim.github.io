@@ -14,7 +14,7 @@ page-layout: full
 
 ### Quarto
 
-- Quarto working paper template for Economics: [\[github link\]](https://github.com/hchulkim/econ-paper-template/tree/main) [\[Blog post\]](https://hchulkim.github.io/posts/quarto-paper-template/)
+- Quarto working paper template for Economics: [Official Quarto Extensions List](https://quarto.org/docs/extensions/listing-journals.html) [\[github link\]](https://github.com/hchulkim/econ-paper-template/tree/main) [\[Blog post\]](https://hchulkim.github.io/posts/quarto-paper-template/)
 
 ### Scripts
 
