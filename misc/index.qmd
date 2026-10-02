@@ -5,6 +5,10 @@ title-block-banner: true
 page-layout: full
 ---
 
+## Data
+
+- [Vessel identifiers and characteristics (ongoing)](https://github.com/hchulkim/vessels): As a side-project of my research, I gathered, collected, and refined a dataset on vessel identifiers (IMO) and characteristics. The dataset mainly includes ship identifiers (IMO number), ship names, vessel types, dimensions, tonnage, and construction details where available. Currently, I collected 68,324 vessels.
+
 ## Software
 
 ### Replication template

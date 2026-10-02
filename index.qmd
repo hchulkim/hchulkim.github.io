@@ -71,7 +71,7 @@ body-classes: front-page
 <section class="block" id="updates">
   <h2 class="section-title red">Recent updates</h2>
   <ul class="updates">
-    <li><span class="when">TBD</li>
+    <li>I recently created a GitHub repository that creates a dataset tracking vessel identifiers and characteristics of 60,000 vessels. <a href="https://github.com/hchulkim/vessels">[GitHub link]</a></li>
   </ul>
 </section>
 
