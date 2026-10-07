@@ -7,4 +7,4 @@ page-layout: full
  
 ## The Wharton School, UPenn (T.A.)
 
-- BEPP 2640: Climate and Financial Markets. Fall 2026 (expected). *with Arthur van Benthem*. \[[Syllabus](syllabus/ACCT-BEPP2640-0710.pdf)\].
+- BEPP 2640: Climate and Financial Markets. Fall 2026. *with Arthur van Benthem and Mirko Heinle*. \[[Syllabus](syllabus/ACCT-BEPP2640-0710.pdf)\].
