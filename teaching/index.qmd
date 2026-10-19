@@ -7,7 +7,7 @@ page-layout: full
  
 ## The Wharton School, UPenn (T.A.)
 
-- BEPP 2640: Climate and Financial Markets. Fall 2026 *with Arthur van Benthem and Mirko Heinle*. \[[Syllabus](syllabus/ACCT-BEPP2640-0710.pdf)\].
 - BEPP 3050/8050: Risk Management. Spring 2027 [Expected]. *with Deniz Selman*. [Syllabus].
 - BEPP 7700: American Public Policy through an Economic Lens. Spring 2027 [Expected]  *with Deniz Selman*. [Syllabus].
+- BEPP 2640: Climate and Financial Markets. Fall 2026 *with Arthur van Benthem and Mirko Heinle*. \[[Syllabus](syllabus/ACCT-BEPP2640-0710.pdf)\].
  
