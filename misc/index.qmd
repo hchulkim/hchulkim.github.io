@@ -47,6 +47,7 @@ These are some info on the courses that I took or self-studied.
 
 - [Travel tips and recommendations (@Seoul, South Korea)](personal/seoul.qmd)
 - [Useful links](personal/information.qmd)
+- [Slides](personal/florida_floodmap_slides.pdf)
 
 </details>
 
