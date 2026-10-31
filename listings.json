@@ -25,5 +25,13 @@
       "/posts/hello-quarto/index.html",
       "/posts/sql-info/index.html"
     ]
+  },
+  {
+    "listing": "/index.html",
+    "items": []
+  },
+  {
+    "listing": "/research/index.html",
+    "items": []
   }
 ]
