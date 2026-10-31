@@ -1,0 +1,101 @@
+# ---------------------------------------------------------------------------
+# Single source for every paper on the site. Both the front page (index.qmd)
+# and the Research tab (research/index.qmd) render from this file through
+# research/paper.ejs, so edit papers here only.
+#
+# Entries display in file order; numbers [n] are counted automatically
+# (newest/first entry gets the highest number). Put new papers at the top
+# of their section.
+#
+# Fields (all optional except title and section):
+#   section:   working | publication | progress | other
+#   title:     paper title
+#   url:       link on the title (PDF, journal page, ...)
+#   coauthors: list of {name, url}; url may be omitted
+#   journal:   shown in italic red
+#   note:      status / date text, e.g. "Submitted, June 2026" or "R&R, JPE"
+#   year:      appended after the journal as ", 2024"
+#   links:     list of {text, url}, shown on the line below the venue
+#   abstract:  plain text; adds an "Abstract" toggle after the links
+#   home:      false to hide the paper on the front page (default: shown)
+#
+# Site-internal files use absolute paths ("/research/...") so the same link
+# works from both pages.
+# ---------------------------------------------------------------------------
+
+# Working papers --------------------------------------------------------------
+
+- section: working
+  title: "The China Shock and Internal Migration: Evidence from Bilateral Migration Flows"
+  url: /research/working-paper/migration_china_shock.pdf
+  coauthors:
+    - name: Jaerim Choi
+      url: https://sites.google.com/view/jaerimchoi
+    - name: Seung Hoon Lee
+      url: https://sites.google.com/view/seunghoon/home
+  note: "Submitted, June 2026"
+  abstract: >-
+    Using Korean administrative data spanning nearly two decades and covering the universe of
+    bilateral migration flows across local labor markets, we examine how the China trade shock
+    shapes internal migration. While prior studies rely on net population changes to measure
+    labor adjustment, we exploit bilateral migration flows that separately capture in- and
+    out-migration. We find that trade exposure primarily increases out-migration from adversely
+    affected regions, with limited effects on in-migration, revealing asymmetric spatial
+    adjustment. Decomposing the shock, export expansion reduces out-migration, whereas import
+    competition increases it. Migration responses are strongest among prime working-age
+    individuals and substantially weaker among younger and older cohorts. Single-person
+    households are more responsive than multi-person households. Overall, bilateral data reveal
+    substantial migration responses that conventional net population measures fail to detect,
+    offering new insight into the "missing migration puzzle."
+  links:
+    - text: Replication
+      url: https://github.com/hchulkim/research_china-shock-migration
+
+# Publications ----------------------------------------------------------------
+
+- section: publication
+  title: "Does Political Conflict Hurt Immigration? Evidence from the South Korea–China THAAD Dispute"
+  url: https://onlinelibrary.wiley.com/doi/10.1002/soej.12723
+  coauthors:
+    - name: Jongkwan Lee
+      url: https://sites.google.com/site/kwanlee84/home?authuser=0
+  journal: Southern Economic Journal
+  year: 2024
+
+- section: publication
+  title: "The Well-Being of Cities: Estimating Migration Attractiveness from Internal Migration across Korean Cities"
+  url: https://www.tandfonline.com/doi/full/10.1080/1226508X.2023.2282622
+  coauthors:
+    - name: Seung Hoon Lee
+      url: https://sites.google.com/view/seunghoon/home
+    - name: Ji Sub Park
+  journal: Global Economic Review
+  year: 2024
+
+# Work in progress ------------------------------------------------------------
+
+- section: progress
+  title: "Investment and Deforestation under Uncertain Market Access: Evidence from the Mexican Avocado Boom"
+  coauthors:
+    - name: Prakash Mishra
+      url: https://sites.google.com/mishra.org/prakashmishra
+    - name: Sebastian Sardon
+      url: https://sites.northwestern.edu/ssardon/
+    - name: James E. Sayre
+      url: http://jaysayre.com
+
+# Other works (Research tab only) ---------------------------------------------
+
+- section: other
+  home: false
+  title: 'A Comment on "Malaria Suitability, Urbanization and Persistence: Evidence from China over More than 2000 Years"'
+  url: /research/working-paper/malaria_urban_china_EER.pdf
+  coauthors:
+    - name: Marc Joëts
+      url: https://www.marcjoets.com/
+    - name: Stefania Lovo
+      url: https://sites.google.com/site/stefanialovo/
+    - name: Niklas Murken
+      url: https://www.rwi-essen.de/rwi/team/person/niklas-murken
+  journal: Institute for Replication, UKRN Replication Game
+  year: 2025

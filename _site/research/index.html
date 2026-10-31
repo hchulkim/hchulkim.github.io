@@ -34,6 +34,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../favicon.ico" rel="icon">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -45,9 +47,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-20ce669f8649457420ad8c6af0ee70ce.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-2ec4595441b88840825c2dfed9bea405.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-20ce669f8649457420ad8c6af0ee70ce.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-f38154fcd8038b8acafa0d38f49257af.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-d6882a9ba1b23313a8724d567affa75d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-f38154fcd8038b8acafa0d38f49257af.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -76,7 +78,149 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-working-papers .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-section','listing-title','listing-url','listing-coauthors','listing-note','listing-abstract','listing-links',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-section","listing-title","listing-url","listing-coauthors","listing-note","listing-abstract","listing-links"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-working-papers'] = new List('listing-working-papers', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-publications .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-section','listing-title','listing-url','listing-coauthors','listing-journal','listing-year',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-section","listing-title","listing-url","listing-coauthors","listing-journal","listing-year"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-publications'] = new List('listing-publications', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-work-in-progress .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-section','listing-title','listing-coauthors',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-section","listing-title","listing-coauthors"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-work-in-progress'] = new List('listing-work-in-progress', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-other-works .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-section','listing-home','listing-title','listing-url','listing-coauthors','listing-journal','listing-year',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-section","listing-home","listing-title","listing-url","listing-coauthors","listing-journal","listing-year"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-other-works'] = new List('listing-other-works', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Research – Hyoungchul Kim">
@@ -331,10 +475,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#working-papers" id="toc-working-papers" class="nav-link active" data-scroll-target="#working-papers">Working papers</a></li>
+  <li><a href="#working-papers" id="toc-working-papers" class="nav-link active" data-scroll-target="#working-papers">Working Papers</a></li>
   <li><a href="#publications" id="toc-publications" class="nav-link" data-scroll-target="#publications">Publications</a></li>
-  <li><a href="#work-in-progress" id="toc-work-in-progress" class="nav-link" data-scroll-target="#work-in-progress">Work in progress</a></li>
-  <li><a href="#other-works" id="toc-other-works" class="nav-link" data-scroll-target="#other-works">Other works</a></li>
+  <li><a href="#work-in-progress" id="toc-work-in-progress" class="nav-link" data-scroll-target="#work-in-progress">Work in Progress</a></li>
+  <li><a href="#other-works" id="toc-other-works" class="nav-link" data-scroll-target="#other-works">Other Works</a></li>
   </ul>
 </nav>
     </div>
@@ -347,45 +491,54 @@ ul.task-list li input[type="checkbox"] {
 
 
 <section id="working-papers" class="level2">
-<h2 class="anchored" data-anchor-id="working-papers">Working papers</h2>
+<h2 class="anchored" data-anchor-id="working-papers">Working Papers</h2>
+<div id="listing-working-papers" class="quarto-listing quarto-listing-container-custom">
 <div class="paper">
-<p><strong>“The China shock and internal migration: Evidence from bilateral migration flows”</strong> <span class="badge status-submitted">Submitted</span><br> with <a href="https://sites.google.com/view/jaerimchoi">Jaerim Choi</a> and <a href="https://sites.google.com/view/seunghoon/home">Seung Hoon Lee</a>. Jun.&nbsp;2026.</p>
-<details>
+[1] <a href="../research/working-paper/migration_china_shock.pdf">The China Shock and Internal Migration: Evidence from Bilateral Migration Flows</a> (with <a href="https://sites.google.com/view/jaerimchoi">Jaerim Choi</a> &amp; <a href="https://sites.google.com/view/seunghoon/home">Seung Hoon Lee</a>)<br><span class="note">Submitted, June 2026</span><br><span class="paper-extras"><a href="https://github.com/hchulkim/research_china-shock-migration">Replication</a> ·
+<details class="abstract">
 <summary>
 Abstract
 </summary>
+<div class="abstract-body">
 Using Korean administrative data spanning nearly two decades and covering the universe of bilateral migration flows across local labor markets, we examine how the China trade shock shapes internal migration. While prior studies rely on net population changes to measure labor adjustment, we exploit bilateral migration flows that separately capture in- and out-migration. We find that trade exposure primarily increases out-migration from adversely affected regions, with limited effects on in-migration, revealing asymmetric spatial adjustment. Decomposing the shock, export expansion reduces out-migration, whereas import competition increases it. Migration responses are strongest among prime working-age individuals and substantially weaker among younger and older cohorts. Single-person households are more responsive than multi-person households. Overall, bilateral data reveal substantial migration responses that conventional net population measures fail to detect, offering new insight into the “missing migration puzzle.”
+</div>
 </details>
-<p><a href="working-paper/migration_china_shock.pdf" class="btn btn-sm btn-outline-primary" role="button"><iconify-icon role="img" inline="" icon="bi:file-earmark-pdf" aria-label="Icon file-earmark-pdf from bi Iconify.design set." title="Icon file-earmark-pdf from bi Iconify.design set."></iconify-icon> Mimeo</a> <a href="https://github.com/hchulkim/research_china-shock-migration" class="btn btn-sm btn-outline-secondary" role="button"><iconify-icon role="img" inline="" icon="bi:github" aria-label="Icon github from bi Iconify.design set." title="Icon github from bi Iconify.design set."></iconify-icon> Replication</a></p>
+</span>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
 </div>
 </section>
 <section id="publications" class="level2">
 <h2 class="anchored" data-anchor-id="publications">Publications</h2>
+<div id="listing-publications" class="quarto-listing quarto-listing-container-custom">
 <div class="paper">
-<p><strong>[2] “Does political conflict hurt immigration? Evidence from the South Korea – China THAAD Dispute”</strong><br> with <a href="https://sites.google.com/site/kwanlee84/home?authuser=0">Jongkwan Lee</a>. Aug.&nbsp;2024. <em>Southern Economic Journal.</em></p>
-<p><a href="https://onlinelibrary.wiley.com/doi/10.1002/soej.12723" class="btn btn-sm btn-outline-primary" role="button"><iconify-icon role="img" inline="" icon="bi:box-arrow-up-right" aria-label="Icon box-arrow-up-right from bi Iconify.design set." title="Icon box-arrow-up-right from bi Iconify.design set."></iconify-icon> Paper</a></p>
+[2] <a href="https://onlinelibrary.wiley.com/doi/10.1002/soej.12723">Does Political Conflict Hurt Immigration? Evidence from the South Korea–China THAAD Dispute</a> (with <a href="https://sites.google.com/site/kwanlee84/home?authuser=0">Jongkwan Lee</a>)<br><span class="journal">Southern Economic Journal</span>, 2024
 </div>
 <div class="paper">
-<p><strong>[1] “The well-being of cities: Estimating migration attractiveness from internal migration across Korean cities”</strong><br> with <a href="https://sites.google.com/view/seunghoon/home">Seung Hoon Lee</a> and Ji Sub Park. Feb.&nbsp;2024. <em>Global Economic Review.</em></p>
-<p><a href="https://www.tandfonline.com/doi/full/10.1080/1226508X.2023.2282622?scroll=top&amp;needAccess=true" class="btn btn-sm btn-outline-primary" role="button"><iconify-icon role="img" inline="" icon="bi:box-arrow-up-right" aria-label="Icon box-arrow-up-right from bi Iconify.design set." title="Icon box-arrow-up-right from bi Iconify.design set."></iconify-icon> Paper</a></p>
+[1] <a href="https://www.tandfonline.com/doi/full/10.1080/1226508X.2023.2282622">The Well-Being of Cities: Estimating Migration Attractiveness from Internal Migration across Korean Cities</a> (with <a href="https://sites.google.com/view/seunghoon/home">Seung Hoon Lee</a> &amp; Ji Sub Park)<br><span class="journal">Global Economic Review</span>, 2024
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
 </div>
 </section>
 <section id="work-in-progress" class="level2">
-<h2 class="anchored" data-anchor-id="work-in-progress">Work in progress</h2>
+<h2 class="anchored" data-anchor-id="work-in-progress">Work in Progress</h2>
+<div id="listing-work-in-progress" class="quarto-listing quarto-listing-container-custom">
 <div class="paper">
-<p><strong>“Investment and deforestation under uncertain market access: Evidence from the Mexican avocado boom”</strong><br> with <a href="https://sites.google.com/mishra.org/prakashmishra">Prakash Mishra</a>, <a href="https://sites.northwestern.edu/ssardon/">Sebastian Sardon</a> and <a href="http://jaysayre.com">James E. Sayre</a></p>
+[1] Investment and Deforestation under Uncertain Market Access: Evidence from the Mexican Avocado Boom (with <a href="https://sites.google.com/mishra.org/prakashmishra">Prakash Mishra</a>, <a href="https://sites.northwestern.edu/ssardon/">Sebastian Sardon</a> &amp; <a href="http://jaysayre.com">James E. Sayre</a>)
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
 </div>
 </section>
 <section id="other-works" class="level2">
-<h2 class="anchored" data-anchor-id="other-works">Other works</h2>
-<!-- ::: {.paper} -->
-<!-- **[4] "Pest outbreak, agricultural production, and trade."** [Work in progress]{.badge .status-wip}<br> -->
-<!-- *Second-year candidacy paper.* Draft available upon request. -->
-<!-- ::: -->
+<h2 class="anchored" data-anchor-id="other-works">Other Works</h2>
+<div id="listing-other-works" class="quarto-listing quarto-listing-container-custom">
 <div class="paper">
-<p><strong>[1] A comment on “Malaria suitability, urbanization and persistence: Evidence from China over more than 2000 years”</strong> <span class="badge status-published">Published</span><br> with <a href="https://www.marcjoets.com/">Marc Joëts</a>, <a href="https://sites.google.com/site/stefanialovo/">Stefania Lovo</a> and <a href="https://www.rwi-essen.de/rwi/team/person/niklas-murken">Niklas Murken</a>. Nov.&nbsp;2025. <em>UKRN replication game</em>, <strong>Institute for Replication</strong>.</p>
-<p><a href="working-paper/malaria_urban_china_EER.pdf" class="btn btn-sm btn-outline-primary" role="button"><iconify-icon role="img" inline="" icon="bi:file-earmark-pdf" aria-label="Icon file-earmark-pdf from bi Iconify.design set." title="Icon file-earmark-pdf from bi Iconify.design set."></iconify-icon> Mimeo</a></p>
+[1] <a href="../research/working-paper/malaria_urban_china_EER.pdf">A Comment on “Malaria Suitability, Urbanization and Persistence: Evidence from China over More than 2000 Years”</a> (with <a href="https://www.marcjoets.com/">Marc Joëts</a>, <a href="https://sites.google.com/site/stefanialovo/">Stefania Lovo</a> &amp; <a href="https://www.rwi-essen.de/rwi/team/person/niklas-murken">Niklas Murken</a>)<br><span class="journal">Institute for Replication, UKRN Replication Game</span>, 2025
 </div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+<!-- Old commented-out entries; to restore, move them into papers.yml. -->
+<!-- **[4] "Pest outbreak, agricultural production, and trade."** Second-year candidacy paper. Draft available upon request. -->
 <!-- ::: {.paper} -->
 <!-- **[2] (Pre-doctoral) "The effect of remote working on household waste: Evidence from South Korea"** [Dormant paper]{.badge .status-wip}<br> -->
 <!-- with [Hee-Seung Yang](https://sites.google.com/site/heeseungyang/home). Mar. 2025. -->
@@ -399,6 +552,7 @@ Using Korean administrative data spanning nearly two decades and covering the un
 <!---->
 <!-- [ Paper](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003074695){.btn .btn-sm .btn-outline-primary role="button"} -->
 <!-- ::: -->
+
 
 
 </section>

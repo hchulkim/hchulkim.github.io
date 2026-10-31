@@ -7,14 +7,19 @@
 // ---------------------------------------------------------------------------
 $penn-blue-lt:   #7ea6f0;
 $wharton-red-lt: #f0728f;
+// Lifted versions of the light theme link blue (#1c4587) and journal red (#990000).
+$link-blue-lt:   #8fb0e8;
+$journal-red-lt: #e88a8a;
 
 $body-bg:    #15151a;
 $body-color: #eceae6;
-$link-color: $penn-blue-lt;
+$link-color: $link-blue-lt;
 $primary:    $penn-blue-lt;
 
-$font-size-root: 17px;
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, "Liberation Sans", "DejaVu Sans", sans-serif;
+// Roboto Slab throughout, as on a Google Sites "Vision"-style academic page.
+$web-font-path: "https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap";
+$font-size-root: 15px;
+$font-family-sans-serif: "Roboto Slab", Georgia, "Times New Roman", serif;
 
 $navbar-bg: #15151a;
 $navbar-fg: #a6a39d;
@@ -29,7 +34,7 @@ $code-bg:             #1d1d23;
 $input-bg:            #1d1d23;
 
 $h1-font-size: 34px;
-$headings-font-weight: 700;
+$headings-font-weight: 500;
 
 /*-- scss:rules --*/
 :root {
@@ -40,9 +45,9 @@ $headings-font-weight: 700;
   --site-muted:       #a6a39d;
   --site-faint:       #78756f;
   --site-border:      #2e2e37;
-  --site-accent:      #{$penn-blue-lt};
+  --site-accent:      #{$link-blue-lt};
   --site-accent-soft: #1e2740;
-  --site-red:         #{$wharton-red-lt};
+  --site-red:         #{$journal-red-lt};
   --site-shadow:      rgba(0, 0, 0, .45);
   --site-maxw:        820px;
   --site-radius:      12px;

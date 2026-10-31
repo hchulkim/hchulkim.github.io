@@ -1,0 +1,34 @@
+<%
+// Renders papers from research/papers.yml as
+//   [n] Title (with A, B & C)
+//   Journal, year · note
+//   Replication · Abstract
+// Content lives in papers.yml; style rules are .paper* in _site-rules.scss.
+// Each entry is built as one HTML string: blank lines or indentation in the
+// output would make Pandoc treat parts of it as Markdown/code blocks.
+// (Quarto's EJS follows lodash: <%= prints raw HTML, <%- escapes.)
+const link = (text, url) => url ? `<a href="${url}">${text}</a>` : text;
+const names = (people) => {
+  const list = people.map(p => link(p.name, p.url));
+  return list.length < 2 ? list.join('') : list.slice(0, -1).join(', ') + ' &amp; ' + list[list.length - 1];
+};
+const entry = (p, n) => {
+  let out = `[${n}] ${link(p.title, p.url)}`;
+  if (p.coauthors && p.coauthors.length) out += ` (with ${names(p.coauthors)})`;
+
+  const venue = [];
+  if (p.journal) venue.push(`<span class="journal">${p.journal}</span>` + (p.year ? `, ${p.year}` : ''));
+  if (p.note) venue.push(`<span class="note">${p.note}</span>`);
+  if (venue.length) out += '<br>' + venue.join(' &middot; ');
+
+  const extras = (p.links || []).map(l => link(l.text, l.url));
+  if (p.abstract) {
+    extras.push('<details class="abstract"><summary>Abstract</summary>' +
+      `<div class="abstract-body">${p.abstract}</div></details>`);
+  }
+  if (extras.length) out += `<br><span class="paper-extras">${extras.join(' &middot; ')}</span>`;
+
+  return `<div class="paper">${out}</div>`;
+};
+%>
+<%= items.map((p, i) => entry(p, items.length - i)).join('\n') %>
