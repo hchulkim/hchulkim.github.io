@@ -1,5 +1,5 @@
 /* Page-level tweaks that sit on top of theme.scss.
-   Front page styling lives entirely in theme.scss. */
+   Shared front page components live in theme.scss. */
 
 #quarto-document-content { text-align: left; }
 
@@ -11,6 +11,13 @@
   padding-bottom: 0; margin-top: 2.4rem; margin-bottom: 1rem;
 }
 #quarto-document-content h3:not(.paper-title):not(.listing-title) { margin-top: 2rem; font-size: 1.1rem; }
+
+/* Tighter gaps between paper sections on Home and Research. */
+#quarto-document-content section:is(#publications, #work-in-progress, #other-works) > h2 {
+  margin-top: 1.6rem;
+}
+.home-main #contact { padding-top: 0; }
+.home-main #contact > h2 { margin-top: 1.6rem; }
 
 
 /* Legacy alias kept so old markdown badges still render. */
