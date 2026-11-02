@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.20">
+<meta name="generator" content="quarto-1.11.9">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -42,18 +42,19 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0ae969d3293726db143f6e9eb89af930.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-8c687e7e7b5385d3da85e3b34d131ef3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-1df6f1448276892dca16d0274945d86d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-8c687e7e7b5385d3da85e3b34d131ef3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-47a3d618dc4d40be45b960aa98dacdab.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-20f9923bf329b172c3f8b999372884de.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-47a3d618dc4d40be45b960aa98dacdab.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -104,12 +105,6 @@ ul.task-list li input[type="checkbox"] {
       window['quarto-listing-loaded']();
     }
   });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
   </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
@@ -147,7 +142,7 @@ window.Quarto = {
 <meta property="og:site_name" content="Hyoungchul Kim">
 </head>
 
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -170,6 +165,7 @@ window.Quarto = {
       for (let i=0; i < toggles.length; i++) {
         const toggle = toggles[i];
         if (toggle) {
+          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
           if (alternate) {
             toggle.classList.add("alternate");
           } else {
@@ -199,13 +195,19 @@ window.Quarto = {
       manageTransitions('#quarto-margin-sidebar .nav-link', true);
       // Switch the toggles
       setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455).
+    // Not run on load: stylesheets are set before first paint there, and
+    // scrolling would undo the scroll to a URL fragment (#14973).
+    // The one pixel nudge keeps the reader where they were.
+    const refreshSafariScrollbar = () => {
       if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
         manageTransitions("body", false);
-        window.scrollTo(0, 1);
+        const scrollY = window.scrollY;
+        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
         setTimeout(() => {
-          window.scrollTo(0, 0);
+          window.scrollTo(0, scrollY);
           manageTransitions("body", true);
         }, 40);
       }
@@ -299,6 +301,7 @@ window.Quarto = {
       // Read the current dark / light value
       let toAlternate = !hasAlternateSentinel();
       toggleColorMode(toAlternate);
+      refreshSafariScrollbar();
       setStyleSentinel(toAlternate);
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
@@ -313,15 +316,14 @@ window.Quarto = {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Hyoungchul Kim</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -365,8 +367,9 @@ window.Quarto = {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
 </div>
+            <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -394,7 +397,7 @@ window.Quarto = {
         
     <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(22)</span></div><div class="category" data-category="YW5ub3VuY2VtZW50">announcement <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGVjdHVyZQ==">lecture <span class="quarto-category-count">(3)</span></div><div class="category" data-category="cGVyc29uYWw=">personal <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmVzZWFyY2g=">research <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c29mdHdhcmU=">software <span class="quarto-category-count">(8)</span></div><div class="category" data-category="c3R1ZHk=">study <span class="quarto-category-count">(8)</span></div></div></div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content" tabindex="-1">
 
 
 
@@ -407,27 +410,29 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="c3R1ZHk=" data-listing-date-sort="1780358400000" data-listing-file-modified-sort="1793585608895" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2290">
-<div class="thumbnail"><a href="../posts/datatable/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="0" data-categories="c3R1ZHk=" data-listing-date-sort="1780358400000" data-listing-file-modified-sort="1793632028882" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2290">
+<div class="thumbnail"><a href="../posts/datatable/index.html" class="no-external-icon" aria-hidden="true" tabindex="-1">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../posts/datatable/index.html" class="no-external">Useful functions in <code>data.table</code> R package</a>
+<a href="../posts/datatable/index.html" class="no-external-icon">Useful functions in <code>data.table</code> R package</a>
 </h3>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('c3R1ZHk='); return false;">study</div>
 
 </div>
-<div class="delink listing-description"><a href="../posts/datatable/index.html" class="no-external">
+<div class="listing-description">
+<a href="../posts/datatable/index.html" class="no-external-icon">
 <p>Useful functions used in <code>data.table</code></p>
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../posts/datatable/index.html" class="no-external">
+<a href="../posts/datatable/index.html" class="no-external-icon">
 <div class="listing-date">
 Jun 2, 2026
 </div>
@@ -437,27 +442,29 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="c3R1ZHk=" data-listing-date-sort="1776729600000" data-listing-file-modified-sort="1793585608897" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2114">
-<div class="thumbnail"><a href="../posts/paper-notes/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="1" data-categories="c3R1ZHk=" data-listing-date-sort="1776729600000" data-listing-file-modified-sort="1793632028885" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2114">
+<div class="thumbnail"><a href="../posts/paper-notes/index.html" class="no-external-icon" aria-hidden="true" tabindex="-1">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../posts/paper-notes/index.html" class="no-external">Short notes on papers</a>
+<a href="../posts/paper-notes/index.html" class="no-external-icon">Short notes on papers</a>
 </h3>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('c3R1ZHk='); return false;">study</div>
 
 </div>
-<div class="delink listing-description"><a href="../posts/paper-notes/index.html" class="no-external">
+<div class="listing-description">
+<a href="../posts/paper-notes/index.html" class="no-external-icon">
 <p>My personal notes on papers that I read</p>
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../posts/paper-notes/index.html" class="no-external">
+<a href="../posts/paper-notes/index.html" class="no-external-icon">
 <div class="listing-date">
 Apr 21, 2026
 </div>
@@ -467,27 +474,29 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="c3R1ZHk=" data-listing-date-sort="1774569600000" data-listing-file-modified-sort="1793585608895" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="46" data-listing-word-count-sort="9087">
-<div class="thumbnail"><a href="../posts/demand-io/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="2" data-categories="c3R1ZHk=" data-listing-date-sort="1774569600000" data-listing-file-modified-sort="1793632028882" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="46" data-listing-word-count-sort="9087">
+<div class="thumbnail"><a href="../posts/demand-io/index.html" class="no-external-icon" aria-hidden="true" tabindex="-1">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../posts/demand-io/index.html" class="no-external">Building demand system from scratch</a>
+<a href="../posts/demand-io/index.html" class="no-external-icon">Building demand system from scratch</a>
 </h3>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('c3R1ZHk='); return false;">study</div>
 
 </div>
-<div class="delink listing-description"><a href="../posts/demand-io/index.html" class="no-external">
+<div class="listing-description">
+<a href="../posts/demand-io/index.html" class="no-external-icon">
 <p>My personal notes on demand system in IO</p>
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../posts/demand-io/index.html" class="no-external">
+<a href="../posts/demand-io/index.html" class="no-external-icon">
 <div class="listing-date">
 Mar 27, 2026
 </div>
@@ -497,27 +506,29 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="c3R1ZHk=" data-listing-date-sort="1774569600000" data-listing-file-modified-sort="1793585608897" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1803">
-<div class="thumbnail"><a href="../posts/lagrangian/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="3" data-categories="c3R1ZHk=" data-listing-date-sort="1774569600000" data-listing-file-modified-sort="1793632028885" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1803">
+<div class="thumbnail"><a href="../posts/lagrangian/index.html" class="no-external-icon" aria-hidden="true" tabindex="-1">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../posts/lagrangian/index.html" class="no-external">Lagrangian, Shadow Price, and KKT: Intuition and Proofs</a>
+<a href="../posts/lagrangian/index.html" class="no-external-icon">Lagrangian, Shadow Price, and KKT: Intuition and Proofs</a>
 </h3>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('c3R1ZHk='); return false;">study</div>
 
 </div>
-<div class="delink listing-description"><a href="../posts/lagrangian/index.html" class="no-external">
+<div class="listing-description">
+<a href="../posts/lagrangian/index.html" class="no-external-icon">
 <p>My personal notes on constrained optimization for economics</p>
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../posts/lagrangian/index.html" class="no-external">
+<a href="../posts/lagrangian/index.html" class="no-external-icon">
 <div class="listing-date">
 Mar 27, 2026
 </div>
@@ -527,27 +538,29 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="c3R1ZHk=" data-listing-date-sort="1773619200000" data-listing-file-modified-sort="1793585608897" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1625">
-<div class="thumbnail"><a href="../posts/notes-io/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="4" data-categories="c3R1ZHk=" data-listing-date-sort="1773619200000" data-listing-file-modified-sort="1793632028885" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1625">
+<div class="thumbnail"><a href="../posts/notes-io/index.html" class="no-external-icon" aria-hidden="true" tabindex="-1">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../posts/notes-io/index.html" class="no-external">Notes on IO</a>
+<a href="../posts/notes-io/index.html" class="no-external-icon">Notes on IO</a>
 </h3>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('c3R1ZHk='); return false;">study</div>
 
 </div>
-<div class="delink listing-description"><a href="../posts/notes-io/index.html" class="no-external">
+<div class="listing-description">
+<a href="../posts/notes-io/index.html" class="no-external-icon">
 <p>My notes on IO</p>
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../posts/notes-io/index.html" class="no-external">
+<a href="../posts/notes-io/index.html" class="no-external-icon">
 <div class="listing-date">
 Mar 16, 2026
 </div>
@@ -557,27 +570,29 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="c29mdHdhcmU=" data-listing-date-sort="1769299200000" data-listing-file-modified-sort="1793585608894" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="721">
-<div class="thumbnail"><a href="../posts/arch-install/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="5" data-categories="c29mdHdhcmU=" data-listing-date-sort="1769299200000" data-listing-file-modified-sort="1793632028882" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="721">
+<div class="thumbnail"><a href="../posts/arch-install/index.html" class="no-external-icon" aria-hidden="true" tabindex="-1">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../posts/arch-install/index.html" class="no-external">My first trial and error with installing Arch Linux</a>
+<a href="../posts/arch-install/index.html" class="no-external-icon">My first trial and error with installing Arch Linux</a>
 </h3>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('c29mdHdhcmU='); return false;">software</div>
 
 </div>
-<div class="delink listing-description"><a href="../posts/arch-install/index.html" class="no-external">
+<div class="listing-description">
+<a href="../posts/arch-install/index.html" class="no-external-icon">
 <p>Installing Arch Linux on Tuxedo Computers InfinityBook Pro 15</p>
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../posts/arch-install/index.html" class="no-external">
+<a href="../posts/arch-install/index.html" class="no-external-icon">
 <div class="listing-date">
 Jan 25, 2026
 </div>
@@ -587,27 +602,29 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="c29mdHdhcmU=" data-listing-date-sort="1757721600000" data-listing-file-modified-sort="1793585608895" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1420">
-<div class="thumbnail"><a href="../posts/dockerfile-trial/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="6" data-categories="c29mdHdhcmU=" data-listing-date-sort="1757721600000" data-listing-file-modified-sort="1793632028882" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1420">
+<div class="thumbnail"><a href="../posts/dockerfile-trial/index.html" class="no-external-icon" aria-hidden="true" tabindex="-1">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../posts/dockerfile-trial/index.html" class="no-external">My trial and error with Dockerfile</a>
+<a href="../posts/dockerfile-trial/index.html" class="no-external-icon">My trial and error with Dockerfile</a>
 </h3>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('c29mdHdhcmU='); return false;">software</div>
 
 </div>
-<div class="delink listing-description"><a href="../posts/dockerfile-trial/index.html" class="no-external">
+<div class="listing-description">
+<a href="../posts/dockerfile-trial/index.html" class="no-external-icon">
 <p>This is a post on my trial and error on building Docker image with Dockerfile</p>
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../posts/dockerfile-trial/index.html" class="no-external">
+<a href="../posts/dockerfile-trial/index.html" class="no-external-icon">
 <div class="listing-date">
 Sep 13, 2025
 </div>
@@ -617,27 +634,29 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="c29mdHdhcmU=" data-listing-date-sort="1756512000000" data-listing-file-modified-sort="1793585608898" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="25" data-listing-word-count-sort="4824">
-<div class="thumbnail"><a href="../posts/reproducible-template/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="7" data-categories="c29mdHdhcmU=" data-listing-date-sort="1756512000000" data-listing-file-modified-sort="1793632028887" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="25" data-listing-word-count-sort="4824">
+<div class="thumbnail"><a href="../posts/reproducible-template/index.html" class="no-external-icon" aria-hidden="true" tabindex="-1">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../posts/reproducible-template/index.html" class="no-external">Hands-on reproducible research workflow</a>
+<a href="../posts/reproducible-template/index.html" class="no-external-icon">Hands-on reproducible research workflow</a>
 </h3>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('c29mdHdhcmU='); return false;">software</div>
 
 </div>
-<div class="delink listing-description"><a href="../posts/reproducible-template/index.html" class="no-external">
+<div class="listing-description">
+<a href="../posts/reproducible-template/index.html" class="no-external-icon">
 <p>This is a detailed post on how to use my replication template (or template for reproducible research workflow) in GitHub</p>
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../posts/reproducible-template/index.html" class="no-external">
+<a href="../posts/reproducible-template/index.html" class="no-external-icon">
 <div class="listing-date">
 Aug 30, 2025
 </div>
@@ -647,27 +666,29 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="c29mdHdhcmU=" data-listing-date-sort="1754092800000" data-listing-file-modified-sort="1793585608894" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="625">
-<div class="thumbnail"><a href="../posts/asahi-linux/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="8" data-categories="c29mdHdhcmU=" data-listing-date-sort="1754092800000" data-listing-file-modified-sort="1793632028882" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="625">
+<div class="thumbnail"><a href="../posts/asahi-linux/index.html" class="no-external-icon" aria-hidden="true" tabindex="-1">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../posts/asahi-linux/index.html" class="no-external">Asahi-linux on Macbook Pro</a>
+<a href="../posts/asahi-linux/index.html" class="no-external-icon">Asahi-linux on Macbook Pro</a>
 </h3>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('c29mdHdhcmU='); return false;">software</div>
 
 </div>
-<div class="delink listing-description"><a href="../posts/asahi-linux/index.html" class="no-external">
+<div class="listing-description">
+<a href="../posts/asahi-linux/index.html" class="no-external-icon">
 <p>My first experience with asahi-linux on Macbook Pro</p>
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../posts/asahi-linux/index.html" class="no-external">
+<a href="../posts/asahi-linux/index.html" class="no-external-icon">
 <div class="listing-date">
 Aug 2, 2025
 </div>
@@ -677,27 +698,29 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="c3R1ZHk=" data-listing-date-sort="1754092800000" data-listing-file-modified-sort="1793585608894" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="436">
-<div class="thumbnail"><a href="../posts/bandit/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="9" data-categories="c3R1ZHk=" data-listing-date-sort="1754092800000" data-listing-file-modified-sort="1793632028882" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="436">
+<div class="thumbnail"><a href="../posts/bandit/index.html" class="no-external-icon" aria-hidden="true" tabindex="-1">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../posts/bandit/index.html" class="no-external">OverTheWire wargames</a>
+<a href="../posts/bandit/index.html" class="no-external-icon">OverTheWire wargames</a>
 </h3>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('c3R1ZHk='); return false;">study</div>
 
 </div>
-<div class="delink listing-description"><a href="../posts/bandit/index.html" class="no-external">
+<div class="listing-description">
+<a href="../posts/bandit/index.html" class="no-external-icon">
 <p>Personal solutions for overthewire wargames</p>
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../posts/bandit/index.html" class="no-external">
+<a href="../posts/bandit/index.html" class="no-external-icon">
 <div class="listing-date">
 Aug 2, 2025
 </div>
@@ -707,27 +730,29 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="cGVyc29uYWw=" data-listing-date-sort="1749168000000" data-listing-file-modified-sort="1793585608897" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="458">
-<div class="thumbnail"><a href="../posts/first-year/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="10" data-categories="cGVyc29uYWw=" data-listing-date-sort="1749168000000" data-listing-file-modified-sort="1793632028885" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="458">
+<div class="thumbnail"><a href="../posts/first-year/index.html" class="no-external-icon" aria-hidden="true" tabindex="-1">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../posts/first-year/index.html" class="no-external">First-year Ph.D.&nbsp;in retrospect</a>
+<a href="../posts/first-year/index.html" class="no-external-icon">First-year Ph.D.&nbsp;in retrospect</a>
 </h3>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('cGVyc29uYWw='); return false;">personal</div>
 
 </div>
-<div class="delink listing-description"><a href="../posts/first-year/index.html" class="no-external">
+<div class="listing-description">
+<a href="../posts/first-year/index.html" class="no-external-icon">
 <p>Summarizing my first-year Ph.D.&nbsp;in Economics experience</p>
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../posts/first-year/index.html" class="no-external">
+<a href="../posts/first-year/index.html" class="no-external-icon">
 <div class="listing-date">
 Jun 6, 2025
 </div>
@@ -737,27 +762,29 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="c3R1ZHk=" data-listing-date-sort="1748217600000" data-listing-file-modified-sort="1793585608897" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="528">
-<div class="thumbnail"><a href="../posts/parallel/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="11" data-categories="c3R1ZHk=" data-listing-date-sort="1748217600000" data-listing-file-modified-sort="1793632028885" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="528">
+<div class="thumbnail"><a href="../posts/parallel/index.html" class="no-external-icon" aria-hidden="true" tabindex="-1">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../posts/parallel/index.html" class="no-external">Parallel programming</a>
+<a href="../posts/parallel/index.html" class="no-external-icon">Parallel programming</a>
 </h3>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('c3R1ZHk='); return false;">study</div>
 
 </div>
-<div class="delink listing-description"><a href="../posts/parallel/index.html" class="no-external">
+<div class="listing-description">
+<a href="../posts/parallel/index.html" class="no-external-icon">
 <p>Learning basic parallel programming in R</p>
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../posts/parallel/index.html" class="no-external">
+<a href="../posts/parallel/index.html" class="no-external-icon">
 <div class="listing-date">
 May 26, 2025
 </div>
@@ -767,27 +794,29 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="c29mdHdhcmU=" data-listing-date-sort="1745280000000" data-listing-file-modified-sort="1793585608897" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="171">
-<div class="thumbnail"><a href="../posts/make-file/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="12" data-categories="c29mdHdhcmU=" data-listing-date-sort="1745280000000" data-listing-file-modified-sort="1793632028885" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="171">
+<div class="thumbnail"><a href="../posts/make-file/index.html" class="no-external-icon" aria-hidden="true" tabindex="-1">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../posts/make-file/index.html" class="no-external">Makefile: build automation software</a>
+<a href="../posts/make-file/index.html" class="no-external-icon">Makefile: build automation software</a>
 </h3>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('c29mdHdhcmU='); return false;">software</div>
 
 </div>
-<div class="delink listing-description"><a href="../posts/make-file/index.html" class="no-external">
+<div class="listing-description">
+<a href="../posts/make-file/index.html" class="no-external-icon">
 <p>Making automation workflow with <code>Makefile</code></p>
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../posts/make-file/index.html" class="no-external">
+<a href="../posts/make-file/index.html" class="no-external-icon">
 <div class="listing-date">
 Apr 22, 2025
 </div>
@@ -797,27 +826,29 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="c29mdHdhcmU=" data-listing-date-sort="1742515200000" data-listing-file-modified-sort="1793585608895" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="404">
-<div class="thumbnail"><a href="../posts/bash-caveats/1 2 3 4 5/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="13" data-categories="c29mdHdhcmU=" data-listing-date-sort="1742515200000" data-listing-file-modified-sort="1793632028882" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="404">
+<div class="thumbnail"><a href="../posts/bash-caveats/1 2 3 4 5/index.html" class="no-external-icon" aria-hidden="true" tabindex="-1">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../posts/bash-caveats/1 2 3 4 5/index.html" class="no-external">Beware of Bash</a>
+<a href="../posts/bash-caveats/1 2 3 4 5/index.html" class="no-external-icon">Beware of Bash</a>
 </h3>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('c29mdHdhcmU='); return false;">software</div>
 
 </div>
-<div class="delink listing-description"><a href="../posts/bash-caveats/1 2 3 4 5/index.html" class="no-external">
+<div class="listing-description">
+<a href="../posts/bash-caveats/1 2 3 4 5/index.html" class="no-external-icon">
 <p>Some warnings when using Bash</p>
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../posts/bash-caveats/1 2 3 4 5/index.html" class="no-external">
+<a href="../posts/bash-caveats/1 2 3 4 5/index.html" class="no-external-icon">
 <div class="listing-date">
 Mar 21, 2025
 </div>
@@ -827,27 +858,29 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="c29mdHdhcmU=" data-listing-date-sort="1741996800000" data-listing-file-modified-sort="1793585608895" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="699">
-<div class="thumbnail"><a href="../posts/dockerfile-template/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="14" data-categories="c29mdHdhcmU=" data-listing-date-sort="1741996800000" data-listing-file-modified-sort="1793632028882" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="699">
+<div class="thumbnail"><a href="../posts/dockerfile-template/index.html" class="no-external-icon" aria-hidden="true" tabindex="-1">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../posts/dockerfile-template/index.html" class="no-external">Personal Dockerfile for data science</a>
+<a href="../posts/dockerfile-template/index.html" class="no-external-icon">Personal Dockerfile for data science</a>
 </h3>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('c29mdHdhcmU='); return false;">software</div>
 
 </div>
-<div class="delink listing-description"><a href="../posts/dockerfile-template/index.html" class="no-external">
+<div class="listing-description">
+<a href="../posts/dockerfile-template/index.html" class="no-external-icon">
 <p>Personal Dockerfile template for my research workflow</p>
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../posts/dockerfile-template/index.html" class="no-external">
+<a href="../posts/dockerfile-template/index.html" class="no-external-icon">
 <div class="listing-date">
 Mar 15, 2025
 </div>
@@ -857,27 +890,29 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-categories="c29mdHdhcmU=" data-listing-date-sort="1741478400000" data-listing-file-modified-sort="1793585608897" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="382">
-<div class="thumbnail"><a href="../posts/quarto-paper-template/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="15" data-categories="c29mdHdhcmU=" data-listing-date-sort="1741478400000" data-listing-file-modified-sort="1793632028885" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="382">
+<div class="thumbnail"><a href="../posts/quarto-paper-template/index.html" class="no-external-icon" aria-hidden="true" tabindex="-1">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../posts/quarto-paper-template/index.html" class="no-external">Quarto format Econ. working paper template</a>
+<a href="../posts/quarto-paper-template/index.html" class="no-external-icon">Quarto format Econ. working paper template</a>
 </h3>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('c29mdHdhcmU='); return false;">software</div>
 
 </div>
-<div class="delink listing-description"><a href="../posts/quarto-paper-template/index.html" class="no-external">
+<div class="listing-description">
+<a href="../posts/quarto-paper-template/index.html" class="no-external-icon">
 <p>I just dropped a new quarto format working paper template in github</p>
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../posts/quarto-paper-template/index.html" class="no-external">
+<a href="../posts/quarto-paper-template/index.html" class="no-external-icon">
 <div class="listing-date">
 Mar 9, 2025
 </div>
@@ -887,27 +922,29 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="16" data-categories="cmVzZWFyY2g=" data-listing-date-sort="1740787200000" data-listing-file-modified-sort="1793585608897" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="102">
-<div class="thumbnail"><a href="../posts/first-cite/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="16" data-categories="cmVzZWFyY2g=" data-listing-date-sort="1740787200000" data-listing-file-modified-sort="1793632028885" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="102">
+<div class="thumbnail"><a href="../posts/first-cite/index.html" class="no-external-icon">
 
 <p class="card-img-top"><img loading='lazy' data-src="first-cite/cite.PNG"  class="thumbnail-image card-img"/></p>
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../posts/first-cite/index.html" class="no-external">First academic citation</a>
+<a href="../posts/first-cite/index.html" class="no-external-icon">First academic citation</a>
 </h3>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('cmVzZWFyY2g='); return false;">research</div>
 
 </div>
-<div class="delink listing-description"><a href="../posts/first-cite/index.html" class="no-external">
+<div class="listing-description">
+<a href="../posts/first-cite/index.html" class="no-external-icon">
 <p>I am celebrating my first citation</p>
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../posts/first-cite/index.html" class="no-external">
+<a href="../posts/first-cite/index.html" class="no-external-icon">
 <div class="listing-date">
 Mar 1, 2025
 </div>
@@ -917,27 +954,29 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="17" data-categories="bGVjdHVyZQ==" data-listing-date-sort="1737331200000" data-listing-file-modified-sort="1793585608894" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="70">
-<div class="thumbnail"><a href="../posts/admission-econ/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="17" data-categories="bGVjdHVyZQ==" data-listing-date-sort="1737331200000" data-listing-file-modified-sort="1793632028881" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="70">
+<div class="thumbnail"><a href="../posts/admission-econ/index.html" class="no-external-icon" aria-hidden="true" tabindex="-1">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../posts/admission-econ/index.html" class="no-external">Admission tips for Econ. Ph.D.&nbsp;(by Ph.D.&nbsp;student)</a>
+<a href="../posts/admission-econ/index.html" class="no-external-icon">Admission tips for Econ. Ph.D.&nbsp;(by Ph.D.&nbsp;student)</a>
 </h3>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('bGVjdHVyZQ=='); return false;">lecture</div>
 
 </div>
-<div class="delink listing-description"><a href="../posts/admission-econ/index.html" class="no-external">
+<div class="listing-description">
+<a href="../posts/admission-econ/index.html" class="no-external-icon">
 <p>Admission tips slide I wrote for master students at Alma Mater</p>
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../posts/admission-econ/index.html" class="no-external">
+<a href="../posts/admission-econ/index.html" class="no-external-icon">
 <div class="listing-date">
 Jan 20, 2025
 </div>
@@ -947,27 +986,29 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-categories="bGVjdHVyZQ==" data-listing-date-sort="1737331200000" data-listing-file-modified-sort="1793585608895" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="55">
-<div class="thumbnail"><a href="../posts/empirical-econ/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="18" data-categories="bGVjdHVyZQ==" data-listing-date-sort="1737331200000" data-listing-file-modified-sort="1793632028882" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="55">
+<div class="thumbnail"><a href="../posts/empirical-econ/index.html" class="no-external-icon" aria-hidden="true" tabindex="-1">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../posts/empirical-econ/index.html" class="no-external">Summary of my understanding of terms in empirical economics</a>
+<a href="../posts/empirical-econ/index.html" class="no-external-icon">Summary of my understanding of terms in empirical economics</a>
 </h3>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('bGVjdHVyZQ=='); return false;">lecture</div>
 
 </div>
-<div class="delink listing-description"><a href="../posts/empirical-econ/index.html" class="no-external">
+<div class="listing-description">
+<a href="../posts/empirical-econ/index.html" class="no-external-icon">
 <p>Summary of some terms and jargons in the field of empirical economics</p>
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../posts/empirical-econ/index.html" class="no-external">
+<a href="../posts/empirical-econ/index.html" class="no-external-icon">
 <div class="listing-date">
 Jan 20, 2025
 </div>
@@ -977,27 +1018,29 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="19" data-categories="bGVjdHVyZQ==" data-listing-date-sort="1737331200000" data-listing-file-modified-sort="1793585608898" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="32">
-<div class="thumbnail"><a href="../posts/reproducible-coding-lecture/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="19" data-categories="bGVjdHVyZQ==" data-listing-date-sort="1737331200000" data-listing-file-modified-sort="1793632028887" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="32">
+<div class="thumbnail"><a href="../posts/reproducible-coding-lecture/index.html" class="no-external-icon" aria-hidden="true" tabindex="-1">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../posts/reproducible-coding-lecture/index.html" class="no-external">Reproducible coding crash course</a>
+<a href="../posts/reproducible-coding-lecture/index.html" class="no-external-icon">Reproducible coding crash course</a>
 </h3>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('bGVjdHVyZQ=='); return false;">lecture</div>
 
 </div>
-<div class="delink listing-description"><a href="../posts/reproducible-coding-lecture/index.html" class="no-external">
+<div class="listing-description">
+<a href="../posts/reproducible-coding-lecture/index.html" class="no-external-icon">
 <p>My slide and resources on reproducible coding</p>
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../posts/reproducible-coding-lecture/index.html" class="no-external">
+<a href="../posts/reproducible-coding-lecture/index.html" class="no-external-icon">
 <div class="listing-date">
 Jan 20, 2025
 </div>
@@ -1007,27 +1050,29 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="20" data-categories="YW5ub3VuY2VtZW50" data-listing-date-sort="1737244800000" data-listing-file-modified-sort="1793585608897" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="332">
-<div class="thumbnail"><a href="../posts/hello-quarto/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="20" data-categories="YW5ub3VuY2VtZW50" data-listing-date-sort="1737244800000" data-listing-file-modified-sort="1793632028885" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="332">
+<div class="thumbnail"><a href="../posts/hello-quarto/index.html" class="no-external-icon" aria-hidden="true" tabindex="-1">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../posts/hello-quarto/index.html" class="no-external">Hello, Quarto</a>
+<a href="../posts/hello-quarto/index.html" class="no-external-icon">Hello, Quarto</a>
 </h3>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('YW5ub3VuY2VtZW50'); return false;">announcement</div>
 
 </div>
-<div class="delink listing-description"><a href="../posts/hello-quarto/index.html" class="no-external">
+<div class="listing-description">
+<a href="../posts/hello-quarto/index.html" class="no-external-icon">
 <p>Migrating from hugo github page</p>
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../posts/hello-quarto/index.html" class="no-external">
+<a href="../posts/hello-quarto/index.html" class="no-external-icon">
 <div class="listing-date">
 Jan 19, 2025
 </div>
@@ -1037,27 +1082,29 @@ Hyoungchul Kim
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="21" data-categories="c3R1ZHk=" data-listing-date-sort="1737072000000" data-listing-file-modified-sort="1793585608899" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="39">
-<div class="thumbnail"><a href="../posts/sql-info/index.html" class="no-external">
+<div class="quarto-post image-right" data-index="21" data-categories="c3R1ZHk=" data-listing-date-sort="1737072000000" data-listing-file-modified-sort="1793632028887" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="39">
+<div class="thumbnail"><a href="../posts/sql-info/index.html" class="no-external-icon" aria-hidden="true" tabindex="-1">
 
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
 </a></div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../posts/sql-info/index.html" class="no-external">SQL materials</a>
+<a href="../posts/sql-info/index.html" class="no-external-icon">SQL materials</a>
 </h3>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('c3R1ZHk='); return false;">study</div>
 
 </div>
-<div class="delink listing-description"><a href="../posts/sql-info/index.html" class="no-external">
+<div class="listing-description">
+<a href="../posts/sql-info/index.html" class="no-external-icon">
 <p>Resources for learning SQL</p>
-</a></div>
+</a>
+</div>
 </div>
 <div class="metadata">
-<a href="../posts/sql-info/index.html" class="no-external">
+<a href="../posts/sql-info/index.html" class="no-external-icon">
 <div class="listing-date">
 Jan 17, 2025
 </div>
@@ -1077,15 +1124,50 @@ Hyoungchul Kim
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
     if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const a = window.document.createElement('a');
-      a.classList.add('top-right');
-      a.classList.add('quarto-color-scheme-toggle');
-      a.href = "";
-      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const toggle = window.document.createElement('button');
+      toggle.type = "button";
+      toggle.setAttribute("role", "switch");
+      toggle.setAttribute("aria-checked", "false");
+      toggle.classList.add('top-right');
+      toggle.classList.add('quarto-color-scheme-toggle');
+      toggle.setAttribute("aria-label", "Toggle dark mode");
+      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
       const i = window.document.createElement("i");
       i.classList.add('bi');
-      a.appendChild(i);
-      window.document.body.appendChild(a);
+      toggle.appendChild(i);
+      // Put the toggle in a landmark of its own, so that landmark navigation
+      // can reach it.
+      //
+      // The container is always a fresh direct child of body, and the toggle is
+      // never moved into page furniture that the theme or the author controls.
+      // The toggle is positioned against the page, so any ancestor that
+      // establishes a containing block captures it: a positioned element or a
+      // grid for position: absolute, and transform, filter, will-change or
+      // contain for position: fixed. A direct child of body has none of these
+      // to inherit, and the shift when one appears is silent and visual.
+      //
+      // ARIA says a document should have at most one banner, and axe reports a
+      // duplicate whether or not the banners carry distinct labels. So use a
+      // header when the page has no banner yet, and a named region otherwise.
+      //
+      // A header is a banner wherever it sits, unless it is inside sectioning
+      // content, so this cannot just look at the children of body: a custom
+      // page layout wraps the title block header in a plain div. An explicit
+      // role="banner" always counts.
+      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
+      const hasBanner = Array.from(
+        window.document.querySelectorAll('header:not([role]), [role="banner"]')
+      ).some(function(el) {
+        return el.hasAttribute("role") || el.closest(sectioning) === null;
+      });
+      const container = window.document.createElement(hasBanner ? "div" : "header");
+      if (hasBanner) {
+        container.setAttribute("role", "region");
+        container.setAttribute("aria-label", "Toggle dark mode");
+      }
+      container.classList.add('quarto-color-scheme-toggle-container');
+      container.appendChild(toggle);
+      window.document.body.appendChild(container);
     }
     setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
@@ -1164,7 +1246,8 @@ Hyoungchul Kim
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
       // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
       for (var i=0; i<links.length; i++) {
         const link = links[i];
         if (!isInternal(link.href)) {
@@ -1173,8 +1256,69 @@ Hyoungchul Kim
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+          if (!link.classList.contains('no-external-icon')) {
+          }
         }
       }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
       const config = {
         allowHTML: true,
@@ -1188,6 +1332,7 @@ Hyoungchul Kim
         interactiveBorder: 10,
         theme: 'quarto',
         placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
       };
       if (contentFn) {
         config.content = contentFn;
@@ -1350,44 +1495,54 @@ Hyoungchul Kim
           const lineIds = lines.map((line) => {
             return targetCell + "-" + line;
           })
-          let top = null;
-          let height = null;
-          let parent = null;
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
           if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
             }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
             }
+            placeBand(gutterDiv, el, lastEl);
             selectedAnnoteEl = annoteEl;
           }
         };
@@ -1485,6 +1640,9 @@ Hyoungchul Kim
       }
     }
   });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
   </script>
 </div> <!-- /content -->
 <footer class="footer">
