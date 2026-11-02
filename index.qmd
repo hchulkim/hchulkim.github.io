@@ -40,7 +40,7 @@ listing:
 
 ::: {.home-side}
 ```{=html}
-<img class="hero-photo" src="bio-picture.jpeg" alt="Portrait of Hyoungchul Kim" />
+<img class="hero-photo" src="bio-jmc.png" alt="Portrait of Hyoungchul Kim" />
 <div class="hero-name">Hyoungchul&nbsp;Kim</div>
 <p class="role">Hi! I am a Ph.D. student at The Wharton School, University of Pennsylvania.</p>
 <p class="bio">
