@@ -48,7 +48,7 @@
     substantial migration responses that conventional net population measures fail to detect,
     offering new insight into the "missing migration puzzle."
   links:
-    - text: Replication
+    - text: Code
       url: https://github.com/hchulkim/research_china-shock-migration
 
 # Publications ----------------------------------------------------------------
@@ -100,7 +100,7 @@
   journal: Institute for Replication, UKRN Replication Game
   year: 2025
   links:
-    - text: Replication
+    - text: Code
       url: https://github.com/hchulkim/malaria-urban-china-EER
 
 
