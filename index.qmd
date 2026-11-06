@@ -42,7 +42,7 @@ listing:
 ```{=html}
 <img class="hero-photo" src="bio-jmc.png" alt="Portrait of Hyoungchul Kim" />
 <div class="hero-name">Hyoungchul&nbsp;Kim</div>
-<p class="role">Hi! I am a Ph.D. student at The Wharton School, University of Pennsylvania.</p>
+<p class="role">Hi! I am a Ph.D. student at The Wharton School, University of Pennsylvania. You can see my CV <a href="vita/cv-kim.pdf">[here]</a>.</p>
 <p class="bio">
   You can call me <strong>Hyoungchul</strong> (H-Young-Cheol, rhymes with &ldquo;Null&rdquo;)
   or <strong>Kent</strong>, my English name.
