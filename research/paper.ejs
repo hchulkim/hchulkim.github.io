@@ -31,4 +31,6 @@ const entry = (p, n) => {
   return `<div class="paper">${out}</div>`;
 };
 %>
-<%= items.map((p, i) => entry(p, items.length - i)).join('\n') %>
+<%= /* empty section (no papers in papers.yml) -> "TBD" placeholder */ items.length
+  ? items.map((p, i) => entry(p, items.length - i)).join('\n')
+  : '<div class="paper paper-empty">TBD</div>' %>
