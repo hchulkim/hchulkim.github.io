@@ -3,3 +3,8 @@
 .DS_Store
 
 **/*.quarto_ipynb
+
+# Claude/Codex agent config (local only)
+CLAUDE.md
+AGENTS.md
+.claude/
