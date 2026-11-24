@@ -15,7 +15,10 @@
 #   journal:   shown in italic red
 #   note:      status / date text, e.g. "Submitted, June 2026" or "R&R, JPE"
 #   year:      appended after the journal as ", 2024"
-#   links:     list of {text, url}, shown on the line below the venue
+#   paper:     url; adds a "Paper" link on the line below the venue
+#   arxiv:     url; adds an "arXiv" link (after Paper)
+#   article:   url; adds an "Article" link (after arXiv)
+#   links:     list of {text, url}, shown after the Paper/arXiv/Article links
 #   abstract:  plain text; adds an "Abstract" toggle after the links
 #   home:      false to hide the paper on the front page (default: shown)
 #

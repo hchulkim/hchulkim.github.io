@@ -2,7 +2,7 @@
 // Renders papers from research/papers.yml as
 //   [n] Title (with A, B & C)
 //   Journal, year · note
-//   Code · Abstract
+//   Paper · arXiv · Article · Code · Abstract
 // Content lives in papers.yml; style rules are .paper* in _site-rules.scss.
 // Each entry is built as one HTML string: blank lines or indentation in the
 // output would make Pandoc treat parts of it as Markdown/code blocks.
@@ -21,7 +21,11 @@ const entry = (p, n) => {
   if (p.note) venue.push(`<span class="note">${p.note}</span>`);
   if (venue.length) out += '<br>' + venue.join(' &middot; ');
 
-  const extras = (p.links || []).map(l => link(l.text, l.url));
+  // Shortcut fields (paper/arxiv/article: url) come first, then custom links.
+  const extras = [['paper', 'Paper'], ['arxiv', 'arXiv'], ['article', 'Article']]
+    .filter(([key]) => p[key])
+    .map(([key, text]) => link(text, p[key]));
+  (p.links || []).forEach(l => extras.push(link(l.text, l.url)));
   if (p.abstract) {
     extras.push('<details class="abstract"><summary>Abstract</summary>' +
       `<div class="abstract-body">${p.abstract}</div></details>`);
