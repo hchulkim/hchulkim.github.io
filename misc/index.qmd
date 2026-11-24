@@ -11,17 +11,9 @@ page-layout: full
 
 ## Software
 
-### Replication template
-
 - [Replication template with nix (rix)](https://github.com/hchulkim/replication-template-nix): I updated the past replication template to use nix (rix) for package management. This is a more modern and flexible way to manage packages for your research workflow.
 - [Replication template (legacy)](https://github.com/hchulkim/replication-template): This is the replication template I use for my empirical papers. This template follows [DCAS](https://datacodestandards.org/), the Data and Code Availability Standard v1.0 and also follows the [Data and Code Availability Policy of the American Economic Association](https://aeaweb.org/journals/data/data-code-policy/).
-
-### Quarto
-
 - Quarto working paper template for Economics: [Official Quarto Extensions List](https://quarto.org/docs/extensions/listing-journals.html) [\[github link\]](https://github.com/hchulkim/econ-paper-template/tree/main) [\[Blog post\]](https://hchulkim.github.io/posts/quarto-paper-template/)
-
-### Scripts
-
 - `Dockerfile` for empirical analysis (`R`, `Python`, `Julia` with dependency management setup): [\[link\]](https://hchulkim.github.io/posts/dockerfile-template/)
 
 <!-- ## Courses
