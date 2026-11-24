@@ -106,8 +106,14 @@
     - text: Code
       url: https://github.com/hchulkim/malaria-urban-china-EER
 
-
-
+- section: other
+  home: false
+  title: 'The Effect of Remote Working on Regional Waste: Evidence from South Korea'
+  coauthors:
+    - name: Hee-Seung Yang
+      url:  https://sites.google.com/site/heeseungyang/
+  year: 2025
+  arxiv: https://hchulkim.github.io
 
 
 
