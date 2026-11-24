@@ -90,7 +90,8 @@ body.front-page main.content { max-width: 1080px; }
 .paper { margin: 0 0 12px; font-size: 15px; line-height: 1.75; }
 .paper a { color: var(--site-accent); }
 .paper .journal { font-style: italic; color: var(--site-red); }
-.paper .note { color: var(--site-text); }
+.paper .status { color: var(--site-text); }
+.paper-small { font-size: 13.5px; line-height: 1.6; color: var(--site-faint); }
 
 /* Small inline toggle and links after an entry ("Abstract · Mimeo · Replication"). */
 .paper-extras { font-size: 13.5px; }

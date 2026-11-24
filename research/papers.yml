@@ -13,13 +13,16 @@
 #   url:       link on the title (PDF, journal page, ...)
 #   coauthors: list of {name, url}; url may be omitted
 #   journal:   shown in italic red
-#   note:      status / date text, e.g. "Submitted, June 2026" or "R&R, JPE"
+#   status:    status / date text, e.g. "Submitted, June 2026" or "R&R, JPE"
 #   year:      appended after the journal as ", 2024"
-#   paper:     url; adds a "Paper" link on the line below the venue
-#   arxiv:     url; adds an "arXiv" link (after Paper)
+#   arxiv:     url; adds an "arXiv" link on the line below the venue
 #   article:   url; adds an "Article" link (after arXiv)
-#   links:     list of {text, url}, shown after the Paper/arXiv/Article links
+#   links:     list of {text, url}, shown after the arXiv/Article links
 #   abstract:  plain text; adds an "Abstract" toggle after the links
+#   notes:     list of strings (HTML ok); each a small grey line at the bottom,
+#              e.g. 'Previously circulated as "..."'
+#   presented: list of strings; small grey line "Presentations: A, B, C."
+#              after the notes
 #   home:      false to hide the paper on the front page (default: shown)
 #
 # Site-internal files use absolute paths ("/research/...") so the same link
@@ -36,7 +39,7 @@
       url: https://sites.google.com/view/jaerimchoi
     - name: Seung Hoon Lee
       url: https://sites.google.com/view/seunghoon/home
-  note: "Revise and Resubmit, <em>Economic Inquiry</em>"
+  status: "Revise and Resubmit, <em>Economic Inquiry</em>"
   abstract: >-
     Using Korean administrative data spanning nearly two decades and covering the universe of
     bilateral migration flows across local labor markets, we examine how the China trade shock
@@ -50,6 +53,9 @@
     households are more responsive than multi-person households. Overall, bilateral data reveal
     substantial migration responses that conventional net population measures fail to detect,
     offering new insight into the "missing migration puzzle."
+  presented:
+    - "Midwest Trade Conference 2023"
+    - "Korean Economic Review Conference 2023"
   links:
     - text: Code
       url: https://github.com/hchulkim/research_china-shock-migration
