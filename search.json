@@ -438,7 +438,7 @@
     "href": "misc/index.html#software",
     "title": "Misc.",
     "section": "Software",
-    "text": "Software\n\nReplication template\n\nReplication template with nix (rix): I updated the past replication template to use nix (rix) for package management. This is a more modern and flexible way to manage packages for your research workflow.\nReplication template (legacy): This is the replication template I use for my empirical papers. This template follows DCAS, the Data and Code Availability Standard v1.0 and also follows the Data and Code Availability Policy of the American Economic Association.\n\n\n\nQuarto\n\nQuarto working paper template for Economics: Official Quarto Extensions List [github link] [Blog post]\n\n\n\nScripts\n\nDockerfile for empirical analysis (R, Python, Julia with dependency management setup): [link]"
+    "text": "Software\n\nReplication template with nix (rix): I updated the past replication template to use nix (rix) for package management. This is a more modern and flexible way to manage packages for your research workflow.\nReplication template (legacy): This is the replication template I use for my empirical papers. This template follows DCAS, the Data and Code Availability Standard v1.0 and also follows the Data and Code Availability Policy of the American Economic Association.\nQuarto working paper template for Economics: Official Quarto Extensions List [github link] [Blog post]\nDockerfile for empirical analysis (R, Python, Julia with dependency management setup): [link]"
   },
   {
     "objectID": "misc/index.html#personal-tips",
