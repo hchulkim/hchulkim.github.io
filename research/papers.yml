@@ -19,10 +19,10 @@
 #   article:   url; adds an "Article" link (after arXiv)
 #   links:     list of {text, url}, shown after the arXiv/Article links
 #   abstract:  plain text; adds an "Abstract" toggle after the links
-#   notes:     list of strings (HTML ok); each a small grey line at the bottom,
-#              e.g. 'Previously circulated as "..."'
 #   presented: list of strings; small grey line "Presentations: A, B, C."
-#              after the notes
+#              below the links/abstract
+#   notes:     list of strings (HTML ok); each a small grey line at the very
+#              bottom, after presentations, e.g. 'Previously circulated as "..."'
 #   home:      false to hide the paper on the front page (default: shown)
 #
 # Site-internal files use absolute paths ("/research/...") so the same link
@@ -39,7 +39,7 @@
       url: https://sites.google.com/view/jaerimchoi
     - name: Seung Hoon Lee
       url: https://sites.google.com/view/seunghoon/home
-  status: "Revise and Resubmit, <em>Economic Inquiry</em>"
+  status: "Revise and Resubmit, <em>Economic Inquiry</em>. June 2026."
   abstract: >-
     Using Korean administrative data spanning nearly two decades and covering the universe of
     bilateral migration flows across local labor markets, we examine how the China trade shock
@@ -120,6 +120,7 @@
       url:  https://sites.google.com/site/heeseungyang/
   year: 2025
   arxiv: https://arxiv.org/abs/2611.31860
+  status: "March 2024."
 
 
 

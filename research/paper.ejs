@@ -3,8 +3,8 @@
 //   [n] Title (with A, B & C)
 //   Journal, year · status
 //   arXiv · Article · Code · Abstract
-//   small notes, one per line
 //   Presentations: A, B, C.
+//   small notes, one per line
 // Content lives in papers.yml; style rules are .paper* in _site-rules.scss.
 // Each entry is built as one HTML string: blank lines or indentation in the
 // output would make Pandoc treat parts of it as Markdown/code blocks.
@@ -35,10 +35,10 @@ const entry = (p, n) => {
   if (extras.length) out += `<br><span class="paper-extras">${extras.join(' &middot; ')}</span>`;
 
   // Small grey lines at the bottom of the entry (blocks, so no <br> needed).
-  (p.notes || []).forEach(t => { out += `<div class="paper-small">${t}</div>`; });
   if (p.presented && p.presented.length) {
     out += `<div class="paper-small">Presentations: ${p.presented.join(', ')}.</div>`;
   }
+  (p.notes || []).forEach(t => { out += `<div class="paper-small">${t}</div>`; });
 
   return `<div class="paper">${out}</div>`;
 };
